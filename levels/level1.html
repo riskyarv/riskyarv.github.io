@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level 1 — Sjonnie's Secret Diary | Pasquil's Cyber Heist</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="diary-page" data-level="1">
+  <div class="page-wrapper">
+
+    <!-- Level Header -->
+    <header class="level-header">
+      <a href="../index.html" class="back-link">← Back to levels</a>
+      <div class="level-badge">Level 1</div>
+      <h1>📖 Sjonnie's Secret Diary</h1>
+      <p class="level-subtitle">HTML source code inspection — what secrets lurk in the source?</p>
+      <div class="sjonnie-says">
+        <strong>Sjonnie says:</strong> "I keep all my personal notes right in the code. Super private — nobody ever looks at HTML, right?"
+      </div>
+    </header>
+
+    <!-- Diary Entries -->
+    <div class="page-content">
+      <div class="diary-entries">
+
+        <article class="diary-entry">
+          <div class="diary-date">📅 January 15, 2026</div>
+          <div class="diary-text">
+            <p>Day 1 at Pasquil! They gave me my own desk and everything. I told them I'm a
+            <em>"Full-Stack Security Engineer"</em> and they believed me! Today I set up the
+            company WiFi password. I made it really secure: <strong>password123</strong>.
+            Wait, I should probably change that...</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <div class="diary-date">📅 February 3, 2026</div>
+          <div class="diary-text">
+            <p>My cat, Tulip, keeps walking on my keyboard. She typed "asdfjkl;" and honestly,
+            that's more secure than most of my passwords. Maybe I should let her be the
+            security consultant. 🐱</p>
+          </div>
+        </article>
+
+        <!-- TODO: Sjonnie, REMOVE this before going live!!! Password = TULIP_HACKER -->
+        <!-- Also please stop using your cat's name as passwords... -->
+
+        <article class="diary-entry">
+          <div class="diary-date">📅 February 28, 2026</div>
+          <div class="diary-text">
+            <p>Boss asked me to "implement two-factor authentication." I put TWO password fields
+            on the login page. That's two factors, right? <em>Nailed it.</em> 💪</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <div class="diary-date">📅 March 15, 2026</div>
+          <div class="diary-text">
+            <p>I read online that you should "never store passwords in plain text." So I wrote
+            them on a sticky note instead. Problem solved! The note is on my monitor where
+            nobody can see it... except everyone in the office. Whatever, it's fine. 🙃</p>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Password Section -->
+      <section class="password-section" id="password-section">
+        <h2>🔐 Enter the password</h2>
+        <form id="password-form" onsubmit="return handlePasswordSubmit(event)">
+          <div class="input-group">
+            <input
+              type="text"
+              id="password-input"
+              placeholder="Type the password here..."
+              autocomplete="off"
+              spellcheck="false"
+            >
+            <button type="submit" class="btn-submit">Check →</button>
+          </div>
+        </form>
+        <div id="feedback" class="feedback hidden"></div>
+        <div id="next-level" class="next-level hidden">
+          <a href="level2.html" class="btn-next">Proceed to Level 2 — The Invisible Vault →</a>
+        </div>
+      </section>
+
+      <!-- Hints -->
+      <section class="hints-section">
+        <button class="btn-hint" onclick="showNextHint()">💡 Need a hint?</button>
+        <div id="hints-container">
+          <div class="hint hidden" data-hint="1">
+            <span class="hint-label">Hint 1:</span>
+            <p>Sjonnie writes notes to himself that only he can see... or can he?</p>
+          </div>
+          <div class="hint hidden" data-hint="2">
+            <span class="hint-label">Hint 2:</span>
+            <p>What you see isn't everything. Try viewing what's behind the curtain.</p>
+          </div>
+          <div class="hint hidden" data-hint="3">
+            <span class="hint-label">Hint 3:</span>
+            <p>Right-click → "View Page Source" and look for Sjonnie's notes.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Confetti -->
+    <div class="confetti-container">
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      Built with 💜 by <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a>
+    </footer>
+
+  </div>
+
+  <script src="../js/game.js"></script>
+</body>
+</html>

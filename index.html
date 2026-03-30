@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pasquil's Cyber Heist — Can You Hack Sjonnie?</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- Hero -->
+    <section class="hero">
+      <span class="hero-emoji">🔐</span>
+      <h1>Pasquil's Cyber Heist</h1>
+      <p class="subtitle">Sjonnie built 5 "secure" web pages. Your mission: find the hidden password in each one.</p>
+    </section>
+
+    <!-- Intro -->
+    <p class="intro-text">
+      Welcome to Pasquil's Cyber Playground! Our bumbling intern, <strong>Stageair Sjonnie</strong>, has been building
+      internal tools... and let's just say his security practices are <em>"creative."</em> Your mission: find the
+      password hidden in each of Sjonnie's terrible web pages. Each password unlocks the next level.
+      Can you hack all five before Sjonnie notices?
+    </p>
+
+    <!-- Level Cards Grid -->
+    <div class="levels-grid">
+
+      <a href="levels/level1.html" class="level-card unlocked" data-level="1">
+        <span class="card-emoji">📖</span>
+        <div class="card-number">Level 1</div>
+        <div class="card-title">Secret Diary</div>
+        <div class="card-status"><span class="lock">🔓</span> Unlocked</div>
+      </a>
+
+      <a href="levels/level2.html" class="level-card locked" data-level="2">
+        <span class="card-emoji">👻</span>
+        <div class="card-number">Level 2</div>
+        <div class="card-title">Invisible Vault</div>
+        <div class="card-status"><span class="lock">🔒</span> Locked</div>
+      </a>
+
+      <a href="levels/level3.html" class="level-card locked" data-level="3">
+        <span class="card-emoji">🤠</span>
+        <div class="card-number">Level 3</div>
+        <div class="card-title">Console Cowboys</div>
+        <div class="card-status"><span class="lock">🔒</span> Locked</div>
+      </a>
+
+      <a href="levels/level4.html" class="level-card locked" data-level="4">
+        <span class="card-emoji">🍪</span>
+        <div class="card-number">Level 4</div>
+        <div class="card-title">Cookie Monster</div>
+        <div class="card-status"><span class="lock">🔒</span> Locked</div>
+      </a>
+
+      <a href="levels/level5.html" class="level-card locked" data-level="5">
+        <span class="card-emoji">🏆</span>
+        <div class="card-number">Level 5</div>
+        <div class="card-title">The Final Heist</div>
+        <div class="card-status"><span class="lock">🔒</span> Locked</div>
+      </a>
+
+    </div>
+
+    <!-- Rules Box -->
+    <div class="rules-box">
+      <h3>🔧 How to Play</h3>
+      <p>
+        All you need is a modern browser with DevTools (press <strong>F12</strong>).
+        No external tools, no server hacking — everything is in the browser.
+        Each level hides a password using a real web security concept.
+        Find it, type it in, and unlock the next challenge. Good luck, hacker!
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      Built with 💜 by <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a> —
+      Making the internet safer, one terrible password at a time.
+    </footer>
+
+  </div>
+
+  <script src="js/game.js"></script>
+</body>
+</html>

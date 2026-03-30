@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level 3 — Console Cowboys | Pasquil's Cyber Heist</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="terminal-page" data-level="3">
+  <div class="page-wrapper">
+
+    <!-- Level Header -->
+    <header class="level-header">
+      <a href="../index.html" class="back-link">← Back to levels</a>
+      <div class="level-badge">Level 3</div>
+      <h1>🤠 Console Cowboys</h1>
+      <p class="level-subtitle">JavaScript secrets — what's hiding in the code?</p>
+      <div class="sjonnie-says">
+        <strong>Sjonnie says:</strong> "This password is protected by my Ultra-Secure JavaScript Encryption™. It uses military-grade ROT-13 quantum algorithms. UNBREAKABLE."
+      </div>
+    </header>
+
+    <!-- Terminal Content -->
+    <div class="page-content">
+      <div class="terminal-content">
+
+        <div class="terminal-box">
+          <span class="prompt">sjonnie@pasquil:~$</span> <span class="string">cat security_status.txt</span><br><br>
+          <span class="comment">// ================================</span><br>
+          <span class="comment">// SJONNIE'S SECURITY STATUS REPORT</span><br>
+          <span class="comment">// ================================</span><br><br>
+          <span class="prompt">&gt;</span> Firewall: ON (it's a picture of a wall on fire 🔥)<br>
+          <span class="prompt">&gt;</span> Encryption: MAXIMUM (I renamed the file to .encrypted)<br>
+          <span class="prompt">&gt;</span> Password Storage: ULTRA SECURE (it's in a variable)<br>
+          <span class="prompt">&gt;</span> Backup Plan: blame the intern (wait, I AM the intern)
+        </div>
+
+        <div class="terminal-taunt">
+          <h3>🔒 Unbreakable Password Checker</h3>
+          <p>Protected by Sjonnie's Ultra-Secure JavaScript Encryption™</p>
+        </div>
+
+        <!-- Access Denied animation -->
+        <div id="access-denied" class="access-denied">
+          ❌ ACCESS DENIED ❌
+        </div>
+
+        <div class="terminal-box">
+          <span class="comment">// Fun fact: Sjonnie stores all his secrets in JavaScript</span><br>
+          <span class="comment">// variables because "nobody ever reads JavaScript."</span><br><br>
+          <span class="comment">// He also has a habit of talking to himself in console.log</span><br>
+          <span class="comment">// statements. Developers are chatty like that.</span><br><br>
+          <span class="prompt">&gt;</span> <span class="string">"The password is safe. I put it in an object. Objects are private, right?"</span><br>
+          <span class="prompt">&gt;</span> <span class="string">"— Sjonnie, moments before disaster"</span>
+        </div>
+
+      </div>
+
+      <!-- Password Section -->
+      <section class="password-section" id="password-section">
+        <h2>🔐 Enter the password</h2>
+        <form id="password-form" onsubmit="return handlePasswordSubmit(event)">
+          <div class="input-group">
+            <input
+              type="text"
+              id="password-input"
+              placeholder="Type the password here..."
+              autocomplete="off"
+              spellcheck="false"
+            >
+            <button type="submit" class="btn-submit">Check →</button>
+          </div>
+        </form>
+        <div id="feedback" class="feedback hidden"></div>
+        <div id="next-level" class="next-level hidden">
+          <a href="level4.html" class="btn-next">Proceed to Level 4 — Cookie Monster →</a>
+        </div>
+      </section>
+
+      <!-- Hints -->
+      <section class="hints-section">
+        <button class="btn-hint" onclick="showNextHint()">💡 Need a hint?</button>
+        <div id="hints-container">
+          <div class="hint hidden" data-hint="1">
+            <span class="hint-label">Hint 1:</span>
+            <p>Sjonnie talks to himself a lot. Have you checked where developers usually talk?</p>
+          </div>
+          <div class="hint hidden" data-hint="2">
+            <span class="hint-label">Hint 2:</span>
+            <p>Open the Console tab in DevTools. Sjonnie might have left a message for you.</p>
+          </div>
+          <div class="hint hidden" data-hint="3">
+            <span class="hint-label">Hint 3:</span>
+            <p>Type <code>sjonnieVault</code> in the console and press Enter.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Confetti -->
+    <div class="confetti-container">
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      Built with 💜 by <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a>
+    </footer>
+
+  </div>
+
+  <script src="../js/level3.js"></script>
+  <script src="../js/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level 5 — The Final Heist | Pasquil's Cyber Heist</title>
+  <meta name="author" content="Sjonnie">
+  <meta name="description" content="Pasquil's most secure page ever">
+  <meta name="sjonnie-part3" content="M4ST3R">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="heist-page" data-level="5">
+  <div class="page-wrapper">
+
+    <!-- Sjonnie's Security Audit Log: All clear! No passwords here.
+         But between you and me... check what's loaded in the Network tab. 
+         Look for something that doesn't belong. -->
+
+    <!-- Level Header -->
+    <header class="level-header">
+      <a href="../index.html" class="back-link">← Back to levels</a>
+      <div class="level-badge">Level 5</div>
+      <h1>🏆 The Final Heist</h1>
+      <p class="level-subtitle">Multi-layered investigation — combine everything you've learned</p>
+      <div class="sjonnie-says">
+        <strong>Sjonnie says:</strong> "You've made it this far, but this page is UNBREAKABLE. I've used every security measure I know: invisible text, encrypted cookies, obfuscated code... you'll never find this one."
+      </div>
+    </header>
+
+    <!-- Heist Content -->
+    <div class="page-content">
+      <div class="heist-content">
+
+        <!-- Vault Door -->
+        <div class="heist-vault-door">
+          <span class="vault-icon">🏦</span>
+        </div>
+
+        <div class="heist-taunt">
+          <h3>🎯 The Ultimate Challenge</h3>
+          <p>You think you're a hacker? Prove it. Find all three pieces.</p>
+        </div>
+
+        <!-- Parts Tracker -->
+        <div class="parts-tracker">
+          <div class="part-card">
+            <div class="part-number">Part 1</div>
+            <div class="part-value">?</div>
+          </div>
+          <div class="part-card">
+            <div class="part-number">Part 2</div>
+            <div class="part-value">?</div>
+          </div>
+          <div class="part-card">
+            <div class="part-number">Part 3</div>
+            <div class="part-value">?</div>
+          </div>
+        </div>
+
+        <div class="heist-info">
+          <p>
+            This is it — the Pasquil Maximum Security Office. Sjonnie's pulling out
+            all the stops. He's split the password into <strong>three parts</strong>
+            and scattered them across the page. Each part is hidden using a different
+            technique you've encountered in previous levels.
+          </p>
+          <p style="margin-top: 12px;">
+            To crack this vault, you'll need to think like a real security researcher:
+            check the source, inspect the elements, read the scripts, and examine
+            the metadata. Leave no stone unturned.
+          </p>
+        </div>
+
+        <div class="heist-info">
+          <p>
+            <strong>⚠️ Sjonnie's final taunt:</strong> "I've hidden the pieces so well,
+            even I forgot where I put part 2. Just kidding — it's in a very logical
+            place. If you know HTML, that is. Which you don't. Probably. 😏"
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Password Section -->
+      <section class="password-section" id="password-section">
+        <h2>🔐 Enter the complete password</h2>
+        <form id="password-form" onsubmit="return handlePasswordSubmit(event)">
+          <div class="input-group">
+            <input
+              type="text"
+              id="password-input"
+              placeholder="Combine all 3 parts..."
+              autocomplete="off"
+              spellcheck="false"
+            >
+            <button type="submit" class="btn-submit">Check →</button>
+          </div>
+        </form>
+        <div id="feedback" class="feedback hidden"></div>
+        <div id="next-level" class="next-level hidden">
+          <p style="color: var(--yellow); font-weight: 700; font-size: 1.1rem;">🎉 You've completed Pasquil's Cyber Heist!</p>
+        </div>
+      </section>
+
+      <!-- Hints -->
+      <section class="hints-section">
+        <button class="btn-hint" onclick="showNextHint()">💡 Need a hint?</button>
+        <div id="hints-container">
+          <div class="hint hidden" data-hint="1">
+            <span class="hint-label">Hint 1:</span>
+            <p>The password is split into three parts. You'll need to search everywhere — source, scripts, elements, and metadata.</p>
+          </div>
+          <div class="hint hidden" data-hint="2">
+            <span class="hint-label">Hint 2:</span>
+            <p>Part 1 is in a JS file. Part 2 is hiding in a data attribute. Part 3 is in the page metadata.</p>
+          </div>
+          <div class="hint hidden" data-hint="3">
+            <span class="hint-label">Hint 3:</span>
+            <p>JS variable <code>_0x1</code> = "P4". <code>data-sjonnie-part2</code> attribute = "SQU1L_". Meta tag <code>sjonnie-part3</code> = "M4ST3R". Combine them.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Victory Overlay -->
+    <div class="victory-overlay" id="victory-overlay">
+      <div class="victory-content">
+        <span class="victory-trophy">🏆</span>
+        <h1>🎉 YOU DID IT!</h1>
+        <p class="victory-subtitle">You hacked all 5 of Sjonnie's "secure" pages!</p>
+
+        <ul class="victory-lessons">
+          <li><span class="lesson-number">Level 1:</span> HTML comments aren't secret</li>
+          <li><span class="lesson-number">Level 2:</span> CSS can't hide content from the DOM</li>
+          <li><span class="lesson-number">Level 3:</span> JavaScript variables are public</li>
+          <li><span class="lesson-number">Level 4:</span> Browser storage is not secure</li>
+          <li><span class="lesson-number">Level 5:</span> Real security requires defense in depth</li>
+        </ul>
+
+        <p style="color: rgba(255,255,255,0.7); margin-bottom: 24px;">
+          Want to learn more about real web security?
+        </p>
+
+        <a href="https://pasquil.nl" target="_blank" rel="noopener" class="victory-cta">
+          Visit Pasquil.nl →
+        </a>
+      </div>
+    </div>
+
+    <!-- Confetti -->
+    <div class="confetti-container">
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-links">
+        <span class="copyright" data-sjonnie-part2="SQU1L_" aria-hidden="true">© 2026 Pasquil</span>
+      </div>
+      Built with 💜 by <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a>
+    </footer>
+
+  </div>
+
+  <script src="../js/level5.js"></script>
+  <script src="../js/game.js"></script>
+</body>
+</html>

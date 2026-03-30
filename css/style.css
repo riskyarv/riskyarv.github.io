@@ -1,0 +1,1276 @@
+/* ============================================
+   Pasquil's Cyber Heist — Shared Styles
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap');
+
+/* --- CSS Variables / Color Palette --- */
+:root {
+  --purple: #6C2DC7;
+  --purple-light: #8B5CF6;
+  --purple-dark: #5521A0;
+  --orange: #FF6B35;
+  --orange-light: #FF8C5A;
+  --yellow: #FFD23F;
+  --yellow-light: #FFE066;
+  --offwhite: #F5F0EB;
+  --charcoal: #2D2D2D;
+  --success: #4CAF50;
+  --error: #E53935;
+  --white: #FFFFFF;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.15);
+  --font-heading: 'Nunito', 'Poppins', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'Fira Code', 'Source Code Pro', monospace;
+}
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--charcoal);
+  background: var(--offwhite);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--purple);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--orange);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* --- Layout Containers --- */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
+}
+
+/* ============================================
+   LANDING PAGE
+   ============================================ */
+
+.hero {
+  text-align: center;
+  padding: 60px 24px 40px;
+  background: linear-gradient(135deg, var(--purple) 0%, var(--purple-dark) 100%);
+  color: var(--white);
+}
+
+.hero-emoji {
+  font-size: 72px;
+  display: block;
+  margin-bottom: 16px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.hero .subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 500;
+}
+
+/* Level Card Grid */
+.levels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 40px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.level-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--charcoal);
+  display: block;
+}
+
+.level-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  color: var(--charcoal);
+}
+
+.level-card.locked {
+  opacity: 0.55;
+  pointer-events: none;
+  filter: grayscale(0.3);
+}
+
+.level-card.locked:hover {
+  transform: none;
+  box-shadow: var(--shadow);
+}
+
+.level-card .card-emoji {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.level-card .card-number {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--purple);
+  margin-bottom: 4px;
+}
+
+.level-card .card-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.level-card .card-status {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 8px;
+}
+
+.level-card .card-status .lock {
+  font-size: 1.2rem;
+}
+
+.level-card.completed {
+  border: 3px solid var(--success);
+}
+
+.level-card.completed .card-status {
+  color: var(--success);
+  font-weight: 600;
+}
+
+.level-card.unlocked {
+  border: 3px solid var(--purple);
+  cursor: pointer;
+}
+
+/* Rules Box */
+.rules-box {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  box-shadow: var(--shadow);
+  border-left: 5px solid var(--yellow);
+}
+
+.rules-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: var(--purple);
+}
+
+.rules-box p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Intro */
+.intro-text {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 32px 24px 0;
+  font-size: 1.05rem;
+  color: #555;
+}
+
+/* ============================================
+   LEVEL HEADER
+   ============================================ */
+
+.level-header {
+  text-align: center;
+  padding: 40px 24px 32px;
+  background: linear-gradient(135deg, var(--purple) 0%, var(--purple-dark) 100%);
+  color: var(--white);
+  position: relative;
+}
+
+.level-header .back-link {
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.level-header .back-link:hover {
+  color: var(--yellow);
+}
+
+.level-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  color: var(--yellow);
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.level-header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.level-header .level-subtitle {
+  opacity: 0.85;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Sjonnie Says Quote Box */
+.sjonnie-says {
+  background: rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  padding: 16px 24px;
+  margin: 20px auto 0;
+  max-width: 600px;
+  font-style: italic;
+  font-size: 0.95rem;
+  border-left: 4px solid var(--yellow);
+  text-align: left;
+}
+
+.sjonnie-says strong {
+  color: var(--yellow);
+  font-style: normal;
+}
+
+/* ============================================
+   PASSWORD SECTION
+   ============================================ */
+
+.password-section {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.password-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: var(--purple);
+}
+
+.input-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#password-input {
+  flex: 1;
+  min-width: 220px;
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  font-family: var(--font-mono);
+  border: 3px solid #ddd;
+  border-radius: var(--radius);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: var(--white);
+}
+
+#password-input:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 4px rgba(108, 45, 199, 0.15);
+}
+
+.btn-submit {
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  background: var(--purple);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-submit:hover {
+  background: var(--purple-light);
+  transform: scale(1.03);
+}
+
+.btn-submit:active {
+  transform: scale(0.98);
+}
+
+/* Feedback Messages */
+.feedback {
+  margin-top: 20px;
+  padding: 16px 24px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.feedback.hidden {
+  display: none;
+}
+
+.feedback.success {
+  background: var(--success);
+  color: var(--white);
+  animation: slideIn 0.3s ease;
+}
+
+.feedback.error {
+  background: var(--error);
+  color: var(--white);
+  animation: shake 0.5s ease;
+}
+
+/* Next Level Button */
+.next-level {
+  margin-top: 20px;
+}
+
+.next-level.hidden {
+  display: none;
+}
+
+.btn-next {
+  display: inline-block;
+  padding: 16px 32px;
+  font-size: 1.15rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  background: var(--orange);
+  color: var(--white);
+  border-radius: var(--radius);
+  transition: background 0.2s, transform 0.1s;
+  text-decoration: none;
+}
+
+.btn-next:hover {
+  background: var(--orange-light);
+  transform: scale(1.03);
+  color: var(--white);
+}
+
+/* ============================================
+   HINTS SECTION
+   ============================================ */
+
+.hints-section {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.btn-hint {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  background: var(--yellow);
+  color: var(--charcoal);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-hint:hover {
+  background: var(--yellow-light);
+  transform: scale(1.03);
+}
+
+.btn-hint:disabled {
+  opacity: 0.7;
+  cursor: default;
+  transform: none;
+}
+
+#hints-container {
+  margin-top: 16px;
+  text-align: left;
+}
+
+.hint {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border-left: 4px solid var(--yellow);
+  animation: fadeSlideIn 0.4s ease;
+}
+
+.hint.hidden {
+  display: none;
+}
+
+.hint-label {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--orange);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hint p {
+  margin-top: 4px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.site-footer {
+  text-align: center;
+  padding: 32px 24px;
+  background: var(--charcoal);
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+.site-footer a {
+  color: var(--yellow);
+}
+
+.site-footer a:hover {
+  color: var(--orange);
+}
+
+/* ============================================
+   LEVEL 1 — DIARY THEME
+   ============================================ */
+
+.diary-page {
+  background: var(--offwhite);
+}
+
+.diary-entries {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.diary-entry {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow);
+  border-left: 5px solid var(--purple);
+  position: relative;
+}
+
+.diary-entry .diary-date {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--purple);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.diary-entry .diary-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.diary-entry .diary-text em {
+  color: var(--orange);
+}
+
+/* ============================================
+   LEVEL 2 — VAULT THEME
+   ============================================ */
+
+.vault-page {
+  background: #1a1a2e;
+  color: var(--white);
+}
+
+.vault-page .level-header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-bottom: 3px solid var(--orange);
+}
+
+.vault-warnings {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.vault-warning-banner {
+  background: rgba(229, 57, 53, 0.15);
+  border: 2px solid var(--error);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 24px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--error);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.vault-padlock {
+  font-size: 80px;
+  display: block;
+  margin: 20px auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+.vault-classified {
+  display: inline-block;
+  background: var(--error);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 1.4rem;
+  padding: 8px 24px;
+  border-radius: 4px;
+  transform: rotate(-3deg);
+  margin: 20px 0;
+  letter-spacing: 4px;
+}
+
+.vault-text {
+  max-width: 600px;
+  margin: 24px auto;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+}
+
+.vault-page .password-section h2 {
+  color: var(--yellow);
+}
+
+.vault-page #password-input {
+  background: #16213e;
+  border-color: #333;
+  color: var(--white);
+}
+
+.vault-page #password-input:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.2);
+}
+
+.vault-page .sjonnie-says {
+  background: rgba(255,255,255,0.05);
+  border-left-color: var(--orange);
+}
+
+.vault-page .hint {
+  background: #16213e;
+  border-left-color: var(--orange);
+}
+
+.vault-page .hint p {
+  color: rgba(255,255,255,0.7);
+}
+
+.vault-page .site-footer {
+  background: #111;
+}
+
+/* ============================================
+   LEVEL 3 — HACKER TERMINAL THEME
+   ============================================ */
+
+.terminal-page {
+  background: #0d1117;
+  color: #c9d1d9;
+}
+
+.terminal-page .level-header {
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+  border-bottom: 3px solid #39d353;
+}
+
+.terminal-page .level-badge {
+  color: #39d353;
+}
+
+.terminal-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.terminal-box {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 24px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.terminal-box .prompt {
+  color: #39d353;
+}
+
+.terminal-box .comment {
+  color: #8b949e;
+}
+
+.terminal-box .string {
+  color: var(--orange);
+}
+
+.terminal-taunt {
+  background: #161b22;
+  border: 2px solid var(--orange);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 24px 0;
+  text-align: center;
+  font-family: var(--font-heading);
+}
+
+.terminal-taunt h3 {
+  color: var(--orange);
+  margin-bottom: 8px;
+}
+
+.terminal-page .password-section h2 {
+  color: #39d353;
+}
+
+.terminal-page #password-input {
+  background: #161b22;
+  border-color: #30363d;
+  color: #c9d1d9;
+}
+
+.terminal-page #password-input:focus {
+  border-color: #39d353;
+  box-shadow: 0 0 0 4px rgba(57, 211, 83, 0.15);
+}
+
+.terminal-page .sjonnie-says {
+  background: rgba(57, 211, 83, 0.05);
+  border-left-color: #39d353;
+}
+
+.terminal-page .hint {
+  background: #161b22;
+  border-left-color: #39d353;
+}
+
+.terminal-page .hint p {
+  color: #8b949e;
+}
+
+.terminal-page .site-footer {
+  background: #010409;
+}
+
+.access-denied {
+  display: none;
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--error);
+  text-align: center;
+  padding: 20px;
+  animation: glitch 0.3s ease infinite;
+}
+
+.access-denied.show {
+  display: block;
+}
+
+/* ============================================
+   LEVEL 4 — COOKIE / BAKERY THEME
+   ============================================ */
+
+.bakery-page {
+  background: #FFF8F0;
+}
+
+.bakery-page .level-header {
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+}
+
+.bakery-page .level-badge {
+  color: var(--yellow);
+}
+
+.bakery-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.cookie-jar {
+  text-align: center;
+  margin: 20px 0 32px;
+  position: relative;
+}
+
+.cookie-jar-emoji {
+  font-size: 100px;
+  display: block;
+  animation: wobble 3s ease-in-out infinite;
+}
+
+.bakery-text {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow);
+  border-left: 5px solid var(--orange);
+  line-height: 1.7;
+}
+
+.bakery-text h3 {
+  color: #8B4513;
+  margin-bottom: 8px;
+}
+
+.bakery-pun {
+  font-style: italic;
+  color: #8B4513;
+  text-align: center;
+  font-size: 1rem;
+  margin: 16px 0;
+}
+
+.bakery-page .sjonnie-says {
+  background: rgba(139, 69, 19, 0.08);
+  border-left-color: #8B4513;
+  color: var(--charcoal);
+}
+
+.bakery-page .sjonnie-says strong {
+  color: #8B4513;
+}
+
+.bakery-page .password-section h2 {
+  color: #8B4513;
+}
+
+.bakery-page .hint {
+  border-left-color: #8B4513;
+}
+
+.bakery-page .hint-label {
+  color: #8B4513;
+}
+
+/* ============================================
+   LEVEL 5 — HEIST THEME
+   ============================================ */
+
+.heist-page {
+  background: #0a0a1a;
+  color: var(--white);
+}
+
+.heist-page .level-header {
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 100%);
+  border-bottom: 3px solid var(--yellow);
+}
+
+.heist-page .level-badge {
+  color: var(--yellow);
+}
+
+.heist-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.heist-vault-door {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.heist-vault-door .vault-icon {
+  font-size: 100px;
+  display: block;
+  animation: float 4s ease-in-out infinite;
+}
+
+.heist-taunt {
+  background: rgba(108, 45, 199, 0.15);
+  border: 2px solid var(--purple-light);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin: 24px 0;
+  text-align: center;
+}
+
+.heist-taunt h3 {
+  color: var(--yellow);
+  margin-bottom: 8px;
+}
+
+.heist-taunt p {
+  color: rgba(255,255,255,0.7);
+}
+
+.parts-tracker {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 32px 0;
+  flex-wrap: wrap;
+}
+
+.part-card {
+  background: rgba(255,255,255,0.05);
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius);
+  padding: 16px 24px;
+  text-align: center;
+  min-width: 120px;
+}
+
+.part-card .part-number {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 0.8rem;
+  color: var(--yellow);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.part-card .part-value {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--orange);
+  margin-top: 4px;
+}
+
+.heist-info {
+  background: rgba(255,255,255,0.05);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 24px 0;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+  border-left: 4px solid var(--purple-light);
+}
+
+.heist-page .password-section h2 {
+  color: var(--yellow);
+}
+
+.heist-page #password-input {
+  background: #1a0a2e;
+  border-color: #333;
+  color: var(--white);
+}
+
+.heist-page #password-input:focus {
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 4px rgba(255, 210, 63, 0.15);
+}
+
+.heist-page .sjonnie-says {
+  background: rgba(255, 210, 63, 0.05);
+  border-left-color: var(--yellow);
+}
+
+.heist-page .hint {
+  background: #1a0a2e;
+  border-left-color: var(--yellow);
+}
+
+.heist-page .hint p {
+  color: rgba(255,255,255,0.7);
+}
+
+.heist-page .site-footer {
+  background: #050510;
+}
+
+/* ============================================
+   VICTORY SCREEN
+   ============================================ */
+
+.victory-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--purple-dark) 0%, #0a0a1a 100%);
+  z-index: 9999;
+  overflow-y: auto;
+  animation: fadeIn 0.5s ease;
+}
+
+.victory-overlay.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.victory-content {
+  text-align: center;
+  padding: 40px 24px;
+  max-width: 700px;
+  color: var(--white);
+}
+
+.victory-trophy {
+  font-size: 100px;
+  display: block;
+  margin-bottom: 20px;
+  animation: float 2s ease-in-out infinite;
+}
+
+.victory-content h1 {
+  font-size: 2.6rem;
+  color: var(--yellow);
+  margin-bottom: 16px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.victory-content .victory-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 32px;
+}
+
+.victory-lessons {
+  text-align: left;
+  list-style: none;
+  margin: 0 auto 32px;
+  max-width: 500px;
+}
+
+.victory-lessons li {
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  background: rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.85);
+  border-left: 4px solid var(--yellow);
+}
+
+.victory-lessons .lesson-number {
+  font-weight: 700;
+  color: var(--yellow);
+  margin-right: 8px;
+}
+
+.victory-cta {
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 1.15rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  background: var(--orange);
+  color: var(--white);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 16px;
+}
+
+.victory-cta:hover {
+  background: var(--orange-light);
+  transform: scale(1.03);
+  color: var(--white);
+}
+
+/* ============================================
+   CONFETTI (CSS-only)
+   ============================================ */
+
+.confetti-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10000;
+  overflow: hidden;
+}
+
+.confetti-container.show {
+  display: block;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: -20px;
+  opacity: 0;
+  animation: confettiFall 3s ease-in forwards;
+}
+
+.confetti-piece:nth-child(1)  { left: 5%;  background: var(--purple);   animation-delay: 0s;    border-radius: 50%; }
+.confetti-piece:nth-child(2)  { left: 15%; background: var(--orange);   animation-delay: 0.1s;  border-radius: 2px; }
+.confetti-piece:nth-child(3)  { left: 25%; background: var(--yellow);   animation-delay: 0.2s;  border-radius: 50%; }
+.confetti-piece:nth-child(4)  { left: 35%; background: var(--success);  animation-delay: 0.15s; border-radius: 2px; }
+.confetti-piece:nth-child(5)  { left: 45%; background: var(--purple);   animation-delay: 0.3s;  border-radius: 50%; }
+.confetti-piece:nth-child(6)  { left: 55%; background: var(--error);    animation-delay: 0.05s; border-radius: 2px; }
+.confetti-piece:nth-child(7)  { left: 65%; background: var(--orange);   animation-delay: 0.25s; border-radius: 50%; }
+.confetti-piece:nth-child(8)  { left: 75%; background: var(--yellow);   animation-delay: 0.35s; border-radius: 2px; }
+.confetti-piece:nth-child(9)  { left: 85%; background: var(--success);  animation-delay: 0.1s;  border-radius: 50%; }
+.confetti-piece:nth-child(10) { left: 95%; background: var(--purple);   animation-delay: 0.2s;  border-radius: 2px; }
+.confetti-piece:nth-child(11) { left: 10%; background: var(--orange);   animation-delay: 0.4s;  border-radius: 50%; }
+.confetti-piece:nth-child(12) { left: 20%; background: var(--yellow);   animation-delay: 0.45s; border-radius: 2px; }
+.confetti-piece:nth-child(13) { left: 30%; background: var(--purple);   animation-delay: 0.5s;  border-radius: 50%; }
+.confetti-piece:nth-child(14) { left: 40%; background: var(--success);  animation-delay: 0.55s; border-radius: 2px; }
+.confetti-piece:nth-child(15) { left: 50%; background: var(--error);    animation-delay: 0.3s;  border-radius: 50%; }
+.confetti-piece:nth-child(16) { left: 60%; background: var(--yellow);   animation-delay: 0.6s;  border-radius: 2px; }
+.confetti-piece:nth-child(17) { left: 70%; background: var(--orange);   animation-delay: 0.15s; border-radius: 50%; }
+.confetti-piece:nth-child(18) { left: 80%; background: var(--purple);   animation-delay: 0.65s; border-radius: 2px; }
+.confetti-piece:nth-child(19) { left: 90%; background: var(--success);  animation-delay: 0.4s;  border-radius: 50%; }
+.confetti-piece:nth-child(20) { left: 3%;  background: var(--yellow);   animation-delay: 0.7s;  border-radius: 2px; }
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-6px); }
+  20%, 40%, 60%, 80% { transform: translateX(6px); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes wobble {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  75% { transform: rotate(-3deg); }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-1px, -1px); }
+  80% { transform: translate(1px, 1px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes confettiFall {
+  0% {
+    top: -20px;
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(30px) rotate(90deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-20px) rotate(180deg);
+  }
+  75% {
+    opacity: 0.8;
+    transform: translateX(15px) rotate(270deg);
+  }
+  100% {
+    top: 100vh;
+    opacity: 0;
+    transform: translateX(-10px) rotate(360deg);
+  }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.hidden {
+  display: none !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+.mt-3 { margin-top: 24px; }
+.mb-1 { margin-bottom: 8px; }
+.mb-2 { margin-bottom: 16px; }
+.mb-3 { margin-bottom: 24px; }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .levels-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 24px 16px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero .subtitle {
+    font-size: 1rem;
+  }
+
+  .level-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .level-header .back-link {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .parts-tracker {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .victory-content h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .levels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-emoji {
+    font-size: 56px;
+  }
+}

@@ -32,6 +32,33 @@
 
 **Reference:** Full details in `/GAME_DESIGN.md`.
 
+### Full Frontend Implementation — Vanilla Stack
+
+**Author:** Livingston (Frontend Dev)  
+**Date:** 2026-03-30  
+**Status:** Implemented
+
+**Summary:** Complete game build using vanilla HTML/CSS/JS per spec. All 10 game files created, no frameworks, no build step.
+
+**Key Decisions:**
+
+1. **Vanilla Stack** — No frameworks, no build step. All relative paths. Game runs by opening `index.html` directly.
+2. **Web Crypto API for SHA-256** — Used native `crypto.subtle.digest()` for password hashing. Hashes precomputed and embedded in `game.js`.
+3. **Theme Classes on `<body>`** — Each level activates theme via `<body class="vault-page">`, etc. Single `style.css` file with per-level overrides.
+4. **CSS-Only Confetti** — 20 absolutely-positioned divs with staggered keyframe animations. No external library. Triggered by adding `.show` class.
+5. **Level 4 Cookies via Inline Script** — Placed after `game.js` loads. Cookies and localStorage set idempotently on every page load.
+6. **Level 5 IIFE Scope** — `level5.js` uses IIFE so `_0x1` is not directly accessible as global. Only `__heistStatus` exposed on `window`.
+7. **No img/ Directory** — Emoji and CSS shapes throughout instead of SVG/PNG assets.
+
+**Deliverables:**
+
+- `index.html` (3.3 KB)
+- `levels/level1.html` through `level5.html` (5.5–7.4 KB each)
+- `css/style.css` (25.5 KB)
+- `js/game.js` (6.3 KB)
+- `js/level3.js` (748 B)
+- `js/level5.js` (730 B)
+
 ## Governance
 
 - All meaningful changes require team consensus
