@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,12 +18,12 @@
 
     <!-- Level Header -->
     <header class="level-header">
-      <a href="../index.html" class="back-link">← Back to levels</a>
+      <a href="../index.html" class="back-link" data-i18n="back-to-levels">← Terug naar levels</a>
       <div class="level-badge">Level 5</div>
-      <h1>🏆 The Final Heist</h1>
-      <p class="level-subtitle">Multi-layered investigation — combine everything you've learned</p>
-      <div class="sjonnie-says">
-        <strong>Sjonnie says:</strong> "You've made it this far, but this page is UNBREAKABLE. I've used every security measure I know: invisible text, encrypted cookies, obfuscated code... you'll never find this one."
+      <h1 data-i18n="l5-title">🏆 De Laatste Heist</h1>
+      <p class="level-subtitle" data-i18n="l5-subtitle">Meerlagig onderzoek — combineer alles wat je hebt geleerd</p>
+      <div class="sjonnie-says" data-i18n="l5-sjonnie">
+        <strong>Sjonnie zegt:</strong> "Je bent ver gekomen, maar deze pagina is ONKRAAKBAAR. Ik heb elke beveiligingsmaatregel gebruikt die ik ken: onzichtbare tekst, versleutelde cookies, verduisterde code... je vindt deze nooit."
       </div>
     </header>
 
@@ -37,45 +37,45 @@
         </div>
 
         <div class="heist-taunt">
-          <h3>🎯 The Ultimate Challenge</h3>
-          <p>You think you're a hacker? Prove it. Find all three pieces.</p>
+          <h3 data-i18n="l5-challenge-title">🎯 De Ultieme Uitdaging</h3>
+          <p data-i18n="l5-challenge-text">Denk je dat je een hacker bent? Bewijs het. Vind alle drie de delen.</p>
         </div>
 
         <!-- Parts Tracker -->
         <div class="parts-tracker">
           <div class="part-card">
-            <div class="part-number">Part 1</div>
+            <div class="part-number"><span data-i18n="l5-part">Deel</span> 1</div>
             <div class="part-value">?</div>
           </div>
           <div class="part-card">
-            <div class="part-number">Part 2</div>
+            <div class="part-number"><span data-i18n="l5-part">Deel</span> 2</div>
             <div class="part-value">?</div>
           </div>
           <div class="part-card">
-            <div class="part-number">Part 3</div>
+            <div class="part-number"><span data-i18n="l5-part">Deel</span> 3</div>
             <div class="part-value">?</div>
           </div>
         </div>
 
         <div class="heist-info">
-          <p>
-            This is it — the Pasquil Maximum Security Office. Sjonnie's pulling out
-            all the stops. He's split the password into <strong>three parts</strong>
-            and scattered them across the page. Each part is hidden using a different
-            technique you've encountered in previous levels.
+          <p data-i18n="l5-info1">
+            Dit is het — het Pasquil Maximum Security Office. Sjonnie haalt alles uit
+            de kast. Hij heeft het wachtwoord opgesplitst in <strong>drie delen</strong>
+            en verspreid over de pagina. Elk deel is verborgen met een andere techniek
+            die je in eerdere levels bent tegengekomen.
           </p>
-          <p style="margin-top: 12px;">
-            To crack this vault, you'll need to think like a real security researcher:
-            check the source, inspect the elements, read the scripts, and examine
-            the metadata. Leave no stone unturned.
+          <p style="margin-top: 12px;" data-i18n="l5-info2">
+            Om deze kluis te kraken, moet je denken als een echte security researcher:
+            controleer de broncode, inspecteer de elementen, lees de scripts, en onderzoek
+            de metadata. Laat geen steen onaangeroerd.
           </p>
         </div>
 
         <div class="heist-info">
-          <p>
-            <strong>⚠️ Sjonnie's final taunt:</strong> "I've hidden the pieces so well,
-            even I forgot where I put part 2. Just kidding — it's in a very logical
-            place. If you know HTML, that is. Which you don't. Probably. 😏"
+          <p data-i18n="l5-taunt">
+            <strong>⚠️ Sjonnie's laatste uitdaging:</strong> "Ik heb de stukken zo goed
+            verstopt, zelfs ik vergat waar ik deel 2 had gelaten. Grapje — het zit op een
+            heel logische plek. Als je HTML kent, tenminste. Wat je waarschijnlijk niet doet. 😏"
           </p>
         </div>
 
@@ -83,40 +83,41 @@
 
       <!-- Password Section -->
       <section class="password-section" id="password-section">
-        <h2>🔐 Enter the complete password</h2>
+        <h2 data-i18n="enter-complete-password">🔐 Voer het volledige wachtwoord in</h2>
         <form id="password-form" onsubmit="return handlePasswordSubmit(event)">
           <div class="input-group">
             <input
               type="text"
               id="password-input"
-              placeholder="Combine all 3 parts..."
+              placeholder="Combineer alle 3 delen..."
+              data-i18n-placeholder="password-placeholder-combine"
               autocomplete="off"
               spellcheck="false"
             >
-            <button type="submit" class="btn-submit">Check →</button>
+            <button type="submit" class="btn-submit" data-i18n="btn-submit">Controleer →</button>
           </div>
         </form>
         <div id="feedback" class="feedback hidden"></div>
         <div id="next-level" class="next-level hidden">
-          <p style="color: var(--yellow); font-weight: 700; font-size: 1.1rem;">🎉 You've completed Pasquil's Cyber Heist!</p>
+          <p style="color: var(--yellow); font-weight: 700; font-size: 1.1rem;" data-i18n="l5-completion">🎉 Je hebt Pasquil's Cyber Heist voltooid!</p>
         </div>
       </section>
 
       <!-- Hints -->
       <section class="hints-section">
-        <button class="btn-hint" onclick="showNextHint()">💡 Need a hint?</button>
+        <button class="btn-hint" onclick="showNextHint()" data-i18n="btn-hint">💡 Hint nodig?</button>
         <div id="hints-container">
           <div class="hint hidden" data-hint="1">
             <span class="hint-label">Hint 1:</span>
-            <p>The password is split into three parts. You'll need to search everywhere — source, scripts, elements, and metadata.</p>
+            <span data-i18n="l5-hint1"><p>Het wachtwoord is opgesplitst in drie delen. Je moet overal zoeken — broncode, scripts, elementen en metadata.</p></span>
           </div>
           <div class="hint hidden" data-hint="2">
             <span class="hint-label">Hint 2:</span>
-            <p>Part 1 is in a JS file. Part 2 is hiding in a data attribute. Part 3 is in the page metadata.</p>
+            <span data-i18n="l5-hint2"><p>Deel 1 zit in een JS-bestand. Deel 2 verstopt zich in een data-attribuut. Deel 3 zit in de pagina-metadata.</p></span>
           </div>
           <div class="hint hidden" data-hint="3">
             <span class="hint-label">Hint 3:</span>
-            <p>JS variable <code>_0x1</code> = "P4". <code>data-sjonnie-part2</code> attribute = "SQU1L_". Meta tag <code>sjonnie-part3</code> = "M4ST3R". Combine them.</p>
+            <span data-i18n="l5-hint3"><p>JS variabele <code>_0x1</code> = "P4". <code>data-sjonnie-part2</code> attribuut = "SQU1L_". Meta tag <code>sjonnie-part3</code> = "M4ST3R". Combineer ze.</p></span>
           </div>
         </div>
       </section>
@@ -127,23 +128,23 @@
     <div class="victory-overlay" id="victory-overlay">
       <div class="victory-content">
         <span class="victory-trophy">🏆</span>
-        <h1>🎉 YOU DID IT!</h1>
-        <p class="victory-subtitle">You hacked all 5 of Sjonnie's "secure" pages!</p>
+        <h1 data-i18n="victory-title">🎉 JE HEBT HET GEDAAN!</h1>
+        <p class="victory-subtitle" data-i18n="victory-subtitle">Je hebt alle 5 van Sjonnie's "beveiligde" pagina's gehackt!</p>
 
         <ul class="victory-lessons">
-          <li><span class="lesson-number">Level 1:</span> HTML comments aren't secret</li>
-          <li><span class="lesson-number">Level 2:</span> CSS can't hide content from the DOM</li>
-          <li><span class="lesson-number">Level 3:</span> JavaScript variables are public</li>
-          <li><span class="lesson-number">Level 4:</span> Browser storage is not secure</li>
-          <li><span class="lesson-number">Level 5:</span> Real security requires defense in depth</li>
+          <li><span class="lesson-number">Level 1:</span> <span data-i18n="victory-l1">HTML-comments zijn niet geheim</span></li>
+          <li><span class="lesson-number">Level 2:</span> <span data-i18n="victory-l2">CSS kan inhoud niet verbergen voor de DOM</span></li>
+          <li><span class="lesson-number">Level 3:</span> <span data-i18n="victory-l3">JavaScript-variabelen zijn openbaar</span></li>
+          <li><span class="lesson-number">Level 4:</span> <span data-i18n="victory-l4">Browseropslag is niet veilig</span></li>
+          <li><span class="lesson-number">Level 5:</span> <span data-i18n="victory-l5">Echte beveiliging vereist verdediging in de diepte</span></li>
         </ul>
 
-        <p style="color: rgba(255,255,255,0.7); margin-bottom: 24px;">
-          Want to learn more about real web security?
+        <p style="color: rgba(255,255,255,0.7); margin-bottom: 24px;" data-i18n="victory-learn-more">
+          Wil je meer leren over echte webbeveiliging?
         </p>
 
-        <a href="https://pasquil.nl" target="_blank" rel="noopener" class="victory-cta">
-          Visit Pasquil.nl →
+        <a href="https://pasquil.nl" target="_blank" rel="noopener" class="victory-cta" data-i18n="victory-cta">
+          Bezoek Pasquil.nl →
         </a>
       </div>
     </div>
@@ -167,12 +168,14 @@
       <div class="footer-links">
         <span class="copyright" data-sjonnie-part2="SQU1L_" aria-hidden="true">© 2026 Pasquil</span>
       </div>
-      Built with 💜 by <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a>
+      <img src="../img/pasquil-logo.png" alt="Pasquil" class="footer-logo">
+      <span data-i18n="footer-text-short">Gemaakt met 💜 door <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a></span>
     </footer>
 
   </div>
 
   <script src="../js/level5.js"></script>
+  <script src="../js/i18n.js"></script>
   <script src="../js/game.js"></script>
 </body>
 </html>

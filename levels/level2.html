@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +11,12 @@
 
     <!-- Level Header -->
     <header class="level-header">
-      <a href="../index.html" class="back-link">← Back to levels</a>
+      <a href="../index.html" class="back-link" data-i18n="back-to-levels">← Terug naar levels</a>
       <div class="level-badge">Level 2</div>
-      <h1>👻 The Invisible Vault</h1>
-      <p class="level-subtitle">CSS-hidden content — can you see what's really on this page?</p>
-      <div class="sjonnie-says">
-        <strong>Sjonnie says:</strong> "I've made this page INVISIBLE-proof. Even if you look at it, you won't see anything. My CSS skills are unmatched!"
+      <h1 data-i18n="l2-title">👻 De Onzichtbare Kluis</h1>
+      <p class="level-subtitle" data-i18n="l2-subtitle">CSS-verborgen inhoud — kun jij zien wat er echt op deze pagina staat?</p>
+      <div class="sjonnie-says" data-i18n="l2-sjonnie">
+        <strong>Sjonnie zegt:</strong> "Ik heb deze pagina ONZICHTBAAR-proof gemaakt. Zelfs als je ernaar kijkt, zie je niks. Mijn CSS-skills zijn ongeëvenaard!"
       </div>
     </header>
 
@@ -24,47 +24,47 @@
     <div class="page-content">
       <div class="vault-warnings">
 
-        <div class="vault-warning-banner">
-          ⚠️ AUTHORIZED PERSONNEL ONLY ⚠️
+        <div class="vault-warning-banner" data-i18n="l2-warning1">
+          ⚠️ ALLEEN BEVOEGD PERSONEEL ⚠️
         </div>
 
         <span class="vault-padlock">🔒</span>
 
-        <div class="vault-classified">CLASSIFIED</div>
+        <div class="vault-classified" data-i18n="l2-classified">GEHEIM</div>
 
-        <p class="vault-text">
-          This is Sjonnie's Maximum Security Vault. Nothing to see here.
-          Absolutely nothing. Don't even bother looking. The password is hidden
-          so well that not even Sjonnie remembers where he put it. (He does, though.
-          He's just bad at hiding things.)
+        <p class="vault-text" data-i18n="l2-text1">
+          Dit is Sjonnie's Maximum Security Kluis. Niks te zien hier.
+          Helemaal niks. Doe niet eens de moeite om te kijken. Het wachtwoord is zo goed
+          verstopt dat zelfs Sjonnie niet meer weet waar hij het heeft gelaten. (Maar eigenlijk
+          wel. Hij is gewoon slecht in dingen verstoppen.)
         </p>
 
-        <div class="vault-warning-banner">
-          🚫 DO NOT INSPECT THIS PAGE 🚫
+        <div class="vault-warning-banner" data-i18n="l2-warning2">
+          🚫 INSPECTEER DEZE PAGINA NIET 🚫
         </div>
 
         <!-- Hidden element 1: display none red herring -->
         <div style="display: none;">
-          <p>Nice try! But this isn't the password. Keep looking...</p>
+          <p data-i18n="l2-redherring1">Goed geprobeerd! Maar dit is niet het wachtwoord. Zoek verder...</p>
         </div>
 
-        <p class="vault-text">
-          Sjonnie spent 3 whole hours making sure this vault is impenetrable. He even
-          asked ChatGPT how to hide things on a webpage. The answer was "use CSS" and
-          Sjonnie said "perfect, nobody knows CSS."
+        <p class="vault-text" data-i18n="l2-text2">
+          Sjonnie heeft 3 hele uren besteed om deze kluis ondoordringbaar te maken. Hij vroeg
+          zelfs ChatGPT hoe je dingen op een webpagina kunt verstoppen. Het antwoord was "gebruik CSS"
+          en Sjonnie zei "perfect, niemand kent CSS."
         </p>
 
         <!-- Hidden element 2: same-color text red herring -->
-        <span style="color: #1a1a2e; user-select: all;">Getting warmer! But not here either.</span>
+        <span style="color: #1a1a2e; user-select: all;" data-i18n="l2-redherring2">Je wordt warmer! Maar hier ook niet.</span>
 
         <!-- Hidden element 3: THE ACTUAL PASSWORD -->
         <div class="totally-not-the-password">
           <p style="font-size: 0; opacity: 0; position: absolute;">G33STELIJK</p>
         </div>
 
-        <p class="vault-text">
-          Remember: true security means making things invisible. If nobody can see it,
-          nobody can hack it. That's what Sjonnie learned from a YouTube tutorial titled
+        <p class="vault-text" data-i18n="l2-text3">
+          Onthoud: echte beveiliging betekent dingen onzichtbaar maken. Als niemand het kan zien,
+          kan niemand het hacken. Dat heeft Sjonnie geleerd van een YouTube tutorial genaamd
           "CSS Security for Beginners (UNHACKABLE)."
         </p>
 
@@ -74,40 +74,41 @@
 
       <!-- Password Section -->
       <section class="password-section" id="password-section">
-        <h2>🔐 Enter the password</h2>
+        <h2 data-i18n="enter-password">🔐 Voer het wachtwoord in</h2>
         <form id="password-form" onsubmit="return handlePasswordSubmit(event)">
           <div class="input-group">
             <input
               type="text"
               id="password-input"
-              placeholder="Type the password here..."
+              placeholder="Typ het wachtwoord hier..."
+              data-i18n-placeholder="password-placeholder"
               autocomplete="off"
               spellcheck="false"
             >
-            <button type="submit" class="btn-submit">Check →</button>
+            <button type="submit" class="btn-submit" data-i18n="btn-submit">Controleer →</button>
           </div>
         </form>
         <div id="feedback" class="feedback hidden"></div>
         <div id="next-level" class="next-level hidden">
-          <a href="level3.html" class="btn-next">Proceed to Level 3 — Console Cowboys →</a>
+          <a href="level3.html" class="btn-next" data-i18n="l2-next">Ga naar Level 3 — Console Cowboys →</a>
         </div>
       </section>
 
       <!-- Hints -->
       <section class="hints-section">
-        <button class="btn-hint" onclick="showNextHint()">💡 Need a hint?</button>
+        <button class="btn-hint" onclick="showNextHint()" data-i18n="btn-hint">💡 Hint nodig?</button>
         <div id="hints-container">
           <div class="hint hidden" data-hint="1">
             <span class="hint-label">Hint 1:</span>
-            <p>Just because you can't see it doesn't mean it's not there.</p>
+            <span data-i18n="l2-hint1"><p>Alleen omdat je het niet kunt zien, betekent niet dat het er niet is.</p></span>
           </div>
           <div class="hint hidden" data-hint="2">
             <span class="hint-label">Hint 2:</span>
-            <p>Open the Inspector and search the elements. Some things are hiding in plain sight... or rather, hiding in plain HTML.</p>
+            <span data-i18n="l2-hint2"><p>Open de Inspector en doorzoek de elementen. Sommige dingen verstoppen zich in het volle zicht... of beter gezegd, in de HTML.</p></span>
           </div>
           <div class="hint hidden" data-hint="3">
             <span class="hint-label">Hint 3:</span>
-            <p>Look for elements with suspicious classes. Try Ctrl+F in the Inspector and search for "password".</p>
+            <span data-i18n="l2-hint3"><p>Zoek naar elementen met verdachte classes. Probeer Ctrl+F in de Inspector en zoek naar "password".</p></span>
           </div>
         </div>
       </section>
@@ -130,11 +131,13 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-      Built with 💜 by <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a>
+      <img src="../img/pasquil-logo.png" alt="Pasquil" class="footer-logo">
+      <span data-i18n="footer-text-short">Gemaakt met 💜 door <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a></span>
     </footer>
 
   </div>
 
+  <script src="../js/i18n.js"></script>
   <script src="../js/game.js"></script>
 </body>
 </html>

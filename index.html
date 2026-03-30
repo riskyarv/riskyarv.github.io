@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,17 +11,18 @@
 
     <!-- Hero -->
     <section class="hero">
+      <img src="img/pasquil-logo.png" alt="Pasquil" class="hero-logo">
       <span class="hero-emoji">🔐</span>
-      <h1>Pasquil's Cyber Heist</h1>
-      <p class="subtitle">Sjonnie built 5 "secure" web pages. Your mission: find the hidden password in each one.</p>
+      <h1 data-i18n="hero-title">Pasquil's Cyber Heist</h1>
+      <p class="subtitle" data-i18n="hero-subtitle">Sjonnie heeft 5 "beveiligde" webpagina's gebouwd. Jouw missie: vind het verborgen wachtwoord in elke pagina.</p>
     </section>
 
     <!-- Intro -->
-    <p class="intro-text">
-      Welcome to Pasquil's Cyber Playground! Our bumbling intern, <strong>Stageair Sjonnie</strong>, has been building
-      internal tools... and let's just say his security practices are <em>"creative."</em> Your mission: find the
-      password hidden in each of Sjonnie's terrible web pages. Each password unlocks the next level.
-      Can you hack all five before Sjonnie notices?
+    <p class="intro-text" data-i18n="intro-text">
+      Welkom bij Pasquil's Cyber Playground! Onze knullige stagiair, <strong>Stagiair Sjonnie</strong>, heeft
+      interne tools gebouwd... en laten we zeggen dat zijn beveiligingspraktijken <em>"creatief"</em> zijn.
+      Jouw missie: vind het wachtwoord dat verborgen zit in elk van Sjonnie's verschrikkelijke webpagina's.
+      Elk wachtwoord ontgrendelt het volgende level. Kun jij alle vijf hacken voordat Sjonnie het doorheeft?
     </p>
 
     <!-- Level Cards Grid -->
@@ -31,58 +32,59 @@
         <span class="card-emoji">📖</span>
         <div class="card-number">Level 1</div>
         <div class="card-title">Secret Diary</div>
-        <div class="card-status"><span class="lock">🔓</span> Unlocked</div>
+        <div class="card-status" data-i18n="status-unlocked"><span class="lock">🔓</span> Ontgrendeld</div>
       </a>
 
       <a href="levels/level2.html" class="level-card locked" data-level="2">
         <span class="card-emoji">👻</span>
         <div class="card-number">Level 2</div>
         <div class="card-title">Invisible Vault</div>
-        <div class="card-status"><span class="lock">🔒</span> Locked</div>
+        <div class="card-status" data-i18n="status-locked"><span class="lock">🔒</span> Vergrendeld</div>
       </a>
 
       <a href="levels/level3.html" class="level-card locked" data-level="3">
         <span class="card-emoji">🤠</span>
         <div class="card-number">Level 3</div>
         <div class="card-title">Console Cowboys</div>
-        <div class="card-status"><span class="lock">🔒</span> Locked</div>
+        <div class="card-status" data-i18n="status-locked"><span class="lock">🔒</span> Vergrendeld</div>
       </a>
 
       <a href="levels/level4.html" class="level-card locked" data-level="4">
         <span class="card-emoji">🍪</span>
         <div class="card-number">Level 4</div>
         <div class="card-title">Cookie Monster</div>
-        <div class="card-status"><span class="lock">🔒</span> Locked</div>
+        <div class="card-status" data-i18n="status-locked"><span class="lock">🔒</span> Vergrendeld</div>
       </a>
 
       <a href="levels/level5.html" class="level-card locked" data-level="5">
         <span class="card-emoji">🏆</span>
         <div class="card-number">Level 5</div>
         <div class="card-title">The Final Heist</div>
-        <div class="card-status"><span class="lock">🔒</span> Locked</div>
+        <div class="card-status" data-i18n="status-locked"><span class="lock">🔒</span> Vergrendeld</div>
       </a>
 
     </div>
 
     <!-- Rules Box -->
     <div class="rules-box">
-      <h3>🔧 How to Play</h3>
-      <p>
-        All you need is a modern browser with DevTools (press <strong>F12</strong>).
-        No external tools, no server hacking — everything is in the browser.
-        Each level hides a password using a real web security concept.
-        Find it, type it in, and unlock the next challenge. Good luck, hacker!
+      <h3 data-i18n="rules-title">🔧 Zo speel je</h3>
+      <p data-i18n="rules-text">
+        Je hebt alleen een moderne browser met DevTools nodig (druk op <strong>F12</strong>).
+        Geen externe tools, geen server-hacking — alles zit in de browser.
+        Elk level verbergt een wachtwoord met een echt web-security concept.
+        Vind het, typ het in, en ontgrendel de volgende uitdaging. Succes, hacker!
       </p>
     </div>
 
     <!-- Footer -->
-    <footer class="site-footer">
-      Built with 💜 by <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a> —
-      Making the internet safer, one terrible password at a time.
+    <footer class="site-footer" data-i18n="footer-text">
+      Gemaakt met 💜 door <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a> —
+      Het internet veiliger maken, één verschrikkelijk wachtwoord per keer.
     </footer>
 
   </div>
 
+  <script src="js/i18n.js"></script>
   <script src="js/game.js"></script>
 </body>
 </html>

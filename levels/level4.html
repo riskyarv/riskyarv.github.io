@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +11,12 @@
 
     <!-- Level Header -->
     <header class="level-header">
-      <a href="../index.html" class="back-link">← Back to levels</a>
+      <a href="../index.html" class="back-link" data-i18n="back-to-levels">← Terug naar levels</a>
       <div class="level-badge">Level 4</div>
-      <h1>🍪 Cookie Monster</h1>
-      <p class="level-subtitle">Client-side storage — cookies, localStorage, and secrets</p>
-      <div class="sjonnie-says">
-        <strong>Sjonnie says:</strong> "I baked the most secure cookies on the internet. Nobody can read cookies, that's why they're called cookies — they crumble before you can read them. That's how it works, right?"
+      <h1 data-i18n="l4-title">🍪 Cookie Monster</h1>
+      <p class="level-subtitle" data-i18n="l4-subtitle">Client-side opslag — cookies, localStorage en geheimen</p>
+      <div class="sjonnie-says" data-i18n="l4-sjonnie">
+        <strong>Sjonnie zegt:</strong> "Ik heb de meest beveiligde cookies van het internet gebakken. Niemand kan cookies lezen, daarom heten ze cookies — ze verkruimelen voordat je ze kunt lezen. Zo werkt het toch?"
       </div>
     </header>
 
@@ -30,79 +30,79 @@
         </div>
 
         <div class="bakery-text">
-          <h3>🏪 Welcome to Sjonnie's Cookie Corner!</h3>
-          <p>
-            Home of the finest digital cookies in all of the Netherlands! Every visitor
-            gets a complimentary batch of cookies — freshly baked and stored right in
-            your browser. We take your privacy very seriously (we eat all the cookies
-            ourselves 🍪).
+          <h3 data-i18n="l4-welcome-title">🏪 Welkom bij Sjonnie's Cookie Corner!</h3>
+          <p data-i18n="l4-welcome-text">
+            Thuisbasis van de lekkerste digitale koekjes van heel Nederland! Elke bezoeker
+            krijgt een gratis batch cookies — vers gebakken en opgeslagen in je browser.
+            We nemen je privacy heel serieus (we eten alle koekjes zelf op 🍪).
           </p>
         </div>
 
-        <p class="bakery-pun">🧑‍🍳 "A smart cookie always checks the jar." — Ancient Baking Proverb</p>
+        <p class="bakery-pun" data-i18n="l4-pun1">🧑‍🍳 "Een slim koekje controleert altijd de koektrommel." — Oud Bakkerspreekwoord</p>
 
         <div class="bakery-text">
-          <h3>📋 Today's Menu</h3>
-          <p>
-            <strong>🍫 Dark Chocolate Chip</strong> — Classic and secure<br>
-            <strong>🧇 Stroopwafels</strong> — A Dutch specialty, stored locally<br>
-            <strong>🔐 Secret Recipe</strong> — Our prize-winning recipe, encoded for safe-keeping<br>
-            <strong>🍪 Tracking Cookies</strong> — Just kidding! No thanks.
+          <h3 data-i18n="l4-menu-title">📋 Menu van Vandaag</h3>
+          <p data-i18n="l4-menu-text">
+            <strong>🍫 Pure Chocolade Chip</strong> — Klassiek en veilig<br>
+            <strong>🧇 Stroopwafels</strong> — Een Nederlandse specialiteit, lokaal opgeslagen<br>
+            <strong>🔐 Geheim Recept</strong> — Ons prijswinnende recept, gecodeerd voor de veiligheid<br>
+            <strong>🍪 Tracking Cookies</strong> — Grapje! Nee bedankt.
           </p>
         </div>
 
-        <p class="bakery-pun">💡 "The proof is in the pudding, but the password is in the cookie." — Sjonnie</p>
+        <p class="bakery-pun" data-i18n="l4-pun2">💡 "Het bewijs zit in de pudding, maar het wachtwoord zit in de cookie." — Sjonnie</p>
 
         <div class="bakery-text">
-          <h3>🤫 A Word From Our Baker</h3>
-          <p>
-            Sjonnie is very proud of his cookie storage system. He stores everything
-            in the browser — session data, user preferences, and maybe even a secret
-            or two. He heard that Base64 is "military-grade encryption" from a Reddit
-            post, so naturally, that's what he uses for his most precious recipe.
+          <h3 data-i18n="l4-baker-title">🤫 Een Woord van Onze Bakker</h3>
+          <p data-i18n="l4-baker-text">
+            Sjonnie is erg trots op zijn cookie-opslagsysteem. Hij slaat alles op in de
+            browser — sessiedata, gebruikersvoorkeuren, en misschien zelfs een geheimpje
+            of twee. Hij hoorde dat Base64 "militaire encryptie" is van een Reddit-bericht,
+            dus natuurlijk gebruikt hij dat voor zijn kostbaarste recept.
           </p>
         </div>
 
-        <p class="bakery-pun">🍪 "That's the way the cookie crumbles... into your Application tab." 🍪</p>
+        <p class="bakery-pun" data-i18n="l4-pun3">🍪 "Zo kruimelt de koek... in je Application-tabblad." 🍪</p>
 
       </div>
 
       <!-- Password Section -->
       <section class="password-section" id="password-section">
-        <h2>🔐 Enter the password</h2>
+        <h2 data-i18n="enter-password">🔐 Voer het wachtwoord in</h2>
         <form id="password-form" onsubmit="return handlePasswordSubmit(event)">
           <div class="input-group">
             <input
               type="text"
               id="password-input"
-              placeholder="Type the password here..."
+              placeholder="Typ het wachtwoord hier..."
+              data-i18n-placeholder="password-placeholder"
               autocomplete="off"
               spellcheck="false"
             >
-            <button type="submit" class="btn-submit">Check →</button>
+            <button type="submit" class="btn-submit" data-i18n="btn-submit">Controleer →</button>
           </div>
         </form>
         <div id="feedback" class="feedback hidden"></div>
         <div id="next-level" class="next-level hidden">
-          <a href="level5.html" class="btn-next">Proceed to Level 5 — The Final Heist →</a>
+          <a href="level5.html" class="btn-next" data-i18n="l4-next">Ga naar Level 5 — De Laatste Heist →</a>
         </div>
       </section>
 
       <!-- Hints -->
       <section class="hints-section">
-        <button class="btn-hint" onclick="showNextHint()">💡 Need a hint?</button>
+        <button class="btn-hint" onclick="showNextHint()" data-i18n="btn-hint">💡 Hint nodig?</button>
         <div id="hints-container">
           <div class="hint hidden" data-hint="1">
             <span class="hint-label">Hint 1:</span>
-            <p>Sjonnie loves cookies. So does your browser. Have you checked what cookies this page left behind?</p>
+            <span data-i18n="l4-hint1"><p>Sjonnie is dol op koekjes. Je browser ook. Heb je al gecheckt welke cookies deze pagina heeft achtergelaten?</p></span>
           </div>
           <div class="hint hidden" data-hint="2">
             <span class="hint-label">Hint 2:</span>
-            <p>Go to DevTools → Application tab → Cookies. One of these cookies looks a bit... encoded.</p>
+            <span data-i18n="l4-hint2"><p>Ga naar DevTools → Application tab → Cookies. Een van deze cookies ziet er een beetje... gecodeerd uit.</p></span>
           </div>
           <div class="hint hidden" data-hint="3">
             <span class="hint-label">Hint 3:</span>
-            <p>The <code>secret_recipe</code> cookie is Base64-encoded. Decode it with <code>atob('SzAwS0pFU19NT05TVEVS')</code> in the console.</p>
+            <span data-i18n="l4-hint3"><p>De <code>secret_recipe</code> cookie is Base64-gecodeerd. Decodeer het met <code>atob('SzAwS0pFU19NT05TVEVS')</code> in de console.</p></span>
           </div>
         </div>
       </section>
@@ -125,11 +125,13 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-      Built with 💜 by <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a>
+      <img src="../img/pasquil-logo.png" alt="Pasquil" class="footer-logo">
+      <span data-i18n="footer-text-short">Gemaakt met 💜 door <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a></span>
     </footer>
 
   </div>
 
+  <script src="../js/i18n.js"></script>
   <script src="../js/game.js"></script>
   <script>
     // Sjonnie's Cookie Bakery — Setting all the "secure" cookies and storage

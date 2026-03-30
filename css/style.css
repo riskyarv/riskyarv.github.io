@@ -9,6 +9,7 @@
   --purple: #6C2DC7;
   --purple-light: #8B5CF6;
   --purple-dark: #5521A0;
+  --pasquil-blue: #0B1D51;
   --orange: #FF6B35;
   --orange-light: #FF8C5A;
   --yellow: #FFD23F;
@@ -90,7 +91,7 @@ img {
 .hero {
   text-align: center;
   padding: 60px 24px 40px;
-  background: linear-gradient(135deg, var(--purple) 0%, var(--purple-dark) 100%);
+  background: linear-gradient(135deg, var(--pasquil-blue) 0%, #071438 100%);
   color: var(--white);
 }
 
@@ -1195,6 +1196,83 @@ img {
 @keyframes typewriter {
   from { width: 0; }
   to { width: 100%; }
+}
+
+/* ============================================
+   LANGUAGE SWITCHER
+   ============================================ */
+
+.lang-switcher {
+  position: fixed;
+  top: 12px;
+  right: 16px;
+  z-index: 9998;
+  display: flex;
+  gap: 0;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.lang-btn {
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.7);
+  transition: background 0.2s, color 0.2s;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: 0.5px;
+}
+
+.lang-btn:hover {
+  background: rgba(255,255,255,0.25);
+  color: var(--white);
+}
+
+.lang-btn.active {
+  background: var(--orange);
+  color: var(--white);
+}
+
+/* Ensure switcher is visible on light pages */
+.diary-page .lang-btn,
+.bakery-page .lang-btn {
+  background: rgba(0,0,0,0.08);
+  color: rgba(0,0,0,0.5);
+}
+
+.diary-page .lang-btn:hover,
+.bakery-page .lang-btn:hover {
+  background: rgba(0,0,0,0.15);
+  color: var(--charcoal);
+}
+
+.diary-page .lang-btn.active,
+.bakery-page .lang-btn.active {
+  background: var(--orange);
+  color: var(--white);
+}
+
+/* ============================================
+   PASQUIL LOGO
+   ============================================ */
+
+.hero-logo {
+  display: block;
+  height: 42px;
+  margin: 0 auto 16px;
+}
+
+.footer-logo {
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 4px;
 }
 
 /* ============================================

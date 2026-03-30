@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +11,12 @@
 
     <!-- Level Header -->
     <header class="level-header">
-      <a href="../index.html" class="back-link">← Back to levels</a>
+      <a href="../index.html" class="back-link" data-i18n="back-to-levels">← Terug naar levels</a>
       <div class="level-badge">Level 3</div>
-      <h1>🤠 Console Cowboys</h1>
-      <p class="level-subtitle">JavaScript secrets — what's hiding in the code?</p>
-      <div class="sjonnie-says">
-        <strong>Sjonnie says:</strong> "This password is protected by my Ultra-Secure JavaScript Encryption™. It uses military-grade ROT-13 quantum algorithms. UNBREAKABLE."
+      <h1 data-i18n="l3-title">🤠 Console Cowboys</h1>
+      <p class="level-subtitle" data-i18n="l3-subtitle">JavaScript-geheimen — wat verstopt zich in de code?</p>
+      <div class="sjonnie-says" data-i18n="l3-sjonnie">
+        <strong>Sjonnie zegt:</strong> "Dit wachtwoord is beschermd door mijn Ultra-Secure JavaScript Encryption™. Het gebruikt military-grade ROT-13 quantum algoritmes. ONKRAAKBAAR."
       </div>
     </header>
 
@@ -25,19 +25,19 @@
       <div class="terminal-content">
 
         <div class="terminal-box">
-          <span class="prompt">sjonnie@pasquil:~$</span> <span class="string">cat security_status.txt</span><br><br>
+          <span class="prompt">sjonnie@pasquil:~$</span> <span class="string" data-i18n="l3-terminal-cmd">cat beveiligingsstatus.txt</span><br><br>
           <span class="comment">// ================================</span><br>
-          <span class="comment">// SJONNIE'S SECURITY STATUS REPORT</span><br>
+          <span class="comment" data-i18n="l3-report-title">// SJONNIE'S BEVEILIGINGSSTATUSRAPPORT</span><br>
           <span class="comment">// ================================</span><br><br>
-          <span class="prompt">&gt;</span> Firewall: ON (it's a picture of a wall on fire 🔥)<br>
-          <span class="prompt">&gt;</span> Encryption: MAXIMUM (I renamed the file to .encrypted)<br>
-          <span class="prompt">&gt;</span> Password Storage: ULTRA SECURE (it's in a variable)<br>
-          <span class="prompt">&gt;</span> Backup Plan: blame the intern (wait, I AM the intern)
+          <span class="prompt">&gt;</span> <span data-i18n="l3-firewall">Firewall: AAN (het is een foto van een muur in brand 🔥)</span><br>
+          <span class="prompt">&gt;</span> <span data-i18n="l3-encryption">Encryptie: MAXIMAAL (ik heb het bestand hernoemd naar .encrypted)</span><br>
+          <span class="prompt">&gt;</span> <span data-i18n="l3-storage">Wachtwoord Opslag: ULTRA VEILIG (het zit in een variabele)</span><br>
+          <span class="prompt">&gt;</span> <span data-i18n="l3-backup">Backup Plan: geef de stagiair de schuld (wacht, IK ben de stagiair)</span>
         </div>
 
         <div class="terminal-taunt">
-          <h3>🔒 Unbreakable Password Checker</h3>
-          <p>Protected by Sjonnie's Ultra-Secure JavaScript Encryption™</p>
+          <h3 data-i18n="l3-taunt-title">🔒 Onkraakbare Wachtwoord Checker</h3>
+          <p data-i18n="l3-taunt-sub">Beschermd door Sjonnie's Ultra-Secure JavaScript Encryption™</p>
         </div>
 
         <!-- Access Denied animation -->
@@ -46,52 +46,53 @@
         </div>
 
         <div class="terminal-box">
-          <span class="comment">// Fun fact: Sjonnie stores all his secrets in JavaScript</span><br>
-          <span class="comment">// variables because "nobody ever reads JavaScript."</span><br><br>
-          <span class="comment">// He also has a habit of talking to himself in console.log</span><br>
-          <span class="comment">// statements. Developers are chatty like that.</span><br><br>
-          <span class="prompt">&gt;</span> <span class="string">"The password is safe. I put it in an object. Objects are private, right?"</span><br>
-          <span class="prompt">&gt;</span> <span class="string">"— Sjonnie, moments before disaster"</span>
+          <span class="comment" data-i18n="l3-funfact1">// Leuk weetje: Sjonnie slaat al zijn geheimen op in JavaScript</span><br>
+          <span class="comment" data-i18n="l3-funfact2">// variabelen omdat "niemand ooit JavaScript leest."</span><br><br>
+          <span class="comment" data-i18n="l3-funfact3">// Hij heeft ook de gewoonte om tegen zichzelf te praten in console.log</span><br>
+          <span class="comment" data-i18n="l3-funfact4">// statements. Developers zijn nu eenmaal praatgraag.</span><br><br>
+          <span class="prompt">&gt;</span> <span class="string" data-i18n="l3-quote1">"Het wachtwoord is veilig. Ik heb het in een object gestopt. Objecten zijn privé, toch?"</span><br>
+          <span class="prompt">&gt;</span> <span class="string" data-i18n="l3-quote2">"— Sjonnie, vlak voor de ramp"</span>
         </div>
 
       </div>
 
       <!-- Password Section -->
       <section class="password-section" id="password-section">
-        <h2>🔐 Enter the password</h2>
+        <h2 data-i18n="enter-password">🔐 Voer het wachtwoord in</h2>
         <form id="password-form" onsubmit="return handlePasswordSubmit(event)">
           <div class="input-group">
             <input
               type="text"
               id="password-input"
-              placeholder="Type the password here..."
+              placeholder="Typ het wachtwoord hier..."
+              data-i18n-placeholder="password-placeholder"
               autocomplete="off"
               spellcheck="false"
             >
-            <button type="submit" class="btn-submit">Check →</button>
+            <button type="submit" class="btn-submit" data-i18n="btn-submit">Controleer →</button>
           </div>
         </form>
         <div id="feedback" class="feedback hidden"></div>
         <div id="next-level" class="next-level hidden">
-          <a href="level4.html" class="btn-next">Proceed to Level 4 — Cookie Monster →</a>
+          <a href="level4.html" class="btn-next" data-i18n="l3-next">Ga naar Level 4 — Cookie Monster →</a>
         </div>
       </section>
 
       <!-- Hints -->
       <section class="hints-section">
-        <button class="btn-hint" onclick="showNextHint()">💡 Need a hint?</button>
+        <button class="btn-hint" onclick="showNextHint()" data-i18n="btn-hint">💡 Hint nodig?</button>
         <div id="hints-container">
           <div class="hint hidden" data-hint="1">
             <span class="hint-label">Hint 1:</span>
-            <p>Sjonnie talks to himself a lot. Have you checked where developers usually talk?</p>
+            <span data-i18n="l3-hint1"><p>Sjonnie praat veel tegen zichzelf. Heb je al gekeken waar developers meestal praten?</p></span>
           </div>
           <div class="hint hidden" data-hint="2">
             <span class="hint-label">Hint 2:</span>
-            <p>Open the Console tab in DevTools. Sjonnie might have left a message for you.</p>
+            <span data-i18n="l3-hint2"><p>Open het Console tabblad in DevTools. Sjonnie heeft misschien een berichtje voor je achtergelaten.</p></span>
           </div>
           <div class="hint hidden" data-hint="3">
             <span class="hint-label">Hint 3:</span>
-            <p>Type <code>sjonnieVault</code> in the console and press Enter.</p>
+            <span data-i18n="l3-hint3"><p>Typ <code>sjonnieVault</code> in de console en druk op Enter.</p></span>
           </div>
         </div>
       </section>
@@ -114,12 +115,14 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-      Built with 💜 by <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a>
+      <img src="../img/pasquil-logo.png" alt="Pasquil" class="footer-logo">
+      <span data-i18n="footer-text-short">Gemaakt met 💜 door <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a></span>
     </footer>
 
   </div>
 
   <script src="../js/level3.js"></script>
+  <script src="../js/i18n.js"></script>
   <script src="../js/game.js"></script>
 </body>
 </html>

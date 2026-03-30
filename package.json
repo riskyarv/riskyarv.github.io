@@ -1,0 +1,14 @@
+{
+  "name": "pasquil-cyber-heist",
+  "version": "1.0.0",
+  "description": "Pasquil's Cyber Heist — A 5-level browser hacking challenge game teaching web security concepts",
+  "scripts": {
+    "start": "npx serve . -l 8080",
+    "dev": "npx serve . -l 8080"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  },
+  "private": true,
+  "license": "UNLICENSED"
+}

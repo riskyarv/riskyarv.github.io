@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +11,12 @@
 
     <!-- Level Header -->
     <header class="level-header">
-      <a href="../index.html" class="back-link">← Back to levels</a>
+      <a href="../index.html" class="back-link" data-i18n="back-to-levels">← Terug naar levels</a>
       <div class="level-badge">Level 1</div>
-      <h1>📖 Sjonnie's Secret Diary</h1>
-      <p class="level-subtitle">HTML source code inspection — what secrets lurk in the source?</p>
-      <div class="sjonnie-says">
-        <strong>Sjonnie says:</strong> "I keep all my personal notes right in the code. Super private — nobody ever looks at HTML, right?"
+      <h1 data-i18n="l1-title">📖 Sjonnie's Geheime Dagboek</h1>
+      <p class="level-subtitle" data-i18n="l1-subtitle">HTML-broncode inspecteren — welke geheimen zitten er in de broncode?</p>
+      <div class="sjonnie-says" data-i18n="l1-sjonnie">
+        <strong>Sjonnie zegt:</strong> "Ik bewaar al mijn persoonlijke notities gewoon in de code. Super privé — niemand kijkt ooit naar HTML, toch?"
       </div>
     </header>
 
@@ -25,21 +25,21 @@
       <div class="diary-entries">
 
         <article class="diary-entry">
-          <div class="diary-date">📅 January 15, 2026</div>
-          <div class="diary-text">
-            <p>Day 1 at Pasquil! They gave me my own desk and everything. I told them I'm a
-            <em>"Full-Stack Security Engineer"</em> and they believed me! Today I set up the
-            company WiFi password. I made it really secure: <strong>password123</strong>.
-            Wait, I should probably change that...</p>
+          <div class="diary-date" data-i18n="l1-diary1-date">📅 15 januari 2026</div>
+          <div class="diary-text" data-i18n="l1-diary1-text">
+            <p>Dag 1 bij Pasquil! Ze hebben me een eigen bureau gegeven en alles. Ik vertelde ze dat ik een
+            <em>"Full-Stack Security Engineer"</em> ben en ze geloofden me! Vandaag heb ik het
+            WiFi-wachtwoord van het bedrijf ingesteld. Ik heb het echt veilig gemaakt: <strong>password123</strong>.
+            Wacht, ik moet dat waarschijnlijk veranderen...</p>
           </div>
         </article>
 
         <article class="diary-entry">
-          <div class="diary-date">📅 February 3, 2026</div>
-          <div class="diary-text">
-            <p>My cat, Tulip, keeps walking on my keyboard. She typed "asdfjkl;" and honestly,
-            that's more secure than most of my passwords. Maybe I should let her be the
-            security consultant. 🐱</p>
+          <div class="diary-date" data-i18n="l1-diary2-date">📅 3 februari 2026</div>
+          <div class="diary-text" data-i18n="l1-diary2-text">
+            <p>Mijn kat, Tulip, loopt steeds over mijn toetsenbord. Ze typte "asdfjkl;" en eerlijk gezegd
+            is dat veiliger dan de meeste van mijn wachtwoorden. Misschien moet ik haar de
+            beveiligingsconsultant maken. 🐱</p>
           </div>
         </article>
 
@@ -47,19 +47,19 @@
         <!-- Also please stop using your cat's name as passwords... -->
 
         <article class="diary-entry">
-          <div class="diary-date">📅 February 28, 2026</div>
-          <div class="diary-text">
-            <p>Boss asked me to "implement two-factor authentication." I put TWO password fields
-            on the login page. That's two factors, right? <em>Nailed it.</em> 💪</p>
+          <div class="diary-date" data-i18n="l1-diary3-date">📅 28 februari 2026</div>
+          <div class="diary-text" data-i18n="l1-diary3-text">
+            <p>De baas vroeg me om "tweefactorauthenticatie te implementeren." Ik heb TWEE wachtwoordvelden
+            op de loginpagina gezet. Dat zijn twee factoren, toch? <em>Geregeld.</em> 💪</p>
           </div>
         </article>
 
         <article class="diary-entry">
-          <div class="diary-date">📅 March 15, 2026</div>
-          <div class="diary-text">
-            <p>I read online that you should "never store passwords in plain text." So I wrote
-            them on a sticky note instead. Problem solved! The note is on my monitor where
-            nobody can see it... except everyone in the office. Whatever, it's fine. 🙃</p>
+          <div class="diary-date" data-i18n="l1-diary4-date">📅 15 maart 2026</div>
+          <div class="diary-text" data-i18n="l1-diary4-text">
+            <p>Ik las online dat je "wachtwoorden nooit in platte tekst moet opslaan." Dus heb ik ze
+            op een sticky note geschreven. Probleem opgelost! De notitie hangt op mijn monitor waar
+            niemand het kan zien... behalve iedereen op kantoor. Maakt niet uit, is prima. 🙃</p>
           </div>
         </article>
 
@@ -67,40 +67,41 @@
 
       <!-- Password Section -->
       <section class="password-section" id="password-section">
-        <h2>🔐 Enter the password</h2>
+        <h2 data-i18n="enter-password">🔐 Voer het wachtwoord in</h2>
         <form id="password-form" onsubmit="return handlePasswordSubmit(event)">
           <div class="input-group">
             <input
               type="text"
               id="password-input"
-              placeholder="Type the password here..."
+              placeholder="Typ het wachtwoord hier..."
+              data-i18n-placeholder="password-placeholder"
               autocomplete="off"
               spellcheck="false"
             >
-            <button type="submit" class="btn-submit">Check →</button>
+            <button type="submit" class="btn-submit" data-i18n="btn-submit">Controleer →</button>
           </div>
         </form>
         <div id="feedback" class="feedback hidden"></div>
         <div id="next-level" class="next-level hidden">
-          <a href="level2.html" class="btn-next">Proceed to Level 2 — The Invisible Vault →</a>
+          <a href="level2.html" class="btn-next" data-i18n="l1-next">Ga naar Level 2 — De Onzichtbare Kluis →</a>
         </div>
       </section>
 
       <!-- Hints -->
       <section class="hints-section">
-        <button class="btn-hint" onclick="showNextHint()">💡 Need a hint?</button>
+        <button class="btn-hint" onclick="showNextHint()" data-i18n="btn-hint">💡 Hint nodig?</button>
         <div id="hints-container">
           <div class="hint hidden" data-hint="1">
             <span class="hint-label">Hint 1:</span>
-            <p>Sjonnie writes notes to himself that only he can see... or can he?</p>
+            <span data-i18n="l1-hint1"><p>Sjonnie schrijft notities voor zichzelf die alleen hij kan lezen... of toch niet?</p></span>
           </div>
           <div class="hint hidden" data-hint="2">
             <span class="hint-label">Hint 2:</span>
-            <p>What you see isn't everything. Try viewing what's behind the curtain.</p>
+            <span data-i18n="l1-hint2"><p>Wat je ziet is niet alles. Probeer te kijken wat er achter het gordijn zit.</p></span>
           </div>
           <div class="hint hidden" data-hint="3">
             <span class="hint-label">Hint 3:</span>
-            <p>Right-click → "View Page Source" and look for Sjonnie's notes.</p>
+            <span data-i18n="l1-hint3"><p>Rechtermuisklik → "Paginabron bekijken" en zoek naar Sjonnie's notities.</p></span>
           </div>
         </div>
       </section>
@@ -123,11 +124,13 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-      Built with 💜 by <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a>
+      <img src="../img/pasquil-logo.png" alt="Pasquil" class="footer-logo">
+      <span data-i18n="footer-text-short">Gemaakt met 💜 door <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a></span>
     </footer>
 
   </div>
 
+  <script src="../js/i18n.js"></script>
   <script src="../js/game.js"></script>
 </body>
 </html>

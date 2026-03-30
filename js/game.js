@@ -19,14 +19,7 @@ const levelNames = {
   5: "The Final Heist",
 };
 
-const wrongMessages = [
-  "Nope! Sjonnie's secrets are safe... for now. 🔒",
-  "Wrong! Have you tried looking harder? 👀",
-  "Access Denied. Sjonnie is laughing at you. 😂",
-  "Not even close! Sjonnie's security prevails! 💪",
-  "Try again! The password is hiding in plain sight... 🙈",
-  "Incorrect! Sjonnie does a little victory dance. 💃",
-];
+const wrongMessageKeys = ["wrong-1", "wrong-2", "wrong-3", "wrong-4", "wrong-5", "wrong-6"];
 
 // SHA-256 hash using SubtleCrypto API
 async function sha256(message) {
@@ -84,7 +77,7 @@ async function handlePasswordSubmit(event) {
   const normalized = input.value.trim().toUpperCase();
 
   if (!normalized) {
-    feedback.textContent = "Type something first! Even Sjonnie can do that. ⌨️";
+    feedback.textContent = t("type-something") || "Type something first! Even Sjonnie can do that. ⌨️";
     feedback.className = "feedback error";
     return false;
   }
@@ -93,14 +86,12 @@ async function handlePasswordSubmit(event) {
   const isCorrect = hash === levelPasswords[level];
 
   if (isCorrect) {
-    // Success!
-    feedback.textContent =
-      "✅ PASSWORD CORRECT! You cracked Sjonnie's " +
-      (levelNames[level] || "level") +
-      "! " +
-      (level < 5
-        ? "Proceed to the next challenge."
-        : "You've completed the heist!");
+    const successMsg = (t("success-msg") || "✅ PASSWORD CORRECT! You cracked Sjonnie's {levelName}! ")
+      .replace("{levelName}", levelNames[level] || "level");
+    const suffix = level < 5
+      ? (t("success-proceed") || "Proceed to the next challenge.")
+      : (t("success-complete") || "You've completed the heist!");
+    feedback.textContent = successMsg + suffix;
     feedback.className = "feedback success";
 
     saveProgress(level);
@@ -125,7 +116,8 @@ async function handlePasswordSubmit(event) {
     document.querySelector(".btn-submit").disabled = true;
   } else {
     // Wrong password
-    const msg = wrongMessages[Math.floor(Math.random() * wrongMessages.length)];
+    const key = wrongMessageKeys[Math.floor(Math.random() * wrongMessageKeys.length)];
+    const msg = t(key) || "Nope! Sjonnie's secrets are safe... for now. 🔒";
     feedback.textContent = msg;
     feedback.className = "feedback error";
 
@@ -153,7 +145,7 @@ function showNextHint() {
 
       // Check if this was the last hint
       if (i === hints.length - 1) {
-        btn.textContent = "No more hints! You're on your own 🫡";
+        btn.textContent = t("no-more-hints") || "No more hints! You're on your own 🫡";
         btn.disabled = true;
       }
       break;
@@ -161,7 +153,7 @@ function showNextHint() {
   }
 
   if (!revealed && btn) {
-    btn.textContent = "No more hints! You're on your own 🫡";
+    btn.textContent = t("no-more-hints") || "No more hints! You're on your own 🫡";
     btn.disabled = true;
   }
 }
@@ -181,19 +173,19 @@ function updateLandingPage() {
 
     if (isCompleted) {
       card.classList.add("completed");
-      if (status) status.innerHTML = '<span class="lock">✅</span> Completed!';
+      if (status) status.innerHTML = t("status-completed") || '<span class="lock">✅</span> Completed!';
       card.style.pointerEvents = "auto";
       card.style.opacity = "1";
       card.style.filter = "none";
     } else if (previousCompleted) {
       card.classList.add("unlocked");
-      if (status) status.innerHTML = '<span class="lock">🔓</span> Unlocked';
+      if (status) status.innerHTML = t("status-unlocked") || '<span class="lock">🔓</span> Unlocked';
       card.style.pointerEvents = "auto";
       card.style.opacity = "1";
       card.style.filter = "none";
     } else {
       card.classList.add("locked");
-      if (status) status.innerHTML = '<span class="lock">🔒</span> Locked';
+      if (status) status.innerHTML = t("status-locked") || '<span class="lock">🔒</span> Locked';
     }
   });
 }
