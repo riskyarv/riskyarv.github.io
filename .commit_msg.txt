@@ -1,0 +1,21 @@
+Security review: Remove plaintext password comments from game.js
+
+Basher security audit identified critical vulnerability: plaintext password
+comments in js/game.js levelPasswords object were exposed via DevTools Sources
+tab, allowing players to bypass all puzzles.
+
+Changes:
+- Remove all inline password comments from levelPasswords object
+- SHA-256 hashes retained for server-side validation
+- All 5 levels verified solvable through intended puzzle mechanics
+
+Audit verified:
+- Level 1-5 clues and hidden elements function correctly
+- SHA-256 hashes match all passwords
+- Base64 encoding verified
+- No cross-level password leakage
+
+Deployment note: GAME_DESIGN.md and .squad/ should be excluded from
+production deployment to prevent additional information exposure.
+
+Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>
