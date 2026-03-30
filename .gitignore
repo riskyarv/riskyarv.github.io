@@ -8,3 +8,6 @@
 
 # Dependencies
 node_modules/
+
+# Dev files (not for production)
+GAME_DESIGN.md
