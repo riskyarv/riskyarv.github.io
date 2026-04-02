@@ -1,12 +1,12 @@
 /* ============================================
-   Pasquil's hacker heist — i18n System
+   Pasquil's Cyber Heist — i18n System
    ============================================ */
 
 const translations = {
   // ===================== SHARED =====================
-  "back-to-Levels": {
-    nl: "← Terug naar Levels",
-    en: "← Back to Levels"
+  "back-to-levels": {
+    nl: "← Terug naar levels",
+    en: "← Back to levels"
   },
   "enter-password": {
     nl: "🔐 Voer het wachtwoord in",
@@ -75,10 +75,10 @@ const translations = {
     en: "Incorrect! Pasquino does a little victory dance. 💃"
   },
 
-  // Success message template (use {LevelName})
+  // Success message template (use {levelName})
   "success-msg": {
-    nl: "✅ WACHTWOORD CORRECT! Je hebt Pasquino's {LevelName} gekraakt! ",
-    en: "✅ PASSWORD CORRECT! You cracked Pasquino's {LevelName}! "
+    nl: "✅ WACHTWOORD CORRECT! Je hebt Pasquino's {levelName} gekraakt! ",
+    en: "✅ PASSWORD CORRECT! You cracked Pasquino's {levelName}! "
   },
   "success-proceed": {
     nl: "Ga door naar de volgende uitdaging.",
@@ -105,30 +105,30 @@ const translations = {
 
   // ===================== INDEX PAGE =====================
   "hero-title": {
-    nl: "Pasquil's hacker heist",
-    en: "Pasquil's hacker heist"
+    nl: "Pasquil's Cyber Heist",
+    en: "Pasquil's Cyber Heist"
   },
   "hero-subtitle": {
-  nl: 'Je hebt toegang gekregen tot 5 zogenaamd "beveiligde" webpagina\'s van Pasquino. Jouw missie: Hack elk Level door het verborgen wachtwoord te achterhalen en in te voeren.',
-  en: 'You have gained access to 5 supposedly "secure" web pages built by Pasquino. Your mission: Hack each Level by uncovering the hidden password and use to to unlock the next Level.'
+  nl: 'Je hebt toegang gekregen tot 5 zogenaamd "beveiligde" webpagina\'s van Pasquino. Jouw missie: Hack elk level door het verborgen wachtwoord te achterhalen en in te voeren.',
+  en: 'You have gained access to 5 supposedly "secure" web pages built by Pasquino. Your mission: Hack each level by uncovering the hidden password and use to to unlock the next level.'
 },
 "intro-text": {
-  nl: 'Welkom bij Pasquil\'s Hackers Playground! Je bent binnengedrongen in het digitale prutswerk van onze knullige stagiair, <strong>Pasquino</strong>. Hij heeft interne webapplicatie gebouwd... en laten we zeggen dat zijn beveiligingspraktijken <em>"creatief"</em> zijn. Jouw missie is simpel: hack je een weg door Pasquino\'s webpagina\'s en vind op elk Level het verborgen wachtwoord. Elk gevonden wachtwoord geeft je toegang tot het volgende Level. Kun jij alle vijf Levels kraken voordat Pasquino doorheeft dat je in zijn systemen zit?',
-  en: 'Welcome to Pasquil\'s Hackers Playground! You have breached the digital mess of our clumsy intern, <strong>Pasquino</strong>. He has been building internal webapplications... and let\'s just say his security practices are <em>"creative."</em> Your mission is simple: hack your way through Pasquino\'s web pages and find the hidden password on each Level. Each password unlocks the next Level. Can you crack all five before Pasquino realizes you are inside his systems?'
+  nl: 'Welkom bij Pasquil\'s Hackers Playground! Je bent binnengedrongen in het digitale prutswerk van onze knullige stagiair, <strong>Pasquino</strong>. Hij heeft interne webapplicatie gebouwd... en laten we zeggen dat zijn beveiligingspraktijken <em>"creatief"</em> zijn. Jouw missie is simpel: hack je een weg door Pasquino\'s webpagina\'s en vind op elk level het verborgen wachtwoord. Elk gevonden wachtwoord geeft je toegang tot het volgende level. Kun jij alle vijf levels kraken voordat Pasquino doorheeft dat je in zijn systemen zit?',
+  en: 'Welcome to Pasquil\'s Hackers Playground! You have breached the digital mess of our clumsy intern, <strong>Pasquino</strong>. He has been building internal webapplications... and let\'s just say his security practices are <em>"creative."</em> Your mission is simple: hack your way through Pasquino\'s web pages and find the hidden password on each level. Each password unlocks the next level. Can you crack all five before Pasquino realizes you are inside his systems?'
 },
   "rules-title": {
     nl: "🔧 Zo speel je",
     en: "🔧 How to Play"
   },
   "rules-text": {
-    nl: ' Je hebt alleen een hackermindset en een moderne browser met DevTools nodig (druk op <strong>F12</strong>). Geen externe tools, geen server-hacking — alles zit in de browser. Elk Level verbergt een wachtwoord met echte security-flaws. Vind het, typ het in, en ontgrendel de volgende uitdaging. Succes, hacker!',
-    en: 'All you need is a hacker mindset and a modern browser with DevTools (press <strong>F12</strong>). No external tools, no server hacking — everything is in the browser. Each Level hides a password using a real security flaws. Find it, type it in, and unlock the next challenge. Good luck, hacker!'
+    nl: ' Je hebt alleen een hackermindset en een moderne browser met DevTools nodig (druk op <strong>F12</strong>). Geen externe tools, geen server-hacking — alles zit in de browser. Elk level verbergt een wachtwoord met echte security-flaws. Vind het, typ het in, en ontgrendel de volgende uitdaging. Succes, hacker!',
+    en: 'All you need is a hacker mindset and a modern browser with DevTools (press <strong>F12</strong>). No external tools, no server hacking — everything is in the browser. Each level hides a password using a real security flaws. Find it, type it in, and unlock the next challenge. Good luck, hacker!'
   },
 
-  // ===================== Level 1 =====================
+  // ===================== LEVEL 1 =====================
   "l1-title": {
-    nl: "📖 Pasquino's geheime dagboek",
-    en: "📖 Pasquino's secret diary"
+    nl: "📖 Pasquino's Geheime Dagboek",
+    en: "📖 Pasquino's Secret Diary"
   },
   "l1-subtitle": {
     nl: "HTML-broncode inspecteren — welke geheimen zitten er in de broncode?",
@@ -183,14 +183,14 @@ const translations = {
     en: "<p>Right-click → \"View Page Source\" and look for Pasquino's notes.</p>"
   },
   "l1-next": {
-    nl: "Ga naar Level 2 - De Onzichtbare Kluis →",
+    nl: "Ga naar Level 2 — De Onzichtbare Kluis →",
     en: "Proceed to Level 2 — The Invisible Vault →"
   },
 
-  // ===================== Level 2 =====================
+  // ===================== LEVEL 2 =====================
   "l2-title": {
-    nl: "👻 De onzichtbare kluis",
-    en: "👻 The invisible vault"
+    nl: "👻 De Onzichtbare Kluis",
+    en: "👻 The Invisible Vault"
   },
   "l2-subtitle": {
     nl: "CSS-verborgen inhoud — kun jij zien wat er echt op deze pagina staat?",
@@ -245,18 +245,18 @@ const translations = {
     en: '<p>Look for elements with suspicious classes. Try Ctrl+F in the Inspector and search for "password".</p>'
   },
   "l2-next": {
-    nl: "Ga naar Level 3 - Console cowboys →",
-    en: "Proceed to Level 3 — Console cowboys →"
+    nl: "Ga naar Level 3 — Console Cowboys →",
+    en: "Proceed to Level 3 — Console Cowboys →"
   },
 
-  // ===================== Level 3 =====================
+  // ===================== LEVEL 3 =====================
   "l3-title": {
-    nl: "🤠 Console cowboys",
-    en: "🤠 Console cowboys"
+    nl: "🤠 Console Cowboys",
+    en: "🤠 Console Cowboys"
   },
   "l3-subtitle": {
-    nl: "JavaScript-geheimen - wat verstopt zich in de code?",
-    en: "JavaScript secrets - what's hiding in the code?"
+    nl: "JavaScript-geheimen — wat verstopt zich in de code?",
+    en: "JavaScript secrets — what's hiding in the code?"
   },
   "l3-Pasquino": {
     nl: '<strong>Pasquino zegt:</strong> "Dit wachtwoord is beschermd door mijn Ultra-Secure JavaScript Encryption™. Het gebruikt military-grade ROT-13 quantum algoritmes. ONKRAAKBAAR."',
@@ -287,8 +287,8 @@ const translations = {
     en: "Backup Plan: blame the intern (wait, I AM the intern)"
   },
   "l3-taunt-title": {
-    nl: "🔒 Onkraakbare wachtwoord checker",
-    en: "🔒 Unbreakable password checker"
+    nl: "🔒 Onkraakbare Wachtwoord Checker",
+    en: "🔒 Unbreakable Password Checker"
   },
   "l3-taunt-sub": {
     nl: "Beschermd door Pasquino's Ultra-Secure JavaScript Encryption™",
@@ -331,14 +331,14 @@ const translations = {
     en: "<p>Type <code>PasquinoVault</code> in the console and press Enter.</p>"
   },
   "l3-next": {
-    nl: "Ga naar Level 4 - Cookie monster →",
-    en: "Proceed to Level 4 — Cookie monster →"
+    nl: "Ga naar Level 4 — Cookie Monster →",
+    en: "Proceed to Level 4 — Cookie Monster →"
   },
 
-  // ===================== Level 4 =====================
+  // ===================== LEVEL 4 =====================
   "l4-title": {
-    nl: "🍪 Cookie monster",
-    en: "🍪 Cookie monster"
+    nl: "🍪 Cookie Monster",
+    en: "🍪 Cookie Monster"
   },
   "l4-subtitle": {
     nl: "Client-side opslag — cookies, localStorage en geheimen",
@@ -349,20 +349,20 @@ const translations = {
     en: '<strong>Pasquino says:</strong> "I baked the most secure cookies on the internet. Nobody can read cookies, that\'s why they\'re called cookies — they crumble before you can read them. That\'s how it works, right?"'
   },
   "l4-welcome-title": {
-    nl: "🏪 Welkom bij Pasquino's cookie corner!",
-    en: "🏪 Welcome to Pasquino's cookie corner!"
+    nl: "🏪 Welkom bij Pasquino's Cookie Corner!",
+    en: "🏪 Welcome to Pasquino's Cookie Corner!"
   },
   "l4-welcome-text": {
     nl: "Thuisbasis van de lekkerste digitale koekjes van heel Nederland! Elke bezoeker krijgt een gratis batch cookies — vers gebakken en opgeslagen in je browser. We nemen je privacy heel serieus (we eten alle koekjes zelf op 🍪).",
     en: "Home of the finest digital cookies in all of the Netherlands! Every visitor gets a complimentary batch of cookies — freshly baked and stored right in your browser. We take your privacy very seriously (we eat all the cookies ourselves 🍪)."
   },
   "l4-pun1": {
-    nl: '🧑‍🍳 "Een slim koekje controleert altijd de koektrommel." — Oud bakkerspreekwoord',
-    en: '🧑‍🍳 "A smart cookie always checks the jar." — Ancient baking proverb'
+    nl: '🧑‍🍳 "Een slim koekje controleert altijd de koektrommel." — Oud Bakkerspreekwoord',
+    en: '🧑‍🍳 "A smart cookie always checks the jar." — Ancient Baking Proverb'
   },
   "l4-menu-title": {
-    nl: "📋 Menu van vandaag",
-    en: "📋 Today's menu"
+    nl: "📋 Menu van Vandaag",
+    en: "📋 Today's Menu"
   },
   "l4-menu-text": {
     nl: "<strong>🍫 Pure Chocolade Chip</strong> — Klassiek en veilig<br><strong>🧇 Stroopwafels</strong> — Een Nederlandse specialiteit, lokaal opgeslagen<br><strong>🔐 Geheim Recept</strong> — Ons prijswinnende recept, gecodeerd voor de veiligheid<br><strong>🍪 Tracking Cookies</strong> — Grapje! Nee bedankt.",
@@ -373,16 +373,16 @@ const translations = {
     en: '💡 "The proof is in the pudding, but the password is in the cookie." — Pasquino'
   },
   "l4-baker-title": {
-    nl: "🤫 Een woord van onze bakker",
-    en: "🤫 A word From our baker"
+    nl: "🤫 Een Woord van Onze Bakker",
+    en: "🤫 A Word From Our Baker"
   },
   "l4-baker-text": {
     nl: "Pasquino is erg trots op zijn cookie-opslagsysteem. Hij slaat alles op in de browser — sessiedata, gebruikersvoorkeuren, en misschien zelfs een geheimpje of twee. Hij hoorde dat Base64 \"militaire encryptie\" is van een Reddit-bericht, dus natuurlijk gebruikt hij dat voor zijn kostbaarste recept.",
     en: 'Pasquino is very proud of his cookie storage system. He stores everything in the browser — session data, user preferences, and maybe even a secret or two. He heard that Base64 is "military-grade encryption" from a Reddit post, so naturally, that\'s what he uses for his most precious recipe.'
   },
   "l4-pun3": {
-    nl: '🍪 "Zo kruimelt de koek... in je application-tabblad." 🍪',
-    en: '🍪 "That\'s the way the cookie crumbles... into your application tab." 🍪'
+    nl: '🍪 "Zo kruimelt de koek... in je Application-tabblad." 🍪',
+    en: '🍪 "That\'s the way the cookie crumbles... into your Application tab." 🍪'
   },
   "l4-hint1": {
     nl: "<p>Pasquino is dol op koekjes. Je browser ook. Heb je al gecheckt welke cookies deze pagina heeft achtergelaten?</p>",
@@ -397,14 +397,14 @@ const translations = {
     en: "<p>The <code>secret_recipe</code> cookie is Base64-encoded. Decode it with <code>atob('SzAwS0pFU19NT05TVEVS')</code> in the console.</p>"
   },
   "l4-next": {
-    nl: "Ga naar Level 5 — De laatste heist →",
-    en: "Proceed to Level 5 — The final heist →"
+    nl: "Ga naar Level 5 — De Laatste Heist →",
+    en: "Proceed to Level 5 — The Final Heist →"
   },
 
-  // ===================== Level 5 =====================
+  // ===================== LEVEL 5 =====================
   "l5-title": {
-    nl: "🏆 De laatste heist",
-    en: "🏆 The final heist"
+    nl: "🏆 De Laatste Heist",
+    en: "🏆 The Final Heist"
   },
   "l5-subtitle": {
     nl: "Meerlagig onderzoek — combineer alles wat je hebt geleerd",
@@ -415,8 +415,8 @@ const translations = {
     en: '<strong>Pasquino says:</strong> "You\'ve made it this far, but this page is UNBREAKABLE. I\'ve used every security measure I know: invisible text, encrypted cookies, obfuscated code... you\'ll never find this one."'
   },
   "l5-challenge-title": {
-    nl: "🎯 De ultieme uitdaging",
-    en: "🎯 The ultimate challenge"
+    nl: "🎯 De Ultieme Uitdaging",
+    en: "🎯 The Ultimate Challenge"
   },
   "l5-challenge-text": {
     nl: "Denk je dat je een hacker bent? Bewijs het. Vind alle drie de delen.",
@@ -427,8 +427,8 @@ const translations = {
     en: "Part"
   },
   "l5-info1": {
-    nl: "Dit is het — het Pasquil Maximum Security Office. Pasquino haalt alles uit de kast. Hij heeft het wachtwoord opgesplitst in <strong>drie delen</strong> en verspreid over de pagina. Elk deel is verborgen met een andere techniek die je in eerdere Levels bent tegengekomen.",
-    en: "This is it — the Pasquil Maximum Security Office. Pasquino's pulling out all the stops. He's split the password into <strong>three parts</strong> and scattered them across the page. Each part is hidden using a different technique you've encountered in previous Levels."
+    nl: "Dit is het — het Pasquil Maximum Security Office. Pasquino haalt alles uit de kast. Hij heeft het wachtwoord opgesplitst in <strong>drie delen</strong> en verspreid over de pagina. Elk deel is verborgen met een andere techniek die je in eerdere levels bent tegengekomen.",
+    en: "This is it — the Pasquil Maximum Security Office. Pasquino's pulling out all the stops. He's split the password into <strong>three parts</strong> and scattered them across the page. Each part is hidden using a different technique you've encountered in previous levels."
   },
   "l5-info2": {
     nl: "Om deze kluis te kraken, moet je denken als een echte security researcher: controleer de broncode, inspecteer de elementen, lees de scripts, en onderzoek de metadata. Laat geen steen onaangeroerd.",
@@ -439,8 +439,8 @@ const translations = {
     en: '<strong>⚠️ Pasquino\'s final taunt:</strong> "I\'ve hidden the pieces so well, even I forgot where I put part 2. Just kidding — it\'s in a very logical place. If you know HTML, that is. Which you don\'t. Probably. 😏"'
   },
   "l5-completion": {
-    nl: "🎉 Je hebt Pasquil's hacker heist voltooid!",
-    en: "🎉 You've completed Pasquil's hacker heist!"
+    nl: "🎉 Je hebt Pasquil's Cyber Heist voltooid!",
+    en: "🎉 You've completed Pasquil's Cyber Heist!"
   },
   "l5-hint1": {
     nl: "<p>Het wachtwoord is opgesplitst in drie delen. Je moet overal zoeken — broncode, scripts, elementen en metadata.</p>",
