@@ -37,12 +37,12 @@ const translations = {
     en: "No more hints! You're on your own 🫡"
   },
   "footer-text": {
-    nl: 'Gemaakt met 💜 door <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a> — Het internet veiliger maken, één verschrikkelijk wachtwoord per keer.',
-    en: 'Built with 💜 by <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a> — Making the internet safer, one terrible password at a time.'
+    nl: 'Gemaakt met 💙 door <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a> — Security en privacy op een leuke manier.',
+    en: 'Built with 💙 by <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a> — Security and privacy in a fun way.'
   },
   "footer-text-short": {
-    nl: 'Gemaakt met 💜 door <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a>',
-    en: 'Built with 💜 by <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a>'
+    nl: 'Gemaakt met 💙 door <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a>',
+    en: 'Built with 💙 by <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a>'
   },
   "type-something": {
     nl: "Typ eerst iets! Zelfs Pasquino kan dat. ⌨️",
@@ -109,20 +109,20 @@ const translations = {
     en: "Pasquil's Cyber Heist"
   },
   "hero-subtitle": {
-  nl: 'Je hebt toegang gekregen tot 5 zogenaamd "beveiligde" webpagina\'s van Pasquino. Jouw missie: infiltreer elk level en achterhaal het verborgen wachtwoord.',
-  en: 'You have gained access to 5 supposedly "secure" web pages built by Pasquino. Your mission: infiltrate each level and uncover the hidden password.'
+  nl: 'Je hebt toegang gekregen tot 5 zogenaamd "beveiligde" webpagina\'s van Pasquino. Jouw missie: Hack elk level door het verborgen wachtwoord te achterhalen en in te voeren.',
+  en: 'You have gained access to 5 supposedly "secure" web pages built by Pasquino. Your mission: Hack each level by uncovering the hidden password and use to to unlock the next level.'
 },
 "intro-text": {
-  nl: 'Welkom bij Pasquil\'s Cyber Playground! Je bent binnengedrongen in het digitale prutswerk van onze knullige stagiair, <strong>Pasquino</strong>. Hij heeft interne tools gebouwd... en laten we zeggen dat zijn beveiligingspraktijken <em>"creatief"</em> zijn. Jouw missie is simpel: hack je een weg door Pasquino\'s webpagina\'s en vind op elk level het verborgen wachtwoord. Elk gevonden wachtwoord geeft je toegang tot het volgende level. Kun jij alle vijf levels kraken voordat Pasquino doorheeft dat je in zijn systemen zit?',
-  en: 'Welcome to Pasquil\'s Cyber Playground! You have breached the digital mess of our clumsy intern, <strong>Pasquino</strong>. He has been building internal tools... and let\'s just say his security practices are <em>"creative."</em> Your mission is simple: hack your way through Pasquino\'s web pages and find the hidden password on each level. Each password unlocks the next level. Can you crack all five before Pasquino realizes you are inside his systems?'
+  nl: 'Welkom bij Pasquil\'s Hackers Playground! Je bent binnengedrongen in het digitale prutswerk van onze knullige stagiair, <strong>Pasquino</strong>. Hij heeft interne webapplicatie gebouwd... en laten we zeggen dat zijn beveiligingspraktijken <em>"creatief"</em> zijn. Jouw missie is simpel: hack je een weg door Pasquino\'s webpagina\'s en vind op elk level het verborgen wachtwoord. Elk gevonden wachtwoord geeft je toegang tot het volgende level. Kun jij alle vijf levels kraken voordat Pasquino doorheeft dat je in zijn systemen zit?',
+  en: 'Welcome to Pasquil\'s Hackers Playground! You have breached the digital mess of our clumsy intern, <strong>Pasquino</strong>. He has been building internal webapplications... and let\'s just say his security practices are <em>"creative."</em> Your mission is simple: hack your way through Pasquino\'s web pages and find the hidden password on each level. Each password unlocks the next level. Can you crack all five before Pasquino realizes you are inside his systems?'
 },
   "rules-title": {
     nl: "🔧 Zo speel je",
     en: "🔧 How to Play"
   },
   "rules-text": {
-    nl: 'Je hebt alleen een moderne browser met DevTools nodig (druk op <strong>F12</strong>). Geen externe tools, geen server-hacking — alles zit in de browser. Elk level verbergt een wachtwoord met een echt web-security concept. Vind het, typ het in, en ontgrendel de volgende uitdaging. Succes, hacker!',
-    en: 'All you need is a modern browser with DevTools (press <strong>F12</strong>). No external tools, no server hacking — everything is in the browser. Each level hides a password using a real web security concept. Find it, type it in, and unlock the next challenge. Good luck, hacker!'
+    nl: ' Je hebt alleen een hackermindset en een moderne browser met DevTools nodig (druk op <strong>F12</strong>). Geen externe tools, geen server-hacking — alles zit in de browser. Elk level verbergt een wachtwoord met echte security-flaws. Vind het, typ het in, en ontgrendel de volgende uitdaging. Succes, hacker!',
+    en: 'All you need is a hacker mindset and a modern browser with DevTools (press <strong>F12</strong>). No external tools, no server hacking — everything is in the browser. Each level hides a password using a real security flaws. Find it, type it in, and unlock the next challenge. Good luck, hacker!'
   },
 
   // ===================== LEVEL 1 =====================
