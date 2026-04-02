@@ -45,40 +45,40 @@ const translations = {
     en: 'Built with 💜 by <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a>'
   },
   "type-something": {
-    nl: "Typ eerst iets! Zelfs Sjonnie kan dat. ⌨️",
-    en: "Type something first! Even Sjonnie can do that. ⌨️"
+    nl: "Typ eerst iets! Zelfs Pasquino kan dat. ⌨️",
+    en: "Type something first! Even Pasquino can do that. ⌨️"
   },
 
   // Wrong password messages
   "wrong-1": {
-    nl: "Nee hoor! Sjonnie's geheimen zijn veilig... voorlopig. 🔒",
-    en: "Nope! Sjonnie's secrets are safe... for now. 🔒"
+    nl: "Nee hoor! Pasquino's geheimen zijn veilig... voorlopig. 🔒",
+    en: "Nope! Pasquino's secrets are safe... for now. 🔒"
   },
   "wrong-2": {
     nl: "Fout! Heb je al beter gekeken? 👀",
     en: "Wrong! Have you tried looking harder? 👀"
   },
   "wrong-3": {
-    nl: "Toegang geweigerd. Sjonnie lacht je uit. 😂",
-    en: "Access Denied. Sjonnie is laughing at you. 😂"
+    nl: "Toegang geweigerd. Pasquino lacht je uit. 😂",
+    en: "Access Denied. Pasquino is laughing at you. 😂"
   },
   "wrong-4": {
-    nl: "Niet eens in de buurt! Sjonnie's beveiliging houdt stand! 💪",
-    en: "Not even close! Sjonnie's security prevails! 💪"
+    nl: "Niet eens in de buurt! Pasquino's beveiliging houdt stand! 💪",
+    en: "Not even close! Pasquino's security prevails! 💪"
   },
   "wrong-5": {
     nl: "Probeer opnieuw! Het wachtwoord verstopt zich in het volle zicht... 🙈",
     en: "Try again! The password is hiding in plain sight... 🙈"
   },
   "wrong-6": {
-    nl: "Onjuist! Sjonnie doet een vrolijk dansje. 💃",
-    en: "Incorrect! Sjonnie does a little victory dance. 💃"
+    nl: "Onjuist! Pasquino doet een vrolijk dansje. 💃",
+    en: "Incorrect! Pasquino does a little victory dance. 💃"
   },
 
   // Success message template (use {levelName})
   "success-msg": {
-    nl: "✅ WACHTWOORD CORRECT! Je hebt Sjonnie's {levelName} gekraakt! ",
-    en: "✅ PASSWORD CORRECT! You cracked Sjonnie's {levelName}! "
+    nl: "✅ WACHTWOORD CORRECT! Je hebt Pasquino's {levelName} gekraakt! ",
+    en: "✅ PASSWORD CORRECT! You cracked Pasquino's {levelName}! "
   },
   "success-proceed": {
     nl: "Ga door naar de volgende uitdaging.",
@@ -109,13 +109,13 @@ const translations = {
     en: "Pasquil's Cyber Heist"
   },
   "hero-subtitle": {
-    nl: 'Sjonnie heeft 5 "beveiligde" webpagina\'s gebouwd. Jouw missie: vind het verborgen wachtwoord in elke pagina.',
-    en: 'Sjonnie built 5 "secure" web pages. Your mission: find the hidden password in each one.'
-  },
-  "intro-text": {
-    nl: 'Welkom bij Pasquil\'s Cyber Playground! Onze knullige stagiair, <strong>Stagiair Sjonnie</strong>, heeft interne tools gebouwd... en laten we zeggen dat zijn beveiligingspraktijken <em>"creatief"</em> zijn. Jouw missie: vind het wachtwoord dat verborgen zit in elk van Sjonnie\'s verschrikkelijke webpagina\'s. Elk wachtwoord ontgrendelt het volgende level. Kun jij alle vijf hacken voordat Sjonnie het doorheeft?',
-    en: 'Welcome to Pasquil\'s Cyber Playground! Our bumbling intern, <strong>Stageair Sjonnie</strong>, has been building internal tools... and let\'s just say his security practices are <em>"creative."</em> Your mission: find the password hidden in each of Sjonnie\'s terrible web pages. Each password unlocks the next level. Can you hack all five before Sjonnie notices?'
-  },
+  nl: 'Je hebt toegang gekregen tot 5 zogenaamd "beveiligde" webpagina\'s van Pasquino. Jouw missie: infiltreer elk level en achterhaal het verborgen wachtwoord.',
+  en: 'You have gained access to 5 supposedly "secure" web pages built by Pasquino. Your mission: infiltrate each level and uncover the hidden password.'
+},
+"intro-text": {
+  nl: 'Welkom bij Pasquil\'s Cyber Playground! Je bent binnengedrongen in het digitale prutswerk van onze knullige stagiair, <strong>Pasquino</strong>. Hij heeft interne tools gebouwd... en laten we zeggen dat zijn beveiligingspraktijken <em>"creatief"</em> zijn. Jouw missie is simpel: hack je een weg door Pasquino\'s webpagina\'s en vind op elk level het verborgen wachtwoord. Elk gevonden wachtwoord geeft je toegang tot het volgende level. Kun jij alle vijf levels kraken voordat Pasquino doorheeft dat je in zijn systemen zit?',
+  en: 'Welcome to Pasquil\'s Cyber Playground! You have breached the digital mess of our clumsy intern, <strong>Pasquino</strong>. He has been building internal tools... and let\'s just say his security practices are <em>"creative."</em> Your mission is simple: hack your way through Pasquino\'s web pages and find the hidden password on each level. Each password unlocks the next level. Can you crack all five before Pasquino realizes you are inside his systems?'
+},
   "rules-title": {
     nl: "🔧 Zo speel je",
     en: "🔧 How to Play"
@@ -127,16 +127,16 @@ const translations = {
 
   // ===================== LEVEL 1 =====================
   "l1-title": {
-    nl: "📖 Sjonnie's Geheime Dagboek",
-    en: "📖 Sjonnie's Secret Diary"
+    nl: "📖 Pasquino's Geheime Dagboek",
+    en: "📖 Pasquino's Secret Diary"
   },
   "l1-subtitle": {
     nl: "HTML-broncode inspecteren — welke geheimen zitten er in de broncode?",
     en: "HTML source code inspection — what secrets lurk in the source?"
   },
-  "l1-sjonnie": {
-    nl: '<strong>Sjonnie zegt:</strong> "Ik bewaar al mijn persoonlijke notities gewoon in de code. Super privé — niemand kijkt ooit naar HTML, toch?"',
-    en: '<strong>Sjonnie says:</strong> "I keep all my personal notes right in the code. Super private — nobody ever looks at HTML, right?"'
+  "l1-Pasquino": {
+    nl: '<strong>Pasquino zegt:</strong> "Ik bewaar al mijn persoonlijke notities gewoon in de code. Super privé — niemand kijkt ooit naar HTML, toch?"',
+    en: '<strong>Pasquino says:</strong> "I keep all my personal notes right in the code. Super private — nobody ever looks at HTML, right?"'
   },
   "l1-diary1-date": {
     nl: "📅 15 januari 2026",
@@ -171,16 +171,16 @@ const translations = {
     en: '<p>I read online that you should "never store passwords in plain text." So I wrote them on a sticky note instead. Problem solved! The note is on my monitor where nobody can see it... except everyone in the office. Whatever, it\'s fine. 🙃</p>'
   },
   "l1-hint1": {
-    nl: "<p>Sjonnie schrijft notities voor zichzelf die alleen hij kan lezen... of toch niet?</p>",
-    en: "<p>Sjonnie writes notes to himself that only he can see... or can he?</p>"
+    nl: "<p>Pasquino schrijft notities voor zichzelf die alleen hij kan lezen... of toch niet?</p>",
+    en: "<p>Pasquino writes notes to himself that only he can see... or can he?</p>"
   },
   "l1-hint2": {
     nl: "<p>Wat je ziet is niet alles. Probeer te kijken wat er achter het gordijn zit.</p>",
     en: "<p>What you see isn't everything. Try viewing what's behind the curtain.</p>"
   },
   "l1-hint3": {
-    nl: "<p>Rechtermuisklik → \"Paginabron bekijken\" en zoek naar Sjonnie's notities.</p>",
-    en: "<p>Right-click → \"View Page Source\" and look for Sjonnie's notes.</p>"
+    nl: "<p>Rechtermuisklik → \"Paginabron bekijken\" en zoek naar Pasquino's notities.</p>",
+    en: "<p>Right-click → \"View Page Source\" and look for Pasquino's notes.</p>"
   },
   "l1-next": {
     nl: "Ga naar Level 2 — De Onzichtbare Kluis →",
@@ -196,9 +196,9 @@ const translations = {
     nl: "CSS-verborgen inhoud — kun jij zien wat er echt op deze pagina staat?",
     en: "CSS-hidden content — can you see what's really on this page?"
   },
-  "l2-sjonnie": {
-    nl: '<strong>Sjonnie zegt:</strong> "Ik heb deze pagina ONZICHTBAAR-proof gemaakt. Zelfs als je ernaar kijkt, zie je niks. Mijn CSS-skills zijn ongeëvenaard!"',
-    en: '<strong>Sjonnie says:</strong> "I\'ve made this page INVISIBLE-proof. Even if you look at it, you won\'t see anything. My CSS skills are unmatched!"'
+  "l2-Pasquino": {
+    nl: '<strong>Pasquino zegt:</strong> "Ik heb deze pagina ONZICHTBAAR-proof gemaakt. Zelfs als je ernaar kijkt, zie je niks. Mijn CSS-skills zijn ongeëvenaard!"',
+    en: '<strong>Pasquino says:</strong> "I\'ve made this page INVISIBLE-proof. Even if you look at it, you won\'t see anything. My CSS skills are unmatched!"'
   },
   "l2-warning1": {
     nl: "⚠️ ALLEEN BEVOEGD PERSONEEL ⚠️",
@@ -209,8 +209,8 @@ const translations = {
     en: "CLASSIFIED"
   },
   "l2-text1": {
-    nl: "Dit is Sjonnie's Maximum Security Kluis. Niks te zien hier. Helemaal niks. Doe niet eens de moeite om te kijken. Het wachtwoord is zo goed verstopt dat zelfs Sjonnie niet meer weet waar hij het heeft gelaten. (Maar eigenlijk wel. Hij is gewoon slecht in dingen verstoppen.)",
-    en: "This is Sjonnie's Maximum Security Vault. Nothing to see here. Absolutely nothing. Don't even bother looking. The password is hidden so well that not even Sjonnie remembers where he put it. (He does, though. He's just bad at hiding things.)"
+    nl: "Dit is Pasquino's Maximum Security Kluis. Niks te zien hier. Helemaal niks. Doe niet eens de moeite om te kijken. Het wachtwoord is zo goed verstopt dat zelfs Pasquino niet meer weet waar hij het heeft gelaten. (Maar eigenlijk wel. Hij is gewoon slecht in dingen verstoppen.)",
+    en: "This is Pasquino's Maximum Security Vault. Nothing to see here. Absolutely nothing. Don't even bother looking. The password is hidden so well that not even Pasquino remembers where he put it. (He does, though. He's just bad at hiding things.)"
   },
   "l2-warning2": {
     nl: "🚫 INSPECTEER DEZE PAGINA NIET 🚫",
@@ -225,12 +225,12 @@ const translations = {
     en: "Getting warmer! But not here either."
   },
   "l2-text2": {
-    nl: 'Sjonnie heeft 3 hele uren besteed om deze kluis ondoordringbaar te maken. Hij vroeg zelfs ChatGPT hoe je dingen op een webpagina kunt verstoppen. Het antwoord was "gebruik CSS" en Sjonnie zei "perfect, niemand kent CSS."',
-    en: 'Sjonnie spent 3 whole hours making sure this vault is impenetrable. He even asked ChatGPT how to hide things on a webpage. The answer was "use CSS" and Sjonnie said "perfect, nobody knows CSS."'
+    nl: 'Pasquino heeft 3 hele uren besteed om deze kluis ondoordringbaar te maken. Hij vroeg zelfs ChatGPT hoe je dingen op een webpagina kunt verstoppen. Het antwoord was "gebruik CSS" en Pasquino zei "perfect, niemand kent CSS."',
+    en: 'Pasquino spent 3 whole hours making sure this vault is impenetrable. He even asked ChatGPT how to hide things on a webpage. The answer was "use CSS" and Pasquino said "perfect, nobody knows CSS."'
   },
   "l2-text3": {
-    nl: 'Onthoud: echte beveiliging betekent dingen onzichtbaar maken. Als niemand het kan zien, kan niemand het hacken. Dat heeft Sjonnie geleerd van een YouTube tutorial genaamd "CSS Security for Beginners (UNHACKABLE)."',
-    en: 'Remember: true security means making things invisible. If nobody can see it, nobody can hack it. That\'s what Sjonnie learned from a YouTube tutorial titled "CSS Security for Beginners (UNHACKABLE)."'
+    nl: 'Onthoud: echte beveiliging betekent dingen onzichtbaar maken. Als niemand het kan zien, kan niemand het hacken. Dat heeft Pasquino geleerd van een YouTube tutorial genaamd "CSS Security for Beginners (UNHACKABLE)."',
+    en: 'Remember: true security means making things invisible. If nobody can see it, nobody can hack it. That\'s what Pasquino learned from a YouTube tutorial titled "CSS Security for Beginners (UNHACKABLE)."'
   },
   "l2-hint1": {
     nl: "<p>Alleen omdat je het niet kunt zien, betekent niet dat het er niet is.</p>",
@@ -258,17 +258,17 @@ const translations = {
     nl: "JavaScript-geheimen — wat verstopt zich in de code?",
     en: "JavaScript secrets — what's hiding in the code?"
   },
-  "l3-sjonnie": {
-    nl: '<strong>Sjonnie zegt:</strong> "Dit wachtwoord is beschermd door mijn Ultra-Secure JavaScript Encryption™. Het gebruikt military-grade ROT-13 quantum algoritmes. ONKRAAKBAAR."',
-    en: '<strong>Sjonnie says:</strong> "This password is protected by my Ultra-Secure JavaScript Encryption™. It uses military-grade ROT-13 quantum algorithms. UNBREAKABLE."'
+  "l3-Pasquino": {
+    nl: '<strong>Pasquino zegt:</strong> "Dit wachtwoord is beschermd door mijn Ultra-Secure JavaScript Encryption™. Het gebruikt military-grade ROT-13 quantum algoritmes. ONKRAAKBAAR."',
+    en: '<strong>Pasquino says:</strong> "This password is protected by my Ultra-Secure JavaScript Encryption™. It uses military-grade ROT-13 quantum algorithms. UNBREAKABLE."'
   },
   "l3-terminal-cmd": {
     nl: "cat beveiligingsstatus.txt",
     en: "cat security_status.txt"
   },
   "l3-report-title": {
-    nl: "// SJONNIE'S BEVEILIGINGSSTATUSRAPPORT",
-    en: "// SJONNIE'S SECURITY STATUS REPORT"
+    nl: "// PASQUINO'S BEVEILIGINGSSTATUSRAPPORT",
+    en: "// PASQUINO'S SECURITY STATUS REPORT"
   },
   "l3-firewall": {
     nl: "Firewall: AAN (het is een foto van een muur in brand 🔥)",
@@ -291,12 +291,12 @@ const translations = {
     en: "🔒 Unbreakable Password Checker"
   },
   "l3-taunt-sub": {
-    nl: "Beschermd door Sjonnie's Ultra-Secure JavaScript Encryption™",
-    en: "Protected by Sjonnie's Ultra-Secure JavaScript Encryption™"
+    nl: "Beschermd door Pasquino's Ultra-Secure JavaScript Encryption™",
+    en: "Protected by Pasquino's Ultra-Secure JavaScript Encryption™"
   },
   "l3-funfact1": {
-    nl: "// Leuk weetje: Sjonnie slaat al zijn geheimen op in JavaScript",
-    en: "// Fun fact: Sjonnie stores all his secrets in JavaScript"
+    nl: "// Leuk weetje: Pasquino slaat al zijn geheimen op in JavaScript",
+    en: "// Fun fact: Pasquino stores all his secrets in JavaScript"
   },
   "l3-funfact2": {
     nl: '// variabelen omdat "niemand ooit JavaScript leest."',
@@ -315,20 +315,20 @@ const translations = {
     en: '"The password is safe. I put it in an object. Objects are private, right?"'
   },
   "l3-quote2": {
-    nl: '"— Sjonnie, vlak voor de ramp"',
-    en: '"— Sjonnie, moments before disaster"'
+    nl: '"— Pasquino, vlak voor de ramp"',
+    en: '"— Pasquino, moments before disaster"'
   },
   "l3-hint1": {
-    nl: "<p>Sjonnie praat veel tegen zichzelf. Heb je al gekeken waar developers meestal praten?</p>",
-    en: "<p>Sjonnie talks to himself a lot. Have you checked where developers usually talk?</p>"
+    nl: "<p>Pasquino praat veel tegen zichzelf. Heb je al gekeken waar developers meestal praten?</p>",
+    en: "<p>Pasquino talks to himself a lot. Have you checked where developers usually talk?</p>"
   },
   "l3-hint2": {
-    nl: "<p>Open het Console tabblad in DevTools. Sjonnie heeft misschien een berichtje voor je achtergelaten.</p>",
-    en: "<p>Open the Console tab in DevTools. Sjonnie might have left a message for you.</p>"
+    nl: "<p>Open het Console tabblad in DevTools. Pasquino heeft misschien een berichtje voor je achtergelaten.</p>",
+    en: "<p>Open the Console tab in DevTools. Pasquino might have left a message for you.</p>"
   },
   "l3-hint3": {
-    nl: "<p>Typ <code>sjonnieVault</code> in de console en druk op Enter.</p>",
-    en: "<p>Type <code>sjonnieVault</code> in the console and press Enter.</p>"
+    nl: "<p>Typ <code>PasquinoVault</code> in de console en druk op Enter.</p>",
+    en: "<p>Type <code>PasquinoVault</code> in the console and press Enter.</p>"
   },
   "l3-next": {
     nl: "Ga naar Level 4 — Cookie Monster →",
@@ -344,13 +344,13 @@ const translations = {
     nl: "Client-side opslag — cookies, localStorage en geheimen",
     en: "Client-side storage — cookies, localStorage, and secrets"
   },
-  "l4-sjonnie": {
-    nl: '<strong>Sjonnie zegt:</strong> "Ik heb de meest beveiligde cookies van het internet gebakken. Niemand kan cookies lezen, daarom heten ze cookies — ze verkruimelen voordat je ze kunt lezen. Zo werkt het toch?"',
-    en: '<strong>Sjonnie says:</strong> "I baked the most secure cookies on the internet. Nobody can read cookies, that\'s why they\'re called cookies — they crumble before you can read them. That\'s how it works, right?"'
+  "l4-Pasquino": {
+    nl: '<strong>Pasquino zegt:</strong> "Ik heb de meest beveiligde cookies van het internet gebakken. Niemand kan cookies lezen, daarom heten ze cookies — ze verkruimelen voordat je ze kunt lezen. Zo werkt het toch?"',
+    en: '<strong>Pasquino says:</strong> "I baked the most secure cookies on the internet. Nobody can read cookies, that\'s why they\'re called cookies — they crumble before you can read them. That\'s how it works, right?"'
   },
   "l4-welcome-title": {
-    nl: "🏪 Welkom bij Sjonnie's Cookie Corner!",
-    en: "🏪 Welcome to Sjonnie's Cookie Corner!"
+    nl: "🏪 Welkom bij Pasquino's Cookie Corner!",
+    en: "🏪 Welcome to Pasquino's Cookie Corner!"
   },
   "l4-welcome-text": {
     nl: "Thuisbasis van de lekkerste digitale koekjes van heel Nederland! Elke bezoeker krijgt een gratis batch cookies — vers gebakken en opgeslagen in je browser. We nemen je privacy heel serieus (we eten alle koekjes zelf op 🍪).",
@@ -369,24 +369,24 @@ const translations = {
     en: "<strong>🍫 Dark Chocolate Chip</strong> — Classic and secure<br><strong>🧇 Stroopwafels</strong> — A Dutch specialty, stored locally<br><strong>🔐 Secret Recipe</strong> — Our prize-winning recipe, encoded for safe-keeping<br><strong>🍪 Tracking Cookies</strong> — Just kidding! No thanks."
   },
   "l4-pun2": {
-    nl: '💡 "Het bewijs zit in de pudding, maar het wachtwoord zit in de cookie." — Sjonnie',
-    en: '💡 "The proof is in the pudding, but the password is in the cookie." — Sjonnie'
+    nl: '💡 "Het bewijs zit in de pudding, maar het wachtwoord zit in de cookie." — Pasquino',
+    en: '💡 "The proof is in the pudding, but the password is in the cookie." — Pasquino'
   },
   "l4-baker-title": {
     nl: "🤫 Een Woord van Onze Bakker",
     en: "🤫 A Word From Our Baker"
   },
   "l4-baker-text": {
-    nl: "Sjonnie is erg trots op zijn cookie-opslagsysteem. Hij slaat alles op in de browser — sessiedata, gebruikersvoorkeuren, en misschien zelfs een geheimpje of twee. Hij hoorde dat Base64 \"militaire encryptie\" is van een Reddit-bericht, dus natuurlijk gebruikt hij dat voor zijn kostbaarste recept.",
-    en: 'Sjonnie is very proud of his cookie storage system. He stores everything in the browser — session data, user preferences, and maybe even a secret or two. He heard that Base64 is "military-grade encryption" from a Reddit post, so naturally, that\'s what he uses for his most precious recipe.'
+    nl: "Pasquino is erg trots op zijn cookie-opslagsysteem. Hij slaat alles op in de browser — sessiedata, gebruikersvoorkeuren, en misschien zelfs een geheimpje of twee. Hij hoorde dat Base64 \"militaire encryptie\" is van een Reddit-bericht, dus natuurlijk gebruikt hij dat voor zijn kostbaarste recept.",
+    en: 'Pasquino is very proud of his cookie storage system. He stores everything in the browser — session data, user preferences, and maybe even a secret or two. He heard that Base64 is "military-grade encryption" from a Reddit post, so naturally, that\'s what he uses for his most precious recipe.'
   },
   "l4-pun3": {
     nl: '🍪 "Zo kruimelt de koek... in je Application-tabblad." 🍪',
     en: '🍪 "That\'s the way the cookie crumbles... into your Application tab." 🍪'
   },
   "l4-hint1": {
-    nl: "<p>Sjonnie is dol op koekjes. Je browser ook. Heb je al gecheckt welke cookies deze pagina heeft achtergelaten?</p>",
-    en: "<p>Sjonnie loves cookies. So does your browser. Have you checked what cookies this page left behind?</p>"
+    nl: "<p>Pasquino is dol op koekjes. Je browser ook. Heb je al gecheckt welke cookies deze pagina heeft achtergelaten?</p>",
+    en: "<p>Pasquino loves cookies. So does your browser. Have you checked what cookies this page left behind?</p>"
   },
   "l4-hint2": {
     nl: "<p>Ga naar DevTools → Application tab → Cookies. Een van deze cookies ziet er een beetje... gecodeerd uit.</p>",
@@ -410,9 +410,9 @@ const translations = {
     nl: "Meerlagig onderzoek — combineer alles wat je hebt geleerd",
     en: "Multi-layered investigation — combine everything you've learned"
   },
-  "l5-sjonnie": {
-    nl: '<strong>Sjonnie zegt:</strong> "Je bent ver gekomen, maar deze pagina is ONKRAAKBAAR. Ik heb elke beveiligingsmaatregel gebruikt die ik ken: onzichtbare tekst, versleutelde cookies, verduisterde code... je vindt deze nooit."',
-    en: '<strong>Sjonnie says:</strong> "You\'ve made it this far, but this page is UNBREAKABLE. I\'ve used every security measure I know: invisible text, encrypted cookies, obfuscated code... you\'ll never find this one."'
+  "l5-Pasquino": {
+    nl: '<strong>Pasquino zegt:</strong> "Je bent ver gekomen, maar deze pagina is ONKRAAKBAAR. Ik heb elke beveiligingsmaatregel gebruikt die ik ken: onzichtbare tekst, versleutelde cookies, verduisterde code... je vindt deze nooit."',
+    en: '<strong>Pasquino says:</strong> "You\'ve made it this far, but this page is UNBREAKABLE. I\'ve used every security measure I know: invisible text, encrypted cookies, obfuscated code... you\'ll never find this one."'
   },
   "l5-challenge-title": {
     nl: "🎯 De Ultieme Uitdaging",
@@ -427,16 +427,16 @@ const translations = {
     en: "Part"
   },
   "l5-info1": {
-    nl: "Dit is het — het Pasquil Maximum Security Office. Sjonnie haalt alles uit de kast. Hij heeft het wachtwoord opgesplitst in <strong>drie delen</strong> en verspreid over de pagina. Elk deel is verborgen met een andere techniek die je in eerdere levels bent tegengekomen.",
-    en: "This is it — the Pasquil Maximum Security Office. Sjonnie's pulling out all the stops. He's split the password into <strong>three parts</strong> and scattered them across the page. Each part is hidden using a different technique you've encountered in previous levels."
+    nl: "Dit is het — het Pasquil Maximum Security Office. Pasquino haalt alles uit de kast. Hij heeft het wachtwoord opgesplitst in <strong>drie delen</strong> en verspreid over de pagina. Elk deel is verborgen met een andere techniek die je in eerdere levels bent tegengekomen.",
+    en: "This is it — the Pasquil Maximum Security Office. Pasquino's pulling out all the stops. He's split the password into <strong>three parts</strong> and scattered them across the page. Each part is hidden using a different technique you've encountered in previous levels."
   },
   "l5-info2": {
     nl: "Om deze kluis te kraken, moet je denken als een echte security researcher: controleer de broncode, inspecteer de elementen, lees de scripts, en onderzoek de metadata. Laat geen steen onaangeroerd.",
     en: "To crack this vault, you'll need to think like a real security researcher: check the source, inspect the elements, read the scripts, and examine the metadata. Leave no stone unturned."
   },
   "l5-taunt": {
-    nl: '<strong>⚠️ Sjonnie\'s laatste uitdaging:</strong> "Ik heb de stukken zo goed verstopt, zelfs ik vergat waar ik deel 2 had gelaten. Grapje — het zit op een heel logische plek. Als je HTML kent, tenminste. Wat je waarschijnlijk niet doet. 😏"',
-    en: '<strong>⚠️ Sjonnie\'s final taunt:</strong> "I\'ve hidden the pieces so well, even I forgot where I put part 2. Just kidding — it\'s in a very logical place. If you know HTML, that is. Which you don\'t. Probably. 😏"'
+    nl: '<strong>⚠️ Pasquino\'s laatste uitdaging:</strong> "Ik heb de stukken zo goed verstopt, zelfs ik vergat waar ik deel 2 had gelaten. Grapje — het zit op een heel logische plek. Als je HTML kent, tenminste. Wat je waarschijnlijk niet doet. 😏"',
+    en: '<strong>⚠️ Pasquino\'s final taunt:</strong> "I\'ve hidden the pieces so well, even I forgot where I put part 2. Just kidding — it\'s in a very logical place. If you know HTML, that is. Which you don\'t. Probably. 😏"'
   },
   "l5-completion": {
     nl: "🎉 Je hebt Pasquil's Cyber Heist voltooid!",
@@ -451,8 +451,8 @@ const translations = {
     en: "<p>Part 1 is in a JS file. Part 2 is hiding in a data attribute. Part 3 is in the page metadata.</p>"
   },
   "l5-hint3": {
-    nl: '<p>JS variabele <code>_0x1</code> = "P4". <code>data-sjonnie-part2</code> attribuut = "SQU1L_". Meta tag <code>sjonnie-part3</code> = "M4ST3R". Combineer ze.</p>',
-    en: '<p>JS variable <code>_0x1</code> = "P4". <code>data-sjonnie-part2</code> attribute = "SQU1L_". Meta tag <code>sjonnie-part3</code> = "M4ST3R". Combine them.</p>'
+    nl: '<p>JS variabele <code>_0x1</code> = "P4". <code>data-Pasquino-part2</code> attribuut = "SQU1L_". Meta tag <code>Pasquino-part3</code> = "M4ST3R". Combineer ze.</p>',
+    en: '<p>JS variable <code>_0x1</code> = "P4". <code>data-Pasquino-part2</code> attribute = "SQU1L_". Meta tag <code>Pasquino-part3</code> = "M4ST3R". Combine them.</p>'
   },
 
   // ===================== VICTORY =====================
@@ -461,8 +461,8 @@ const translations = {
     en: "🎉 YOU DID IT!"
   },
   "victory-subtitle": {
-    nl: 'Je hebt alle 5 van Sjonnie\'s "beveiligde" pagina\'s gehackt!',
-    en: 'You hacked all 5 of Sjonnie\'s "secure" pages!'
+    nl: 'Je hebt alle 5 van Pasquino\'s "beveiligde" pagina\'s gehackt!',
+    en: 'You hacked all 5 of Pasquino\'s "secure" pages!'
   },
   "victory-l1": {
     nl: "HTML-comments zijn niet geheim",
