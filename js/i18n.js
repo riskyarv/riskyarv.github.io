@@ -397,14 +397,14 @@ const translations = {
     en: "<p>The <code>secret_recipe</code> cookie is Base64-encoded. Decode it with <code>atob('SzAwS0pFU19NT05TVEVS')</code> in the console.</p>"
   },
   "l4-next": {
-    nl: "Ga naar Level 5 — De Laatste Heist →",
-    en: "Proceed to Level 5 — The Final Heist →"
+    nl: "Ga naar Level 5 — De laaste Heist →",
+    en: "Proceed to Level 5 — The final heist →"
   },
 
   // ===================== LEVEL 5 =====================
   "l5-title": {
-    nl: "🏆 De Laatste Heist",
-    en: "🏆 The Final Heist"
+    nl: "🏆 De laaste Heist",
+    en: "🏆 The final heist"
   },
   "l5-subtitle": {
     nl: "Meerlagig onderzoek — combineer alles wat je hebt geleerd",
