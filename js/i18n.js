@@ -451,8 +451,8 @@ const translations = {
     en: "<p>Part 1 is in a JS file. Part 2 is hiding in a data attribute. Part 3 is in the page metadata.</p>"
   },
   "l5-hint3": {
-    nl: "<p>De oplossing bestaat uit drie delen. Het eerste deel heeft 2 tekens en komt uit een JavaScript-variabele. Het tweede deel heeft 6 tekens en staat in een data-attribuut. Het derde deel heeft 6 tekens en is te vinden in een meta-tag. Zet de delen in de juiste volgorde.</p>",
-    en: "<p>De oplossing bestaat uit drie delen. Het eerste deel heeft 2 tekens en komt uit een JavaScript-variabele. Het tweede deel heeft 6 tekens en staat in een data-attribuut. Het derde deel heeft 6 tekens en is te vinden in een meta-tag. Zet de delen in de juiste volgorde.</p>"
+    nl: "<p>Drie delen: 2 tekens (JS), 6 tekens (data‑attribuut) en 6 tekens (meta‑tag). Combineer ze.</p>",
+    en: "<p>Three parts: 2 characters (JS), 6 characters (data attribute), and 6 characters (meta tag). Combine them.</p>"
   },
 
 
