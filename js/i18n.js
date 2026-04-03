@@ -455,7 +455,6 @@ const translations = {
   en: '&lt;p&gt;The solution consists of three parts. The first part is 2 characters long and comes from a JavaScript variable. The second part is 6 characters long and is stored in a &lt;code&gt;data-&lt;/code&gt; attribute. The third part is 6 characters long and can be found in a meta tag. Combine the parts in the correct order.&lt;/p&gt;'
 },
 
-
   // ===================== VICTORY =====================
   "victory-title": {
     nl: "🎉 JE HEBT HET GEDAAN!",
