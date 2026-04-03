@@ -109,8 +109,8 @@ const translations = {
     en: "Pasquil's hack heist"
   },
   "hero-subtitle": {
-  nl: 'Je hebt toegang gekregen tot 5 zogenaamd "beveiligde" webpagina\'s van Pasquino. Jouw missie: Hack elk level door het verborgen wachtwoord te achterhalen en in te voeren.',
-  en: 'You have gained access to 5 supposedly "secure" web pages built by Pasquino. Your mission: Hack each level by uncovering the hidden password and use to to unlock the next level.'
+  nl: 'Je bent binnengedrongen in de digitale chaos van onze onhandige stagiair, Pasquino. Jouw missie: hack elk level door het verborgen wachtwoord te achterhalen en in te voeren.',
+  en: 'You have broken into the digital chaos of our clumsy intern, Pasquino. Your mission: hack each level by uncovering the hidden password and entering it.'
 },
 "intro-text": {
   nl: 'Welkom bij Pasquil\'s Hackers Playground! Je bent binnengedrongen in het digitale prutswerk van onze knullige stagiair, <strong>Pasquino</strong>. Hij heeft interne webapplicatie gebouwd... en laten we zeggen dat zijn beveiligingspraktijken <em>"creatief"</em> zijn. Jouw missie is simpel: hack je een weg door Pasquino\'s webpagina\'s en vind op elk level het verborgen wachtwoord. Elk gevonden wachtwoord geeft je toegang tot het volgende level. Kun jij alle vijf levels kraken voordat Pasquino doorheeft dat je in zijn systemen zit?',
