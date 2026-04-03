@@ -341,8 +341,8 @@ const translations = {
     en: "🍪 Cookie monster"
   },
   "l4-subtitle": {
-    nl: "Client-side opslag — cookies, localStorage en geheimen",
-    en: "Client-side storage — cookies, localStorage, and secrets"
+    nl: "Client-side opslag: cookies, localStorage en geheimen",
+    en: "Client-side storage: cookies, localStorage, and secrets"
   },
   "l4-sjonnie": {
     nl: '<strong>Pasquino zegt:</strong> "Ik heb de meest beveiligde cookies van het internet gebakken. Niemand kan cookies lezen, daarom heten ze cookies — ze verkruimelen voordat je ze kunt lezen. Zo werkt het toch?"',
