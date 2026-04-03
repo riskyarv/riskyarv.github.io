@@ -426,7 +426,7 @@ const translations = {
     nl: "Deel",
     en: "Part"
   },
-  l5-info1": {
+  "l5-info1": {
   nl: "Dit is het. Het Pasquil Maximum Security Office. Pasquino haalt alles uit de kast. Hij heeft het wachtwoord opgesplitst in <strong>drie delen</strong> en verspreid over de pagina. Elk deel is verborgen met een andere techniek die je in eerdere levels bent tegengekomen.",
   en: "This is it. The Pasquil Maximum Security Office. Pasquino's pulling out all the stops. He's split the password into <strong>three parts</strong> and scattered them across the page. Each part is hidden using a different technique you've encountered in previous levels."
   },
