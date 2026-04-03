@@ -389,7 +389,7 @@ const translations = {
     en: "<p>Pasquino loves cookies. So does your browser. Have you checked what cookies this page left behind?</p>"
   },
   "l4-hint2": {
-    nl: "<p>Ga naar DevTools → Application tab → Cookies. Een van deze cookies ziet er een beetje... gecodeerd uit.</p>",
+    nl: "<p>Ga naar DevTools → Applicatie tab → Cookies. Een van deze cookies ziet er een beetje... gecodeerd uit.</p>",
     en: "<p>Go to DevTools → Application tab → Cookies. One of these cookies looks a bit... encoded.</p>"
   },
   "l4-hint3": {
