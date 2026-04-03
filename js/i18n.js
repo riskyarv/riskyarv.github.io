@@ -193,8 +193,8 @@ const translations = {
     en: "👻 The invisible vault"
   },
   "l2-subtitle": {
-    nl: "CSS-verborgen inhoud — kun jij zien wat er echt op deze pagina staat?",
-    en: "CSS-hidden content — can you see what's really on this page?"
+    nl: "CSS-verborgen inhoud: kun jij zien wat er echt op deze pagina staat?",
+    en: "CSS-hidden content: can you see what's really on this page?"
   },
   "l2-sjonnie": {
     nl: '<strong>Pasquino zegt:</strong> "Ik heb deze pagina ONZICHTBAAR-proof gemaakt. Zelfs als je ernaar kijkt, zie je niks. Mijn CSS-skills zijn ongeëvenaard!"',
