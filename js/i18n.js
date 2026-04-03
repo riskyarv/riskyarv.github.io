@@ -443,8 +443,8 @@ const translations = {
     en: "🎉 You've completed Pasquil's hack heist!"
   },
   "l5-hint1": {
-    nl: "<p>Het wachtwoord is opgesplitst in drie delen. Je moet overal zoeken — broncode, scripts, elementen en metadata.</p>",
-    en: "<p>The password is split into three parts. You'll need to search everywhere — source, scripts, elements, and metadata.</p>"
+    nl: "<p>Het wachtwoord is opgesplitst in drie delen. Je moet overal zoeken: broncode, scripts, elementen en metadata.</p>",
+    en: "<p>The password is split into three parts. You'll need to search everywhere: source, scripts, elements, and metadata.</p>"
   },
   "l5-hint2": {
     nl: "<p>Deel 1 zit in een JS-bestand. Deel 2 verstopt zich in een data-attribuut. Deel 3 zit in de pagina-metadata.</p>",
