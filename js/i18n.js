@@ -407,8 +407,8 @@ const translations = {
     en: "🏆 The final heist"
   },
   "l5-subtitle": {
-    nl: "Meerlagig onderzoek — combineer alles wat je hebt geleerd",
-    en: "Multi-layered investigation — combine everything you've learned"
+  nl: "Meerlagig onderzoek: combineer alles wat je hebt geleerd",
+  en: "Multi-layered investigation: combine everything you've learned"
   },
   "l5-sjonnie": {
     nl: '<strong>Pasquino zegt:</strong> "Je bent ver gekomen, maar deze pagina is ONKRAAKBAAR. Ik heb elke beveiligingsmaatregel gebruikt die ik ken: onzichtbare tekst, versleutelde cookies, verduisterde code... je vindt deze nooit."',
@@ -439,7 +439,7 @@ const translations = {
     en: '<strong>⚠️ Pasquino\'s final taunt:</strong> "I\'ve hidden the pieces so well, even I forgot where I put part 2. Just kidding — it\'s in a very logical place. If you know HTML, that is. Which you don\'t. Probably. 😏"'
   },
   "l5-completion": {
-    nl: "🎉 Je hebt Pasquil's hack heist voltooid!",
+    nl: "🎉 Je hebt Pasquil's hack overval voltooid!",
     en: "🎉 You've completed Pasquil's hack heist!"
   },
   "l5-hint1": {
