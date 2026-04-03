@@ -451,9 +451,9 @@ const translations = {
     en: "<p>Part 1 is in a JS file. Part 2 is hiding in a data attribute. Part 3 is in the page metadata.</p>"
   },
   "l5-hint3": {
-  nl: "<p>De oplossing bestaat uit drie delen. Het eerste deel heeft 2 tekens en komt uit een JavaScript-variabele. Het tweede deel heeft 6 tekens en staat in een data-attribuut. Het derde deel heeft 6 tekens en is te vinden in een meta-tag. Zet de delen in de juiste volgorde.</p>",
-  en: "<p>The solution consists of three parts. The first part is 2 characters long and comes from a JavaScript variable. The second part is 6 characters long and is stored in a data attribute. The third part is 6 characters long and can be found in a meta tag. Combine the parts in the correct order.</p>"
-},
+    nl: "<p>De oplossing bestaat uit drie delen. Het eerste deel heeft 2 tekens en komt uit een JavaScript-variabele. Het tweede deel heeft 6 tekens en staat in een data-attribuut. Het derde deel heeft 6 tekens en is te vinden in een meta-tag. Zet de delen in de juiste volgorde.</p>",
+    en: "<p>De oplossing bestaat uit drie delen. Het eerste deel heeft 2 tekens en komt uit een JavaScript-variabele. Het tweede deel heeft 6 tekens en staat in een data-attribuut. Het derde deel heeft 6 tekens en is te vinden in een meta-tag. Zet de delen in de juiste volgorde.</p>"
+  },
 
 
   // ===================== VICTORY =====================
