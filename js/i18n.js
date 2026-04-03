@@ -196,7 +196,7 @@ const translations = {
     nl: "CSS-verborgen inhoud — kun jij zien wat er echt op deze pagina staat?",
     en: "CSS-hidden content — can you see what's really on this page?"
   },
-  "l2-Pasquino": {
+  "l2-sjonnie": {
     nl: '<strong>Pasquino zegt:</strong> "Ik heb deze pagina ONZICHTBAAR-proof gemaakt. Zelfs als je ernaar kijkt, zie je niks. Mijn CSS-skills zijn ongeëvenaard!"',
     en: '<strong>Pasquino says:</strong> "I\'ve made this page INVISIBLE-proof. Even if you look at it, you won\'t see anything. My CSS skills are unmatched!"'
   },
