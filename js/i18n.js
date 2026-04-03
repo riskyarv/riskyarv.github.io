@@ -403,7 +403,7 @@ const translations = {
 
   // ===================== LEVEL 5 =====================
   "l5-title": {
-    nl: "🏆 De laaste heist",
+    nl: "🏆 De laatste heist",
     en: "🏆 The final heist"
   },
   "l5-subtitle": {
