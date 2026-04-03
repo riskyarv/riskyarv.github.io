@@ -255,8 +255,8 @@ const translations = {
     en: "🤠 Console cowboys"
   },
   "l3-subtitle": {
-    nl: "JavaScript-geheimen — wat verstopt zich in de code?",
-    en: "JavaScript secrets — what's hiding in the code?"
+    nl: "JavaScript-geheimen: wat verstopt zich in de code?",
+    en: "JavaScript secrets: what's hiding in the code?"
   },
   "l3-sjonnie": {
     nl: '<strong>Pasquino zegt:</strong> "Dit wachtwoord is beschermd door mijn Ultra-Secure JavaScript Encryption™. Het gebruikt military-grade ROT-13 quantum algoritmes. ONKRAAKBAAR."',
