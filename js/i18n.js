@@ -434,10 +434,10 @@ const translations = {
     nl: "Om deze kluis te kraken, moet je denken als een echte security researcher: controleer de broncode, inspecteer de elementen, lees de scripts, en onderzoek de metadata. Laat geen steen onaangeroerd.",
     en: "To crack this vault, you'll need to think like a real security researcher: check the source, inspect the elements, read the scripts, and examine the metadata. Leave no stone unturned."
   },
-  "l5-taunt": {
-  nl: '<strong>⚠️ Pasquino\'s laatste uitdaging:</strong> "Ik heb de stukken zo goed verstopt, zelfs ik vergat waar ik deel 2 had gelaten. Grapje. Het zit op een heel logische plek. Als je HTML kent, tenminste. Wat je waarschijnlijk niet doet. 😏"',
-  en: '<strong>⚠️ Pasquino\'s final taunt:</strong> "I\'ve hidden the pieces so well, even I forgot where I put part 2. Just kidding. It\'s in a very logical place. If you know HTML, that is. Which you don\'t. Probably. 😏"'
-},
+ "l5-taunt": {
+    nl: '<strong>⚠️ Pasquino\'s laatste uitdaging:</strong> "Ik heb de stukken zo goed verstopt, zelfs ik vergat waar ik deel 2 had gelaten. Grapje — het zit op een heel logische plek. Als je HTML kent, tenminste. Wat je waarschijnlijk niet doet. 😏"',
+    en: '<strong>⚠️ Pasquino\'s final taunt:</strong> "I\'ve hidden the pieces so well, even I forgot where I put part 2. Just kidding — it\'s in a very logical place. If you know HTML, that is. Which you don\'t. Probably. 😏"'
+  },
   "l5-completion": {
     nl: "🎉 Je hebt Pasquil's hack overval voltooid!",
     en: "🎉 You've completed Pasquil's hack heist!"
