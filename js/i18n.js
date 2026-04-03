@@ -131,12 +131,12 @@ const translations = {
     en: "📖 Pasquino's secret diary"
   },
   "l1-subtitle": {
-    nl: "HTML-broncode inspecteren — welke geheimen zitten er in de broncode?",
-    en: "HTML source code inspection — what secrets lurk in the source?"
+    nl: "HTML-broncode inspecteren: welke geheimen zitten er in de broncode?",
+    en: "HTML source code inspection: what secrets lurk in the source?"
   },
   "l1-Pasquino": {
-    nl: '<strong>Pasquino zegt:</strong> "Ik bewaar al mijn persoonlijke notities gewoon in de code. Super privé — niemand kijkt ooit naar HTML, toch?"',
-    en: '<strong>Pasquino says:</strong> "I keep all my personal notes right in the code. Super private — nobody ever looks at HTML, right?"'
+    nl: '<strong>Pasquino zegt:</strong> "Ik bewaar al mijn persoonlijke notities gewoon in de code. Super privé. Niemand kijkt ooit naar HTML, toch?"',
+    en: '<strong>Pasquino says:</strong> "I keep all my personal notes right in the code. Super private. Nobody ever looks at HTML, right?"'
   },
   "l1-diary1-date": {
     nl: "📅 15 januari 2026",
