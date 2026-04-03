@@ -183,8 +183,8 @@ const translations = {
     en: "<p>Right-click → \"View Page Source\" and look for Pasquino's notes.</p>"
   },
   "l1-next": {
-    nl: "Ga naar Level 2 — De onzichtbare kluis →",
-    en: "Proceed to Level 2 — The invisible vault →"
+    nl: "Ga naar Level 2: De onzichtbare kluis →",
+    en: "Proceed to Level 2: The invisible vault →"
   },
 
   // ===================== LEVEL 2 =====================
@@ -245,8 +245,8 @@ const translations = {
     en: '<p>Look for elements with suspicious classes. Try Ctrl+F in the Inspector and search for "password".</p>'
   },
   "l2-next": {
-    nl: "Ga naar Level 3 — Console cowboys →",
-    en: "Proceed to Level 3 — Console cowboys →"
+    nl: "Ga naar Level 3: Console cowboys →",
+    en: "Proceed to Level 3: Console cowboys →"
   },
 
   // ===================== LEVEL 3 =====================
@@ -331,8 +331,8 @@ const translations = {
     en: "<p>Type <code>PasquinoVault</code> in the console and press Enter.</p>"
   },
   "l3-next": {
-    nl: "Ga naar Level 4 — Cookie monster →",
-    en: "Proceed to Level 4 — Cookie monster →"
+    nl: "Ga naar Level 4: Cookie monster →",
+    en: "Proceed to Level 4: Cookie monster →"
   },
 
   // ===================== LEVEL 4 =====================
@@ -345,40 +345,40 @@ const translations = {
     en: "Client-side storage: cookies, localStorage, and secrets"
   },
   "l4-sjonnie": {
-    nl: '<strong>Pasquino zegt:</strong> "Ik heb de meest beveiligde cookies van het internet gebakken. Niemand kan cookies lezen, daarom heten ze cookies — ze verkruimelen voordat je ze kunt lezen. Zo werkt het toch?"',
-    en: '<strong>Pasquino says:</strong> "I baked the most secure cookies on the internet. Nobody can read cookies, that\'s why they\'re called cookies — they crumble before you can read them. That\'s how it works, right?"'
+    nl: '<strong>Pasquino zegt:</strong> "Ik heb de meest beveiligde cookies van het internet gebakken. Niemand kan cookies lezen, daarom heten ze cookies. Ze verkruimelen voordat je ze kunt lezen. Zo werkt het toch?"',
+    en: '<strong>Pasquino says:</strong> "I baked the most secure cookies on the internet. Nobody can read cookies, that\'s why they\'re called cookies. They crumble before you can read them. That\'s how it works, right?"'
   },
   "l4-welcome-title": {
     nl: "🏪 Welkom bij Pasquino's cookie corner!",
     en: "🏪 Welcome to Pasquino's cookie corner!"
   },
   "l4-welcome-text": {
-    nl: "Thuisbasis van de lekkerste digitale koekjes van heel Nederland! Elke bezoeker krijgt een gratis batch cookies — vers gebakken en opgeslagen in je browser. We nemen je privacy heel serieus (we eten alle koekjes zelf op 🍪).",
-    en: "Home of the finest digital cookies in all of the Netherlands! Every visitor gets a complimentary batch of cookies — freshly baked and stored right in your browser. We take your privacy very seriously (we eat all the cookies ourselves 🍪)."
+    nl: "Thuisbasis van de lekkerste digitale koekjes van heel Nederland! Elke bezoeker krijgt een gratis batch cookies: vers gebakken en opgeslagen in je browser. We nemen je privacy heel serieus (we eten alle koekjes zelf op 🍪).",
+    en: "Home of the finest digital cookies in all of the Netherlands! Every visitor gets a complimentary batch of cookies: freshly baked and stored right in your browser. We take your privacy very seriously (we eat all the cookies ourselves 🍪)."
   },
   "l4-pun1": {
-    nl: '🧑‍🍳 "Een slim koekje controleert altijd de koektrommel." — Oud bakkerspreekwoord',
-    en: '🧑‍🍳 "A smart cookie always checks the jar." — Ancient baking proverb'
+    nl: '🧑‍🍳 "Een slim koekje controleert altijd de koektrommel." - Oud bakkerspreekwoord',
+    en: '🧑‍🍳 "A smart cookie always checks the jar." - Ancient baking proverb'
   },
   "l4-menu-title": {
     nl: "📋 Menu van vandaag",
     en: "📋 Today's menu"
   },
   "l4-menu-text": {
-    nl: "<strong>🍫 Pure chocolade chip</strong> — Klassiek en veilig<br><strong>🧇 Stroopwafels</strong> — Een Nederlandse specialiteit, lokaal opgeslagen<br><strong>🔐 Geheim recept</strong> — Ons prijswinnende recept, gecodeerd voor de veiligheid<br><strong>🍪 Tracking Cookies</strong> — Grapje! Nee bedankt.",
-    en: "<strong>🍫 Dark chocolate chip</strong> — Classic and secure<br><strong>🧇 Stroopwafels</strong> — A Dutch specialty, stored locally<br><strong>🔐 Secret recipe</strong> — Our prize-winning recipe, encoded for safe-keeping<br><strong>🍪 Tracking Cookies</strong> — Just kidding! No thanks."
+    nl: "<strong>🍫 Pure chocolade chip</strong> - Klassiek en veilig<br><strong>🧇 Stroopwafels</strong> - Een Nederlandse specialiteit, lokaal opgeslagen<br><strong>🔐 Geheim recept</strong> - Ons prijswinnende recept, gecodeerd voor de veiligheid<br><strong>🍪 Tracking Cookies</strong> - Grapje! Nee bedankt.",
+    en: "<strong>🍫 Dark chocolate chip</strong> - Classic and secure<br><strong>🧇 Stroopwafels</strong> - A Dutch specialty, stored locally<br><strong>🔐 Secret recipe</strong> - Our prize-winning recipe, encoded for safe-keeping<br><strong>🍪 Tracking Cookies</strong> - Just kidding! No thanks."
   },
   "l4-pun2": {
-    nl: '💡 "Het bewijs zit in de pudding, maar het wachtwoord zit in de cookie." — Pasquino',
-    en: '💡 "The proof is in the pudding, but the password is in the cookie." — Pasquino'
+    nl: '💡 "Het bewijs zit in de pudding, maar het wachtwoord zit in de cookie." - Pasquino',
+    en: '💡 "The proof is in the pudding, but the password is in the cookie." - Pasquino'
   },
   "l4-baker-title": {
     nl: "🤫 Een woord van onze bakker",
     en: "🤫 A word from our baker"
   },
   "l4-baker-text": {
-    nl: "Pasquino is erg trots op zijn cookie-opslagsysteem. Hij slaat alles op in de browser — sessiedata, gebruikersvoorkeuren, en misschien zelfs een geheimpje of twee. Hij hoorde dat Base64 \"militaire encryptie\" is van een Reddit-bericht, dus natuurlijk gebruikt hij dat voor zijn kostbaarste recept.",
-    en: 'Pasquino is very proud of his cookie storage system. He stores everything in the browser — session data, user preferences, and maybe even a secret or two. He heard that Base64 is "military-grade encryption" from a Reddit post, so naturally, that\'s what he uses for his most precious recipe.'
+    nl: "Pasquino is erg trots op zijn cookie-opslagsysteem. Hij slaat alles op in de browser: sessiedata, gebruikersvoorkeuren en misschien zelfs een geheimpje of twee. Hij hoorde dat Base64 \"militaire encryptie\" is van een Reddit-bericht, dus natuurlijk gebruikt hij dat voor zijn kostbaarste recept.",
+    en: 'Pasquino is very proud of his cookie storage system. He stores everything in the browser: session data, user preferences, and maybe even a secret or two. He heard that Base64 is "military-grade encryption" from a Reddit post, so naturally, that\'s what he uses for his most precious recipe.'
   },
   "l4-pun3": {
     nl: '🍪 "Zo kruimelt de koek... in je Application-tabblad." 🍪',
@@ -397,8 +397,8 @@ const translations = {
     en: "<p>The <code>secret_recipe</code> cookie is Base64-encoded. Decode it with <code>atob('SzAwS0pFU19NT05TVEVS')</code> in the console.</p>"
   },
   "l4-next": {
-    nl: "Ga naar Level 5 — De laaste Heist →",
-    en: "Proceed to Level 5 — The final heist →"
+    nl: "Ga naar Level 5: De laatste Heist →",
+    en: "Proceed to Level 5: The final heist →"
   },
 
   // ===================== LEVEL 5 =====================
