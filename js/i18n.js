@@ -131,8 +131,8 @@ const translations = {
     en: "📖 Pasquino's secret diary"
   },
   "l1-subtitle": {
-    nl: "HTML-broncode inspecteren: welke geheimen zitten er in de broncode?",
-    en: "HTML source code inspection: what secrets lurk in the source?"
+    nl: "HTML-broncode inspecteren: welke geheimen verschuilen zich in de broncode?",
+    en: "HTML source code inspection: What secrets are lurking in the source code?"
   },
   "l1-Pasquino": {
     nl: '<strong>Pasquino zegt:</strong> "Ik bewaar al mijn persoonlijke notities gewoon in de code. Super privé. Niemand kijkt ooit naar HTML, toch?"',
