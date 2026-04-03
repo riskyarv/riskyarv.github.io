@@ -1,5 +1,5 @@
 /* ============================================
-   Pasquil's hack heist — i18n System
+   Pasquil's hack overval — i18n System
    ============================================ */
 
 const translations = {
@@ -105,7 +105,7 @@ const translations = {
 
   // ===================== INDEX PAGE =====================
   "hero-title": {
-    nl: "Pasquil's hack heist",
+    nl: "Pasquil's hack overval",
     en: "Pasquil's hack heist"
   },
   "hero-subtitle": {
