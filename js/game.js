@@ -87,7 +87,7 @@ async function handlePasswordSubmit(event) {
 
   if (isCorrect) {
     const successMsg = (t("success-msg") || "✅ PASSWORD CORRECT! You cracked Sjonnie's {levelName}! ")
-      .replace("{levelName}", levelNames[level] || "level");
+      .replace("{levelName}", t("card-title-" + level) || levelNames[level] || "level");
     const suffix = level < 5
       ? (t("success-proceed") || "Proceed to the next challenge.")
       : (t("success-complete") || "You've completed the heist!");
@@ -190,10 +190,42 @@ function updateLandingPage() {
   });
 }
 
+// Guard: block access to levels if the previous level isn't completed
+function checkLevelAccess() {
+  const level = getCurrentLevel();
+  if (level <= 1) return; // Level 1 is always accessible
+
+  const prevCompleted = isLevelCompleted(level - 1);
+  if (prevCompleted) return;
+
+  const lang = (typeof getLang === "function") ? getLang() : "nl";
+  const title = (typeof t === "function" && t("level-locked-title")) || "🚫 Nice try!";
+  const text = ((typeof t === "function" && t("level-locked-text")) ||
+    "You need to complete the previous level first. Go back and solve Level {prev}!")
+    .replace("{prev}", level - 1);
+  const backText = (typeof t === "function" && t("level-locked-back")) || "← Back to levels";
+
+  const wrapper = document.querySelector(".page-wrapper");
+  if (wrapper) {
+    wrapper.innerHTML = `
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:80vh;text-align:center;padding:2rem;">
+        <h1 style="font-size:2.5rem;margin-bottom:1rem;">${title}</h1>
+        <p style="font-size:1.2rem;max-width:500px;margin-bottom:2rem;opacity:0.85;">${text}</p>
+        <a href="../index.html" style="color:#a78bfa;text-decoration:none;font-size:1.1rem;">${backText}</a>
+      </div>
+    `;
+  }
+}
+
 // Auto-init on DOM ready
 document.addEventListener("DOMContentLoaded", () => {
   // Landing page init
   if (document.querySelector(".levels-grid")) {
     updateLandingPage();
+  }
+
+  // Level page guard
+  if (document.querySelector("[data-level]") && !document.querySelector(".levels-grid")) {
+    checkLevelAccess();
   }
 });

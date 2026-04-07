@@ -48,6 +48,18 @@ const translations = {
     nl: "Typ eerst iets! Zelfs Pasquino kan dat. ⌨️",
     en: "Type something first! Even Pasquino can do that. ⌨️"
   },
+  "level-locked-title": {
+    nl: "🚫 Mooi geprobeerd!",
+    en: "🚫 Nice try!"
+  },
+  "level-locked-text": {
+    nl: "Je moet eerst het vorige level voltooien voordat je hier mag komen. Ga terug en los Level {prev} op!",
+    en: "You need to complete the previous level before you can access this one. Go back and solve Level {prev}!"
+  },
+  "level-locked-back": {
+    nl: "← Terug naar levels",
+    en: "← Back to levels"
+  },
 
   // Wrong password messages
   "wrong-1": {
@@ -123,6 +135,26 @@ const translations = {
   "rules-text": {
     nl: ' Je hebt alleen een hackermindset en een moderne browser met DevTools nodig (druk op <strong>F12</strong>). Geen externe tools, geen server-hacking — alles zit in de browser. Elk level verbergt een wachtwoord met echte security-flaws. Vind het, typ het in, en ontgrendel de volgende uitdaging. Succes, hacker!',
     en: 'All you need is a hacker mindset and a modern browser with DevTools (press <strong>F12</strong>). No external tools, no server hacking — everything is in the browser. Each level hides a password using a real security flaws. Find it, type it in, and unlock the next challenge. Good luck, hacker!'
+  },
+  "card-title-1": {
+    nl: "Geheim dagboek",
+    en: "Secret Diary"
+  },
+  "card-title-2": {
+    nl: "De onzichtbare kluis",
+    en: "The Invisible Vault"
+  },
+  "card-title-3": {
+    nl: "Console cowboys",
+    en: "Console Cowboys"
+  },
+  "card-title-4": {
+    nl: "Cookie monster",
+    en: "Cookie Monster"
+  },
+  "card-title-5": {
+    nl: "De laatste overval",
+    en: "The Final Heist"
   },
 
   // ===================== LEVEL 1 =====================
