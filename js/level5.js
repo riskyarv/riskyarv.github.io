@@ -6,10 +6,10 @@
   const _0x1 = "P4"; // Part 1 of 3
 
   // Part 2? I hid that somewhere you'd never expect...
-  // Hint: data can live in the strangest HTML attributes.
+  // Hint: some HTML elements carry secret data-* attributes. Inspect every <span> you see.
 
-  // Part 3? Hah! Good luck. Check the network response headers.
-  // ...oh wait, this is a static site. I meant the meta tags. Same thing, right?
+  // Part 3? Hah! Good luck. It's hiding in plain sight — right in the <head>.
+  // Check the meta tags. Who reads those anyway?
 
   window.__heistStatus = {
     partsFound: 0,
