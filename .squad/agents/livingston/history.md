@@ -13,10 +13,10 @@
 - **Architecture:** Single shared CSS file with theme classes per level (`.diary-page`, `.vault-page`, `.terminal-page`, `.bakery-page`, `.heist-page`). Shared `game.js` handles password hashing (SubtleCrypto SHA-256), hint system, localStorage progress, and confetti.
 - **Password validation:** SHA-256 hashes computed via `shasum -a 256` and stored in `game.js`. Input is case-insensitive (uppercased before hashing).
 - **No frameworks:** Pure vanilla HTML/CSS/JS. No build step. Open `index.html` and go.
-- **Key file paths:** `css/style.css` (all visual styles), `js/game.js` (core logic), `js/level3.js` (sjonnieVault object), `js/level5.js` (IIFE with part 1 + heistStatus helper).
+- **Key file paths:** `css/style.css` (all visual styles), `js/game.js` (core logic), `js/level3.js` (pasquinoVault object), `js/level5.js` (IIFE with part 1 + heistStatus helper).
 - **Confetti is CSS-only:** 20 `.confetti-piece` divs with staggered `animation-delay` and `@keyframes confettiFall`. No JS library.
 - **Level 4 cookies:** Set via inline `<script>` after `game.js` loads. Base64-encoded secret: `SzAwS0pFU19NT05TVEVS` → `K00KJES_MONSTER`.
-- **Level 5 password split:** Part 1 in `js/level5.js` (`_0x1 = "P4"`), Part 2 in footer `data-sjonnie-part2="SQU1L_"`, Part 3 in `<meta name="sjonnie-part3" content="M4ST3R">`.
+- **Level 5 password split:** Part 1 in `js/level5.js` (`_0x1 = "P4"`), Part 2 in footer `data-pasquino-part2="SQU1L_"`, Part 3 in `<meta name="pasquino-part3" content="M4ST3R">`.
 - **Responsive:** 3-col grid on desktop, 2-col on tablet, 1-col on mobile. Min viable width 360px.
 - **i18n system added:** `js/i18n.js` handles multi-lingual support (NL default, EN alternative). Uses `data-i18n` attributes on HTML elements, `data-i18n-placeholder` for input placeholders. Language stored in `localStorage('pasquil_lang')`. ~100 translation keys covering all visible game text. Game.js references `t()` function for dynamic messages (wrong password, success, hints).
 - **Language switcher:** Fixed-position NL|EN toggle in top-right corner on every page. CSS adapts for light/dark page themes. Orange highlight on active language.

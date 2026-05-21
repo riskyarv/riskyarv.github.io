@@ -18,7 +18,7 @@
 4. **No URL gatekeeping** — any level is directly accessible by URL. The "lock" is the password form revealing the next URL.
 5. **Progress tracked in localStorage** (`pasquil_progress`) — landing page reads this to show locked/unlocked states.
 6. **3-tier hint system** — progressive hints, always sequential, Hint 3 is near-direct answer.
-7. **Sjonnie character** — the bumbling intern. All level flavor text and humor flows through this character.
+7. **Pasquino character** — the bumbling intern. All level flavor text and humor flows through this character.
 
 **Passwords:**
 

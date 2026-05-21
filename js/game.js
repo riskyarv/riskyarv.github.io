@@ -77,7 +77,7 @@ async function handlePasswordSubmit(event) {
   const normalized = input.value.trim().toUpperCase();
 
   if (!normalized) {
-    feedback.textContent = t("type-something") || "Type something first! Even Sjonnie can do that. ⌨️";
+    feedback.textContent = t("type-something") || "Type something first! Even Pasquino can do that. ⌨️";
     feedback.className = "feedback error";
     return false;
   }
@@ -86,7 +86,7 @@ async function handlePasswordSubmit(event) {
   const isCorrect = hash === levelPasswords[level];
 
   if (isCorrect) {
-    const successMsg = (t("success-msg") || "✅ PASSWORD CORRECT! You cracked Sjonnie's {levelName}! ")
+    const successMsg = (t("success-msg") || "✅ PASSWORD CORRECT! You cracked Pasquino's {levelName}! ")
       .replace("{levelName}", t("card-title-" + level) || levelNames[level] || "level");
     const suffix = level < 5
       ? (t("success-proceed") || "Proceed to the next challenge.")
@@ -117,7 +117,7 @@ async function handlePasswordSubmit(event) {
   } else {
     // Wrong password
     const key = wrongMessageKeys[Math.floor(Math.random() * wrongMessageKeys.length)];
-    const msg = t(key) || "Nope! Sjonnie's secrets are safe... for now. 🔒";
+    const msg = t(key) || "Nope! Pasquino's secrets are safe... for now. 🔒";
     feedback.textContent = msg;
     feedback.className = "feedback error";
 

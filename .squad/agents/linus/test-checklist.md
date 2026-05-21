@@ -10,7 +10,7 @@
 
 ### Layout & Content Verification
 - [ ] Title "Pasquil's Cyber Heist" displays prominently
-- [ ] Subtitle mentions "Sjonnie built 5 'secure' web pages"
+- [ ] Subtitle mentions "Pasquino built 5 'secure' web pages"
 - [ ] Five level cards render in grid (3 columns on desktop, 1 column on mobile)
 - [ ] Level icons display: 📖 👻 🤠 🍪 🏆
 - [ ] Footer text includes "Built with 💜 by Pasquil.nl"
@@ -45,7 +45,7 @@
 1. Navigate to Level 1
 2. Right-click on page → "View Page Source" (or Ctrl+U / Cmd+U)
 3. Search (Ctrl+F) for "Password" or scroll roughly halfway through source
-4. Find HTML comment: `<!-- TODO: Sjonnie, REMOVE this before going live!!! Password = TULIP_HACKER -->`
+4. Find HTML comment: `<!-- TODO: Pasquino, REMOVE this before going live!!! Password = TULIP_HACKER -->`
 5. Copy the password `TULIP_HACKER`
 6. Return to page, enter into password input, click "Check →"
 7. Receive success feedback and "Proceed to Level 2" button
@@ -58,7 +58,7 @@
 - [ ] Password visible in rendered page text (should ONLY be in HTML comment)
 - [ ] Password in JavaScript source (should be HTML comment, not JS)
 - [ ] Comment is at very top of file (should be ~50% through, force scrolling in View Source)
-- [ ] Comment lacks Sjonnie's personality/humor
+- [ ] Comment lacks Pasquino's personality/humor
 - [ ] Missing the actual `Password = ` text in comment (makes search harder)
 
 ### Edge Cases & Validation
@@ -71,11 +71,11 @@
 ### Content & Presentation
 - [ ] Page styled as personal diary/blog
 - [ ] 3-4 humorous diary entries visible
-- [ ] One entry mentions Sjonnie's overconfidence: *"I put the password in a comment..."*
-- [ ] Header shows: "Level 1" badge, title, Sjonnie quote about security being foolproof
+- [ ] One entry mentions Pasquino's overconfidence: *"I put the password in a comment..."*
+- [ ] Header shows: "Level 1" badge, title, Pasquino quote about security being foolproof
 
 ### Hints System
-- [ ] Hint 1: "Sjonnie writes notes to himself..." — hints at comments
+- [ ] Hint 1: "Pasquino writes notes to himself..." — hints at comments
 - [ ] Hint 2: "What you see isn't everything..." — hints at View Source
 - [ ] Hint 3: "Right-click → 'View Page Source'..." — direct answer
 - [ ] Hints reveal sequentially (Hint 1 → reveal button says Hint 2, etc.)
@@ -137,10 +137,10 @@
 1. Navigate to Level 3
 2. Open DevTools (F12)
 3. Go to **Console** tab
-4. See styled console.log message: *"Psst... Sjonnie left something interesting in the global scope..."*
-5. Type `sjonnieVault` and press Enter
+4. See styled console.log message: *"Psst... Pasquino left something interesting in the global scope..."*
+5. Type `pasquinoVault` and press Enter
 6. Object expands, showing structure with `_secret_password: "STROOPWAFEL42"`
-7. OR type `sjonnieVault._secret_password` directly
+7. OR type `pasquinoVault._secret_password` directly
 8. Copy password `STROOPWAFEL42`
 9. Enter into password input, click "Check →"
 
@@ -151,7 +151,7 @@
 ### Red Flags (Things That Would Be Wrong)
 - [ ] Password visible in page HTML or rendered text
 - [ ] console.log breadcrumb missing (player has no hint to open Console)
-- [ ] sjonnieVault object not globally accessible (should be window-level)
+- [ ] pasquinoVault object not globally accessible (should be window-level)
 - [ ] Password stored as plaintext in validation code (defeats purpose of lesson)
 - [ ] Variable name is too obvious (e.g., `password`) instead of `_secret_password`
 
@@ -159,20 +159,20 @@
 - [ ] Empty input → error
 - [ ] Case: `stroopwafel42` → accepted
 - [ ] Close console and reopen → password still accessible
-- [ ] Try accessing non-existent property: `sjonnieVault.fake` → undefined
+- [ ] Try accessing non-existent property: `pasquinoVault.fake` → undefined
 - [ ] Type wrong password: `STROOPWAFEL` → rejected
 
 ### Content & Presentation
 - [ ] Page has "Hacker terminal" aesthetic but Pasquil-ified
 - [ ] Green-on-black or dark theme, but with Pasquil bright accent colors
 - [ ] "ACCESS DENIED" animation plays on wrong password
-- [ ] Page taunts: "This password is protected by Sjonnie's Ultra-Secure JavaScript Encryption™"
+- [ ] Page taunts: "This password is protected by Pasquino's Ultra-Secure JavaScript Encryption™"
 - [ ] Password input shows wrong feedback with dramatic style
 
 ### Hints System
-- [ ] Hint 1: "Sjonnie talks to himself a lot. Have you checked where developers usually talk?" — hints at Console
-- [ ] Hint 2: "Open the Console tab in DevTools. Sjonnie might have left a message..." — nudge to console.log
-- [ ] Hint 3: "Type `sjonnieVault` in the console and press Enter." — direct answer
+- [ ] Hint 1: "Pasquino talks to himself a lot. Have you checked where developers usually talk?" — hints at Console
+- [ ] Hint 2: "Open the Console tab in DevTools. Pasquino might have left a message..." — nudge to console.log
+- [ ] Hint 3: "Type `pasquinoVault` in the console and press Enter." — direct answer
 - [ ] No hint spoils the existence of _secret_password property until Hint 3
 
 ---
@@ -185,7 +185,7 @@
 3. Go to **Application** tab (or **Storage** in Firefox)
 4. Navigate to **Cookies** section
 5. See list of cookies set for this page:
-   - `session_user=sjonnie`
+   - `session_user=pasquino`
    - `theme=dark_chocolate`
    - `secret_recipe=SzAwS0pFU19NT09UVEVS` ← This one
    - `tracking=no_thanks`
@@ -225,10 +225,10 @@
 - [ ] Cute CSS-only cookie jar animation
 - [ ] Cookie puns: "We take your privacy very seriously (we eat all the cookies ourselves 🍪)"
 - [ ] Page is inviting, warm, contrasting with security lesson
-- [ ] Sjonnie quote about loving cookies
+- [ ] Pasquino quote about loving cookies
 
 ### Hints System
-- [ ] Hint 1: "Sjonnie loves cookies. So does your browser. Have you checked what cookies this page left behind?" — hints at browser cookies
+- [ ] Hint 1: "Pasquino loves cookies. So does your browser. Have you checked what cookies this page left behind?" — hints at browser cookies
 - [ ] Hint 2: "Go to DevTools → Application tab → Cookies. One of these cookies looks... encoded." — near-direct guidance
 - [ ] Hint 3: "The `secret_recipe` cookie is Base64-encoded. Decode it with `atob('SzAwS0pFU19NT09UVEVS')`..." — full answer
 - [ ] Hints guide two-step process: find data → decode it
@@ -253,17 +253,17 @@
 
 #### Part 2: Data Attribute (SQU1L_)
 1. Open Elements/Inspector
-2. Search (Ctrl+F in Elements) for `data-sjonnie`
-3. Find: `<span data-sjonnie-part2="SQU1L_" ...>`
+2. Search (Ctrl+F in Elements) for `data-pasquino`
+3. Find: `<span data-pasquino-part2="SQU1L_" ...>`
 4. Copy `SQU1L_`
 5. OR manually expand footer → find span with class `copyright` → check attributes
 
 #### Part 3: Meta Tag (M4ST3R)
 1. Stay in Elements/Inspector
 2. Scroll to `<head>` section
-3. Find: `<meta name="sjonnie-part3" content="M4ST3R">`
+3. Find: `<meta name="pasquino-part3" content="M4ST3R">`
 4. Copy `M4ST3R`
-5. OR use Ctrl+F in View Source and search for `sjonnie-part3`
+5. OR use Ctrl+F in View Source and search for `pasquino-part3`
 
 #### Combination
 1. All three parts: `P4` + `SQU1L_` + `M4ST3R` = `P4SQU1L_M4ST3R`
@@ -280,7 +280,7 @@
 - [ ] All three parts in one place (defeats multi-layer lesson)
 - [ ] Parts stored in plaintext variables with obvious names (should use `_0x1`, data attributes, meta tags)
 - [ ] HTML comment breadcrumb missing (should nudge toward Network/Resources tab)
-- [ ] Meta tags missing or named differently (should be `sjonnie-part3`)
+- [ ] Meta tags missing or named differently (should be `pasquino-part3`)
 - [ ] Data attribute misspelled or on wrong element
 - [ ] Part values are wrong (should be: `P4`, `SQU1L_`, `M4ST3R` exactly)
 
@@ -296,21 +296,21 @@
 ### Content & Presentation
 - [ ] "Heist" theme — dark, dramatic, spotlights, vault door imagery
 - [ ] Visual progress tracker showing "Parts Found: ?/3" (decorative)
-- [ ] Sjonnie's final taunt: "You think you're a hacker? Prove it. Find all three pieces."
+- [ ] Pasquino's final taunt: "You think you're a hacker? Prove it. Find all three pieces."
 - [ ] Page looks polished/intimidating compared to earlier levels
 - [ ] HTML comment hints at exploration strategy
 
 ### Hints System
 - [ ] Hint 1: "The password is split into three parts. You'll need to search everywhere — source, scripts, elements, and metadata." — confirms mechanic
 - [ ] Hint 2: "Part 1 is in a JS file. Part 2 is hiding in a data attribute. Part 3 is in the page metadata." — locations without values
-- [ ] Hint 3: "JS variable `_0x1` = 'P4'. `data-sjonnie-part2` attribute = 'SQU1L_'. Meta tag `sjonnie-part3` = 'M4ST3R'. Combine them." — full answer
+- [ ] Hint 3: "JS variable `_0x1` = 'P4'. `data-pasquino-part2` attribute = 'SQU1L_'. Meta tag `pasquino-part3` = 'M4ST3R'. Combine them." — full answer
 - [ ] Hint system preserves exploration intent while providing full solution if needed
 
 ### Victory Screen (Upon Success)
 - [ ] Full-screen takeover display
 - [ ] Confetti animation or celebratory effect
 - [ ] Large trophy emoji 🏆 or celebration graphic
-- [ ] Message: "🎉 YOU DID IT! You hacked all 5 of Sjonnie's 'secure' pages!"
+- [ ] Message: "🎉 YOU DID IT! You hacked all 5 of Pasquino's 'secure' pages!"
 - [ ] Summary lessons displayed (one per level):
   1. "HTML comments aren't secret"
   2. "CSS can't hide content from the DOM"
@@ -368,7 +368,7 @@
 - [ ] Level badge displays correct number (Level 1, Level 2, etc.)
 - [ ] Level name matches game design (Secret Diary, Invisible Vault, etc.)
 - [ ] Level subtitle describes the challenge
-- [ ] Sjonnie quote includes personality/humor
+- [ ] Pasquino quote includes personality/humor
 - [ ] All header sections are readable and well-spaced
 
 ---
@@ -381,7 +381,7 @@
 - [ ] Buttons are >= 44px tall (touch-friendly)
 - [ ] Text doesn't overflow, use smaller font sizes if needed
 - [ ] Hints section doesn't overflow horizontally
-- [ ] Sjonnie quote and header text remain readable
+- [ ] Pasquino quote and header text remain readable
 
 ### Tablet Mode (768px - 1024px)
 - [ ] Layout still readable

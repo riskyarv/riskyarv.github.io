@@ -19,5 +19,5 @@
 - **Hint system:** 3 progressive hints per level, revealed sequentially. Hint 3 is always near-direct answer.
 - **Navigation:** Each level reveals next level URL on correct password. Landing page tracks progress via localStorage key `pasquil_progress`.
 - **Style:** Pasquil palette — purple (#6C2DC7), orange (#FF6B35), yellow (#FFD23F), off-white (#F5F0EB). Nunito/Poppins headings, rounded corners, emoji-heavy, playful.
-- **Character:** "Stageair Sjonnie" — bumbling intern whose bad security practices are the puzzle. Humor source.
+- **Character:** "Stageair Pasquino" — bumbling intern whose bad security practices are the puzzle. Humor source.
 - **Key decision:** No URL-based access control. Levels are standalone pages. The "lock" is the password form that reveals the next URL, not actual gatekeeping.

@@ -289,8 +289,8 @@ img {
   font-weight: 500;
 }
 
-/* Sjonnie Says Quote Box */
-.sjonnie-says {
+/* Pasquino Says Quote Box */
+.pasquino-says {
   background: rgba(255,255,255,0.12);
   border-radius: var(--radius);
   padding: 16px 24px;
@@ -302,7 +302,7 @@ img {
   text-align: left;
 }
 
-.sjonnie-says strong {
+.pasquino-says strong {
   color: var(--yellow);
   font-style: normal;
 }
@@ -637,7 +637,7 @@ img {
   box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.2);
 }
 
-.vault-page .sjonnie-says {
+.vault-page .pasquino-says {
   background: rgba(255,255,255,0.05);
   border-left-color: var(--orange);
 }
@@ -732,7 +732,7 @@ img {
   box-shadow: 0 0 0 4px rgba(57, 211, 83, 0.15);
 }
 
-.terminal-page .sjonnie-says {
+.terminal-page .pasquino-says {
   background: rgba(57, 211, 83, 0.05);
   border-left-color: #39d353;
 }
@@ -822,13 +822,13 @@ img {
   margin: 16px 0;
 }
 
-.bakery-page .sjonnie-says {
+.bakery-page .pasquino-says {
   background: rgba(139, 69, 19, 0.08);
   border-left-color: #8B4513;
   color: var(--charcoal);
 }
 
-.bakery-page .sjonnie-says strong {
+.bakery-page .pasquino-says strong {
   color: #8B4513;
 }
 
@@ -957,7 +957,7 @@ img {
   box-shadow: 0 0 0 4px rgba(255, 210, 63, 0.15);
 }
 
-.heist-page .sjonnie-says {
+.heist-page .pasquino-says {
   background: rgba(255, 210, 63, 0.05);
   border-left-color: var(--yellow);
 }

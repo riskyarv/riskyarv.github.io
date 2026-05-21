@@ -228,7 +228,7 @@ const translations = {
     nl: "CSS-verborgen inhoud: kun jij zien wat er echt op deze pagina staat?",
     en: "CSS-hidden content: can you see what's really on this page?"
   },
-  "l2-sjonnie": {
+  "l2-pasquino": {
     nl: '<strong>Pasquino zegt:</strong> "Ik heb deze pagina ONZICHTBAAR-proof gemaakt. Zelfs als je ernaar kijkt, zie je niks. Mijn CSS-skills zijn ongeëvenaard!"',
     en: '<strong>Pasquino says:</strong> "I\'ve made this page INVISIBLE-proof. Even if you look at it, you won\'t see anything. My CSS skills are unmatched!"'
   },
@@ -290,7 +290,7 @@ const translations = {
     nl: "JavaScript-geheimen: wat verstopt zich in de code?",
     en: "JavaScript secrets: what's hiding in the code?"
   },
-  "l3-sjonnie": {
+  "l3-pasquino": {
     nl: '<strong>Pasquino zegt:</strong> "Dit wachtwoord is beschermd door mijn Ultra-Secure JavaScript Encryption™. Het gebruikt military-grade ROT-13 quantum algoritmes. ONKRAAKBAAR."',
     en: '<strong>Pasquino says:</strong> "This password is protected by my Ultra-Secure JavaScript Encryption™. It uses military-grade ROT-13 quantum algorithms. UNBREAKABLE."'
   },
@@ -376,7 +376,7 @@ const translations = {
     nl: "Client-side opslag: cookies, localStorage en geheimen",
     en: "Client-side storage: cookies, localStorage, and secrets"
   },
-  "l4-sjonnie": {
+  "l4-pasquino": {
     nl: '<strong>Pasquino zegt:</strong> "Ik heb de meest beveiligde cookies van het internet gebakken. Niemand kan cookies lezen, daarom heten ze cookies. Ze verkruimelen voordat je ze kunt lezen. Zo werkt het toch?"',
     en: '<strong>Pasquino says:</strong> "I baked the most secure cookies on the internet. Nobody can read cookies, that\'s why they\'re called cookies. They crumble before you can read them. That\'s how it works, right?"'
   },
@@ -442,7 +442,7 @@ const translations = {
   nl: "Meerlagig onderzoek: combineer alles wat je hebt geleerd",
   en: "Multi-layered investigation: combine everything you've learned"
   },
-  "l5-sjonnie": {
+  "l5-pasquino": {
     nl: '<strong>Pasquino zegt:</strong> "Je bent ver gekomen, maar deze pagina is ONKRAAKBAAR. Ik heb elke beveiligingsmaatregel gebruikt die ik ken: onzichtbare tekst, versleutelde cookies, verduisterde code... je vindt deze nooit."',
     en: '<strong>Pasquino says:</strong> "You\'ve made it this far, but this page is UNBREAKABLE. I\'ve used every security measure I know: invisible text, encrypted cookies, obfuscated code... you\'ll never find this one."'
   },

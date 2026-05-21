@@ -1,5 +1,5 @@
-// Sjonnie's FINAL defense layer
-// "I split the password into pieces. Even if they find one, they'll never find them all!" — Sjonnie
+// Pasquino's FINAL defense layer
+// "I split the password into pieces. Even if they find one, they'll never find them all!" — Pasquino
 
 (function() {
   // Part 1 is right here, if you can find it
