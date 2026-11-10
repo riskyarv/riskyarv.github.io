@@ -27,10 +27,10 @@
         <!-- Splash -->
         <section class="splash-card">
           <h2 data-i18n="l1-splash-title">🏢 Welkom op de afdeling Informatiebeveiliging</h2>
-          <a href="../img/splash.jpg" target="_blank" rel="noopener" class="splash-image-link">
+          <a href="../img/splash.jpg" class="splash-image-link" id="splash-open">
             <img src="../img/splash.jpg" alt="Pasquil Splash: een kantoor vol beveiligingsrisico's" class="splash-image" width="1600" height="900">
           </a>
-          <p class="splash-caption" data-i18n="l1-splash-caption">Onze Splash: zo ziet een werkplek eruit als niemand oplet. Hoeveel beveiligingsrisico's zie jij? (Tik op de afbeelding om in te zoomen.)</p>
+          <p class="splash-caption" data-i18n="l1-splash-caption">Onze Splash: zo ziet een werkplek eruit als niemand oplet. Hoeveel beveiligingsrisico's zie jij? (Tik op de afbeelding om hem te vergroten.)</p>
         </section>
 
         <!-- Awareness -->
@@ -117,6 +117,15 @@
 
     </div>
 
+    <!-- Splash lightbox -->
+    <dialog id="splash-lightbox" class="splash-lightbox">
+      <button type="button" class="splash-lightbox-close" id="splash-close" aria-label="Sluiten">✕</button>
+      <div class="splash-lightbox-scroll">
+        <img src="../img/splash.jpg" alt="Pasquil Splash: een kantoor vol beveiligingsrisico's" class="splash-lightbox-image" id="splash-lightbox-image" width="1600" height="900">
+      </div>
+      <p class="splash-lightbox-help" data-i18n="l1-lightbox-help">Tik op de afbeelding om in of uit te zoomen.</p>
+    </dialog>
+
     <!-- Confetti -->
     <div class="confetti-container">
       <div class="confetti-piece"></div><div class="confetti-piece"></div>
@@ -141,5 +150,6 @@
 
   <script src="../js/i18n.js"></script>
   <script src="../js/game.js"></script>
+  <script src="../js/level1.js"></script>
 </body>
 </html>

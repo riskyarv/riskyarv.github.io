@@ -45,6 +45,7 @@ pasquilgame/
 ├── js/
 │   ├── game.js                 # Shared game logic (password checking, navigation, hints)
 │   ├── i18n.js                 # NL/EN translations
+│   ├── level1.js               # Level 1 specific JS (Splash lightbox)
 │   ├── level2.js               # Level 2 specific JS (AI chatbot)
 │   ├── level5.js               # Level 5 specific JS (console challenge)
 │   └── level7.js               # Level 7 specific JS (final heist)

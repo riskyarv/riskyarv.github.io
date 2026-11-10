@@ -562,6 +562,94 @@ img {
   height: auto;
 }
 
+.splash-image-link {
+  cursor: zoom-in;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+.splash-lightbox {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: #071438;
+  color: var(--white);
+}
+
+.splash-lightbox[open] {
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.2s ease;
+}
+
+.splash-lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.splash-lightbox-scroll {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  padding: 56px 12px 8px;
+}
+
+.splash-lightbox-image {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border-radius: var(--radius);
+  cursor: zoom-in;
+}
+
+.splash-lightbox.zoomed .splash-lightbox-scroll {
+  display: block;
+  padding: 56px 0 8px;
+}
+
+.splash-lightbox.zoomed .splash-lightbox-image {
+  max-width: none;
+  max-height: none;
+  width: 1600px;
+  border-radius: 0;
+  cursor: zoom-out;
+}
+
+.splash-lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  z-index: 1;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--charcoal);
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.splash-lightbox-help {
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.75;
+  padding: 8px 12px 16px;
+}
+
 .splash-caption {
   margin-top: 12px;
   font-size: 0.9rem;

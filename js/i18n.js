@@ -191,8 +191,16 @@ const translations = {
     en: "🏢 Welcome to the Information Security department"
   },
   "l1-splash-caption": {
-    nl: "Onze Splash: zo ziet een werkplek eruit als niemand oplet. Hoeveel beveiligingsrisico's zie jij? (Tik op de afbeelding om in te zoomen.)",
-    en: "Our Splash: this is what a workplace looks like when nobody pays attention. How many security risks can you spot? (Tap the image to zoom in.)"
+    nl: "Onze Splash: zo ziet een werkplek eruit als niemand oplet. Hoeveel beveiligingsrisico's zie jij? (Tik op de afbeelding om hem te vergroten.)",
+    en: "Our Splash: this is what a workplace looks like when nobody pays attention. How many security risks can you spot? (Tap the image to enlarge it.)"
+  },
+  "l1-lightbox-help": {
+    nl: "Tik op de afbeelding om in of uit te zoomen.",
+    en: "Tap the image to zoom in or out."
+  },
+  "l1-lightbox-close": {
+    nl: "Sluiten",
+    en: "Close"
   },
   "l1-awareness-title": {
     nl: "🛡️ Bewustwording: informatiebeveiliging begint bij jou",
