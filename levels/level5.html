@@ -5,93 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Level 5 - Hack Pasquino</title>
   <link rel="icon" type="image/png" href="/img/Favicon.png">
-  <meta name="author" content="Pasquino">
-  <meta name="description" content="Pasquil's most secure page ever">
-  <meta name="pasquino-part3" content="M4ST3R">
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class="heist-page" data-level="5">
+<body class="terminal-page" data-level="5">
   <div class="page-wrapper">
-
-    <!-- Pasquino's Security Audit Log: All clear! No passwords here.
-         But between you and me... check what's loaded in the Network tab. 
-         Look for something that doesn't belong. -->
 
     <!-- Level Header -->
     <header class="level-header">
       <a href="../index.html" class="back-link" data-i18n="back-to-levels">← Terug naar levels</a>
       <div class="level-badge">Level 5</div>
-      <h1 data-i18n="l5-title">🏆 De laatste overval</h1>
-      <p class="level-subtitle" data-i18n="l5-subtitle">Meerlagig onderzoek — combineer alles wat je hebt geleerd</p>
+      <h1 data-i18n="l5-title">🤠 Console Cowboys</h1>
+      <p class="level-subtitle" data-i18n="l5-subtitle">JavaScript-geheimen — wat verstopt zich in de code?</p>
       <div class="pasquino-says" data-i18n="l5-pasquino">
-        <strong>Pasquino zegt:</strong> "Je bent ver gekomen, maar deze pagina is ONKRAAKBAAR. Ik heb elke beveiligingsmaatregel gebruikt die ik ken: onzichtbare tekst, versleutelde cookies, verduisterde code... je vindt deze nooit."
+        <strong>Pasquino zegt:</strong> "Dit wachtwoord is beschermd door mijn Ultra-Secure JavaScript Encryption™. Het gebruikt military-grade ROT-13 quantum algoritmes. ONKRAAKBAAR."
       </div>
     </header>
 
-    <!-- Heist Content -->
+    <!-- Terminal Content -->
     <div class="page-content">
-      <div class="heist-content">
+      <div class="terminal-content">
 
-        <!-- Vault Door -->
-        <div class="heist-vault-door">
-          <span class="vault-icon">🏦</span>
+        <div class="terminal-box">
+          <span class="prompt">Pasquino@pasquil:~$</span> <span class="string" data-i18n="l5-terminal-cmd">cat beveiligingsstatus.txt</span><br><br>
+          <span class="comment">// ================================</span><br>
+          <span class="comment" data-i18n="l5-report-title">// PASQUINO'S BEVEILIGINGSSTATUSRAPPORT</span><br>
+          <span class="comment">// ================================</span><br><br>
+          <span class="prompt">&gt;</span> <span data-i18n="l5-firewall">Firewall: AAN (het is een foto van een muur in brand 🔥)</span><br>
+          <span class="prompt">&gt;</span> <span data-i18n="l5-encryption">Encryptie: MAXIMAAL (ik heb het bestand hernoemd naar .encrypted)</span><br>
+          <span class="prompt">&gt;</span> <span data-i18n="l5-storage">Wachtwoord Opslag: ULTRA VEILIG (het zit in een variabele)</span><br>
+          <span class="prompt">&gt;</span> <span data-i18n="l5-backup">Backup Plan: geef de stagiair de schuld (wacht, IK ben de stagiair)</span>
         </div>
 
-        <div class="heist-taunt">
-          <h3 data-i18n="l5-challenge-title">🎯 De ultieme uitdaging</h3>
-          <p data-i18n="l5-challenge-text">Denk je dat je een hacker bent? Bewijs het. Vind alle drie de delen.</p>
+        <div class="terminal-taunt">
+          <h3 data-i18n="l5-taunt-title">🔒 Onkraakbare Wachtwoord Checker</h3>
+          <p data-i18n="l5-taunt-sub">Beschermd door Pasquino's Ultra-Secure JavaScript Encryption™</p>
         </div>
 
-        <!-- Parts Tracker -->
-        <div class="parts-tracker">
-          <div class="part-card">
-            <div class="part-number"><span data-i18n="l5-part">Deel</span> 1</div>
-            <div class="part-value">?</div>
-          </div>
-          <div class="part-card">
-            <div class="part-number"><span data-i18n="l5-part">Deel</span> 2</div>
-            <div class="part-value">?</div>
-          </div>
-          <div class="part-card">
-            <div class="part-number"><span data-i18n="l5-part">Deel</span> 3</div>
-            <div class="part-value">?</div>
-          </div>
+        <!-- Access Denied animation -->
+        <div id="access-denied" class="access-denied">
+          ❌ ACCESS DENIED ❌
         </div>
 
-        <div class="heist-info">
-          <p data-i18n="l5-info1">
-            Dit is het — het Pasquil Maximum Security Office. Pasquino haalt alles uit
-            de kast. Hij heeft het wachtwoord opgesplitst in <strong>drie delen</strong>
-            en verspreid over de pagina. Elk deel is verborgen met een andere techniek
-            die je in eerdere levels bent tegengekomen.
-          </p>
-          <p style="margin-top: 12px;" data-i18n="l5-info2">
-            Om deze kluis te kraken, moet je denken als een echte security researcher:
-            controleer de broncode, inspecteer de elementen, lees de scripts, en onderzoek
-            de metadata. Laat geen steen onaangeroerd.
-          </p>
-        </div>
-
-        <div class="heist-info">
-          <p data-i18n="l5-taunt">
-            <strong>⚠️ Pasquino's laatste uitdaging:</strong> "Ik heb de stukken zo goed
-            verstopt, zelfs ik vergat waar ik deel 2 had gelaten. Grapje — het zit op een
-            heel logische plek. Als je HTML kent, tenminste. Wat je waarschijnlijk niet doet. 😏"
-          </p>
+        <div class="terminal-box">
+          <span class="comment" data-i18n="l5-funfact1">// Leuk weetje: Pasquino slaat al zijn geheimen op in JavaScript</span><br>
+          <span class="comment" data-i18n="l5-funfact2">// variabelen omdat "niemand ooit JavaScript leest."</span><br><br>
+          <span class="comment" data-i18n="l5-funfact3">// Hij heeft ook de gewoonte om tegen zichzelf te praten in console.log</span><br>
+          <span class="comment" data-i18n="l5-funfact4">// statements. Developers zijn nu eenmaal praatgraag.</span><br><br>
+          <span class="prompt">&gt;</span> <span class="string" data-i18n="l5-quote1">"Het wachtwoord is veilig. Ik heb het in een object gestopt. Objecten zijn privé, toch?"</span><br>
+          <span class="prompt">&gt;</span> <span class="string" data-i18n="l5-quote2">"— Pasquino, vlak voor de ramp"</span>
         </div>
 
       </div>
 
       <!-- Password Section -->
       <section class="password-section" id="password-section">
-        <h2 data-i18n="enter-complete-password">🔐 Voer het volledige wachtwoord in</h2>
+        <h2 data-i18n="enter-password">🔐 Voer het wachtwoord in</h2>
         <form id="password-form" onsubmit="return handlePasswordSubmit(event)">
           <div class="input-group">
             <input
               type="text"
               id="password-input"
-              placeholder="Combineer alle 3 delen..."
-              data-i18n-placeholder="password-placeholder-combine"
+              placeholder="Typ het wachtwoord hier..."
+              data-i18n-placeholder="password-placeholder"
               autocomplete="off"
               spellcheck="false"
             >
@@ -100,7 +75,7 @@
         </form>
         <div id="feedback" class="feedback hidden"></div>
         <div id="next-level" class="next-level hidden">
-          <p style="color: var(--yellow); font-weight: 700; font-size: 1.1rem;" data-i18n="l5-completion">🎉 Je hebt Pasquil's hack heist voltooid!</p>
+          <a href="level6.html" class="btn-next" data-i18n="l5-next">Ga naar Level 6 — Cookie Monster →</a>
         </div>
       </section>
 
@@ -110,44 +85,19 @@
         <div id="hints-container">
           <div class="hint hidden" data-hint="1">
             <span class="hint-label">Hint 1:</span>
-            <span data-i18n="l5-hint1"><p>Het wachtwoord is opgesplitst in drie delen. Je moet overal zoeken — broncode, scripts, elementen en metadata.</p></span>
+            <span data-i18n="l5-hint1"><p>Pasquino praat veel tegen zichzelf. Heb je al gekeken waar developers meestal praten?</p></span>
           </div>
           <div class="hint hidden" data-hint="2">
             <span class="hint-label">Hint 2:</span>
-            <span data-i18n="l5-hint2"><p>Deel 1 zit in een JS-bestand. Deel 2 verstopt zich in een data-attribuut. Deel 3 zit in de pagina-metadata.</p></span>
+            <span data-i18n="l5-hint2"><p>Open het Console tabblad in DevTools. Pasquino heeft misschien een berichtje voor je achtergelaten.</p></span>
           </div>
           <div class="hint hidden" data-hint="3">
             <span class="hint-label">Hint 3:</span>
-            <span data-i18n="l5-hint3"><p>JS variabele <code>_0x1</code> = "--". <code>data-pasquino-part2</code> attribuut = "-----". Meta tag <code>pasquino-part3</code> = "-----". Combineer ze.</p></span>
+            <span data-i18n="l5-hint3"><p>Typ <code>pasquinoVault</code> in de console en druk op Enter.</p></span>
           </div>
         </div>
       </section>
 
-    </div>
-
-    <!-- Victory Overlay -->
-    <div class="victory-overlay" id="victory-overlay">
-      <div class="victory-content">
-        <span class="victory-trophy">🏆</span>
-        <h1 data-i18n="victory-title">🎉 JE HEBT HET GEDAAN!</h1>
-        <p class="victory-subtitle" data-i18n="victory-subtitle">Je hebt alle 5 van Pasquino's "beveiligde" pagina's gehackt!</p>
-
-        <ul class="victory-lessons">
-          <li><span class="lesson-number">Level 1:</span> <span data-i18n="victory-l1">HTML-comments zijn niet geheim</span></li>
-          <li><span class="lesson-number">Level 2:</span> <span data-i18n="victory-l2">CSS kan inhoud niet verbergen voor de DOM</span></li>
-          <li><span class="lesson-number">Level 3:</span> <span data-i18n="victory-l3">JavaScript-variabelen zijn openbaar</span></li>
-          <li><span class="lesson-number">Level 4:</span> <span data-i18n="victory-l4">Browseropslag is niet veilig</span></li>
-          <li><span class="lesson-number">Level 5:</span> <span data-i18n="victory-l5">Echte beveiliging vereist verdediging in de diepte</span></li>
-        </ul>
-
-        <p style="color: rgba(255,255,255,0.7); margin-bottom: 24px;" data-i18n="victory-learn-more">
-          Wil je meer leren over echte webbeveiliging?
-        </p>
-
-        <a href="https://pasquil.nl" target="_blank" rel="noopener" class="victory-cta" data-i18n="victory-cta">
-          Bezoek Pasquil.nl →
-        </a>
-      </div>
     </div>
 
     <!-- Confetti -->
@@ -166,9 +116,6 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-      <div class="footer-links">
-        <span class="copyright" data-pasquino-part2="SQU1L_" aria-hidden="true">© 2026 Pasquil</span>
-      </div>
       <img src="../img/pasquil-logo.png" alt="Pasquil" class="footer-logo">
       <span data-i18n="footer-text-short">Gemaakt met 💜 door <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a></span>
     </footer>

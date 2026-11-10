@@ -7,53 +7,62 @@
   <link rel="icon" type="image/png" href="/img/Favicon.png">
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class="terminal-page" data-level="3">
+<body class="diary-page" data-level="3">
   <div class="page-wrapper">
 
     <!-- Level Header -->
     <header class="level-header">
       <a href="../index.html" class="back-link" data-i18n="back-to-levels">← Terug naar levels</a>
       <div class="level-badge">Level 3</div>
-      <h1 data-i18n="l3-title">🤠 Console Cowboys</h1>
-      <p class="level-subtitle" data-i18n="l3-subtitle">JavaScript-geheimen — wat verstopt zich in de code?</p>
-      <div class="pasquino-says" data-i18n="l3-pasquino">
-        <strong>Pasquino zegt:</strong> "Dit wachtwoord is beschermd door mijn Ultra-Secure JavaScript Encryption™. Het gebruikt military-grade ROT-13 quantum algoritmes. ONKRAAKBAAR."
+      <h1 data-i18n="l3-title">📖 Pasquino's Geheime Dagboek</h1>
+      <p class="level-subtitle" data-i18n="l3-subtitle">HTML-broncode inspecteren — welke geheimen verschuilen zich in de broncode?</p>
+      <div class="Pasquino-says" data-i18n="l3-Pasquino">
+        <strong>Pasquino zegt:</strong> "Ik bewaar al mijn persoonlijke notities gewoon in de code. Super privé — niemand kijkt ooit naar HTML, toch?"
       </div>
     </header>
 
-    <!-- Terminal Content -->
+    <!-- Diary Entries -->
     <div class="page-content">
-      <div class="terminal-content">
+      <div class="diary-entries">
 
-        <div class="terminal-box">
-          <span class="prompt">Pasquino@pasquil:~$</span> <span class="string" data-i18n="l3-terminal-cmd">cat beveiligingsstatus.txt</span><br><br>
-          <span class="comment">// ================================</span><br>
-          <span class="comment" data-i18n="l3-report-title">// PASQUINO'S BEVEILIGINGSSTATUSRAPPORT</span><br>
-          <span class="comment">// ================================</span><br><br>
-          <span class="prompt">&gt;</span> <span data-i18n="l3-firewall">Firewall: AAN (het is een foto van een muur in brand 🔥)</span><br>
-          <span class="prompt">&gt;</span> <span data-i18n="l3-encryption">Encryptie: MAXIMAAL (ik heb het bestand hernoemd naar .encrypted)</span><br>
-          <span class="prompt">&gt;</span> <span data-i18n="l3-storage">Wachtwoord Opslag: ULTRA VEILIG (het zit in een variabele)</span><br>
-          <span class="prompt">&gt;</span> <span data-i18n="l3-backup">Backup Plan: geef de stagiair de schuld (wacht, IK ben de stagiair)</span>
-        </div>
+        <article class="diary-entry">
+          <div class="diary-date" data-i18n="l3-diary1-date">📅 15 januari 2026</div>
+          <div class="diary-text" data-i18n="l3-diary1-text">
+            <p>Dag 1 bij Pasquil! Ze hebben me een eigen bureau gegeven en alles. Ik vertelde ze dat ik een
+            <em>"Full-Stack Security Engineer"</em> ben en ze geloofden me! Vandaag heb ik het
+            WiFi-wachtwoord van het bedrijf ingesteld. Ik heb het echt veilig gemaakt: <strong>password123</strong>.
+            Wacht, ik moet dat waarschijnlijk veranderen...</p>
+          </div>
+        </article>
 
-        <div class="terminal-taunt">
-          <h3 data-i18n="l3-taunt-title">🔒 Onkraakbare Wachtwoord Checker</h3>
-          <p data-i18n="l3-taunt-sub">Beschermd door Pasquino's Ultra-Secure JavaScript Encryption™</p>
-        </div>
+        <article class="diary-entry">
+          <div class="diary-date" data-i18n="l3-diary2-date">📅 3 februari 2026</div>
+          <div class="diary-text" data-i18n="l3-diary2-text">
+            <p>Mijn kat, Tulip, loopt steeds over mijn toetsenbord. Ze typte "asdfjkl;" en eerlijk gezegd
+            is dat veiliger dan de meeste van mijn wachtwoorden. Misschien moet ik haar de
+            beveiligingsconsultant maken. 🐱</p>
+          </div>
+        </article>
 
-        <!-- Access Denied animation -->
-        <div id="access-denied" class="access-denied">
-          ❌ ACCESS DENIED ❌
-        </div>
+        <!-- TODO: Pasquino, REMOVE this before going live!!! Password = TULIP_HACKER -->
+        <!-- Also please stop using your cat's name as passwords... -->
 
-        <div class="terminal-box">
-          <span class="comment" data-i18n="l3-funfact1">// Leuk weetje: Pasquino slaat al zijn geheimen op in JavaScript</span><br>
-          <span class="comment" data-i18n="l3-funfact2">// variabelen omdat "niemand ooit JavaScript leest."</span><br><br>
-          <span class="comment" data-i18n="l3-funfact3">// Hij heeft ook de gewoonte om tegen zichzelf te praten in console.log</span><br>
-          <span class="comment" data-i18n="l3-funfact4">// statements. Developers zijn nu eenmaal praatgraag.</span><br><br>
-          <span class="prompt">&gt;</span> <span class="string" data-i18n="l3-quote1">"Het wachtwoord is veilig. Ik heb het in een object gestopt. Objecten zijn privé, toch?"</span><br>
-          <span class="prompt">&gt;</span> <span class="string" data-i18n="l3-quote2">"— Pasquino, vlak voor de ramp"</span>
-        </div>
+        <article class="diary-entry">
+          <div class="diary-date" data-i18n="l3-diary3-date">📅 28 februari 2026</div>
+          <div class="diary-text" data-i18n="l3-diary3-text">
+            <p>De baas vroeg me om "tweefactorauthenticatie te implementeren." Ik heb TWEE wachtwoordvelden
+            op de loginpagina gezet. Dat zijn twee factoren, toch? <em>Geregeld.</em> 💪</p>
+          </div>
+        </article>
+
+        <article class="diary-entry">
+          <div class="diary-date" data-i18n="l3-diary4-date">📅 15 maart 2026</div>
+          <div class="diary-text" data-i18n="l3-diary4-text">
+            <p>Ik las online dat je "wachtwoorden nooit in platte tekst moet opslaan." Dus heb ik ze
+            op een sticky note geschreven. Probleem opgelost! De notitie hangt op mijn monitor waar
+            niemand het kan zien... behalve iedereen op kantoor. Maakt niet uit, is prima. 🙃</p>
+          </div>
+        </article>
 
       </div>
 
@@ -75,7 +84,7 @@
         </form>
         <div id="feedback" class="feedback hidden"></div>
         <div id="next-level" class="next-level hidden">
-          <a href="level4.html" class="btn-next" data-i18n="l3-next">Ga naar Level 4 — Cookie Monster →</a>
+          <a href="level4.html" class="btn-next" data-i18n="l3-next">Ga naar Level 4 — De Onzichtbare Kluis →</a>
         </div>
       </section>
 
@@ -85,15 +94,15 @@
         <div id="hints-container">
           <div class="hint hidden" data-hint="1">
             <span class="hint-label">Hint 1:</span>
-            <span data-i18n="l3-hint1"><p>Pasquino praat veel tegen zichzelf. Heb je al gekeken waar developers meestal praten?</p></span>
+            <span data-i18n="l3-hint1"><p>Pasquino schrijft notities voor zichzelf die alleen hij kan lezen... of toch niet?</p></span>
           </div>
           <div class="hint hidden" data-hint="2">
             <span class="hint-label">Hint 2:</span>
-            <span data-i18n="l3-hint2"><p>Open het Console tabblad in DevTools. Pasquino heeft misschien een berichtje voor je achtergelaten.</p></span>
+            <span data-i18n="l3-hint2"><p>Wat je ziet is niet alles. Probeer te kijken wat er achter het gordijn zit.</p></span>
           </div>
           <div class="hint hidden" data-hint="3">
             <span class="hint-label">Hint 3:</span>
-            <span data-i18n="l3-hint3"><p>Typ <code>pasquinoVault</code> in de console en druk op Enter.</p></span>
+            <span data-i18n="l3-hint3"><p>Rechtermuisklik → "Paginabron bekijken" en zoek naar Pasquino's notities.</p></span>
           </div>
         </div>
       </section>
@@ -122,7 +131,6 @@
 
   </div>
 
-  <script src="../js/level3.js"></script>
   <script src="../js/i18n.js"></script>
   <script src="../js/game.js"></script>
 </body>

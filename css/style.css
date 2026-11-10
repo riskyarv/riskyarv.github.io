@@ -516,7 +516,281 @@ img {
 }
 
 /* ============================================
-   LEVEL 1 — DIARY THEME
+   LEVEL 1 — SPLASH / LOGIN PORTAL THEME
+   ============================================ */
+
+.splash-page {
+  background: var(--offwhite);
+}
+
+.splash-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 24px 0;
+}
+
+.splash-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow);
+  border-left: 5px solid var(--yellow);
+}
+
+.splash-card h2 {
+  font-size: 1.4rem;
+  color: var(--pasquil-blue);
+  margin-bottom: 16px;
+}
+
+.splash-card p {
+  color: #444;
+  line-height: 1.7;
+}
+
+.splash-image-link {
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+
+.splash-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.splash-caption {
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+.splash-sneer {
+  margin-top: 8px;
+  padding: 8px 14px;
+  background: #F3EEFB;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  color: var(--purple-dark) !important;
+}
+
+.splash-tips {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.splash-tips strong {
+  color: var(--pasquil-blue);
+}
+
+.login-portal {
+  background: var(--pasquil-blue);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  max-width: 440px;
+  color: var(--white);
+}
+
+.login-portal h2 {
+  color: var(--yellow);
+  margin-bottom: 8px;
+}
+
+.login-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.login-form label {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.login-form #username-input,
+.login-form #password-input {
+  width: 100%;
+  min-width: 0;
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  font-family: var(--font-mono);
+  border: 3px solid #ddd;
+  border-radius: var(--radius);
+  outline: none;
+  background: var(--white);
+  margin-bottom: 8px;
+}
+
+.login-form #username-input:focus,
+.login-form #password-input:focus {
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 4px rgba(255, 210, 63, 0.25);
+}
+
+.login-form .btn-submit {
+  margin-top: 8px;
+}
+
+/* ============================================
+   LEVEL 2 — AI CHATBOT THEME
+   ============================================ */
+
+.chatbot-page {
+  background: var(--offwhite);
+}
+
+.chatbot {
+  max-width: 640px;
+  margin: 40px auto 0;
+  padding: 28px 24px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.chatbot h2 {
+  font-size: 1.4rem;
+  color: var(--pasquil-blue);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.chat-name-form p {
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.chat-name-form label,
+.chat-ask-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+#chat-name-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  border: 3px solid #ddd;
+  border-radius: var(--radius);
+  outline: none;
+}
+
+#chat-name-input:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 4px rgba(108, 45, 199, 0.15);
+}
+
+.chat-log {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 360px;
+  overflow-y: auto;
+  padding: 16px;
+  background: #F4F2F8;
+  border-radius: var(--radius);
+  margin-bottom: 16px;
+}
+
+.chat-msg {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  animation: fadeSlideIn 0.3s ease;
+  word-wrap: break-word;
+}
+
+.chat-msg-bot {
+  align-self: flex-start;
+  background: var(--white);
+  border: 2px solid var(--purple-light);
+  border-bottom-left-radius: 4px;
+}
+
+.chat-msg-bot::before {
+  content: "🤖 PasquiBot";
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.75rem;
+  color: var(--purple);
+  margin-bottom: 2px;
+}
+
+.chat-msg-user {
+  align-self: flex-end;
+  background: var(--purple);
+  color: var(--white);
+  border-bottom-right-radius: 4px;
+}
+
+.chat-disclaimer {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #777;
+}
+
+.chat-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chat-question {
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  text-align: left;
+  background: var(--white);
+  color: var(--purple-dark);
+  border: 2px solid var(--purple-light);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.chat-question:hover {
+  background: #F3EEFB;
+}
+
+.chat-reset {
+  margin-top: 16px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  background: none;
+  border: none;
+  color: var(--purple);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ============================================
+   LEVEL 3 — DIARY THEME
    ============================================ */
 
 .diary-page {
@@ -560,7 +834,7 @@ img {
 }
 
 /* ============================================
-   LEVEL 2 — VAULT THEME
+   LEVEL 4 — VAULT THEME
    ============================================ */
 
 .vault-page {
@@ -656,7 +930,7 @@ img {
 }
 
 /* ============================================
-   LEVEL 3 — HACKER TERMINAL THEME
+   LEVEL 5 — HACKER TERMINAL THEME
    ============================================ */
 
 .terminal-page {
@@ -766,7 +1040,7 @@ img {
 }
 
 /* ============================================
-   LEVEL 4 — COOKIE / BAKERY THEME
+   LEVEL 6 — COOKIE / BAKERY THEME
    ============================================ */
 
 .bakery-page {
@@ -845,7 +1119,7 @@ img {
 }
 
 /* ============================================
-   LEVEL 5 — HEIST THEME
+   LEVEL 7 — HEIST THEME
    ============================================ */
 
 .heist-page {
@@ -1242,18 +1516,24 @@ img {
 
 /* Ensure switcher is visible on light pages */
 .diary-page .lang-btn,
+.splash-page .lang-btn,
+.chatbot-page .lang-btn,
 .bakery-page .lang-btn {
   background: rgba(0,0,0,0.08);
   color: rgba(0,0,0,0.5);
 }
 
 .diary-page .lang-btn:hover,
+.splash-page .lang-btn:hover,
+.chatbot-page .lang-btn:hover,
 .bakery-page .lang-btn:hover {
   background: rgba(0,0,0,0.15);
   color: var(--charcoal);
 }
 
 .diary-page .lang-btn.active,
+.splash-page .lang-btn.active,
+.chatbot-page .lang-btn.active,
 .bakery-page .lang-btn.active {
   background: var(--orange);
   color: var(--white);
@@ -1350,5 +1630,22 @@ img {
 
   .hero-emoji {
     font-size: 56px;
+  }
+
+  .splash-content {
+    padding: 24px 12px 0;
+  }
+
+  .splash-card,
+  .chatbot {
+    padding: 20px 16px;
+  }
+
+  .chatbot {
+    margin: 24px 12px 0;
+  }
+
+  .chat-msg {
+    max-width: 95%;
   }
 }

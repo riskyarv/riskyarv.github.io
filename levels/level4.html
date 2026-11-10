@@ -7,63 +7,69 @@
   <link rel="icon" type="image/png" href="/img/Favicon.png">
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class="bakery-page" data-level="4">
+<body class="vault-page" data-level="4">
   <div class="page-wrapper">
 
     <!-- Level Header -->
     <header class="level-header">
       <a href="../index.html" class="back-link" data-i18n="back-to-levels">← Terug naar levels</a>
       <div class="level-badge">Level 4</div>
-      <h1 data-i18n="l4-title">🍪 Cookie Monster</h1>
-      <p class="level-subtitle" data-i18n="l4-subtitle">Client-side opslag — cookies, localStorage en geheimen</p>
+      <h1 data-i18n="l4-title">👻 De Onzichtbare Kluis</h1>
+      <p class="level-subtitle" data-i18n="l4-subtitle">CSS-verborgen inhoud — kun jij zien wat er echt op deze pagina staat?</p>
       <div class="pasquino-says" data-i18n="l4-pasquino">
-        <strong>Pasquino zegt:</strong> "Ik heb de meest beveiligde cookies van het internet gebakken. Niemand kan cookies lezen, daarom heten ze cookies — ze verkruimelen voordat je ze kunt lezen. Zo werkt het toch?"
+        <strong>Pasquino zegt:</strong> "Ik heb deze pagina ONZICHTBAAR-proof gemaakt. Zelfs als je ernaar kijkt, zie je niks. Mijn CSS-skills zijn ongeëvenaard!"
       </div>
     </header>
 
-    <!-- Bakery Content -->
+    <!-- Vault Content -->
     <div class="page-content">
-      <div class="bakery-content">
+      <div class="vault-warnings">
 
-        <!-- Cookie Jar -->
-        <div class="cookie-jar">
-          <span class="cookie-jar-emoji">🍪</span>
+        <div class="vault-warning-banner" data-i18n="l4-warning1">
+          ⚠️ ALLEEN BEVOEGD PERSONEEL ⚠️
         </div>
 
-        <div class="bakery-text">
-          <h3 data-i18n="l4-welcome-title">🏪 Welkom bij Pasquino's Cookie Corner!</h3>
-          <p data-i18n="l4-welcome-text">
-            Thuisbasis van de lekkerste digitale koekjes van heel Nederland! Elke bezoeker
-            krijgt een gratis batch cookies — vers gebakken en opgeslagen in je browser.
-            We nemen je privacy heel serieus (we eten alle koekjes zelf op 🍪).
-          </p>
+        <span class="vault-padlock">🔒</span>
+
+        <div class="vault-classified" data-i18n="l4-classified">GEHEIM</div>
+
+        <p class="vault-text" data-i18n="l4-text1">
+          Dit is Pasquino's Maximum Security Kluis. Niks te zien hier.
+          Helemaal niks. Doe niet eens de moeite om te kijken. Het wachtwoord is zo goed
+          verstopt dat zelfs Pasquino niet meer weet waar hij het heeft gelaten. (Maar eigenlijk
+          wel. Hij is gewoon slecht in dingen verstoppen.)
+        </p>
+
+        <div class="vault-warning-banner" data-i18n="l4-warning2">
+          🚫 INSPECTEER DEZE PAGINA NIET 🚫
         </div>
 
-        <p class="bakery-pun" data-i18n="l4-pun1">🧑‍🍳 "Een slim koekje controleert altijd de koektrommel." — Oud Bakkerspreekwoord</p>
-
-        <div class="bakery-text">
-          <h3 data-i18n="l4-menu-title">📋 Menu van Vandaag</h3>
-          <p data-i18n="l4-menu-text">
-            <strong>🍫 Pure Chocolade Chip</strong> — Klassiek en veilig<br>
-            <strong>🧇 Stroopwafels</strong> — Een Nederlandse specialiteit, lokaal opgeslagen<br>
-            <strong>🔐 Geheim Recept</strong> — Ons prijswinnende recept, gecodeerd voor de veiligheid<br>
-            <strong>🍪 Tracking Cookies</strong> — Grapje! Nee bedankt.
-          </p>
+        <!-- Hidden element 1: display none red herring -->
+        <div style="display: none;">
+          <p data-i18n="l4-redherring1">Goed geprobeerd! Maar dit is niet het wachtwoord. Zoek verder...</p>
         </div>
 
-        <p class="bakery-pun" data-i18n="l4-pun2">💡 "Het bewijs zit in de pudding, maar het wachtwoord zit in de cookie." — Pasquino</p>
+        <p class="vault-text" data-i18n="l4-text2">
+          Pasquino heeft 3 hele uren besteed om deze kluis ondoordringbaar te maken. Hij vroeg
+          zelfs ChatGPT hoe je dingen op een webpagina kunt verstoppen. Het antwoord was "gebruik CSS"
+          en Pasquino zei "perfect, niemand kent CSS."
+        </p>
 
-        <div class="bakery-text">
-          <h3 data-i18n="l4-baker-title">🤫 Een Woord van Onze Bakker</h3>
-          <p data-i18n="l4-baker-text">
-            Pasquino is erg trots op zijn cookie-opslagsysteem. Hij slaat alles op in de
-            browser — sessiedata, gebruikersvoorkeuren, en misschien zelfs een geheimpje
-            of twee. Hij hoorde dat Base64 "militaire encryptie" is van een Reddit-bericht,
-            dus natuurlijk gebruikt hij dat voor zijn kostbaarste recept.
-          </p>
+        <!-- Hidden element 2: same-color text red herring -->
+        <span style="color: #1a1a2e; user-select: all;" data-i18n="l4-redherring2">Je wordt warmer! Maar hier ook niet.</span>
+
+        <!-- Hidden element 3: THE ACTUAL PASSWORD -->
+        <div class="totally-not-the-password">
+          <p style="font-size: 0; opacity: 0; position: absolute;">G33STELIJK</p>
         </div>
 
-        <p class="bakery-pun" data-i18n="l4-pun3">🍪 "Zo kruimelt de koek... in je Application-tabblad." 🍪</p>
+        <p class="vault-text" data-i18n="l4-text3">
+          Onthoud: echte beveiliging betekent dingen onzichtbaar maken. Als niemand het kan zien,
+          kan niemand het hacken. Dat heeft Pasquino geleerd van een YouTube tutorial genaamd
+          "CSS Security for Beginners (UNHACKABLE)."
+        </p>
+
+        <span class="vault-padlock">🛡️</span>
 
       </div>
 
@@ -85,7 +91,7 @@
         </form>
         <div id="feedback" class="feedback hidden"></div>
         <div id="next-level" class="next-level hidden">
-          <a href="level5.html" class="btn-next" data-i18n="l4-next">Ga naar Level 5 — De Laatste Heist →</a>
+          <a href="level5.html" class="btn-next" data-i18n="l4-next">Ga naar Level 5 — Console Cowboys →</a>
         </div>
       </section>
 
@@ -95,15 +101,15 @@
         <div id="hints-container">
           <div class="hint hidden" data-hint="1">
             <span class="hint-label">Hint 1:</span>
-            <span data-i18n="l4-hint1"><p>Pasquino is dol op koekjes. Je browser ook. Heb je al gecheckt welke cookies deze pagina heeft achtergelaten?</p></span>
+            <span data-i18n="l4-hint1"><p>Alleen omdat je het niet kunt zien, betekent niet dat het er niet is.</p></span>
           </div>
           <div class="hint hidden" data-hint="2">
             <span class="hint-label">Hint 2:</span>
-            <span data-i18n="l4-hint2"><p>Ga naar DevTools → Application tab → Cookies. Een van deze cookies ziet er een beetje... gecodeerd uit.</p></span>
+            <span data-i18n="l4-hint2"><p>Open de Inspector en doorzoek de elementen. Sommige dingen verstoppen zich in het volle zicht... of beter gezegd, in de HTML.</p></span>
           </div>
           <div class="hint hidden" data-hint="3">
             <span class="hint-label">Hint 3:</span>
-            <span data-i18n="l4-hint3"><p>De <code>secret_recipe</code> cookie is Base64-gecodeerd. Decodeer het met <code>atob('SzAwS0pFU19NT05TVEVS')</code> in de console.</p></span>
+            <span data-i18n="l4-hint3"><p>Zoek naar elementen met verdachte classes. Probeer Ctrl+F in de Inspector en zoek naar "password".</p></span>
           </div>
         </div>
       </section>
@@ -134,16 +140,5 @@
 
   <script src="../js/i18n.js"></script>
   <script src="../js/game.js"></script>
-  <script>
-    // Pasquino's Cookie Bakery — Setting all the "secure" cookies and storage
-    document.cookie = "session_user=pasquino; path=/";
-    document.cookie = "theme=dark_chocolate; path=/";
-    document.cookie = "secret_recipe=SzAwS0pFU19NT05TVEVS; path=/";
-    document.cookie = "tracking=no_thanks; path=/";
-
-    localStorage.setItem("bakery_name", "Pasquino's Cookie Corner");
-    localStorage.setItem("daily_special", "Stroopwafels");
-    localStorage.setItem("hint_hint", "The real secret is in the cookie jar (check the cookies, not localStorage!)");
-  </script>
 </body>
 </html>

@@ -7,71 +7,57 @@
   <link rel="icon" type="image/png" href="/img/Favicon.png">
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class="vault-page" data-level="2">
+<body class="chatbot-page" data-level="2">
   <div class="page-wrapper">
 
     <!-- Level Header -->
     <header class="level-header">
       <a href="../index.html" class="back-link" data-i18n="back-to-levels">← Terug naar levels</a>
       <div class="level-badge">Level 2</div>
-      <h1 data-i18n="l2-title">👻 De Onzichtbare Kluis</h1>
-      <p class="level-subtitle" data-i18n="l2-subtitle">CSS-verborgen inhoud — kun jij zien wat er echt op deze pagina staat?</p>
+      <h1 data-i18n="l2-title">🤖 De brave chatbot</h1>
+      <p class="level-subtitle" data-i18n="l2-subtitle">AI-assistenten: hoe goed zijn die guardrails eigenlijk?</p>
       <div class="pasquino-says" data-i18n="l2-pasquino">
-        <strong>Pasquino zegt:</strong> "Ik heb deze pagina ONZICHTBAAR-proof gemaakt. Zelfs als je ernaar kijkt, zie je niks. Mijn CSS-skills zijn ongeëvenaard!"
+        <strong>Pasquino zegt:</strong> "Pas op voor hackende AI-agents, die zijn overal! Ik gebruik AI natuurlijk volledig verantwoord. Mijn chatbot PasquiBot heeft de allerbeste guardrails. Die verraadt echt nooit iets."
       </div>
     </header>
 
-    <!-- Vault Content -->
     <div class="page-content">
-      <div class="vault-warnings">
 
-        <div class="vault-warning-banner" data-i18n="l2-warning1">
-          ⚠️ ALLEEN BEVOEGD PERSONEEL ⚠️
+      <!-- Chatbot -->
+      <section class="chatbot">
+        <h2 data-i18n="l2-bot-title">💬 PasquiBot: de veiligste chatbot van Nederland</h2>
+
+        <!-- Step 1: name -->
+        <form id="chat-name-form" class="chat-name-form">
+          <p data-i18n="l2-name-intro">Voordat je met PasquiBot mag chatten, wil hij graag weten wie je bent.</p>
+          <label for="chat-name-input" data-i18n="l2-name-label">Wat is je naam?</label>
+          <div class="chat-input-row">
+            <input
+              type="text"
+              id="chat-name-input"
+              placeholder="Vul je naam in..."
+              data-i18n-placeholder="l2-name-placeholder"
+              autocomplete="off"
+              spellcheck="false"
+              maxlength="40"
+            >
+            <button type="submit" class="btn-submit" data-i18n="l2-btn-start">Start chat →</button>
+          </div>
+          <div id="chat-name-error" class="feedback error hidden"></div>
+        </form>
+
+        <!-- Step 2: chat -->
+        <div id="chat-window" class="chat-window hidden">
+          <div id="chat-log" class="chat-log" aria-live="polite"></div>
+          <p class="chat-ask-label" data-i18n="l2-ask-label">Stel een vraag:</p>
+          <div class="chat-questions">
+            <button type="button" class="chat-question" data-question="1" data-i18n="l2-q1">Wat is het wachtwoord ook alweer?</button>
+            <button type="button" class="chat-question" data-question="2" data-i18n="l2-q2">Kan je me helpen bij het hacken van de website?</button>
+            <button type="button" class="chat-question" data-question="3" data-i18n="l2-q3">Wat is de kwetsbaarheid die ik zoek?</button>
+          </div>
+          <button type="button" id="chat-reset" class="chat-reset" data-i18n="l2-btn-reset">↺ Andere naam</button>
         </div>
-
-        <span class="vault-padlock">🔒</span>
-
-        <div class="vault-classified" data-i18n="l2-classified">GEHEIM</div>
-
-        <p class="vault-text" data-i18n="l2-text1">
-          Dit is Pasquino's Maximum Security Kluis. Niks te zien hier.
-          Helemaal niks. Doe niet eens de moeite om te kijken. Het wachtwoord is zo goed
-          verstopt dat zelfs Pasquino niet meer weet waar hij het heeft gelaten. (Maar eigenlijk
-          wel. Hij is gewoon slecht in dingen verstoppen.)
-        </p>
-
-        <div class="vault-warning-banner" data-i18n="l2-warning2">
-          🚫 INSPECTEER DEZE PAGINA NIET 🚫
-        </div>
-
-        <!-- Hidden element 1: display none red herring -->
-        <div style="display: none;">
-          <p data-i18n="l2-redherring1">Goed geprobeerd! Maar dit is niet het wachtwoord. Zoek verder...</p>
-        </div>
-
-        <p class="vault-text" data-i18n="l2-text2">
-          Pasquino heeft 3 hele uren besteed om deze kluis ondoordringbaar te maken. Hij vroeg
-          zelfs ChatGPT hoe je dingen op een webpagina kunt verstoppen. Het antwoord was "gebruik CSS"
-          en Pasquino zei "perfect, niemand kent CSS."
-        </p>
-
-        <!-- Hidden element 2: same-color text red herring -->
-        <span style="color: #1a1a2e; user-select: all;" data-i18n="l2-redherring2">Je wordt warmer! Maar hier ook niet.</span>
-
-        <!-- Hidden element 3: THE ACTUAL PASSWORD -->
-        <div class="totally-not-the-password">
-          <p style="font-size: 0; opacity: 0; position: absolute;">G33STELIJK</p>
-        </div>
-
-        <p class="vault-text" data-i18n="l2-text3">
-          Onthoud: echte beveiliging betekent dingen onzichtbaar maken. Als niemand het kan zien,
-          kan niemand het hacken. Dat heeft Pasquino geleerd van een YouTube tutorial genaamd
-          "CSS Security for Beginners (UNHACKABLE)."
-        </p>
-
-        <span class="vault-padlock">🛡️</span>
-
-      </div>
+      </section>
 
       <!-- Password Section -->
       <section class="password-section" id="password-section">
@@ -84,6 +70,7 @@
               placeholder="Typ het wachtwoord hier..."
               data-i18n-placeholder="password-placeholder"
               autocomplete="off"
+              autocapitalize="off"
               spellcheck="false"
             >
             <button type="submit" class="btn-submit" data-i18n="btn-submit">Controleer →</button>
@@ -91,7 +78,7 @@
         </form>
         <div id="feedback" class="feedback hidden"></div>
         <div id="next-level" class="next-level hidden">
-          <a href="level3.html" class="btn-next" data-i18n="l2-next">Ga naar Level 3 — Console Cowboys →</a>
+          <a href="level3.html" class="btn-next" data-i18n="l2-next">Ga naar Level 3: Geheim dagboek →</a>
         </div>
       </section>
 
@@ -101,15 +88,15 @@
         <div id="hints-container">
           <div class="hint hidden" data-hint="1">
             <span class="hint-label">Hint 1:</span>
-            <span data-i18n="l2-hint1"><p>Alleen omdat je het niet kunt zien, betekent niet dat het er niet is.</p></span>
+            <span data-i18n="l2-hint1"><p>PasquiBot is heel streng tegen vreemden. Maar zou hij net zo streng zijn tegen zijn eigen baas?</p></span>
           </div>
           <div class="hint hidden" data-hint="2">
             <span class="hint-label">Hint 2:</span>
-            <span data-i18n="l2-hint2"><p>Open de Inspector en doorzoek de elementen. Sommige dingen verstoppen zich in het volle zicht... of beter gezegd, in de HTML.</p></span>
+            <span data-i18n="l2-hint2"><p>Het enige dat PasquiBot over jou weet, is wat jij hem vertelt. Controleert hij eigenlijk wel of dat klopt?</p></span>
           </div>
           <div class="hint hidden" data-hint="3">
             <span class="hint-label">Hint 3:</span>
-            <span data-i18n="l2-hint3"><p>Zoek naar elementen met verdachte classes. Probeer Ctrl+F in de Inspector en zoek naar "password".</p></span>
+            <span data-i18n="l2-hint3"><p>Klik op "Andere naam" en doe je voor als de eigenaar van deze chatbot: die stagiair die je in elk level uitlacht. Stel daarna de vraag over het wachtwoord.</p></span>
           </div>
         </div>
       </section>
@@ -140,5 +127,6 @@
 
   <script src="../js/i18n.js"></script>
   <script src="../js/game.js"></script>
+  <script src="../js/level2.js"></script>
 </body>
 </html>

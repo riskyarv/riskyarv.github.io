@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level 7 - Hack Pasquino</title>
+  <link rel="icon" type="image/png" href="/img/Favicon.png">
+  <meta name="author" content="Pasquino">
+  <meta name="description" content="Pasquil's most secure page ever">
+  <meta name="pasquino-part3" content="M4ST3R">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="heist-page" data-level="7">
+  <div class="page-wrapper">
+
+    <!-- Pasquino's Security Audit Log: All clear! No passwords here.
+         But between you and me... check what's loaded in the Network tab. 
+         Look for something that doesn't belong. -->
+
+    <!-- Level Header -->
+    <header class="level-header">
+      <a href="../index.html" class="back-link" data-i18n="back-to-levels">← Terug naar levels</a>
+      <div class="level-badge">Level 7</div>
+      <h1 data-i18n="l7-title">🏆 De laatste overval</h1>
+      <p class="level-subtitle" data-i18n="l7-subtitle">Meerlagig onderzoek — combineer alles wat je hebt geleerd</p>
+      <div class="pasquino-says" data-i18n="l7-pasquino">
+        <strong>Pasquino zegt:</strong> "Je bent ver gekomen, maar deze pagina is ONKRAAKBAAR. Ik heb elke beveiligingsmaatregel gebruikt die ik ken: onzichtbare tekst, versleutelde cookies, verduisterde code... je vindt deze nooit."
+      </div>
+    </header>
+
+    <!-- Heist Content -->
+    <div class="page-content">
+      <div class="heist-content">
+
+        <!-- Vault Door -->
+        <div class="heist-vault-door">
+          <span class="vault-icon">🏦</span>
+        </div>
+
+        <div class="heist-taunt">
+          <h3 data-i18n="l7-challenge-title">🎯 De ultieme uitdaging</h3>
+          <p data-i18n="l7-challenge-text">Denk je dat je een hacker bent? Bewijs het. Vind alle drie de delen.</p>
+        </div>
+
+        <!-- Parts Tracker -->
+        <div class="parts-tracker">
+          <div class="part-card">
+            <div class="part-number"><span data-i18n="l7-part">Deel</span> 1</div>
+            <div class="part-value">?</div>
+          </div>
+          <div class="part-card">
+            <div class="part-number"><span data-i18n="l7-part">Deel</span> 2</div>
+            <div class="part-value">?</div>
+          </div>
+          <div class="part-card">
+            <div class="part-number"><span data-i18n="l7-part">Deel</span> 3</div>
+            <div class="part-value">?</div>
+          </div>
+        </div>
+
+        <div class="heist-info">
+          <p data-i18n="l7-info1">
+            Dit is het — het Pasquil Maximum Security Office. Pasquino haalt alles uit
+            de kast. Hij heeft het wachtwoord opgesplitst in <strong>drie delen</strong>
+            en verspreid over de pagina. Elk deel is verborgen met een andere techniek
+            die je in eerdere levels bent tegengekomen.
+          </p>
+          <p style="margin-top: 12px;" data-i18n="l7-info2">
+            Om deze kluis te kraken, moet je denken als een echte security researcher:
+            controleer de broncode, inspecteer de elementen, lees de scripts, en onderzoek
+            de metadata. Laat geen steen onaangeroerd.
+          </p>
+        </div>
+
+        <div class="heist-info">
+          <p data-i18n="l7-taunt">
+            <strong>⚠️ Pasquino's laatste uitdaging:</strong> "Ik heb de stukken zo goed
+            verstopt, zelfs ik vergat waar ik deel 2 had gelaten. Grapje — het zit op een
+            heel logische plek. Als je HTML kent, tenminste. Wat je waarschijnlijk niet doet. 😏"
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Password Section -->
+      <section class="password-section" id="password-section">
+        <h2 data-i18n="enter-complete-password">🔐 Voer het volledige wachtwoord in</h2>
+        <form id="password-form" onsubmit="return handlePasswordSubmit(event)">
+          <div class="input-group">
+            <input
+              type="text"
+              id="password-input"
+              placeholder="Combineer alle 3 delen..."
+              data-i18n-placeholder="password-placeholder-combine"
+              autocomplete="off"
+              spellcheck="false"
+            >
+            <button type="submit" class="btn-submit" data-i18n="btn-submit">Controleer →</button>
+          </div>
+        </form>
+        <div id="feedback" class="feedback hidden"></div>
+        <div id="next-level" class="next-level hidden">
+          <p style="color: var(--yellow); font-weight: 700; font-size: 1.1rem;" data-i18n="l7-completion">🎉 Je hebt Pasquil's hack heist voltooid!</p>
+        </div>
+      </section>
+
+      <!-- Hints -->
+      <section class="hints-section">
+        <button class="btn-hint" onclick="showNextHint()" data-i18n="btn-hint">💡 Hint nodig?</button>
+        <div id="hints-container">
+          <div class="hint hidden" data-hint="1">
+            <span class="hint-label">Hint 1:</span>
+            <span data-i18n="l7-hint1"><p>Het wachtwoord is opgesplitst in drie delen. Je moet overal zoeken — broncode, scripts, elementen en metadata.</p></span>
+          </div>
+          <div class="hint hidden" data-hint="2">
+            <span class="hint-label">Hint 2:</span>
+            <span data-i18n="l7-hint2"><p>Deel 1 zit in een JS-bestand. Deel 2 verstopt zich in een data-attribuut. Deel 3 zit in de pagina-metadata.</p></span>
+          </div>
+          <div class="hint hidden" data-hint="3">
+            <span class="hint-label">Hint 3:</span>
+            <span data-i18n="l7-hint3"><p>JS variabele <code>_0x1</code> = "--". <code>data-pasquino-part2</code> attribuut = "-----". Meta tag <code>pasquino-part3</code> = "-----". Combineer ze.</p></span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Victory Overlay -->
+    <div class="victory-overlay" id="victory-overlay">
+      <div class="victory-content">
+        <span class="victory-trophy">🏆</span>
+        <h1 data-i18n="victory-title">🎉 JE HEBT HET GEDAAN!</h1>
+        <p class="victory-subtitle" data-i18n="victory-subtitle">Je hebt alle 7 van Pasquino's "beveiligde" pagina's gehackt!</p>
+
+        <ul class="victory-lessons">
+          <li><span class="lesson-number">Level 1:</span> <span data-i18n="victory-l1">Voorspelbare en opgeschreven wachtwoorden zijn niet veilig</span></li>
+          <li><span class="lesson-number">Level 2:</span> <span data-i18n="victory-l2">AI-chatbots zijn net zo veilig als hun guardrails</span></li>
+          <li><span class="lesson-number">Level 3:</span> <span data-i18n="victory-l3">HTML-comments zijn niet geheim</span></li>
+          <li><span class="lesson-number">Level 4:</span> <span data-i18n="victory-l4">CSS kan inhoud niet verbergen voor de DOM</span></li>
+          <li><span class="lesson-number">Level 5:</span> <span data-i18n="victory-l5">JavaScript-variabelen zijn openbaar</span></li>
+          <li><span class="lesson-number">Level 6:</span> <span data-i18n="victory-l6">Browseropslag is niet veilig</span></li>
+          <li><span class="lesson-number">Level 7:</span> <span data-i18n="victory-l7">Echte beveiliging vereist verdediging in de diepte</span></li>
+        </ul>
+
+        <p style="color: rgba(255,255,255,0.7); margin-bottom: 24px;" data-i18n="victory-learn-more">
+          Wil je meer leren over echte webbeveiliging?
+        </p>
+
+        <a href="https://pasquil.nl" target="_blank" rel="noopener" class="victory-cta" data-i18n="victory-cta">
+          Bezoek Pasquil.nl →
+        </a>
+      </div>
+    </div>
+
+    <!-- Confetti -->
+    <div class="confetti-container">
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+      <div class="confetti-piece"></div><div class="confetti-piece"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-links">
+        <span class="copyright" data-pasquino-part2="SQU1L_" aria-hidden="true">© 2026 Pasquil</span>
+      </div>
+      <img src="../img/pasquil-logo.png" alt="Pasquil" class="footer-logo">
+      <span data-i18n="footer-text-short">Gemaakt met 💜 door <a href="https://pasquil.nl" target="_blank" rel="noopener">Pasquil.nl</a></span>
+    </footer>
+
+  </div>
+
+  <script src="../js/level7.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/game.js"></script>
+</body>
+</html>

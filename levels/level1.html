@@ -7,84 +7,92 @@
   <link rel="icon" type="image/png" href="/img/Favicon.png">
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class="diary-page" data-level="1">
+<body class="splash-page" data-level="1">
   <div class="page-wrapper">
 
     <!-- Level Header -->
     <header class="level-header">
       <a href="../index.html" class="back-link" data-i18n="back-to-levels">← Terug naar levels</a>
       <div class="level-badge">Level 1</div>
-      <h1 data-i18n="l1-title">📖 Pasquino's Geheime Dagboek</h1>
-      <p class="level-subtitle" data-i18n="l1-subtitle">HTML-broncode inspecteren — welke geheimen verschuilen zich in de broncode?</p>
-      <div class="Pasquino-says" data-i18n="l1-Pasquino">
-        <strong>Pasquino zegt:</strong> "Ik bewaar al mijn persoonlijke notities gewoon in de code. Super privé — niemand kijkt ooit naar HTML, toch?"
+      <h1 data-i18n="l1-title">🖼️ Het inlogportaal</h1>
+      <p class="level-subtitle" data-i18n="l1-subtitle">Voorspelbare wachtwoorden: hoe goed kijk jij om je heen?</p>
+      <div class="pasquino-says" data-i18n="l1-pasquino">
+        <strong>Pasquino zegt:</strong> "Informatiebeveiliging? Pff, dat is voor amateurs. Ik gebruik alleen onvoorspelbare wachtwoorden, dus ik ben veilig. Denk je van niet? Probeer maar eens in te loggen!"
       </div>
     </header>
 
-    <!-- Diary Entries -->
     <div class="page-content">
-      <div class="diary-entries">
+      <div class="splash-content">
 
-        <article class="diary-entry">
-          <div class="diary-date" data-i18n="l1-diary1-date">📅 15 januari 2026</div>
-          <div class="diary-text" data-i18n="l1-diary1-text">
-            <p>Dag 1 bij Pasquil! Ze hebben me een eigen bureau gegeven en alles. Ik vertelde ze dat ik een
-            <em>"Full-Stack Security Engineer"</em> ben en ze geloofden me! Vandaag heb ik het
-            WiFi-wachtwoord van het bedrijf ingesteld. Ik heb het echt veilig gemaakt: <strong>password123</strong>.
-            Wacht, ik moet dat waarschijnlijk veranderen...</p>
+        <!-- Splash -->
+        <section class="splash-card">
+          <h2 data-i18n="l1-splash-title">🏢 Welkom op de afdeling Informatiebeveiliging</h2>
+          <a href="../img/splash.jpg" target="_blank" rel="noopener" class="splash-image-link">
+            <img src="../img/splash.jpg" alt="Pasquil Splash: een kantoor vol beveiligingsrisico's" class="splash-image" width="1600" height="900">
+          </a>
+          <p class="splash-caption" data-i18n="l1-splash-caption">Onze Splash: zo ziet een werkplek eruit als niemand oplet. Hoeveel beveiligingsrisico's zie jij? (Tik op de afbeelding om in te zoomen.)</p>
+        </section>
+
+        <!-- Awareness -->
+        <section class="splash-card">
+          <h2 data-i18n="l1-awareness-title">🛡️ Bewustwording: informatiebeveiliging begint bij jou</h2>
+          <div data-i18n="l1-awareness-text">
+            <p>De meeste beveiligingsincidenten beginnen niet bij een geniale hacker, maar bij een kleine menselijke fout: een open deur, een rondslingerende USB-stick, een weggegooide printout of een wachtwoord op een briefje. Kijk eens goed naar de Splash hierboven: daar gaat van alles mis.</p>
           </div>
-        </article>
+          <p class="splash-sneer" data-i18n="l1-awareness-pasquino">🙄 <em>Pasquino: "Allemaal overdreven. Die kat heeft echt geen toegang tot mijn toetsenbord. Nou ja, bijna nooit."</em></p>
+        </section>
 
-        <article class="diary-entry">
-          <div class="diary-date" data-i18n="l1-diary2-date">📅 3 februari 2026</div>
-          <div class="diary-text" data-i18n="l1-diary2-text">
-            <p>Mijn kat, Tulip, loopt steeds over mijn toetsenbord. Ze typte "asdfjkl;" en eerlijk gezegd
-            is dat veiliger dan de meeste van mijn wachtwoorden. Misschien moet ik haar de
-            beveiligingsconsultant maken. 🐱</p>
-          </div>
-        </article>
-
-        <!-- TODO: Pasquino, REMOVE this before going live!!! Password = TULIP_HACKER -->
-        <!-- Also please stop using your cat's name as passwords... -->
-
-        <article class="diary-entry">
-          <div class="diary-date" data-i18n="l1-diary3-date">📅 28 februari 2026</div>
-          <div class="diary-text" data-i18n="l1-diary3-text">
-            <p>De baas vroeg me om "tweefactorauthenticatie te implementeren." Ik heb TWEE wachtwoordvelden
-            op de loginpagina gezet. Dat zijn twee factoren, toch? <em>Geregeld.</em> 💪</p>
-          </div>
-        </article>
-
-        <article class="diary-entry">
-          <div class="diary-date" data-i18n="l1-diary4-date">📅 15 maart 2026</div>
-          <div class="diary-text" data-i18n="l1-diary4-text">
-            <p>Ik las online dat je "wachtwoorden nooit in platte tekst moet opslaan." Dus heb ik ze
-            op een sticky note geschreven. Probleem opgelost! De notitie hangt op mijn monitor waar
-            niemand het kan zien... behalve iedereen op kantoor. Maakt niet uit, is prima. 🙃</p>
-          </div>
-        </article>
+        <!-- Password tips -->
+        <section class="splash-card">
+          <h2 data-i18n="l1-pw-title">🔑 Gebruik goede wachtwoorden</h2>
+          <ul class="splash-tips">
+            <li>
+              <p data-i18n="l1-pw-tip1"><strong>Niet voorspelbaar.</strong> Geen woorden als "wachtwoord" met een cijfer erachter, geen namen van je huisdier en geen dingen die anderen over jou weten. Een lange wachtzin is veel sterker.</p>
+              <p class="splash-sneer" data-i18n="l1-pw-tip1-pasquino">😏 <em>Pasquino: "Voorspelbaar? Ik? Niemand raadt ooit wat ik bedenk."</em></p>
+            </li>
+            <li>
+              <p data-i18n="l1-pw-tip2"><strong>Regelmatig aanpassen.</strong> Verander je wachtwoord als het (mogelijk) gelekt is en gebruik nooit hetzelfde wachtwoord voor meerdere accounts.</p>
+              <p class="splash-sneer" data-i18n="l1-pw-tip2-pasquino">🥱 <em>Pasquino: "Aanpassen? Ik gebruik al sinds mijn eerste dag hetzelfde wachtwoord. Het werkt toch prima?"</em></p>
+            </li>
+            <li>
+              <p data-i18n="l1-pw-tip3"><strong>Niet opschrijven.</strong> Geen post-its op je scherm, geen briefjes onder je toetsenbord en zeker geen flip-over. Gebruik een wachtwoordmanager.</p>
+              <p class="splash-sneer" data-i18n="l1-pw-tip3-pasquino">🙃 <em>Pasquino: "Opschrijven doe ik nooit. Nou ja... alleen héél groot, zodat ik het niet vergeet."</em></p>
+            </li>
+          </ul>
+        </section>
 
       </div>
 
-      <!-- Password Section -->
-      <section class="password-section" id="password-section">
-        <h2 data-i18n="enter-password">🔐 Voer het wachtwoord in</h2>
-        <form id="password-form" onsubmit="return handlePasswordSubmit(event)">
-          <div class="input-group">
-            <input
-              type="text"
-              id="password-input"
-              placeholder="Typ het wachtwoord hier..."
-              data-i18n-placeholder="password-placeholder"
-              autocomplete="off"
-              spellcheck="false"
-            >
-            <button type="submit" class="btn-submit" data-i18n="btn-submit">Controleer →</button>
-          </div>
+      <!-- Login Portal -->
+      <section class="password-section login-portal" id="password-section">
+        <h2 data-i18n="l1-login-title">🔐 Pasquil Admin Portaal</h2>
+        <p class="login-subtitle" data-i18n="l1-login-subtitle">Alleen voor geautoriseerde beheerders. (Dus alleen voor Pasquino.)</p>
+        <form id="password-form" class="login-form" onsubmit="return handlePasswordSubmit(event)">
+          <label for="username-input" data-i18n="l1-username-label">Gebruikersnaam</label>
+          <input
+            type="text"
+            id="username-input"
+            placeholder="Gebruikersnaam..."
+            data-i18n-placeholder="username-placeholder"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+          >
+          <label for="password-input" data-i18n="l1-password-label">Wachtwoord</label>
+          <input
+            type="text"
+            id="password-input"
+            placeholder="Typ het wachtwoord hier..."
+            data-i18n-placeholder="password-placeholder"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+          >
+          <button type="submit" class="btn-submit" data-i18n="l1-btn-login">Inloggen →</button>
         </form>
         <div id="feedback" class="feedback hidden"></div>
         <div id="next-level" class="next-level hidden">
-          <a href="level2.html" class="btn-next" data-i18n="l1-next">Ga naar Level 2 — De Onzichtbare Kluis →</a>
+          <a href="level2.html" class="btn-next" data-i18n="l1-next">Ga naar Level 2: De brave chatbot →</a>
         </div>
       </section>
 
@@ -94,15 +102,15 @@
         <div id="hints-container">
           <div class="hint hidden" data-hint="1">
             <span class="hint-label">Hint 1:</span>
-            <span data-i18n="l1-hint1"><p>Pasquino schrijft notities voor zichzelf die alleen hij kan lezen... of toch niet?</p></span>
+            <span data-i18n="l1-hint1"><p>Pasquino zegt dat hij zijn wachtwoord nooit opschrijft... Kijk nog eens goed naar de Splash. Hangt daar misschien iets dat op een wachtwoord lijkt?</p></span>
           </div>
           <div class="hint hidden" data-hint="2">
             <span class="hint-label">Hint 2:</span>
-            <span data-i18n="l1-hint2"><p>Wat je ziet is niet alles. Probeer te kijken wat er achter het gordijn zit.</p></span>
+            <span data-i18n="l1-hint2"><p>Een inlogportaal heeft ook een gebruikersnaam nodig. Wie is de baas over alle systemen? Op een van de posters aan de muur staat het antwoord.</p></span>
           </div>
           <div class="hint hidden" data-hint="3">
             <span class="hint-label">Hint 3:</span>
-            <span data-i18n="l1-hint3"><p>Rechtermuisklik → "Paginabron bekijken" en zoek naar Pasquino's notities.</p></span>
+            <span data-i18n="l1-hint3"><p>Zoom in op de poster naast het bureau: de gebruikersnaam is het laatste woord, in kleine letters. Het wachtwoord staat in grote letters op de flip-over links in de kamer. Neem het letterlijk over, inclusief het leesteken aan het eind!</p></span>
           </div>
         </div>
       </section>

@@ -4,19 +4,25 @@
 
 // SHA-256 hashes of each level's password (UPPERCASE)
 const levelPasswords = {
-  1: "0800d78f904a9fb47bae49d5a877224744ff6093482bc91fa12cbe24915e1768",
-  2: "bc17a9baa24d4c1ac11c98389df632a0505a16140aa34e02f538e812002e372c",
-  3: "60276d9c750ab9f73b8d7ec54c2a68ef70be0c436bfe9f2e16b00cfa552afbd8",
-  4: "3ed63ad803ba1a875d0a663d90370c58b427487b9ec58108571af13581cc54f7",
-  5: "68a7f1e52e8a03601c8599e9f987808d408a0ba9e07f426f67c166eb8a92113d",
+  1: "a49254b2737592d7f15c246d8d0786c06a4f8647247a7c735e8bf15e5ff10346", // "USERNAME:PASSWORD"
+  2: "8ebadbaed8281b9b46f1b2bd37000a1234da523d02b7293ebffd6a4d128e04a6",
+  3: "0800d78f904a9fb47bae49d5a877224744ff6093482bc91fa12cbe24915e1768",
+  4: "bc17a9baa24d4c1ac11c98389df632a0505a16140aa34e02f538e812002e372c",
+  5: "60276d9c750ab9f73b8d7ec54c2a68ef70be0c436bfe9f2e16b00cfa552afbd8",
+  6: "3ed63ad803ba1a875d0a663d90370c58b427487b9ec58108571af13581cc54f7",
+  7: "68a7f1e52e8a03601c8599e9f987808d408a0ba9e07f426f67c166eb8a92113d",
 };
 
+const FINAL_LEVEL = 7;
+
 const levelNames = {
-  1: "Secret Diary",
-  2: "Invisible Vault",
-  3: "Console Cowboys",
-  4: "Cookie Monster",
-  5: "The Final Heist",
+  1: "Login Portal",
+  2: "Well-Behaved Chatbot",
+  3: "Secret Diary",
+  4: "Invisible Vault",
+  5: "Console Cowboys",
+  6: "Cookie Monster",
+  7: "The Final Heist",
 };
 
 const wrongMessageKeys = ["wrong-1", "wrong-2", "wrong-3", "wrong-4", "wrong-5", "wrong-6"];
@@ -35,8 +41,31 @@ function getCurrentLevel() {
   return el ? parseInt(el.getAttribute("data-level"), 10) : 1;
 }
 
+// Two levels were added at the start of the game; shift progress saved
+// under the old 5-level numbering (1-5) to the new numbering (3-7).
+const PROGRESS_VERSION = "2";
+
+function migrateProgress() {
+  try {
+    if (localStorage.getItem("pasquil_progress_version") === PROGRESS_VERSION) return;
+    const raw = localStorage.getItem("pasquil_progress");
+    if (raw) {
+      const old = JSON.parse(raw) || {};
+      const shifted = {};
+      Object.keys(old).forEach((lvl) => {
+        if (old[lvl]) shifted[parseInt(lvl, 10) + 2] = true;
+      });
+      localStorage.setItem("pasquil_progress", JSON.stringify(shifted));
+    }
+    localStorage.setItem("pasquil_progress_version", PROGRESS_VERSION);
+  } catch {
+    // Ignore storage errors (e.g. private mode)
+  }
+}
+
 // Load progress from localStorage
 function getProgress() {
+  migrateProgress();
   try {
     const raw = localStorage.getItem("pasquil_progress");
     return raw ? JSON.parse(raw) : {};
@@ -73,8 +102,20 @@ async function handlePasswordSubmit(event) {
   const input = document.getElementById("password-input");
   const feedback = document.getElementById("feedback");
   const nextLevel = document.getElementById("next-level");
+  const usernameInput = document.getElementById("username-input");
   const level = getCurrentLevel();
-  const normalized = input.value.trim().toUpperCase();
+  let normalized = input.value.trim().toUpperCase();
+
+  // Login-style levels check "USERNAME:PASSWORD"
+  if (usernameInput) {
+    const username = usernameInput.value.trim().toUpperCase();
+    if (!username || !normalized) {
+      feedback.textContent = t("type-both") || "Fill in both a username and a password! ⌨️";
+      feedback.className = "feedback error";
+      return false;
+    }
+    normalized = username + ":" + normalized;
+  }
 
   if (!normalized) {
     feedback.textContent = t("type-something") || "Type something first! Even Pasquino can do that. ⌨️";
@@ -88,7 +129,7 @@ async function handlePasswordSubmit(event) {
   if (isCorrect) {
     const successMsg = (t("success-msg") || "✅ PASSWORD CORRECT! You cracked Pasquino's {levelName}! ")
       .replace("{levelName}", t("card-title-" + level) || levelNames[level] || "level");
-    const suffix = level < 5
+    const suffix = level < FINAL_LEVEL
       ? (t("success-proceed") || "Proceed to the next challenge.")
       : (t("success-complete") || "You've completed the heist!");
     feedback.textContent = successMsg + suffix;
@@ -101,8 +142,8 @@ async function handlePasswordSubmit(event) {
       nextLevel.classList.remove("hidden");
     }
 
-    // Level 5 victory screen
-    if (level === 5) {
+    // Final level victory screen
+    if (level === FINAL_LEVEL) {
       setTimeout(() => {
         const victory = document.querySelector(".victory-overlay");
         if (victory) {
@@ -113,6 +154,7 @@ async function handlePasswordSubmit(event) {
     }
 
     input.disabled = true;
+    if (usernameInput) usernameInput.disabled = true;
     document.querySelector(".btn-submit").disabled = true;
   } else {
     // Wrong password
@@ -121,7 +163,7 @@ async function handlePasswordSubmit(event) {
     feedback.textContent = msg;
     feedback.className = "feedback error";
 
-    // Show access denied for level 3
+    // Show access denied (Console Cowboys level)
     const accessDenied = document.getElementById("access-denied");
     if (accessDenied) {
       accessDenied.classList.add("show");

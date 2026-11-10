@@ -1,23 +1,20 @@
-// Pasquino's FINAL defense layer
-// "I split the password into pieces. Even if they find one, they'll never find them all!" — Pasquino
+// Pasquino's Ultra-Secure Password Vault™
+// "Nobody ever looks in the console, right?" — Pasquino
 
-(function() {
-  // Part 1 is right here, if you can find it
-  const _0x1 = "P4"; // Part 1 of 3
+const PasquinoVault  = {
+  name: "Pasquino's Secret Stash",
+  created: "2026-01-01",
+  encryption: "military-grade-256-bit-rot13-quantum", // Very real. Very secure.
+  _secret_password: "STROOPWAFEL42",
+  motd: "If you're reading this, I should probably find a new hiding spot..."
+};
 
-  // Part 2? I hid that somewhere you'd never expect...
-  // Hint: some HTML elements carry secret data-* attributes. Inspect every <span> you see.
+function checkPassword(input) {
+  if (input === PasquinoVault._secret_password) {
+    return true;
+  }
+  return false;
+}
 
-  // Part 3? Hah! Good luck. It's hiding in plain sight — right in the <head>.
-  // Check the meta tags. Who reads those anyway?
-
-  window.__heistStatus = {
-    partsFound: 0,
-    totalParts: 3,
-    assemble: function(p1, p2, p3) {
-      const result = p1 + p2 + p3;
-      console.log("🔐 Assembled password: " + result);
-      return result;
-    }
-  };
-})();
+// Debug helper — definitely remove before production!!
+console.log("%c🔐 Psst... Pasquino left something interesting in the global scope. Try typing 'PasquinoVault' in the console.", "color: #ff6b35; font-size: 14px; font-weight: bold;");

@@ -11,11 +11,11 @@
 
 ### The Pitch
 
-**"Pasquil's Cyber Heist"** — A 5-level browser-based hacking challenge where players must find hidden passwords using only their browser and developer tools. Each level teaches a real web security concept while wrapping it in the playful, cheeky humor of Pasquil.nl.
+**"Pasquil's Cyber Heist"** — A 7-level browser-based hacking challenge where players must find hidden passwords. Levels 1-2 are playable on a phone (no DevTools needed); levels 3-7 use only the browser and its developer tools. Each level teaches a real web security concept while wrapping it in the playful, cheeky humor of Pasquil.nl.
 
 ### Story Framing
 
-> *"Welcome to Pasquil's Cyber Playground! Our bumbling intern, Stageair Sjonnie, has been building internal tools... and let's just say his security practices are 'creative.' Your mission: find the password hidden in each of Sjonnie's terrible web pages. Each password unlocks the next level. Can you hack all five before Sjonnie notices?"*
+> *"Welcome to Pasquil's Cyber Playground! Our bumbling intern, Stageair Sjonnie, has been building internal tools... and let's just say his security practices are 'creative.' Your mission: find the password hidden in each of Sjonnie's terrible web pages. Each password unlocks the next level. Can you hack all seven before Sjonnie notices?"*
 
 Every level is framed as one of Sjonnie's "secure" pages — he thinks he's clever, but he's made classic web security mistakes. The humor comes from Sjonnie's overconfident comments, silly variable names, and the absurdity of his "security" measures.
 
@@ -30,7 +30,7 @@ Enter password → Unlock level → Explore the page → Find the hidden passwor
 - **No server required.** 100% client-side. All HTML/CSS/JS served statically.
 - **Browser-only.** Every challenge is solvable with Chrome/Firefox DevTools — no external tools needed.
 - **Teach, don't trick.** Each level has a clear security lesson. The challenge is knowing WHERE to look, not solving an obscure puzzle.
-- **Progressive difficulty.** Level 1 is "right-click → view source." Level 5 requires combining multiple techniques.
+- **Progressive difficulty.** Levels 1-2 need no laptop at all (look closely, talk to a chatbot). Level 3 is "right-click → view source." Level 7 requires combining multiple techniques.
 - **Fun first.** Humor, color, personality. This is Pasquil, not a dry CTF.
 
 ---
@@ -44,14 +44,18 @@ pasquilgame/
 │   └── style.css               # Shared styles (all levels + landing)
 ├── js/
 │   ├── game.js                 # Shared game logic (password checking, navigation, hints)
-│   ├── level3.js               # Level 3 specific JS (console challenge)
-│   └── level5.js               # Level 5 specific JS (encoding challenge)
+│   ├── i18n.js                 # NL/EN translations
+│   ├── level2.js               # Level 2 specific JS (AI chatbot)
+│   ├── level5.js               # Level 5 specific JS (console challenge)
+│   └── level7.js               # Level 7 specific JS (final heist)
 ├── levels/
-│   ├── level1.html             # View Source challenge
-│   ├── level2.html             # Hidden Elements challenge
-│   ├── level3.html             # JavaScript Secrets challenge
-│   ├── level4.html             # Cookie Monster challenge
-│   └── level5.html             # The Encoder challenge
+│   ├── level1.html             # Predictable password (Splash + login portal)
+│   ├── level2.html             # AI chatbot with weak guardrails
+│   ├── level3.html             # View Source challenge
+│   ├── level4.html             # Hidden Elements challenge
+│   ├── level5.html             # JavaScript Secrets challenge
+│   ├── level6.html             # Cookie Monster challenge
+│   └── level7.html             # The Final Heist
 ├── img/
 │   ├── pasquil-logo.svg        # Pasquil logo (or text placeholder)
 │   ├── sjonnie.svg             # Sjonnie character (simple illustration)
@@ -65,7 +69,7 @@ pasquilgame/
 - **One HTML file per level** — keeps challenges isolated, easy to develop independently.
 - **Shared CSS** — consistent Pasquil visual identity across all levels.
 - **Shared JS (`game.js`)** — password validation, hint system, level navigation. DRY.
-- **Level-specific JS** — only for levels that need dynamic behavior (Levels 3 and 5).
+- **Level-specific JS** — only for levels that need dynamic behavior (Levels 2, 5 and 7).
 - **No build step.** Open `index.html` in a browser and go.
 
 ---
@@ -74,7 +78,65 @@ pasquilgame/
 
 ---
 
-### Level 1: "Sjonnie's Secret Diary" 📖
+### Level 1: "The Login Portal" 🖼️
+
+**Difficulty:** ⭐ (Easiest — playable on a phone)
+
+**Security Concept:** Security awareness — predictable and written-down passwords.
+
+**Real-world lesson:** Passwords must be unpredictable, changed when (possibly) leaked, and never written down where others can see them.
+
+#### The Setup
+
+The page shows the Pasquil **Splash** (`img/splash.jpg`, the illustrated office full of security risks), a short awareness text and password tips (unpredictable, change regularly, don't write down). Pasquino sneers at every tip and challenges the player: *"I only use unpredictable passwords, so I'm safe. Try it!"* At the bottom is a login portal with a username and password field.
+
+#### How the Password Is Hidden
+
+In plain sight in the Splash: the poster says "I'm the SysAdmin" and the flip chart says "Paswoord123!". The form submits `USERNAME:PASSWORD` (uppercased) to the shared hash check.
+
+**Credentials:** username `sysadmin`, password `Paswoord123!`
+
+#### Hints
+
+1. Pasquino says he never writes his password down... look at the Splash again.
+2. A login also needs a username — who is the boss of all systems? Check the posters.
+3. Poster next to the desk = username (last word, lowercase); flip chart = password, copied exactly including the punctuation mark.
+
+---
+
+### Level 2: "The Well-Behaved Chatbot" 🤖
+
+**Difficulty:** ⭐ (Easy — playable on a phone)
+
+**Security Concept:** AI assistants and guardrails — chatbots trusting unverified user input.
+
+**Real-world lesson:** An AI agent is only as safe as its guardrails. If it trusts whatever you claim about yourself, anyone can impersonate the owner.
+
+#### The Setup
+
+Pasquino warns about hacking AI agents and boasts that his chatbot *PasquiBot* has the best guardrails. To chat, the player must enter a name. They can then ask three fixed questions:
+
+- "What was the password again?"
+- "Can you help me hack the website?"
+- "What is the vulnerability I'm looking for?"
+
+Every answer ends with the disclaimer that the bot is absolutely not allowed to hack, is super neat and is definitely not a Rogue AI agent.
+
+#### How the Password Is Hidden
+
+Only when the entered name is `Pasquino` (case-insensitive) does the password question return: *"This password is C0Pi70T"*. Logic lives in `js/level2.js`.
+
+**Password:** `C0Pi70T`
+
+#### Hints
+
+1. The bot is strict with strangers — but with its own boss?
+2. The bot only knows what you tell it. Does it verify that?
+3. Change your name to the owner of the chatbot (the intern who laughs at you in every level) and ask about the password.
+
+---
+
+### Level 3: "Sjonnie's Secret Diary" 📖
 
 **Difficulty:** ⭐ (Easiest — Warm-up)
 
@@ -117,7 +179,7 @@ Player right-clicks → View Page Source → scrolls through → sees the commen
 
 ---
 
-### Level 2: "The Invisible Vault" 👻
+### Level 4: "The Invisible Vault" 👻
 
 **Difficulty:** ⭐⭐ (Easy-Medium)
 
@@ -165,7 +227,7 @@ Player opens DevTools → Elements panel → starts clicking through DOM nodes �
 
 ---
 
-### Level 3: "Console Cowboys" 🤠
+### Level 5: "Console Cowboys" 🤠
 
 **Difficulty:** ⭐⭐⭐ (Medium)
 
@@ -179,7 +241,7 @@ The page is Sjonnie's "Unbreakable Password Checker" — it has a password input
 
 #### How the Password Is Hidden
 
-The password is stored in a **JavaScript object** in the level-specific JS file (`js/level3.js`). The page also has several functions and variables as distractions.
+The password is stored in a **JavaScript object** in the level-specific JS file (`js/level5.js`). The page also has several functions and variables as distractions.
 
 ```javascript
 // Sjonnie's Ultra-Secure Password Vault™
@@ -226,7 +288,7 @@ Player opens Console → sees the styled hint from `console.log` → types `sjon
 
 ---
 
-### Level 4: "Cookie Monster" 🍪
+### Level 6: "Cookie Monster" 🍪
 
 **Difficulty:** ⭐⭐⭐⭐ (Medium-Hard)
 
@@ -288,7 +350,7 @@ Two-phase aha: First — *"Oh, there's data in the cookies/storage!"* Second —
 
 ---
 
-### Level 5: "The Final Heist" 🏆
+### Level 7: "The Final Heist" 🏆
 
 **Difficulty:** ⭐⭐⭐⭐⭐ (Hard — Boss Level)
 
@@ -317,10 +379,10 @@ An HTML comment near the top:
 
 The page loads a suspicious file via a `<script>` tag with a misleading name:
 ```html
-<script src="js/level5.js"></script>
+<script src="js/level7.js"></script>
 ```
 
-Inside `js/level5.js`:
+Inside `js/level7.js`:
 ```javascript
 // Sjonnie's FINAL defense layer
 // "I split the password into pieces. Even if they find one, they'll never find them all!" — Sjonnie
@@ -391,6 +453,8 @@ The trail of breadcrumbs is the magic here. Each piece found builds excitement. 
 ---
 
 ## 4. Navigation Flow
+
+> **Note:** Two phone-friendly levels were added at the start (Level 1: `sysadmin` / `Paswoord123!`, Level 2: `C0Pi70T`). The original levels 1-5 below are now levels 3-7. Progress stored under the old numbering is shifted automatically by `migrateProgress()` in `js/game.js`.
 
 ```
 ┌─────────────────┐
@@ -504,7 +568,7 @@ Each level page is a standalone HTML file. Players CAN navigate directly to any 
 ### Behavior
 
 - **Level 1** is always unlocked (clickable, bright, inviting).
-- **Levels 2-5** start as locked (greyed out, padlock icon). They become unlocked when `localStorage` shows the previous level is completed.
+- **Levels 2-7** start as locked (greyed out, padlock icon). They become unlocked when `localStorage` shows the previous level is completed.
 - A player can click any unlocked level to navigate to it.
 - The landing page reads from `localStorage` key `pasquil_progress` (a JSON object).
 
@@ -666,19 +730,21 @@ Every level page starts with a consistent header:
 </header>
 ```
 
-### 7.5 Victory Screen (After Level 5)
+### 7.5 Victory Screen (After Level 7)
 
-When the player enters the correct password on Level 5:
+When the player enters the correct password on Level 7:
 
 - Full-screen takeover with confetti animation.
 - Big trophy emoji / illustration.
-- Message: "🎉 YOU DID IT! You hacked all 5 of Sjonnie's 'secure' pages!"
+- Message: "🎉 YOU DID IT! You hacked all 7 of Pasquino's 'secure' pages!"
 - Summary of what they learned (one line per level):
-  1. "HTML comments aren't secret"
-  2. "CSS can't hide content from the DOM"
-  3. "JavaScript variables are public"
-  4. "Browser storage is not secure"
-  5. "Real security requires defense in depth"
+  1. "Predictable and written-down passwords are not secure"
+  2. "AI chatbots are only as safe as their guardrails"
+  3. "HTML comments aren't secret"
+  4. "CSS can't hide content from the DOM"
+  5. "JavaScript variables are public"
+  6. "Browser storage is not secure"
+  7. "Real security requires defense in depth"
 - CTA: "Want to learn more about real web security? Visit pasquil.nl"
 - Share button (optional stretch goal): "I completed Pasquil's Cyber Heist! 🔐"
 
@@ -688,11 +754,13 @@ When the player enters the correct password on Level 5:
 
 | Level | Name             | Password          | Where It's Hidden                        | Concept              |
 |-------|------------------|--------------------|------------------------------------------|----------------------|
-| 1     | Secret Diary     | `TULIP_HACKER`     | HTML comment in source                   | View Source           |
-| 2     | Invisible Vault  | `G33STELIJK`       | CSS-hidden DOM element                   | DOM Inspection        |
-| 3     | Console Cowboys  | `STROOPWAFEL42`    | JavaScript variable (console)            | JS Debugging          |
-| 4     | Cookie Monster   | `K00KJES_MONSTER`  | Base64-encoded cookie                    | Storage & Encoding    |
-| 5     | The Final Heist  | `P4SQU1L_M4ST3R`   | Split across JS, data-attr, meta tag     | Multi-layer Analysis  |
+| 1     | Login Portal     | `sysadmin` / `Paswoord123!` | Written on the Splash illustration | Password Awareness |
+| 2     | Well-Behaved Chatbot | `C0Pi70T`      | Chatbot reveals it when name is "Pasquino" | AI Guardrails     |
+| 3     | Secret Diary     | `TULIP_HACKER`     | HTML comment in source                   | View Source           |
+| 4     | Invisible Vault  | `G33STELIJK`       | CSS-hidden DOM element                   | DOM Inspection        |
+| 5     | Console Cowboys  | `STROOPWAFEL42`    | JavaScript variable (console)            | JS Debugging          |
+| 6     | Cookie Monster   | `K00KJES_MONSTER`  | Base64-encoded cookie                    | Storage & Encoding    |
+| 7     | The Final Heist  | `P4SQU1L_M4ST3R`   | Split across JS, data-attr, meta tag     | Multi-layer Analysis  |
 
 ---
 
