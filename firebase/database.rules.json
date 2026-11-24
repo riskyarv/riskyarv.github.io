@@ -13,7 +13,7 @@
           ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 7"
         },
         "time": {
-          ".validate": "newData.isNumber() && newData.val() >= 0"
+          ".validate": "newData.isNumber() && newData.val() >= 0 && (newData.val() > 0 || newData.parent().child('levels').val() === 0)"
         },
         "updatedAt": {
           ".validate": "newData.val() === now"

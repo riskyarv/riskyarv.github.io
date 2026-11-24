@@ -75,10 +75,26 @@ function onLevelSolved(firstSolve) {
   const player = getPlayer();
   if (!player) return;
   if (firstSolve && Number.isFinite(player.startedAt)) {
-    player.time = Math.round((Date.now() - player.startedAt) / 1000);
+    player.time = Math.max(1, Math.round((Date.now() - player.startedAt) / 1000));
     writeStoredJSON(PLAYER_KEY, player);
   }
   syncScore().catch((err) => console.warn("Scoreboard sync failed:", err));
+}
+
+// A time of 0 means this player hasn't solved anything yet, so any completed levels
+// come from before they entered a name. Reset them so they can't count as a 0:00 score.
+// Runs as soon as the script loads, before game.js renders the levels.
+function clearInheritedProgress() {
+  const player = getPlayer();
+  if (!player || toWholeNumber(player.time) > 0 || countCompletedLevels() === 0) return;
+  localStorage.removeItem("pasquil_progress");
+  writeStoredJSON(PLAYER_KEY, { ...player, startedAt: Date.now(), time: 0 });
+}
+
+try {
+  clearInheritedProgress();
+} catch {
+  // Ignore storage errors (e.g. private mode)
 }
 
 function initPlayerPanel() {
@@ -109,6 +125,8 @@ function handlePlayerSubmit(event) {
   }
 
   feedback.className = "feedback hidden";
+  // Every player starts at level 1, so progress from an earlier run can't count
+  localStorage.removeItem("pasquil_progress");
   writeStoredJSON(PLAYER_KEY, { name, startedAt: Date.now(), time: 0 });
   initPlayerPanel();
   updateLandingPage();

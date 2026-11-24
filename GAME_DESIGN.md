@@ -800,16 +800,17 @@ When the player enters the correct password on Level 7:
 ### Gameplay
 
 - Players must enter a name on the landing page before any level unlocks. Levels opened directly show a "Who are you?" screen.
+- Entering a name clears earlier progress, so every player starts at level 1. Players whose `time` is still 0 but who have completed levels (e.g. progress from before names existed) are reset the same way when a page loads.
 - The scoreboard on the landing page ranks players by **most levels**, then **fastest time** (seconds from entering the name to the latest newly solved level).
 - **TULIP_HACKER is always #1.** It is pinned client-side and never stored; the name (and look-alikes) is rejected for players.
 - Scores are kept for **24 hours**: older entries are hidden and visiting players delete them.
 - "New player" clears the name, progress and identity on a shared device. The previous score stays on the board.
-- **Bonus hack (after level 7):** the player record lives in `localStorage` (`pasquil_player`: `name`, `startedAt`, `time`). Editing `time` or `name` and reloading `index.html` pushes the "improved" score. TULIP_HACKER stays on top no matter what.
+- **Bonus hack (after level 7):** the player record lives in `localStorage` (`pasquil_player`: `name`, `startedAt`, `time`). Editing `time` (at least 1; a time of 0 resets the progress) or `name` and reloading `index.html` pushes the "improved" score. TULIP_HACKER stays on top no matter what.
 
 ### How It Works
 
 - `js/scoreboard.js` uses the Firebase REST APIs directly (no SDK): anonymous sign-in, then `PUT /scoreboard/{uid}` with `{ name, levels, time, updatedAt }`.
-- `firebase/database.rules.json` lets each browser write only its own entry, validates the fields, forces `updatedAt` to the server time and only allows deleting entries older than 24 hours.
+- `firebase/database.rules.json` lets each browser write only its own entry, validates the fields (a time of 0 is only allowed with 0 levels), forces `updatedAt` to the server time and only allows deleting entries older than 24 hours.
 - Without a configured database the scoreboard still renders, showing only TULIP_HACKER and the local player.
 - Limits: Firebase allows about 100 anonymous sign-ups per hour per IP address, which matters when a big group shares one Wi-Fi network.
 
