@@ -1,0 +1,27 @@
+{
+  "rules": {
+    "scoreboard": {
+      ".read": "auth != null",
+      ".indexOn": ["updatedAt"],
+      "$uid": {
+        ".write": "auth != null && (auth.uid === $uid || (!newData.exists() && data.child('updatedAt').val() < now - 86400000))",
+        ".validate": "newData.hasChildren(['name', 'levels', 'time', 'updatedAt'])",
+        "name": {
+          ".validate": "newData.isString() && newData.val().length >= 1 && newData.val().length <= 20 && !newData.val().toUpperCase().replace(' ', '').replace('_', '').replace('-', '').replace('.', '').contains('TULIPHACKER')"
+        },
+        "levels": {
+          ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 7"
+        },
+        "time": {
+          ".validate": "newData.isNumber() && newData.val() >= 0"
+        },
+        "updatedAt": {
+          ".validate": "newData.val() === now"
+        },
+        "$other": {
+          ".validate": false
+        }
+      }
+    }
+  }
+}

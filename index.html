@@ -28,6 +28,31 @@
   Elk gevonden wachtwoord geeft je toegang tot het volgende level. Kun jij alle zeven levels kraken voordat Pasquino doorheeft dat je in zijn systemen zit?
 </p>
 
+    <!-- Player -->
+    <section class="player-panel" id="player-panel">
+      <form id="player-form" class="player-form hidden" onsubmit="return handlePlayerSubmit(event)">
+        <h2 data-i18n="player-form-title">👤 Wie ben jij, hacker?</h2>
+        <p data-i18n="player-form-text">Vul je naam in om te beginnen. Je naam komt op het scorebord dat alle spelers kunnen zien.</p>
+        <div class="input-group">
+          <input
+            type="text"
+            id="player-name-input"
+            maxlength="20"
+            placeholder="Je hackernaam..."
+            data-i18n-placeholder="player-name-placeholder"
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <button type="submit" class="btn-submit" data-i18n="player-start">Start →</button>
+        </div>
+        <div id="player-feedback" class="feedback hidden"></div>
+      </form>
+      <div id="player-info" class="player-info hidden">
+        <span data-i18n="player-playing-as">👤 Je speelt als</span> <strong id="player-name"></strong>
+        <button type="button" class="player-new" onclick="startNewPlayer()" data-i18n="player-new">Nieuwe speler</button>
+      </div>
+    </section>
+
     <!-- Level Cards Grid -->
     <div class="levels-grid">
 
@@ -82,6 +107,24 @@
 
     </div>
 
+    <!-- Scoreboard -->
+    <section class="scoreboard hidden" id="scoreboard">
+      <h2 data-i18n="scoreboard-title">🏆 Scorebord</h2>
+      <p class="scoreboard-subtitle" data-i18n="scoreboard-subtitle">Meeste levels wint; bij gelijkspel telt de snelste tijd. Scores verdwijnen na 24 uur.</p>
+      <table class="scoreboard-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th data-i18n="scoreboard-col-name">Naam</th>
+            <th data-i18n="scoreboard-col-levels">Levels</th>
+            <th data-i18n="scoreboard-col-time">Tijd</th>
+          </tr>
+        </thead>
+        <tbody id="scoreboard-rows"></tbody>
+      </table>
+      <p id="scoreboard-status" class="scoreboard-status hidden"></p>
+    </section>
+
     <!-- Rules Box -->
     <div class="rules-box">
       <h3 data-i18n="rules-title">🔧 Zo speel je</h3>
@@ -104,5 +147,7 @@
 
   <script src="js/i18n.js"></script>
   <script src="js/game.js"></script>
+  <script src="js/scoreboard-config.js"></script>
+  <script src="js/scoreboard.js"></script>
 </body>
 </html>

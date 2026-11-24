@@ -135,7 +135,9 @@ async function handlePasswordSubmit(event) {
     feedback.textContent = successMsg + suffix;
     feedback.className = "feedback success";
 
+    const firstSolve = !isLevelCompleted(level);
     saveProgress(level);
+    onLevelSolved(firstSolve);
     showConfetti();
 
     if (nextLevel) {
@@ -204,6 +206,7 @@ function showNextHint() {
 function updateLandingPage() {
   const cards = document.querySelectorAll(".level-card");
   const progress = getProgress();
+  const hasPlayer = !!getPlayer();
 
   cards.forEach((card) => {
     const level = parseInt(card.getAttribute("data-level"), 10);
@@ -213,7 +216,10 @@ function updateLandingPage() {
 
     card.classList.remove("locked", "unlocked", "completed");
 
-    if (isCompleted) {
+    if (!hasPlayer) {
+      card.classList.add("locked");
+      if (status) status.innerHTML = t("status-locked") || '<span class="lock">🔒</span> Locked';
+    } else if (isCompleted) {
       card.classList.add("completed");
       if (status) status.innerHTML = t("status-completed") || '<span class="lock">✅</span> Completed!';
       card.style.pointerEvents = "auto";
@@ -232,21 +238,34 @@ function updateLandingPage() {
   });
 }
 
-// Guard: block access to levels if the previous level isn't completed
+// Guard: block access to levels without a player name or if the previous level isn't completed
 function checkLevelAccess() {
   const level = getCurrentLevel();
+
+  if (!getPlayer()) {
+    showBlockedScreen(
+      t("player-required-title") || "✋ Who are you?",
+      t("player-required-text") || "Enter your name on the start page first to begin the game.",
+      t("player-required-back") || "← Go to the start page"
+    );
+    return;
+  }
+
   if (level <= 1) return; // Level 1 is always accessible
 
   const prevCompleted = isLevelCompleted(level - 1);
   if (prevCompleted) return;
 
-  const lang = (typeof getLang === "function") ? getLang() : "nl";
   const title = (typeof t === "function" && t("level-locked-title")) || "🚫 Nice try!";
   const text = ((typeof t === "function" && t("level-locked-text")) ||
     "You need to complete the previous level first. Go back and solve Level {prev}!")
     .replace("{prev}", level - 1);
   const backText = (typeof t === "function" && t("level-locked-back")) || "← Back to levels";
 
+  showBlockedScreen(title, text, backText);
+}
+
+function showBlockedScreen(title, text, backText) {
   const wrapper = document.querySelector(".page-wrapper");
   if (wrapper) {
     wrapper.innerHTML = `

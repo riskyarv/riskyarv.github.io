@@ -32,6 +32,16 @@ jobs:
           mkdir -p _site
           cp -r index.html css/ js/ img/ levels/ .nojekyll _site/
 
+      - name: Configure scoreboard
+        if: ${{ vars.FIREBASE_API_KEY != '' && vars.FIREBASE_DATABASE_URL != '' }}
+        env:
+          FIREBASE_API_KEY: ${{ vars.FIREBASE_API_KEY }}
+          FIREBASE_DATABASE_URL: ${{ vars.FIREBASE_DATABASE_URL }}
+        run: |
+          jq -n --arg apiKey "$FIREBASE_API_KEY" --arg databaseURL "$FIREBASE_DATABASE_URL" \
+            '{apiKey: $apiKey, databaseURL: $databaseURL}' \
+            | { printf 'window.SCOREBOARD_CONFIG = '; cat; printf ';\n'; } > _site/js/scoreboard-config.js
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 

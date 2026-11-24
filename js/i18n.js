@@ -752,6 +752,100 @@ const translations = {
   "victory-cta": {
     nl: "Bezoek Pasquil.nl →",
     en: "Visit Pasquil.nl →"
+  },
+  "victory-bonus-title": {
+    nl: "🕵️ Bonusmissie: hack het scorebord",
+    en: "🕵️ Bonus mission: hack the scoreboard"
+  },
+  "victory-bonus-text": {
+    nl: "Pasquino's scorebord gelooft alles wat jouw browser vertelt. TULIP_HACKER is onverslaanbaar, maar wie zegt dat jij niet de snelste van de rest was? Tip: je spelersgegevens staan in de browseropslag, net als de geheimen in level 6. Pas ze aan en herlaad het scorebord.",
+    en: "Pasquino's scoreboard believes whatever your browser tells it. TULIP_HACKER is unbeatable, but who says you weren't the fastest of the rest? Tip: your player data lives in browser storage, just like the secrets in level 6. Change it and reload the scoreboard."
+  },
+  "victory-bonus-link": {
+    nl: "Naar het scorebord →",
+    en: "Go to the scoreboard →"
+  },
+
+  // ===================== PLAYER & SCOREBOARD =====================
+  "player-form-title": {
+    nl: "👤 Wie ben jij, hacker?",
+    en: "👤 Who are you, hacker?"
+  },
+  "player-form-text": {
+    nl: "Vul je naam in om te beginnen. Je naam komt op het scorebord dat alle spelers kunnen zien.",
+    en: "Enter your name to start. Your name will appear on the scoreboard that all players can see."
+  },
+  "player-name-placeholder": {
+    nl: "Je hackernaam...",
+    en: "Your hacker name..."
+  },
+  "player-start": {
+    nl: "Start →",
+    en: "Start →"
+  },
+  "player-name-empty": {
+    nl: "Vul eerst een naam in! ⌨️",
+    en: "Enter a name first! ⌨️"
+  },
+  "player-name-reserved": {
+    nl: "Mooi geprobeerd, maar die naam is al van de allerbeste hacker. 😼",
+    en: "Nice try, but that name belongs to the best hacker of all. 😼"
+  },
+  "player-playing-as": {
+    nl: "👤 Je speelt als",
+    en: "👤 Playing as"
+  },
+  "player-new": {
+    nl: "Nieuwe speler",
+    en: "New player"
+  },
+  "player-new-confirm": {
+    nl: "Opnieuw beginnen als nieuwe speler? Je voortgang op dit apparaat wordt gewist. Je huidige score blijft op het scorebord staan.",
+    en: "Start over as a new player? Your progress on this device will be cleared. Your current score stays on the scoreboard."
+  },
+  "player-required-title": {
+    nl: "✋ Wie ben jij?",
+    en: "✋ Who are you?"
+  },
+  "player-required-text": {
+    nl: "Vul eerst je naam in op de startpagina om het spel te beginnen.",
+    en: "Enter your name on the start page first to begin the game."
+  },
+  "player-required-back": {
+    nl: "← Naar de startpagina",
+    en: "← Go to the start page"
+  },
+  "scoreboard-title": {
+    nl: "🏆 Scorebord",
+    en: "🏆 Scoreboard"
+  },
+  "scoreboard-subtitle": {
+    nl: "Meeste levels wint; bij gelijkspel telt de snelste tijd. Scores verdwijnen na 24 uur.",
+    en: "Most levels wins; ties go to the fastest time. Scores disappear after 24 hours."
+  },
+  "scoreboard-col-name": {
+    nl: "Naam",
+    en: "Name"
+  },
+  "scoreboard-col-levels": {
+    nl: "Levels",
+    en: "Levels"
+  },
+  "scoreboard-col-time": {
+    nl: "Tijd",
+    en: "Time"
+  },
+  "scoreboard-you": {
+    nl: "(jij)",
+    en: "(you)"
+  },
+  "scoreboard-offline": {
+    nl: "📴 Het gedeelde scorebord is nog niet ingesteld, dus je ziet alleen jezelf (en TULIP_HACKER natuurlijk).",
+    en: "📴 The shared scoreboard isn't set up yet, so you only see yourself (and TULIP_HACKER, of course)."
+  },
+  "scoreboard-error": {
+    nl: "⚠️ Het scorebord is even niet bereikbaar. We proberen het zo opnieuw.",
+    en: "⚠️ The scoreboard can't be reached right now. We'll try again shortly."
   }
 };
 

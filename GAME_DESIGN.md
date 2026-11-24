@@ -27,7 +27,7 @@ Enter password → Unlock level → Explore the page → Find the hidden passwor
 
 ### Key Design Principles
 
-- **No server required.** 100% client-side. All HTML/CSS/JS served statically.
+- **No server required.** 100% client-side. All HTML/CSS/JS served statically. (The optional shared scoreboard talks to Firebase's hosted REST API; see section 10.)
 - **Browser-only.** Every challenge is solvable with Chrome/Firefox DevTools — no external tools needed.
 - **Teach, don't trick.** Each level has a clear security lesson. The challenge is knowing WHERE to look, not solving an obscure puzzle.
 - **Progressive difficulty.** Levels 1-2 need no laptop at all (look closely, talk to a chatbot). Level 3 is "right-click → view source." Level 7 requires combining multiple techniques.
@@ -45,6 +45,8 @@ pasquilgame/
 ├── js/
 │   ├── game.js                 # Shared game logic (password checking, navigation, hints)
 │   ├── i18n.js                 # NL/EN translations
+│   ├── scoreboard.js           # Player name + shared scoreboard (Firebase REST)
+│   ├── scoreboard-config.js    # Firebase config, filled in by the deploy workflow
 │   ├── level1.js               # Level 1 specific JS (Splash lightbox)
 │   ├── level2.js               # Level 2 specific JS (AI chatbot)
 │   ├── level5.js               # Level 5 specific JS (console challenge)
@@ -61,6 +63,8 @@ pasquilgame/
 │   ├── pasquil-logo.svg        # Pasquil logo (or text placeholder)
 │   ├── sjonnie.svg             # Sjonnie character (simple illustration)
 │   └── trophy.svg              # Victory trophy for completion
+├── firebase/
+│   └── database.rules.json     # Realtime Database rules for the scoreboard (not deployed)
 ├── GAME_DESIGN.md              # This document
 └── README.md                   # Player-facing readme
 ```
@@ -746,6 +750,7 @@ When the player enters the correct password on Level 7:
   5. "JavaScript variables are public"
   6. "Browser storage is not secure"
   7. "Real security requires defense in depth"
+- Bonus mission: "Hack the scoreboard" — hints that the player data lives in browser storage, with a link to the scoreboard (see section 10).
 - CTA: "Want to learn more about real web security? Visit pasquil.nl"
 - Share button (optional stretch goal): "I completed Pasquil's Cyber Heist! 🔐"
 
@@ -787,6 +792,38 @@ When the player enters the correct password on Level 7:
 - Hint system ensures no player is permanently stuck.
 - Color is never the ONLY indicator — always pair with text/icons.
 - Screen readers will naturally expose hidden content (which is fine — the game is about learning to use browser tools).
+
+---
+
+## 10. Player Names & Scoreboard
+
+### Gameplay
+
+- Players must enter a name on the landing page before any level unlocks. Levels opened directly show a "Who are you?" screen.
+- The scoreboard on the landing page ranks players by **most levels**, then **fastest time** (seconds from entering the name to the latest newly solved level).
+- **TULIP_HACKER is always #1.** It is pinned client-side and never stored; the name (and look-alikes) is rejected for players.
+- Scores are kept for **24 hours**: older entries are hidden and visiting players delete them.
+- "New player" clears the name, progress and identity on a shared device. The previous score stays on the board.
+- **Bonus hack (after level 7):** the player record lives in `localStorage` (`pasquil_player`: `name`, `startedAt`, `time`). Editing `time` or `name` and reloading `index.html` pushes the "improved" score. TULIP_HACKER stays on top no matter what.
+
+### How It Works
+
+- `js/scoreboard.js` uses the Firebase REST APIs directly (no SDK): anonymous sign-in, then `PUT /scoreboard/{uid}` with `{ name, levels, time, updatedAt }`.
+- `firebase/database.rules.json` lets each browser write only its own entry, validates the fields, forces `updatedAt` to the server time and only allows deleting entries older than 24 hours.
+- Without a configured database the scoreboard still renders, showing only TULIP_HACKER and the local player.
+- Limits: Firebase allows about 100 anonymous sign-ups per hour per IP address, which matters when a big group shares one Wi-Fi network.
+
+### Setup
+
+1. Create a project in the [Firebase console](https://console.firebase.google.com/) (no billing needed).
+2. **Build → Realtime Database → Create database** (e.g. `europe-west1`) in locked mode, then paste `firebase/database.rules.json` into the **Rules** tab and publish.
+3. **Build → Authentication → Sign-in method:** enable **Anonymous**.
+4. In the repository, under **Settings → Secrets and variables → Actions → Variables**, add:
+   - `FIREBASE_API_KEY`: the Web API key (Project settings → General)
+   - `FIREBASE_DATABASE_URL`: the database URL, e.g. `https://<project>-default-rtdb.europe-west1.firebasedatabase.app`
+5. Re-run the "Deploy to GitHub Pages" workflow. It writes these values into `js/scoreboard-config.js`.
+
+The Web API key only identifies the project and is safe to expose; the database rules provide the protection.
 
 ---
 
