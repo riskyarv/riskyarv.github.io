@@ -15,10 +15,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  # Separate jobs so deploy-pages reliably finds the uploaded artifact (actions/deploy-pages#451)
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -45,6 +43,13 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
