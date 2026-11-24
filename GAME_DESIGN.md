@@ -816,8 +816,8 @@ When the player enters the correct password on Level 7:
 ### Setup
 
 1. Create a project in the [Firebase console](https://console.firebase.google.com/) (no billing needed).
-2. **Build → Realtime Database → Create database** (e.g. `europe-west1`) in locked mode, then paste `firebase/database.rules.json` into the **Rules** tab and publish.
-3. **Build → Authentication → Sign-in method:** enable **Anonymous**.
+2. **Databases & Storage → Realtime Database → Create database** (e.g. `europe-west1`) in locked mode, then paste `firebase/database.rules.json` into the **Rules** tab and publish.
+3. **Security → Authentication → Sign-in method** (click **Get started** first if prompted): add the **Anonymous** provider, enable it and save.
 4. In the repository, under **Settings → Secrets and variables → Actions → Variables**, add:
    - `FIREBASE_API_KEY`: the Web API key (Project settings → General)
    - `FIREBASE_DATABASE_URL`: the database URL, e.g. `https://<project>-default-rtdb.europe-west1.firebasedatabase.app`
