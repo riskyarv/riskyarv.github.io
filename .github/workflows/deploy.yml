@@ -28,7 +28,7 @@ jobs:
       - name: Prepare site
         run: |
           mkdir -p _site
-          cp -r index.html css/ js/ img/ levels/ .nojekyll _site/
+          cp -r index.html css js img levels pasquil-opus pasquil-astra .nojekyll _site/
 
       - name: Configure scoreboard
         if: ${{ vars.FIREBASE_API_KEY != '' && vars.FIREBASE_DATABASE_URL != '' }}
