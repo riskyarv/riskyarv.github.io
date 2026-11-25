@@ -1,0 +1,16 @@
+{
+  "name": "pasquil",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "eleventy --serve --port=4317",
+    "start": "npm run dev",
+    "build": "eleventy",
+    "test": "npm run build && node --test tests/*.test.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  },
+  "engines": { "node": ">=22" }
+}

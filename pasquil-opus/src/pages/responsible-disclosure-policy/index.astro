@@ -1,0 +1,336 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import Icon from '../../components/Icon.astro';
+import type { IconName } from '../../data/icons';
+import c from '@content/pages/responsible-disclosure-policy.json';
+
+// listStyle in the JSON → list markup: check/dont/cross = icon list, numbered = timeline.
+const lists: Record<string, { class: string; icon: IconName }> = {
+  check: { class: 'check-list', icon: 'check' },
+  dont: { class: 'rules', icon: 'ban' },
+  cross: { class: 'scope', icon: 'circle-xmark' },
+};
+---
+
+<Base title={c.seo.title} description={c.seo.description} lang="en" crumbs={c.crumbs}>
+  <PageHero eyebrow={c.hero.eyebrow} title={c.hero.title} crumbs={c.crumbs} variant="navy">
+    <p class="lead" set:html={c.hero.leadHtml} />
+    <div class="btn-row">
+      <a class="btn" href={c.hero.primary.href}><Icon name="file-lines" /> {c.hero.primary.label}</a>
+      <a class="btn btn--ghost" href={c.hero.secondary.href}>{c.hero.secondary.label} <Icon name="arrow-right" /></a>
+    </div>
+  </PageHero>
+
+  <section class="section">
+    <div class="container rd">
+      <nav class="rd__toc" aria-labelledby="toc-title">
+        <p id="toc-title" class="eyebrow">{c.toc.title}</p>
+        <ol role="list">
+          {
+            c.sections.map((s) => (
+              <li>
+                <a href={`#${s.id}`}>{s.navLabel}</a>
+              </li>
+            ))
+          }
+        </ol>
+      </nav>
+
+      <div class="rd__body">
+        {
+          c.sections.map((s) => {
+            const list = lists[s.listStyle];
+            return (
+              <section id={s.id} class:list={['block', s.card && `card card--${s.card}`]}>
+                {s.icon && (
+                  <span class="icon-tile">
+                    <Icon name={s.icon as IconName} />
+                  </span>
+                )}
+                <h2>{s.title}</h2>
+                {s.highlightHtml && <p class="report-link" set:html={s.highlightHtml} />}
+                {s.paragraphsHtml.map((p) => (
+                  <p set:html={p} />
+                ))}
+                {s.listTitle && <p class="sub">{s.listTitle}</p>}
+                {s.items.length > 0 && s.listStyle === 'numbered' && (
+                  <ol class="timeline" role="list">
+                    {s.items.map((t) => (
+                      <li>{t}</li>
+                    ))}
+                  </ol>
+                )}
+                {s.items.length > 0 && list && (
+                  <ul class={list.class} role="list">
+                    {s.items.map((t) => (
+                      <li>
+                        <Icon name={list.icon} />
+                        <span>{t}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </section>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .rd {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  @media (min-width: 1000px) {
+    .rd {
+      grid-template-columns: 15rem minmax(0, 1fr);
+      gap: clamp(3rem, 1rem + 4vw, 5rem);
+      align-items: start;
+    }
+
+    .rd__toc {
+      position: sticky;
+      top: calc(var(--header-h) + 1.5rem);
+    }
+  }
+
+  .rd__toc ol {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0 0 0.25rem;
+    list-style: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .rd__toc li {
+    flex: none;
+    margin: 0;
+  }
+
+  .rd__toc a {
+    display: block;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--navy);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition:
+      border-color 0.25s,
+      background-color 0.25s;
+  }
+
+  .rd__toc a:hover {
+    border-color: var(--navy);
+  }
+
+  .rd__toc a[aria-current='true'] {
+    border-color: var(--navy);
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  @media (min-width: 1000px) {
+    .rd__toc ol {
+      flex-direction: column;
+      gap: 0.15rem;
+      overflow: visible;
+      border-left: 2px solid var(--line);
+    }
+
+    .rd__toc a {
+      margin-left: -2px;
+      padding: 0.45rem 1rem;
+      border: 0;
+      border-left: 2px solid transparent;
+      border-radius: 0;
+      white-space: normal;
+    }
+
+    .rd__toc a[aria-current='true'] {
+      border-left-color: var(--yellow);
+      background: transparent;
+      color: var(--navy);
+      font-weight: 800;
+    }
+  }
+
+  .rd__body {
+    display: grid;
+    gap: clamp(2.5rem, 2rem + 2vw, 3.5rem);
+    min-width: 0;
+  }
+
+  .block {
+    scroll-margin-top: calc(var(--header-h) + 1.5rem);
+  }
+
+  .block h2 {
+    font-size: var(--fs-h3);
+  }
+
+  .block.card h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  .report-link {
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+
+  .card--yellow :global(.link) {
+    color: var(--navy);
+    text-decoration-color: var(--navy);
+  }
+
+  .card--navy :global(.link) {
+    color: var(--yellow);
+    text-decoration-color: var(--yellow);
+    overflow-wrap: anywhere;
+  }
+
+  .card--navy :global(.link):hover {
+    color: var(--white);
+  }
+
+  .sub {
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .rules,
+  .scope {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .rules li,
+  .scope li {
+    display: grid;
+    grid-template-columns: 1.25rem 1fr;
+    gap: 0.75rem;
+    align-items: start;
+    margin: 0;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-s);
+    background: var(--surface);
+    color: var(--ink);
+    font-size: var(--fs-sm);
+    line-height: 1.55;
+  }
+
+  .rules :global(.icon),
+  .scope :global(.icon) {
+    margin-top: 0.15em;
+    font-size: 1.1rem;
+    color: var(--navy);
+  }
+
+  .rules li {
+    font-size: var(--fs-body);
+    font-weight: 600;
+  }
+
+  @media (min-width: 700px) {
+    .scope {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .timeline {
+    counter-reset: step;
+    position: relative;
+    display: grid;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 1.125rem;
+    top: 1rem;
+    bottom: 1rem;
+    width: 2px;
+    background: var(--line);
+  }
+
+  .timeline li {
+    counter-increment: step;
+    position: relative;
+    display: grid;
+    grid-template-columns: 2.25rem 1fr;
+    gap: 1rem;
+    align-items: start;
+    margin: 0;
+    padding-top: 0.35rem;
+    color: var(--ink);
+  }
+
+  .timeline li::before {
+    content: counter(step);
+    margin-top: -0.35rem;
+    display: grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background: var(--yellow);
+    color: var(--navy);
+    font-weight: 800;
+    box-shadow: 0 0 0 4px var(--white);
+  }
+</style>
+
+<script>
+  const links = new Map<string, HTMLAnchorElement>();
+  document.querySelectorAll<HTMLAnchorElement>('.rd__toc a').forEach((a) => links.set(a.hash.slice(1), a));
+  const bar = document.querySelector<HTMLElement>('.rd__toc ol');
+  const sections = [...document.querySelectorAll<HTMLElement>('.rd__body > section[id]')];
+  let current: string | null = null;
+  let ticking = false;
+
+  const update = () => {
+    ticking = false;
+    const line = innerHeight * 0.35;
+    let id: string | null = null;
+    for (const s of sections) if (s.getBoundingClientRect().top <= line) id = s.id;
+    if (innerHeight + scrollY >= document.documentElement.scrollHeight - 2) id = sections.at(-1)?.id ?? id;
+    if (id === current) return;
+    current = id;
+    links.forEach((a, key) => (key === id ? a.setAttribute('aria-current', 'true') : a.removeAttribute('aria-current')));
+    if (bar && bar.scrollWidth > bar.clientWidth) {
+      const li = id ? links.get(id)?.parentElement : null;
+      const left = li ? bar.scrollLeft + li.getBoundingClientRect().left - bar.getBoundingClientRect().left - 16 : 0;
+      bar.scrollTo({ left });
+    }
+  };
+
+  addEventListener(
+    'scroll',
+    () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    },
+    { passive: true },
+  );
+  update();
+</script>

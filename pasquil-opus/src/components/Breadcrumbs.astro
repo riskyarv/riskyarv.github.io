@@ -1,0 +1,31 @@
+---
+import layout from '@content/layout.json';
+
+export interface Crumb {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  items: Crumb[];
+}
+
+const { items } = Astro.props;
+const all: Crumb[] = [{ label: layout.a11y.breadcrumbsHome, href: '/' }, ...items];
+---
+
+<nav class="crumbs" aria-label={layout.a11y.breadcrumbsLabel}>
+  <ol>
+    {
+      all.map((c, i) =>
+        i === all.length - 1 || !c.href ? (
+          <li aria-current="page">{c.label}</li>
+        ) : (
+          <li>
+            <a href={c.href}>{c.label}</a>
+          </li>
+        ),
+      )
+    }
+  </ol>
+</nav>

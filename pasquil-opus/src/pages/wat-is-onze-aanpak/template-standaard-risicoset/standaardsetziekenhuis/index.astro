@@ -1,0 +1,16 @@
+---
+import SetPage from '../../../../layouts/SetPage.astro';
+import data from '@content/sets/ziekenhuis.json';
+import c from '@content/pages/set-ziekenhuis.json';
+---
+
+<SetPage
+  title={c.title}
+  crumb={c.crumb}
+  description={c.seo.description}
+  current="ziekenhuis"
+  versions={data}
+  note={c.note || undefined}
+>
+  {c.introHtml.map((p) => <p set:html={p} />)}
+</SetPage>

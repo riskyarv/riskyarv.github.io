@@ -1,0 +1,14 @@
+{
+  "name": "Pasquil",
+  "short_name": "Pasquil",
+  "description": "Adviesbureau voor informatiebeveiliging en privacy in Utrecht.",
+  "lang": "nl",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#0b1d51",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "/apple-touch-icon.png", "type": "image/png", "sizes": "180x180" }
+  ]
+}

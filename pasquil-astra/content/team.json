@@ -1,0 +1,53 @@
+{
+  "story": "<p>Pasquil is opgericht in 2021. We zijn een adviesbedrijf voor informatiebeveiliging en privacy. Als adviseurs bieden we ondersteuning en advies aan verschillende soorten organisaties. Veel van onze klanten zitten in de zorg- en onderwijssector en we helpen verschillende softwareleveranciers. Ons doel is organisaties te helpen om hun informatie en systemen optimaal te beschermen tegen cyberdreigingen en te voldoen aan wettelijke eisen op het gebied van informatiebeveiliging. We ontmoeten elkaar en onze klanten op ons kantoor in Utrecht, pal naast het centraal station. </p><p>Pasquil onderscheid zich door pragmatiek de boventoon te laten voeren. Met humor, energie en inhoudelijke expertise zorgen we voor verbetering van informatiebeveiliging op korte en lange termijn.</p>",
+  "members": [
+    {
+      "name": "Arvid",
+      "bio": "Arvid is de oprichter van Pasquil en een adviseur met veel kennis van risicomanagement, informatiebeveiliging, privacy en ISO27001 en NEN7510. Hij fungeert vaker als ad interim CISO, auditor, trainer en projectmanager.",
+      "url": "https://www.linkedin.com/in/arvid-landwaart-378b6131/",
+      "photo": "/media/arvid.webp",
+      "width": 768,
+      "height": 960
+    },
+    {
+      "name": "Lotte",
+      "bio": "Lotte is specialist op het gebied van het opzetten en coördineren van een ISMS bij grote organisaties en start-ups. Ze heeft veel ervaring met risicomanagement en project-management en is expert in bedrijfscontinuïteitsvraagstukken.",
+      "url": "https://www.linkedin.com/in/lotte-van-hazel-75843a217/",
+      "photo": "/media/lotte.webp",
+      "width": 768,
+      "height": 960
+    },
+    {
+      "name": "Jelle",
+      "bio": "Jelle is een ervaren FG en privacyadviseur met een juridische achtergrond. Naast privacykennis heeft Jelle ook veel ervaring met informatiebeveiliging. Hij audit regelmatig organisaties op ISO27001 en NEN7510.",
+      "url": "https://www.linkedin.com/in/hoekstrajelle/",
+      "photo": "/media/jelle.webp",
+      "width": 768,
+      "height": 960
+    },
+    {
+      "name": "Mariëtte",
+      "bio": "Mariëtte heeft een achtergrond in informatiekunde, rechten en bedrijfskunde. Ze is analytisch zeer sterk en heeft veel kennis van informatiebeveiligingsnormen, risicomanagement en DPIA's.",
+      "url": "https://www.linkedin.com/in/mari%C3%ABtte-smits-5b5830225/",
+      "photo": "/media/mariette.webp",
+      "width": 682,
+      "height": 903
+    },
+    {
+      "name": "Daniël",
+      "bio": "Daniël is een pragmatische jurist en heeft veel kennis op het gebied van privacy- en gezondheidsrecht. Hij heeft ruime ervaring als privacy officer en FG en is CIPP/E, CIPM, CIPT en CDPO gecertificeerd.",
+      "url": "https://www.linkedin.com/in/daniel-tjeerdsma/",
+      "photo": "/media/daniel.webp",
+      "width": 768,
+      "height": 960
+    },
+    {
+      "name": "Lynley",
+      "bio": "Lynley is als stagiaire begonnen bij Pasquil en werkt nu naast haar studie rechten voor Pasquil. Ze heeft kennis van privacy-wetgeving en ondersteunt verschillende klanten.",
+      "url": "https://www.linkedin.com/in/lynley-vrolijk-076196323/",
+      "photo": "/media/lynley.webp",
+      "width": 768,
+      "height": 910
+    }
+  ]
+}

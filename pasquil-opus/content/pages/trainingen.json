@@ -1,0 +1,59 @@
+{
+  "seo": {
+    "title": "Trainingen",
+    "description": "Pasquil geeft regelmatig cursussen, trainingen en workshops over privacy en security: van een spoedcursus AVG tot NIS2 (Cyberbeveiligingswet) voor bestuurders en maatwerk."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Wat bieden we?",
+      "href": "/wat-bieden-we/"
+    },
+    {
+      "label": "Trainingen"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Wat bieden we?",
+    "title": "Trainingen",
+    "lead": "In samenwerking met andere organisaties geven wij regelmatig cursussen, trainingen en workshops op een aantal privacy en security gerelateerde onderwerpen. We gebruiken hiervoor een team van docenten dat een onderwerp vanuit meerdere kanten belicht."
+  },
+  "overview": {
+    "title": "Hieronder zie je een overzicht van de trainingen die wij binnenkort geven.",
+    "startLabel": "Start:",
+    "durationLabel": "Duur:",
+    "cta": "Bekijk op Springest",
+    "newWindowLabel": "(opent Springest in nieuw venster)",
+    "items": [
+      {
+        "title": "Spoedcursus AVG",
+        "text": "Een snelle introductie in de AVG, zodat je snel op de hoogte bent",
+        "href": "https://www.springest.nl/ict-institute/privacy-gdpr-training",
+        "icon": "bolt",
+        "start": "NTB",
+        "duration": "Dagdeel"
+      },
+      {
+        "title": "Cyberbeveiligingswet (NIS2) voor bestuurders",
+        "text": "Als bestuurder de verplichte scholing vanuit de CBW",
+        "href": "https://www.springest.nl/ict-institute/nis2-training-informatiebeveiliging-voor-bestuurders",
+        "icon": "user-tie",
+        "start": "NTB",
+        "duration": "Dagdeel"
+      }
+    ]
+  },
+  "custom": {
+    "title": "Maatwerk",
+    "subtitle": "Doe een aanvraag bij ons!",
+    "items": [
+      "ISO27001 introductie",
+      "Privacy en wetenschappelijk integriteit",
+      "Specifieke normenkaders",
+      "Interne auditor"
+    ],
+    "cta": {
+      "label": "Neem contact op",
+      "href": "/hoe-bereik-je-ons/"
+    }
+  }
+}

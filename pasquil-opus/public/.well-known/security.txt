@@ -1,0 +1,6 @@
+Contact: mailto:hallo@pasquil.nl
+Expires: 2027-05-13T10:00:00.000Z
+Encryption: https://www.pasquil.nl/.well-known/pgp-key.txt
+Preferred-Languages: en, nl
+Canonical: https://pasquil.nl/.well-known/security.txt
+Policy: https://pasquil.nl/responsible-disclosure-policy/

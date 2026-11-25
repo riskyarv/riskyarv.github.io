@@ -1,0 +1,466 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import heroRoom from '../assets/img/hero-room.png';
+import laptop from '../assets/img/flying-laptop.png';
+import { services } from '../data/site';
+import type { IconName } from '../data/icons';
+import c from '@content/pages/home.json';
+
+const featured = services.slice(0, 2);
+const rest = services.slice(2);
+---
+
+<Base>
+  <section class="hero bg-yellow">
+    <div class="container container--wide">
+      <div class="hero__head">
+        <div>
+          <p class="eyebrow">{c.hero.eyebrow}</p>
+          <h1 class="display hero__title">
+            {c.hero.title}{' '}
+            <span class="hero__mark">{c.hero.titleMark}</span>
+          </h1>
+        </div>
+        <div class="hero__aside">
+          <p class="lead">{c.hero.lead}</p>
+          <div class="btn-row">
+            <a class="btn" href={c.hero.primary.href}>{c.hero.primary.label} <Icon name="arrow-right" /></a>
+            <a class="btn btn--ghost" href={c.hero.secondary.href}>{c.hero.secondary.label}</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__art">
+        <Image
+          src={heroRoom}
+          alt={c.hero.imageAlt}
+          widths={[640, 960, 1280, 1680, 2338]}
+          sizes="(min-width: 1320px) 1180px, 94vw"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <Image src={laptop} alt="" class="hero__laptop" width={247} densities={[1, 2]} />
+      </div>
+    </div>
+  </section>
+
+  <div class="norms bg-navy" aria-label={c.norms.label}>
+    <ul class="norms__track" role="list">
+      {c.norms.items.map((n) => <li>{n}</li>)}
+    </ul>
+    <ul class="norms__track" role="list" aria-hidden="true">
+      {c.norms.items.map((n) => <li>{n}</li>)}
+    </ul>
+  </div>
+
+  <section class="section why" aria-labelledby="why-title">
+    <div class="panel bg-navy">
+      <div class="container split split--wide-text">
+        <div class="reveal">
+          <p class="eyebrow">{c.why.eyebrow}</p>
+          <h2 id="why-title">{c.why.title}</h2>
+          <p class="lead why__lead">
+            {c.why.lead} <span class="accent">{c.why.leadAccent}</span>
+          </p>
+          <p class="rich" set:html={c.why.bodyHtml} />
+          <div class="btn-row">
+            <a class="btn" href={c.why.primary.href}>{c.why.primary.label} <Icon name="arrow-right" /></a>
+            <a class="btn btn--ghost" href={c.why.secondary.href}>{c.why.secondary.label}</a>
+          </div>
+        </div>
+        <div class="why__media">
+          <img src="/media/waarom.gif" alt="" width="520" height="520" loading="lazy" decoding="async" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--flush-top" aria-labelledby="services-title">
+    <div class="container container--wide">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">{c.services.eyebrow}</p>
+          <h2 id="services-title">{c.services.title}</h2>
+        </div>
+        <a class="arrow-link" href={c.services.allLink.href}>{c.services.allLink.label} <Icon name="arrow-right" /></a>
+      </div>
+
+      <ul class="bento" role="list">
+        {
+          featured.map((s) => (
+            <li class="card card--navy bento__item bento__item--featured reveal">
+              <span class="icon-tile">
+                <Icon name={s.icon} />
+              </span>
+              <h3>
+                <a class="stretched" href={`/wat-bieden-we/#${s.id}`}>
+                  {s.title}
+                </a>
+              </h3>
+              <p>{s.summary}</p>
+              <span class="arrow-link" aria-hidden="true">
+                {c.services.readMore} <Icon name="arrow-right" />
+              </span>
+            </li>
+          ))
+        }
+        {
+          rest.map((s) => (
+            <li class="card bento__item reveal">
+              <span class="icon-tile">
+                <Icon name={s.icon} />
+              </span>
+              <h3>
+                <a class="stretched" href={`/wat-bieden-we/#${s.id}`}>
+                  {s.title}
+                </a>
+              </h3>
+              <p>{s.summary}</p>
+              <span class="arrow-link" aria-hidden="true">
+                {c.services.readMore} <Icon name="arrow-right" />
+              </span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section bg-soft" aria-labelledby="kennis-title">
+    <div class="container container--wide">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">{c.kennis.eyebrow}</p>
+          <h2 id="kennis-title">{c.kennis.title}</h2>
+        </div>
+      </div>
+      <ul class="grid teasers" role="list">
+        {
+          c.kennis.items.map((t) => (
+            <li class="card reveal">
+              <span class="icon-tile">
+                <Icon name={t.icon as IconName} />
+              </span>
+              <h3>
+                <a class="stretched" href={t.href}>
+                  {t.title}
+                </a>
+              </h3>
+              <p>{t.text}</p>
+              <span class="arrow-link" aria-hidden="true">
+                {t.cta} <Icon name="arrow-right" />
+              </span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* ---- Hero ---- */
+  .hero {
+    position: relative;
+    overflow: clip;
+    padding-top: clamp(2.5rem, 1.5rem + 4vw, 5rem);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -40%;
+    width: 120%;
+    aspect-ratio: 2.2;
+    translate: -50% 0;
+    border-radius: 50%;
+    background: radial-gradient(closest-side, rgb(255 255 255 / 0.4), transparent);
+    pointer-events: none;
+  }
+
+  .hero__head {
+    position: relative;
+    display: grid;
+    gap: 1.75rem 3rem;
+    align-items: end;
+  }
+
+  .hero__title {
+    margin: 0;
+    max-width: 13em;
+    color: var(--navy);
+  }
+
+  .hero__mark {
+    display: inline;
+    padding: 0 0.12em;
+    background: var(--white);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    border-radius: 0.12em;
+    line-height: 1.25;
+  }
+
+  .hero__aside .lead {
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero__art {
+    position: relative;
+    width: min(100%, 1180px);
+    margin: clamp(2rem, 1rem + 4vw, 4rem) auto 0;
+    padding-bottom: clamp(1.5rem, 1rem + 2vw, 3rem);
+  }
+
+  .hero__art > :global(img:first-child) {
+    width: 100%;
+    filter: drop-shadow(0 30px 40px rgb(11 29 81 / 0.18));
+  }
+
+  .hero__art :global(.hero__laptop) {
+    position: absolute;
+    top: -2%;
+    right: 3%;
+    width: 11%;
+    height: auto;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero__art :global(.hero__laptop) {
+      animation: float 6s ease-in-out infinite;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .hero__head {
+      grid-template-columns: minmax(0, 1fr) 22rem;
+    }
+
+    .hero__aside {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  /* ---- Norms marquee ---- */
+  .norms {
+    display: flex;
+    overflow: hidden;
+    padding-block: 1.1rem;
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  }
+
+  .norms__track {
+    display: flex;
+    flex: none;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .norms li {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding-right: 2.5rem;
+    color: var(--white);
+    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.375rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
+
+  .norms li::after {
+    content: '';
+    width: 0.55rem;
+    height: 0.55rem;
+    rotate: 45deg;
+    background: var(--yellow);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .norms__track {
+      animation: marquee-self 38s linear infinite;
+    }
+
+    .norms:hover .norms__track {
+      animation-play-state: paused;
+    }
+  }
+
+  @keyframes marquee-self {
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .norms {
+      justify-content: center;
+      mask-image: none;
+    }
+
+    .norms__track {
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 0.5rem;
+    }
+
+    .norms__track[aria-hidden] {
+      display: none;
+    }
+  }
+
+  /* ---- Why ---- */
+  .why__lead {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .why .btn-row {
+    margin-top: 2rem;
+  }
+
+  .why__media img {
+    width: min(100%, 300px);
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    margin-inline: auto;
+  }
+
+  @media (min-width: 900px) {
+    .why__media img {
+      width: min(100%, 440px);
+      aspect-ratio: 1;
+    }
+  }
+
+  /* ---- Section head ---- */
+  .section-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+    margin-bottom: clamp(1.75rem, 1.25rem + 2vw, 3rem);
+  }
+
+  .section-head h2 {
+    margin: 0;
+  }
+
+  /* ---- Bento ---- */
+  .bento {
+    display: grid;
+    gap: clamp(0.875rem, 0.6rem + 1vw, 1.25rem);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .bento__item p {
+    font-size: var(--fs-sm);
+    line-height: 1.65;
+  }
+
+  .bento__item .arrow-link {
+    margin-top: auto;
+    padding-top: 0.5rem;
+  }
+
+  .bento__item h3 a {
+    color: inherit;
+  }
+
+  .bento__item:hover .icon-tile {
+    transform: rotate(-6deg) scale(1.06);
+  }
+
+  .bento__item:not(.card--navy):hover .icon-tile {
+    background: var(--navy);
+    color: var(--yellow);
+  }
+
+  .bento__item--featured {
+    padding: clamp(1.75rem, 1.25rem + 1.5vw, 2.75rem);
+  }
+
+  .bento__item--featured h3 {
+    font-size: var(--fs-h3);
+  }
+
+  .bento__item--featured p {
+    font-size: var(--fs-body);
+    max-width: 52ch;
+  }
+
+  @media (max-width: 639px) {
+    .bento__item:not(.bento__item--featured) {
+      display: grid;
+      grid-template-columns: 2.75rem 1fr;
+      column-gap: 1rem;
+      align-items: center;
+    }
+
+    .bento__item:not(.bento__item--featured) .icon-tile {
+      width: 2.75rem;
+      height: 2.75rem;
+      margin: 0;
+      font-size: 1.125rem;
+    }
+
+    .bento__item:not(.bento__item--featured) h3 {
+      margin: 0;
+    }
+
+    .bento__item:not(.bento__item--featured) > :is(p, .arrow-link) {
+      grid-column: 1 / -1;
+    }
+
+    .bento__item:not(.bento__item--featured) p {
+      margin: 0.85rem 0 0;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .bento {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .bento {
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    .bento__item {
+      grid-column: span 3;
+    }
+
+    .bento__item--featured {
+      grid-column: span 6;
+    }
+  }
+
+  /* ---- Teasers ---- */
+  .teasers {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .teasers .arrow-link {
+    margin-top: auto;
+    padding-top: 0.5rem;
+  }
+
+  @media (min-width: 800px) {
+    .teasers {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

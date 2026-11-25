@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "Wat bieden we?",
+    "description": "Onze diensten: advies, risicomanagement, ISO27001 & NEN7510 implementaties, audits, onafhankelijke beoordeling NEN7510, ad interim, FG-as-a-service, awareness, security assessments en cyber crisis-simulaties."
+  },
+  "hero": {
+    "breadcrumb": "Wat bieden we?",
+    "eyebrow": "Wat bieden we?",
+    "title": "Onze diensten",
+    "lead": "Van concreet advies en ISO27001/NEN7510-implementaties tot audits, FG-as-a-service en crisis-simulaties. Kies een dienst om direct verder te lezen."
+  },
+  "servicesNav": {
+    "label": "Diensten op deze pagina"
+  },
+  "services": {
+    "items": [
+      {
+        "id": "advies",
+        "paragraphsHtml": [
+          "Pasquil kan ondersteunen met concreet en pragmatisch advies op allerlei deelonderwerpen van informatiebeveiliging en privacy. Denk aan: een aanpak voor ISO27001/NEN7510, het opzetten van een bewustwordingscampagne, FG-advies geven over DPIA’s, procesverbetering en uitwerken van beleidstukken. Advies is altijd maatwerk. Ons doel van advies om te komen tot een concreet resultaat. We kunnen een rapport opleveren, maar daarin staat zeer helder <strong>wat</strong> er moet gebeuren en altijd een concreet advies <strong>hoe</strong> dat zou kunnen. Wil je meer weten over onze aanpak? Lees dan <a href=\"/wat-is-onze-aanpak/\">hier</a> meer."
+        ],
+        "cta": {
+          "label": "Wat is onze aanpak?",
+          "href": "/wat-is-onze-aanpak/"
+        }
+      },
+      {
+        "id": "risicomanagement",
+        "paragraphsHtml": [
+          "Risicomanagement is de kern van informatiebeveiliging. Bij Pasquil gaan we verder dan alleen het uitvoeren van een risicoanalyse, we borgen risicomanagement als integraal proces en betrekken de risico-eigenaren in dit proces. Risicomanagement begint met het inventariseren van de risico’s, wat gebeurt op basis van onze <a href=\"/wat-is-onze-aanpak/template-standaard-risicoset/\">standaard risicosets</a>. Daarna vinden de analyses plaats, gevolgd door het opstellen van de behandelingen. Daarna wordt er gerapporteerd over de voortgang van de behandeling en doorlopend de risico-scores geëvalueerd. De voortgang op de risico-score is onze belangrijkste performance indicator van informatiebeveiliging en hierover rapporteren we altijd in de managementrapportages. Om dit proces goed te ondersteunen hebben wij ook ons eigen systeem ontwikkeld: <a href=\"https://risqui.nl/\" target=\"_blank\" rel=\"noopener\">Risqui</a>. Wil je meer lezen over onze aanpak? Lees dan onze <a href=\"/blog-risicomanagement/\">blog</a> over risicomanagement."
+        ],
+        "cta": {
+          "label": "Lees de blog over risicomanagement",
+          "href": "/blog-risicomanagement/"
+        }
+      },
+      {
+        "id": "implementaties",
+        "imageAlt": "Animatie van de Plan-Do-Check-Act cyclus",
+        "paragraphsHtml": [
+          "Pasquil heeft veel certificeringstrajecten ondersteund en succesvol afgerond. We hebben een bewezen aanpak, die pragmatisch is en past bij elke organisatie. Door elke norm logisch en passend in te vullen voor een organisatie, vermijden we security by compliance. De normen waar we vaker mee hebben gewerkt zijn: ISO27001, NEN7510, BIO, NIST, SURF-normenkader, ISO27701 en ISO9001.",
+          "De ondersteuning kan in verschillende vormen. Dat kan in projectvorm, als projectleider, CISO, ISO, coach, ondersteuning met de opzetfase, uitvoeren van een 0-meting of het uitvoeren van een proef-audit.",
+          "Onze aanpak is helder. We starten met het strategisch beleid, met daarin de randvoorwaarden voor het ISMS. Vervolgens beschrijven we de processen van het ISMS en het risicomanagementproces. Daarna voeren we de risicoanalyses uit en starten we met het implementeren van de maatregelen. Tot slot controleren we onderdelen van het ISMS en de beheersmaatregelen, starten we managementrapportage op en voeren we verbeteringen door. Met deze stappen is er sprake van een sluitend managementsysteem, aangezien alle fasen van de Plan-Do-Check-Act cyclus zijn doorlopen. We blijven deze cyclus in het klein herhalen, om zo continue verbetering te realiseren."
+        ],
+        "cta": {
+          "label": "",
+          "href": ""
+        }
+      },
+      {
+        "id": "audits",
+        "paragraphsHtml": [
+          "We kunnen interne en externe audits uitvoeren op het gebied van ISO27001, NEN7510, NIS2 of de AVG. Hiermee krijg je als organisatie een overzicht van de huidige situatie, hoe volwassen de organisatie is en wat er nog moet gebeuren.",
+          "Bij Pasquil hanteren we voor audits een ‘waarderende’ en ‘risicogebaseerde’ aanpak.",
+          "<strong>Waarderend auditen:</strong> We leggen vooral de focus ook op wat er goed gaat binnen de organisatie. Het is wetenschappelijk bewezen dat positieve sterker is dan negatieve feedback. Een belangrijk doel van een audit is tekortkomingen worden gevonden, geregistreerd en worden opgelost. Maar vaak wordt vergeten dat een audit als ultieme doel heeft om te verbeteren. Dan is het ook belangrijk om te horen dat bepaalde zaken goed gaan. Dat motiveert auditees ook nog eens, waardoor er energie is om de continue verbetering te realiseren.",
+          "<strong>Risicogebaseerd auditen:</strong> We focussen op de risico’s van een organisatie. De risico’s die een organisatie zelf vanuit het ISMS heeft gedefinieerd is hiervoor het uitgangspunt, maar vragen door als we risico’s missen. Door de focus te leggen op de risico’s, nemen we meer tijd voor de inspectie van kritische maatregelen. Daartegenover staat dat er minder tijd is voor de maatregelen die lagere risico’s behandelen."
+        ],
+        "cta": {
+          "label": "",
+          "href": ""
+        }
+      },
+      {
+        "id": "onafhankelijkebeoordeling",
+        "paragraphsHtml": [
+          "Pasquil voert regelmatig onafhankelijke beoordelingen uit voor de NEN7510. Deze onafhankelijke beoordeling is verplicht gesteld door de IGJ voor zorgorganisaties. De verwachting is dat dit minimaal één keer per drie jaar wordt gedaan. Met deze beoordeling kan je als organisatie aantonen dat je voldoet aan de eisen van de NEN7510. Onze onafhankelijke beoordeling voldoet volledig aan de (nieuwe) criteria van de IGJ. Daarnaast is onze aanpak bij meerdere zorginstellingen gezien door de IGJ en is hierop positieve feedback gekomen.",
+          "De onafhankelijke beoordeling kan ook dienen als nulmeting of als voorbereiding op een certificeringsaudit. Lees <a href=\"/wat-is-onze-aanpak/onafhankelijke-beoordeling-nen7510-igj/\">hier</a> meer over de onafhankelijke beoordeling."
+        ],
+        "cta": {
+          "label": "Meer over de onafhankelijke beoordeling",
+          "href": "/wat-is-onze-aanpak/onafhankelijke-beoordeling-nen7510-igj/"
+        }
+      },
+      {
+        "id": "adinterim",
+        "paragraphsHtml": [
+          "Soms is er behoefte aan een vaste of tijdelijk invulling van een informatiebeveiligings- of privacyfunctionaris. Bijvoorbeeld omdat het moeilijk of niet rendabel is om een volledige functie intern in te vullen of vanwege verlof tijdelijke ondersteuning nodig is. Vanuit Pasquil vervullen we bij verschillende organisaties in informatiebeveiligings- en privacyrollen, zoals CISO, ISO, privacy officer en FG. De reden of rol maakt voor ons niet uit. Als er hulp nodig is, kunnen wij dat (mits we de capaciteit hebben) leveren."
+        ],
+        "cta": {
+          "label": "",
+          "href": ""
+        }
+      },
+      {
+        "id": "fgasaservice",
+        "paragraphsHtml": [
+          "Wij zijn beschikbaar als Functionaris Gegevensbescherming (de privacytoezichthouder). De rol van FG extern beleggen heeft een aantal voordelen. Zo biedt de externe FG onafhankelijk toezicht op de werkzaamheden binnen de organisatie en hoef je dus zelf geen specialistische kennis in de organisatie op te bouwen en op peil te houden. Als FG zijn we meedenkend en pragmatisch, maar ook scherp en kritisch. We hebben een vaste aanpak voor de invulling van de FG-rol. We werken met een toezichtsplan, dat jaarlijks wordt opgesteld, uitgevoerd en waarover ook jaarlijks wordt gerapporteerd. De doelstellingen in het toezichtsplan worden aangepast op de volwassenheid van de organisatie."
+        ],
+        "cta": {
+          "label": "",
+          "href": ""
+        }
+      },
+      {
+        "id": "awareness",
+        "paragraphsHtml": [
+          "We hebben bij Pasquil kant en klare trainingsdagen over verschillende onderwerpen. Zo geven we regelmatig een training voor interne auditoren, over risicomanagement en eenvoudige bewustwordingssessies voor medewerkers. We passen onze trainingen altijd aan op de klant en kunnen ook op maat gemaakte trainingen voor specifieke onderwerpen en doelgroepen verzorgen. Ook zien we steeds meer aanvragen voor bestuurderstraining vanwege de verplichting in de cyberbeveiligingswet.",
+          "Voor het trainingsaanbod, zie <a href=\"/trainingen/\">pasquil.nl/trainingen</a>"
+        ],
+        "cta": {
+          "label": "Bekijk het trainingsaanbod",
+          "href": "/trainingen/"
+        }
+      },
+      {
+        "id": "securityassessment",
+        "paragraphsHtml": [
+          "Technische kwetsbaarheden worden, door de komst van sterke AI-modellen, steeds sneller ontdekt en misbruikt door hackers. Voor elke organisatie is het uitvoeren van een pentest en het inrichten van automatische vulnerability scans een must. Organisaties die al verder zijn in hun technische beveiliging en continue monitoring hebben ingericht, is red-teaming een nuttige optie. Met behulp van onze partners, kunnen we deze technische security assessments realiseren. Pasquil ondersteunt bij het vertalen van technische rapporten, naar concrete adviezen en duurzame oplossing voor een organisatie."
+        ],
+        "cta": {
+          "label": "",
+          "href": ""
+        }
+      },
+      {
+        "id": "cybercrisissimulatie",
+        "paragraphsHtml": [
+          "Een veelvoorkomende quote is ‘Het is niet de vraag óf je wordt gehackt, maar wannéér.’ Nou zit er een kern van waarheid in die boodschap, maar niet elke ‘hack’ is even erg. Maar mocht er wel een grote hack plaatsvinden of door andere oorzaken valt de informatievoorziening weg. Dan is het wel erg fijn om een solide bedrijfscontinuïteitsplan te hebben en deze ook een keer te hebben geoefend. Dat scheelt kostbare tijd en zal altijd de impact van het incident verminderen. Om goed voorbereid te zijn op een crisis leveren wij interactieve en realistische simulaties, waarin we een organisatie een informatiebeveiligings-crisis laten beleven. Op bestuurlijk niveau is dit een enorme bewustzijn-booster en op operationeel niveau is het ook zeer leerzaam. De sessie(s) kunnen op operationeel, tactisch of strategisch niveau, of een combinatie van de drie."
+        ],
+        "cta": {
+          "label": "",
+          "href": ""
+        }
+      }
+    ]
+  }
+}

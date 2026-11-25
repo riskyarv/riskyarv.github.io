@@ -1,0 +1,72 @@
+{
+  "items": [
+    {
+      "label": "Wat bieden we?",
+      "href": "/wat-bieden-we/",
+      "children": [
+        {
+          "label": "Risicomanagement",
+          "href": "/blog-risicomanagement/",
+          "icon": "circle-radiation"
+        },
+        {
+          "label": "Onafhankelijke beoordeling NEN7510",
+          "href": "/wat-is-onze-aanpak/onafhankelijke-beoordeling-nen7510-igj/",
+          "icon": "thermometer"
+        },
+        {
+          "label": "Standaard risico & maatregelensets",
+          "href": "/wat-is-onze-aanpak/template-standaard-risicoset/",
+          "icon": "table-list",
+          "children": [
+            {
+              "label": "Set ouderenzorg",
+              "href": "/wat-is-onze-aanpak/template-standaard-risicoset/standaard-risicoset-ouderenzorg/"
+            },
+            {
+              "label": "Set ziekenhuis",
+              "href": "/wat-is-onze-aanpak/template-standaard-risicoset/standaardsetziekenhuis/"
+            },
+            {
+              "label": "Set hoger onderwijs",
+              "href": "/wat-is-onze-aanpak/template-standaard-risicoset/standaardsethogeronderwijs/"
+            }
+          ]
+        },
+        {
+          "label": "Trainingen",
+          "href": "/trainingen/",
+          "icon": "chalkboard-user"
+        },
+        {
+          "label": "Risqui",
+          "href": "/risqui/",
+          "icon": "shield-halved"
+        }
+      ]
+    },
+    {
+      "label": "Wat is onze aanpak?",
+      "href": "/wat-is-onze-aanpak/"
+    },
+    {
+      "label": "Wie zijn we?",
+      "href": "/wie-zijn-we/"
+    },
+    {
+      "label": "Hoe bereik je ons?",
+      "href": "/hoe-bereik-je-ons/",
+      "children": [
+        {
+          "label": "Wil je samenwerken?",
+          "href": "/hoe-bereik-je-ons/samenwerken/",
+          "icon": "handshake"
+        }
+      ]
+    },
+    {
+      "label": "Vacatures",
+      "href": "/hoe-bereik-je-ons/vacatures/"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import Icon from '../../components/Icon.astro';
+import type { IconName } from '../../data/icons';
+import favicon from '../../assets/img/favicon.png';
+import c from '@content/pages/privacy-cookie-statement.json';
+---
+
+<Base title={c.seo.title} description={c.seo.description} crumbs={c.crumbs}>
+  <PageHero eyebrow={c.hero.eyebrow} title={c.hero.title} crumbs={c.crumbs} />
+
+  <section class="section">
+    <div class="container container--narrow">
+      <div class="card statement">
+        <Image src={favicon} alt="" class="statement__mark" width={43} height={54} densities={[1, 2]} />
+        <p class="statement__quote">{c.statement.quote}</p>
+        <p class="statement__text">{c.statement.text}</p>
+        <ul class="badges" role="list">
+          {
+            c.statement.badges.map((b) => (
+              <li>
+                <Icon name={b.icon as IconName} /> {b.label}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .statement {
+    align-items: flex-start;
+    gap: 1rem;
+    padding: clamp(1.75rem, 1rem + 4vw, 3.5rem);
+    border-radius: var(--radius-l);
+  }
+
+  .statement__mark {
+    width: 2.75rem;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+
+  .statement__quote {
+    margin: 0;
+    color: var(--navy);
+    font-size: clamp(1.5rem, 1.1rem + 1.8vw, 2.25rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  .statement__text {
+    margin: 0;
+    font-size: var(--fs-lead);
+    color: var(--ink);
+  }
+
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.75rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .badges li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0.5rem 0.95rem;
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--navy);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+  }
+
+  .badges :global(.icon) {
+    color: var(--navy);
+  }
+</style>

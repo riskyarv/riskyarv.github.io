@@ -1,0 +1,20 @@
+{
+  "intro": "<p>In samenwerking met andere organisaties geven wij regelmatig cursussen, trainingen en workshops op een aantal privacy en security gerelateerde onderwerpen. We gebruiken hiervoor een team van docenten dat een onderwerp vanuit meerdere kanten belicht. </p><p>Hieronder zie je een overzicht van de trainingen die wij binnenkort geven. </p>",
+  "courses": [
+    {
+      "name": "Spoedcursus AVG",
+      "url": "https://www.springest.nl/ict-institute/privacy-gdpr-training",
+      "text": "<p><strong>Een snelle introductie in de AVG, zodat je snel op de hoogte bent </strong></p><p><strong>Start: </strong></p><ul><li>NTB</li></ul><p>Duur: Dagdeel</p>"
+    },
+    {
+      "name": "Cyberbeveiligingswet (NIS2) voor bestuurders",
+      "url": "https://www.springest.nl/ict-institute/nis2-training-informatiebeveiliging-voor-bestuurders",
+      "text": "<p><strong>Als bestuurder de verplichte scholing vanuit de CBW</strong></p><p><strong>Start: </strong></p><ul><li>NTB</li></ul><p>Duur: Dagdeel</p>"
+    },
+    {
+      "name": "Maatwerk",
+      "url": "/hoe-bereik-je-ons/",
+      "text": "<h3>Doe een aanvraag bij ons!</h3><ul><li>ISO27001 introductie</li><li>Privacy en wetenschappelijk integriteit</li><li>Specifieke normenkaders</li><li>Interne auditor </li></ul>"
+    }
+  ]
+}

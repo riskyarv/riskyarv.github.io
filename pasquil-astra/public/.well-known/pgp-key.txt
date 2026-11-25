@@ -1,0 +1,20 @@
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: User-ID:	Arvid Landwaart <arvid@pasquil.nl>
+Comment: Valid from:	13/05/2024 19:53
+Comment: Valid until:	13/05/2027 12:00
+Comment: Type:	255-bit EdDSA (secret key available)
+Comment: Usage:	Signing, Encryption, Certifying User-IDs
+Comment: Fingerprint:	CFD1F4BE42DD87E0331CFA8360C08A24B0F2E91C
+
+
+mDMEZkJTmhYJKwYBBAHaRw8BAQdA14qun4VsmihFePv9K/jtFvVcFOv9HnGvrztd
+5Tl8M6q0IkFydmlkIExhbmR3YWFydCA8YXJ2aWRAcGFzcXVpbC5ubD6ImQQTFgoA
+QRYhBM/R9L5C3YfgMxz6g2DAiiSw8ukcBQJmQlOaAhsDBQkFoyuGBQsJCAcCAiIC
+BhUKCQgLAgQWAgMBAh4HAheAAAoJEGDAiiSw8ukc8jgA/RqfbP/k/X5O05JzkjO7
+8eWvB/5soEWh36DB47ATifotAQDNO+oBUpRKbhWepcP50VPd29/C7euNoO+zzlAa
+c4gCCLg4BGZCU5oSCisGAQQBl1UBBQEBB0BAkAzTdckfwaZzfTan55JYtjGxxN+Z
+iGkspzL5ztPyNgMBCAeIfgQYFgoAJhYhBM/R9L5C3YfgMxz6g2DAiiSw8ukcBQJm
+QlOaAhsMBQkFoyuGAAoJEGDAiiSw8ukc4b8A/RjQfXBU6ATTrShmzXOxpZNvYkQM
+IvMoxRa956/GPlMiAP0aKUgB68Gv4FfFFSSR3N72SJYj/iKcc7RKbNsP15FPAA==
+=LiKh
+-----END PGP PUBLIC KEY BLOCK-----

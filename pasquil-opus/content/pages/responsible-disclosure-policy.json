@@ -1,0 +1,139 @@
+{
+  "seo": {
+    "title": "Responsible disclosure policy",
+    "description": "Found a weakness in Pasquil's systems? Read how to report it through coordinated vulnerability disclosure, what is out of scope and what we will do."
+  },
+  "crumbs": [
+    {
+      "label": "Responsible disclosure policy"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Responsible disclosure policy",
+    "title": "Reporting a security breach",
+    "leadHtml": "We do all we can to keep our systems secure. But it’s always possible that you’ll spot a weakness we’ve missed. If you do, please let us know, so that we can do something about it quickly. Reporting problems you come across is known as <a class=\"link\" href=\"https://en.wikipedia.org/wiki/Vulnerability_(computing)#Vulnerability_disclosure\" target=\"_blank\" rel=\"noopener\">vulnerability disclosure</a> (also known as coordinated vulnerability disclosure and responsible disclosure).",
+    "primary": {
+      "label": "security.txt",
+      "href": "/.well-known/security.txt"
+    },
+    "secondary": {
+      "label": "How to report",
+      "href": "#how-to-report"
+    }
+  },
+  "toc": {
+    "title": "On this page"
+  },
+  "sections": [
+    {
+      "id": "how-to-report",
+      "navLabel": "How to report a problem?",
+      "title": "How to report a problem?",
+      "card": "yellow",
+      "icon": "triangle-exclamation",
+      "highlightHtml": "See <a class=\"link\" href=\"https://www.pasquil.nl/.well-known/security.txt\">https://www.pasquil.nl/.well-known/security.txt</a>",
+      "paragraphsHtml": [],
+      "listTitle": "Please include:",
+      "listStyle": "check",
+      "items": [
+        "As much information as possible, because that will help us reproduce the problem and put it right. We’d ideally like to have a description of what you discovered, complete with IP addresses, logs, screenshots and so on.",
+        "Your contact details (phone number or e-mail address), so that we can get in touch if we need to know more."
+      ]
+    },
+    {
+      "id": "other-points",
+      "navLabel": "Other important points",
+      "title": "Other important points",
+      "card": "",
+      "icon": "",
+      "highlightHtml": "",
+      "paragraphsHtml": [],
+      "listTitle": "",
+      "listStyle": "dont",
+      "items": [
+        "Don’t tell anyone what you found.",
+        "Destroy any data you’ve stumbled on.",
+        "Don’t go deeper into our systems than you need to in order to show that there’s a problem.",
+        "Don’t abuse a vulnerability you’ve discovered."
+      ]
+    },
+    {
+      "id": "out-of-scope",
+      "navLabel": "What you do not need to report",
+      "title": "What you do not need to report:",
+      "card": "",
+      "icon": "",
+      "highlightHtml": "",
+      "paragraphsHtml": [],
+      "listTitle": "",
+      "listStyle": "cross",
+      "items": [
+        "Social Engineering.",
+        "Resource exhaustion / (Distributed) Denial of Service.",
+        "Physical Access Testing",
+        "Situations that cannot be reproduced; Exploits that are not validated with a second tool/method, i.e. wrong result in tool A, right result in tool B.",
+        "Cosmetical level issues, i.e. this does not look good in browser A.",
+        "Situations where the problem lies on user (awareness) level, i.e. can be exploited when the workplace is left unprotected, click or keypress combo’s.",
+        "Simple fingerprinting or version listings on OS, services or ports.",
+        "Reporting of publicly available files that contain public information",
+        "Secure/HTTP-only flag missing on cookies containing public information only",
+        "TLS misconfiguration without a proof of concept to exploit the weakness.",
+        "Incomplete or missing SPF, DKIM or DMARC records",
+        "Services running at third-party service providers (verify their responsible disclosure statement on beforehand)",
+        "E-mail addresses found at a third-party data breach",
+        "Publicly disclosed vulnerabilities, patched within the last 2 weeks.",
+        "URL redirection (to a valid webpage)",
+        "Local content spoofing / clickjacking",
+        "Registered public IP-addresses.",
+        "Public files and information leakage through metadata",
+        "Missing security headers, options, and flags",
+        "Outdated versions without proof-of-concept or working exploit."
+      ]
+    },
+    {
+      "id": "known-issues",
+      "navLabel": "Known issues",
+      "title": "Known issues.",
+      "card": "",
+      "icon": "",
+      "highlightHtml": "",
+      "paragraphsHtml": [
+        "There are also problems that are already aware of and that we are working on or that we recognise as accepted risks. These problems are not mentioned on the website. Our support team is aware of them and will report them. As a result, there might be no actions taken."
+      ],
+      "listTitle": "",
+      "listStyle": "",
+      "items": []
+    },
+    {
+      "id": "what-we-do",
+      "navLabel": "What we’ll do",
+      "title": "What we’ll do",
+      "card": "",
+      "icon": "",
+      "highlightHtml": "",
+      "paragraphsHtml": [],
+      "listTitle": "",
+      "listStyle": "numbered",
+      "items": [
+        "We’ll e-mail you within one working week, confirming receipt of your report.",
+        "Within ten working days, we’ll respond to the substance of your report and tell you when the issue will be resolved.",
+        "We’ll keep you updated about progress with fixing the issue.",
+        "With your help, we’ll decide whether information about the issue should be published. We’ll name you as the person who discovered the problem only if you want us to."
+      ]
+    },
+    {
+      "id": "security-txt",
+      "navLabel": "Security.txt",
+      "title": "Security.txt",
+      "card": "navy",
+      "icon": "shield-halved",
+      "highlightHtml": "",
+      "paragraphsHtml": [
+        "<a class=\"link\" href=\"https://www.rfc-editor.org/rfc/rfc9116\" target=\"_blank\" rel=\"noopener\">RFC 9116</a> sets out a straightforward mechanism for organisations to publish their vulnerability disclosure policies and contacts details. The system involves publication of a file called security.txt on the organisation’s website, written in a special legible and <a class=\"link\" href=\"https://en.wikipedia.org/wiki/Machine-readable_document\" target=\"_blank\" rel=\"noopener\">machine</a>-readable text format. We follow this internet standard ourselves. Our security.txt file is available here: <a class=\"link\" href=\"https://www.pasquil.nl/.well-known/security.txt\">https://www.pasquil.nl/.well-known/security.txt</a>."
+      ],
+      "listTitle": "",
+      "listStyle": "",
+      "items": []
+    }
+  ]
+}

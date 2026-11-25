@@ -1,0 +1,37 @@
+{
+  "seo": {
+    "title": "Pagina niet gevonden",
+    "description": "Deze pagina bestaat niet (meer)."
+  },
+  "notFound": {
+    "eyebrow": "Foutcode 404",
+    "title": "Deze pagina is ervandoor gevlogen.",
+    "lead": "De pagina die je zoekt bestaat niet (meer) of is verplaatst.",
+    "primary": {
+      "label": "Naar de homepage",
+      "href": "/"
+    },
+    "secondary": {
+      "label": "Mail ons",
+      "href": "mailto:hallo@pasquil.nl"
+    },
+    "links": [
+      {
+        "label": "Wat bieden we?",
+        "href": "/wat-bieden-we/"
+      },
+      {
+        "label": "Wat is onze aanpak?",
+        "href": "/wat-is-onze-aanpak/"
+      },
+      {
+        "label": "Wie zijn we?",
+        "href": "/wie-zijn-we/"
+      },
+      {
+        "label": "Hoe bereik je ons?",
+        "href": "/hoe-bereik-je-ons/"
+      }
+    ]
+  }
+}

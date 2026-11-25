@@ -1,0 +1,56 @@
+{
+  "seo": {
+    "title": "Samenwerken?",
+    "description": "Wil je met Pasquil samenwerken of samen optrekken, of wil je bij ons werken? We zijn altijd op zoek naar complementaire bedrijven en versterking."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Hoe bereik je ons?",
+      "href": "/hoe-bereik-je-ons/"
+    },
+    {
+      "label": "Samenwerken?"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Hoe bereik je ons?",
+    "title": "Samenwerken?"
+  },
+  "options": {
+    "label": "Mogelijkheden",
+    "items": [
+      {
+        "title": "Partnership?",
+        "text": "Wil je met ons samenwerken of samen optrekken? We zijn altijd op zoek naar andere bedrijven die complementair zijn.",
+        "icon": "puzzle-piece",
+        "cta": {
+          "label": "Mail ons",
+          "href": "mailto:hallo@pasquil.nl?subject=Partnership"
+        }
+      },
+      {
+        "title": "Werken bij ons?",
+        "text": "Wil je bij ons werken? Snappen we. We kunnen bijna altijd versterking gebruiken! Kijk voor onze",
+        "textLink": {
+          "label": "vacature-pagina",
+          "href": "/hoe-bereik-je-ons/vacatures/"
+        },
+        "textAfterLink": ". Neem contact met ons op voor vrijblijvend kennismaken of gewoon om te vragen wat er mogelijk is!",
+        "icon": "briefcase",
+        "cta": {
+          "label": "Bekijk de vacature",
+          "href": "/hoe-bereik-je-ons/vacatures/"
+        }
+      },
+      {
+        "title": "Anders?",
+        "text": "Er is vast nog een derde optie. Maar wat dat is, weten we nog niet.",
+        "icon": "question",
+        "cta": {
+          "label": "Verras ons",
+          "href": "mailto:hallo@pasquil.nl"
+        }
+      }
+    ]
+  }
+}

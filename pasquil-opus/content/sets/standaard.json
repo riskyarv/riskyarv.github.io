@@ -1,0 +1,842 @@
+{
+ "nl": [
+  {
+   "label": "Versie 3.0: 25-11-2024",
+   "categories": [
+    {
+     "title": "1. Menselijk",
+     "risks": [
+      {
+       "nr": "1",
+       "text": "Gebruiker maakt een onbewuste fout waardoor (digitale) gevoelige informatie door onbevoegden wordt ingezien."
+      },
+      {
+       "nr": "2",
+       "text": "Cybercrimineel misleidt een gebruiker, waardoor er onrechtmatige toegang is tot gevoelige informatie."
+      },
+      {
+       "nr": "3",
+       "text": "Cybercrimineel misleidt een gebruiker tot een verkeerde handeling of betaling, met financiële schade als gevolg."
+      },
+      {
+       "nr": "4",
+       "text": "Boze (oud) medewerker publiceert/lekt gevoelige informatie."
+      },
+      {
+       "nr": "5",
+       "text": "Medewerker laat per ongeluk fysieke informatie slingeren, waardoor onbevoegden toegang hebben tot deze gevoelige informatie."
+      },
+      {
+       "nr": "6",
+       "text": "Medewerker is onvoldoende kundig voor de uitvoering van hun functie, waardoor er een verstoring ontstaat in de informatievoorziening."
+      },
+      {
+       "nr": "7",
+       "text": "Onduidelijkheid in rollen en/of functies en de bijbehorende rechten tot informatie leidt tot te ruime autorisatie en daarmee onrechtmatige toegang tot informatie."
+      },
+      {
+       "nr": "8",
+       "text": "Wijzigingen van rollen/functies worden niet goed gemanaged, waardoor er een stapeling van rechten ontstaat en met als resultaat onrechtmatige toegang tot informatie."
+      },
+      {
+       "nr": "9",
+       "text": "Medewerker verkoopt gevoelige en waardevolle (persoons)gegevens voor financieel gewin, met onrechtmatige toegang als gevolg."
+      },
+      {
+       "nr": "10",
+       "text": "Medewerker (met hogere IT- rechten) maakt (configuratie)fout, waardoor systemen toegankelijk zijn voor onbevoegden."
+      },
+      {
+       "nr": "11",
+       "text": "Medewerker (met hogere IT-rechten) maakt (configuratie)fout, waardoor systemen onbeschikbaar raken"
+      },
+      {
+       "nr": "12",
+       "text": "Boze medewerker (met hogere IT-rechten) verwijdert data waardoor processen niet meer kunnen worden uitgevoerd."
+      }
+     ]
+    },
+    {
+     "title": "3. Technisch",
+     "risks": [
+      {
+       "nr": "13",
+       "text": "Medewerkers gebruiken eigen applicaties (Shadow IT) wat zorgt voor onbekende kwetsbaarheden die gehackt kunnen worden met als gevolg een verstoring van het proces."
+      },
+      {
+       "nr": "14",
+       "text": "Bekende kwetsbaarheden in netwerk, infra, OT-apparatuur, werkplek of applicaties leidt tot onbevoegde toegang tot gevoelige informatie en mogelijk onjuiste informatie."
+      },
+      {
+       "nr": "15",
+       "text": "Geen inzicht hebben in de kwetsbaarheden in netwerk, infra, OT-apparatuur, werkplek of applicaties leidt tot onbevoegde toegang en openbaring van informatie."
+      },
+      {
+       "nr": "16",
+       "text": "Geen inzicht hebben in de kwetsbaarheden in netwerk, infra, OT-apparatuur, werkplek of applicaties leidt tot het onbeschikbaar raken van informatie en systemen (bijv. ransomware)."
+      },
+      {
+       "nr": "17",
+       "text": "Een geïnfecteerd apparaat verspreidt malware, waardoor apparatuur onbeschikbaar raakt en processen worden vestoord."
+      },
+      {
+       "nr": "18",
+       "text": "Apparatuur wordt verkeerd gebruikt waardoor onherstelbare schade ontstaat en informatie niet meer beschikbaar is."
+      },
+      {
+       "nr": "19",
+       "text": "Oude (legacy) systemen in het netwerk zijn kwetsbaar en worden door een cybercrimineel als ‘stepping stone’ gebruikt om onrechtmatige toegang tot data te verkrijgen of informatie onbeschikbaar te maken."
+      },
+      {
+       "nr": "20",
+       "text": "Gebruikers worden niet gedwongen om sterke authenticatie te gebruiken of hebben last van MFA-moeheid, waardoor cybercrimineel kan inloggen als medewerkers, met als gevolg onrechtmatige inzage van gevoelige gegevens."
+      },
+      {
+       "nr": "21",
+       "text": "Wijzigingen in systeem zorgen voor onbedoelde neveneffecten in proces, waardoor informatie onbeschikbaar raakt."
+      },
+      {
+       "nr": "22",
+       "text": "Een ontwikkel, test of acceptatiesystemen is minder beveiligd en wordt gehackt, met een datalek als gevolg."
+      },
+      {
+       "nr": "23",
+       "text": "IT-onderhoudswerkzaamheden leiden tot verstoring van de continuïteit van de bedrijfsprocessen, waardoor data niet beschikbaar is."
+      },
+      {
+       "nr": "24",
+       "text": "Data wordt niet veilig verwijderd, waardoor onbevoegden toegang hebben tot de informatie."
+      },
+      {
+       "nr": "25",
+       "text": "Bij een incident blijken de back-up(s)/systemen niet goed te werken, waardoor data onbeschikbaar blijft en of wetgeving niet wordt nageleefd."
+      },
+      {
+       "nr": "26",
+       "text": "Door configuratiefouten of kapotte apparatuur raakt data corrupt en is informatie niet meer beschikbaar."
+      },
+      {
+       "nr": "27",
+       "text": "Gegevens worden gedurende uitwisseling onderschept, waardoor een kwaadwillende de data inziet en/of aanpast."
+      }
+     ]
+    },
+    {
+     "title": "5. Organisatie",
+     "risks": [
+      {
+       "nr": "28",
+       "text": "Door onduidelijkheid in verantwoordelijkheden worden risico’s niet goed gemanaged en wordt de kans op een ernstig incident groter."
+      },
+      {
+       "nr": "29",
+       "text": "Incidenten worden niet tijdig gemeld, niet goed gemeld of niet goed gemanaged, waardoor deze onnodig groter worden."
+      },
+      {
+       "nr": "30",
+       "text": "Vanuit directie/bestuur is onvoldoende budget en of prioriteit voor informatiebeveiliging en privacy, waardoor informatiebeveiligings- en privacy maatregelen niet worden opgepakt of worden uitgesteld."
+      },
+      {
+       "nr": "31",
+       "text": "Doordat er geen actuele kennis is van dreigingen en kwetsbaarheden worden belangrijke maatregelen over het hoofd gezien met een grootschalig incident als gevolg."
+      },
+      {
+       "nr": "32",
+       "text": "Door een gebrek van kennis met betrekking tot wet- en regelgeving is er niet voldaan aan wettelijke eisen en volgt er een boete of imagoschade."
+      },
+      {
+       "nr": "33",
+       "text": "Management legt prioriteiten elders, wat leidt tot geld tekorten/ bezuinigingen die zorgen voor onvoldoende investeringen in de IT, en kwetsbare systemen."
+      }
+     ]
+    },
+    {
+     "title": "6. Fysiek",
+     "risks": [
+      {
+       "nr": "34",
+       "text": "Door een ramp (brand, weersinvloeden, aardbeving of anders) is de informatievoorziening beschadigd en niet beschikbaar."
+      },
+      {
+       "nr": "35",
+       "text": "Door falende infrastructuur (dijkdoorbraak, leidingbreuk) of instorting/verzakking is de informatievoorziening beschadigd en niet beschikbaar."
+      },
+      {
+       "nr": "36",
+       "text": "Door falende nutsvoorziening (elektriciteit, internet) is de informatievoorziening niet beschikbaar."
+      },
+      {
+       "nr": "37",
+       "text": "Door kwetsbaarheden in de fysieke beveiliging, kan een inbreker inbreken op het kantoor en datadragers met gevoelige data ontvreemden met een datalek als gevolg."
+      },
+      {
+       "nr": "38",
+       "text": "Vandalen vernielen onderdelen van de infrastructuur of andere onderdelen van de informatievoorziening waardoor deze niet meer beschikbaar is."
+      },
+      {
+       "nr": "39",
+       "text": "Ongedierte tast kabels en of netwerkapparatuur aan, waardoor de connectivitiet wordt verstoord of opslag onbeschikbaar raakt, met verstoring van processen tot gevolg."
+      }
+     ]
+    },
+    {
+     "title": "7. Leveranciers",
+     "risks": [
+      {
+       "nr": "40",
+       "text": "Door onvoldoende beheersing van bedrijfsmiddelen ontstaat het risico dat deze buiten de invloedsfeer van de organisatie raken"
+      },
+      {
+       "nr": "41",
+       "text": "Een gebrek aan duidelijke eisen bij de inkoop van een systeem of (Cloud)dienst leidt tot kwetsbare techniek, processen, menselijke aspecten met een onderbreking van de bedrijfsvoeringen en overtreding van wet- en regelgeving."
+      },
+      {
+       "nr": "42",
+       "text": "Een gebrek aan duidelijke eisen bij de aanschaf van een dienst leidt tot kwetsbare techniek, processen, menselijke aspecten, met een datalek tot gevolg."
+      },
+      {
+       "nr": "43",
+       "text": "Een leverancier of subleverancier van een essentieel systeem wordt gehackt, waardoor de informatievoorziening niet beschikbaar is of er onrechtmatige toegang is tot de data."
+      },
+      {
+       "nr": "44",
+       "text": "Een leverancier meldt een incident niet, waardoor de instelling niet voldoet aan haar meldplicht(en), het incident niet wordt verholpen en de gevolgen van het incident niet worden verminderd."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "label": "Versie 2.0: 16-05-2024",
+   "categories": [
+    {
+     "title": "1. Menselijk (HR)",
+     "risks": [
+      {
+       "nr": "1",
+       "text": "Gebruiker maakt een onbewuste fout waardoor (digitale) gevoelige informatie door onbevoegden wordt ingezien."
+      },
+      {
+       "nr": "2",
+       "text": "Hacker misleidt een gebruiker, waardoor er onrechtmatige toegang is tot gevoelige informatie"
+      },
+      {
+       "nr": "3",
+       "text": "Hacker misleidt een gebruiker tot een verkeerde handeling of betaling, met financiële schade als gevolg."
+      },
+      {
+       "nr": "4",
+       "text": "Boze (oud) medewerker publiceert/lekt informatie."
+      },
+      {
+       "nr": "5",
+       "text": "Medewerker laat per ongeluk fysieke informatie slingeren, waardoor onbevoegden toegang hebben tot deze gevoelige informatie."
+      },
+      {
+       "nr": "6",
+       "text": "Medewerker is onvoldoende kundig voor de uitvoering van hun functie, waardoor er een verstoring ontstaat in de informatievoorziening."
+      },
+      {
+       "nr": "7",
+       "text": "Onduidelijkheid in rollen en/of functies en de bijbehorende rechten tot informatie leidt tot te ruime autorisatie en daarmee onrechtmatige toegang tot informatie."
+      },
+      {
+       "nr": "8",
+       "text": "Wijzigingen van rollen/functies worden niet goed gemanaged, waardoor er een stapeling van rechten ontstaat en met als resultaat onrechtmatige toegang tot informatie."
+      },
+      {
+       "nr": "9",
+       "text": "Medewerker verkoopt gevoelige en waardevolle (persoons)gegevens voor financieel gewin, met onrechtmatige toegang als gevolg."
+      }
+     ]
+    },
+    {
+     "title": "2. Menselijk (IT)",
+     "risks": [
+      {
+       "nr": "10",
+       "text": "Medewerker (met hogere IT- rechten) maakt (configuratie)fout, waardoor systemen toegankelijk zijn voor onbevoegden."
+      },
+      {
+       "nr": "11",
+       "text": "Medewerker (met hogere IT-rechten) maakt (configuratie)fout, waardoor systemen onbeschikbaar raken"
+      },
+      {
+       "nr": "12",
+       "text": "Boze medewerker (met hogere IT-rechten) verwijdert data waardoor processen niet meer kunnen worden uitgevoerd."
+      }
+     ]
+    },
+    {
+     "title": "3. Technisch (IT)",
+     "risks": [
+      {
+       "nr": "13",
+       "text": "Medewerkers gebruiken eigen applicaties (Shadow IT) wat zorgt voor onbekende kwetsbaarheden die gehackt kunnen worden met als gevolg een verstoring van het proces."
+      },
+      {
+       "nr": "14",
+       "text": "Bekende kwetsbaarheden in netwerk, infra, OT-apparatuur, werkplek of applicaties leidt tot onbevoegde toegang tot gevoelige informatie en mogelijk onjuiste informatie."
+      },
+      {
+       "nr": "15",
+       "text": "Geen inzicht hebben in de kwetsbaarheden in netwerk, infra, OT-apparatuur, werkplek of applicaties leidt tot onbevoegde toegang en openbaring van informatie."
+      },
+      {
+       "nr": "16",
+       "text": "Geen inzicht hebben in de kwetsbaarheden in netwerk, infra, OT-apparatuur, werkplek of applicaties leidt tot het onbeschikbaar raken van informatie en systemen (bijv. ransomware)."
+      },
+      {
+       "nr": "17",
+       "text": "Een geïnfecteerd apparaat verspreidt malware, waardoor apparatuur onbeschikbaar raakt en processen worden vestoord."
+      },
+      {
+       "nr": "18",
+       "text": "Apparatuur wordt verkeerd gebruikt waardoor onherstelbare schade ontstaat en informatie niet meer beschikbaar is."
+      },
+      {
+       "nr": "19",
+       "text": "Oude (legacy) systemen in het netwerk zijn kwetsbaar en worden door een hacker als ‘stepping stone’ gebruikt om onrechtmatige toegang tot data te verkrijgen of informatie onbeschikbaar te maken."
+      },
+      {
+       "nr": "20",
+       "text": "Gebruikers worden niet gedwongen om sterke authenticatie te gebruiken of hebben last van MFA-moeheid, waardoor hacker kan inloggen als medewerkers, met als gevolg onrechtmatige inzage van gevoelige gegevens."
+      },
+      {
+       "nr": "21",
+       "text": "Wijzigingen in systeem zorgen voor onbedoelde neveneffecten in proces, waardoor informatie onbeschikbaar raakt."
+      },
+      {
+       "nr": "22",
+       "text": "Een ontwikkel, test of acceptatiesystemen is minder beveiligd en wordt gehackt, met een datalek als gevolg."
+      },
+      {
+       "nr": "23",
+       "text": "IT-onderhoudswerkzaamheden leiden tot verstoring van de continuïteit van de bedrijfsprocessen, waardoor data niet beschikbaar is."
+      }
+     ]
+    },
+    {
+     "title": "4. Gegevens/Data (IT)",
+     "risks": [
+      {
+       "nr": "24",
+       "text": "Data wordt niet veilig verwijderd, waardoor onbevoegden toegang hebben tot de informatie."
+      },
+      {
+       "nr": "25",
+       "text": "Bij een incident blijken de back-up(s)/systemen niet goed te werken, waardoor data onbeschikbaar blijft en of wetgeving niet wordt nageleefd."
+      },
+      {
+       "nr": "26",
+       "text": "Door configuratiefouten of kapotte apparatuur raakt data corrupt en is informatie niet meer beschikbaar."
+      },
+      {
+       "nr": "27",
+       "text": "Gegevens worden gedurende uitwisseling onderschept, waardoor een kwaadwillende de data inziet en/of aanpast."
+      }
+     ]
+    },
+    {
+     "title": "5. Organisatie (Bestuur & security office)",
+     "risks": [
+      {
+       "nr": "28",
+       "text": "Door onduidelijkheid in verantwoordelijkheden worden risico’s niet goed gemanaged en wordt de kans op een ernstig incident groter."
+      },
+      {
+       "nr": "29",
+       "text": "Incidenten worden niet tijdig gemeld, niet goed gemeld of niet goed gemanaged, waardoor deze onnodig groter worden."
+      },
+      {
+       "nr": "30",
+       "text": "Vanuit directie/bestuur is onvoldoende budget en of prioriteit voor informatiebeveiliging en privacy, waardoor informatiebeveiligings- en privacy maatregelen niet worden opgepakt of worden uitgesteld."
+      },
+      {
+       "nr": "31",
+       "text": "Doordat er geen actuele kennis is van dreigingen en kwetsbaarheden worden belangrijke maatregelen over het hoofd gezien met een grootschalig incident als gevolg."
+      },
+      {
+       "nr": "32",
+       "text": "Door een gebrek van kennis met betrekking tot wet- en regelgeving is er niet voldaan aan wettelijke eisen en volgt er een boete of imagoschade."
+      },
+      {
+       "nr": "33",
+       "text": "Management legt prioriteiten elders, wat leidt tot geld tekorten/ bezuinigingen die zorgen voor onvoldoende investeringen in de IT, en kwetsbare systemen."
+      }
+     ]
+    },
+    {
+     "title": "6. Omgeving (Faciliteiten)",
+     "risks": [
+      {
+       "nr": "34",
+       "text": "Door een ramp (brand, weersinvloeden, aardbeving of anders) is de informatievoorziening beschadigd en niet beschikbaar."
+      },
+      {
+       "nr": "35",
+       "text": "Door falende infrastructuur (dijkdoorbraak, leidingbreuk) of instorting/verzakking is de informatievoorziening beschadigd en niet beschikbaar."
+      },
+      {
+       "nr": "36",
+       "text": "Door falende nutsvoorziening (elektriciteit, internet) is de informatievoorziening niet beschikbaar."
+      },
+      {
+       "nr": "37",
+       "text": "Door kwetsbaarheden in de fysieke beveiliging, kan een inbreker inbreken op het kantoor en datadragers met gevoelige data ontvreemden met een datalek als gevolg."
+      },
+      {
+       "nr": "38",
+       "text": "Vandalen vernielen onderdelen van de infrastructuur of andere onderdelen van de informatievoorziening waardoor deze niet meer beschikbaar is."
+      }
+     ]
+    },
+    {
+     "title": "7. Leveranciers (Inkoop/IT)",
+     "risks": [
+      {
+       "nr": "39",
+       "text": "Door onvoldoende beheersing van bedrijfsmiddelen ontstaat het risico dat deze buiten de invloedsfeer van de organisatie raken"
+      },
+      {
+       "nr": "40",
+       "text": "Een gebrek aan duidelijke eisen bij de inkoop van een systeem of (Cloud)dienst leidt tot kwetsbare techniek, processen, menselijke aspecten met een onderbreking van de bedrijfsvoeringen en overtreding van wet- en regelgeving."
+      },
+      {
+       "nr": "41",
+       "text": "Een gebrek aan duidelijke eisen bij de aanschaf van een dienst leidt tot kwetsbare techniek, processen, menselijke aspecten, met een datalek tot gevolg."
+      },
+      {
+       "nr": "42",
+       "text": "Een leverancier of subleverancier van een essentieel systeem wordt gehackt, waardoor de informatievoorziening niet beschikbaar is of er onrechtmatige toegang is tot de data."
+      },
+      {
+       "nr": "43",
+       "text": "Een leverancier meldt een incident niet, waardoor de instelling niet voldoet aan haar meldplicht(en), het incident niet wordt verholpen en de gevolgen van het incident niet worden verminderd."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "en": [
+  {
+   "label": "Version 3.0 : 25-11-2024",
+   "categories": [
+    {
+     "title": "1. Human",
+     "risks": [
+      {
+       "nr": "1",
+       "text": "User makes an unconscious mistake resulting in (digital) sensitive information being accessed by unauthorized individuals."
+      },
+      {
+       "nr": "2",
+       "text": "Hacker deceives a user, leading to unauthorized access to sensitive information."
+      },
+      {
+       "nr": "3",
+       "text": "Hacker tricks a user into making a wrong action or payment, resulting in financial damage."
+      },
+      {
+       "nr": "4",
+       "text": "Disgruntled (former) employee publishes/leaks information."
+      },
+      {
+       "nr": "5",
+       "text": "Employee accidentally leaves physical information lying around, allowing unauthorized access to sensitive information."
+      },
+      {
+       "nr": "6",
+       "text": "Employee lacks sufficient expertise for their job, causing a disruption in information provision."
+      },
+      {
+       "nr": "7",
+       "text": "Uncertainty in roles and/or functions and their associated information rights leads to overly broad authorization and thereby unauthorized access to information."
+      },
+      {
+       "nr": "8",
+       "text": "Changes in roles/functions are not properly managed, resulting in a buildup of rights and consequently unauthorized access to information."
+      },
+      {
+       "nr": "9",
+       "text": "Employee sells sensitive and valuable (personal) data for financial gain, resulting in unauthorized access."
+      },
+      {
+       "nr": "10",
+       "text": "Employee (with privileged rights) makes a (configuration) mistake, allowing unauthorized access to systems."
+      },
+      {
+       "nr": "11",
+       "text": "Employee (with privileged rights) makes a (configuration) mistake, causing systems to become unavailable."
+      },
+      {
+       "nr": "12",
+       "text": "Disgruntled employee (with privileged rights) deletes data, rendering processes inoperable."
+      }
+     ]
+    },
+    {
+     "title": "3. Technical",
+     "risks": [
+      {
+       "nr": "13",
+       "text": "Employees use personal applications (Shadow IT), creating unknown vulnerabilities that can be exploited, resulting in process disruption."
+      },
+      {
+       "nr": "14",
+       "text": "Known vulnerabilities in network, infrastructure, OT equipment, workplace, or applications lead to unauthorized access to sensitive information and potentially incorrect information."
+      },
+      {
+       "nr": "15",
+       "text": "Lack of insight into vulnerabilities in network, infrastructure, OT equipment, workplace, or applications leads to unauthorized access and disclosure of information."
+      },
+      {
+       "nr": "16",
+       "text": "Lack of insight into vulnerabilities in network, infrastructure, OT equipment, workplace, or applications leads to information and systems becoming unavailable (e.g., ransomware)."
+      },
+      {
+       "nr": "17",
+       "text": "An infected device spreads malware, resulting in equipment becoming unavailable and processes being disrupted."
+      },
+      {
+       "nr": "18",
+       "text": "Equipment is misused, causing irreparable damage and rendering information unavailable."
+      },
+      {
+       "nr": "19",
+       "text": "Legacy systems in the network are vulnerable and used by a hacker as ‘stepping stones’ to gain unauthorized access to data or render information unavailable."
+      },
+      {
+       "nr": "20",
+       "text": "Users are not compelled to use strong authentication or suffer from MFA fatigue, allowing hackers to log in as employees, resulting in unauthorized access to sensitive data."
+      },
+      {
+       "nr": "21",
+       "text": "System changes result in unintended side effects in processes, causing information to become unavailable."
+      },
+      {
+       "nr": "22",
+       "text": "A development, testing, or acceptance system is less secure and gets hacked, resulting in a data breach."
+      },
+      {
+       "nr": "23",
+       "text": "IT maintenance activities disrupt the continuity of care processes, resulting in data being unavailable."
+      },
+      {
+       "nr": "24",
+       "text": "Data is not securely erased, allowing unauthorized access to the information."
+      },
+      {
+       "nr": "25",
+       "text": "In an incident, backups/systems are found to be malfunctioning, resulting in data remaining unavailable and/or non-compliance with legislation."
+      },
+      {
+       "nr": "26",
+       "text": "Due to configuration errors or faulty equipment, data becomes corrupt and information is no longer available."
+      },
+      {
+       "nr": "27",
+       "text": "Data is intercepted during exchange, allowing a malicious actor to view and/or alter the data."
+      }
+     ]
+    },
+    {
+     "title": "5. Organization",
+     "risks": [
+      {
+       "nr": "28",
+       "text": "Due to unclear responsibilities, risks are not properly managed, increasing the likelihood of a severe incident."
+      },
+      {
+       "nr": "29",
+       "text": "Incidents are not reported in a timely manner, not properly reported, or not properly managed, making the incident greater and not complying with notification obligations."
+      },
+      {
+       "nr": "30",
+       "text": "There is insufficient budget and/or priority for information security and privacy from management/board, resulting in information security and privacy measures not being implemented or being postponed."
+      },
+      {
+       "nr": "31",
+       "text": "Due to a lack of current knowledge of threats and vulnerabilities, important measures are overlooked, resulting in a large-scale incident."
+      },
+      {
+       "nr": "32",
+       "text": "Due to a lack of knowledge regarding laws and regulations, legal requirements are not met, resulting in fines or reputational damage."
+      },
+      {
+       "nr": "33",
+       "text": "Management prioritizes elsewhere, leading to financial shortages/cutbacks that result in insufficient investments in IT and vulnerable systems."
+      }
+     ]
+    },
+    {
+     "title": "6. Environment",
+     "risks": [
+      {
+       "nr": "34",
+       "text": "Due to a disaster (fire, weather conditions, earthquake, or otherwise), the information provision is damaged and/or unavailable."
+      },
+      {
+       "nr": "35",
+       "text": "Due to failing infrastructure (levee breach, pipeline break) or collapse/subsidence, the information provision is damaged and/or unavailable."
+      },
+      {
+       "nr": "36",
+       "text": "Due to failing utilities (electricity, internet), the information provision is unavailable."
+      },
+      {
+       "nr": "37",
+       "text": "Due to vulnerabilities in physical security, a burglar can break into the office and steal datacarriers with sensitive data, resulting in a data breach."
+      },
+      {
+       "nr": "38",
+       "text": "Vandals destroy parts of the infrastructure or other components of the information provision, rendering it unavailable."
+      },
+      {
+       "nr": "39",
+       "text": "Vermin damages cables and/or network equipment, causing connectivity disruptions or making storage unavailable, resulting in disruption in processes."
+      }
+     ]
+    },
+    {
+     "title": "7. Suppliers (Procurement/IT)",
+     "risks": [
+      {
+       "nr": "40",
+       "text": "Due to insufficient control of assets, there is a risk of them falling outside the organization’s sphere of influence."
+      },
+      {
+       "nr": "41",
+       "text": "A lack of clear requirements in the procurement of a system or (Cloud) service leads to vulnerable technology, processes, human aspects, causing a disruption to operations and violation of laws and regulations."
+      },
+      {
+       "nr": "42",
+       "text": "A lack of clear requirements in the purchase of a service leads to vulnerable technology, processes, human aspects, resulting in a data breach."
+      },
+      {
+       "nr": "43",
+       "text": "A supplier or subcontractor of an essential system is hacked, resulting in the information provision being unavailable or unauthorized access to the data."
+      },
+      {
+       "nr": "44",
+       "text": "A supplier fails to report an incident, resulting in the organization not fulfilling its reporting obligations, the incident not being resolved, and the consequences of the incident not being mitigated."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "label": "Version 2.0 : 16-05-2024",
+   "categories": [
+    {
+     "title": "1. Human (HR)",
+     "risks": [
+      {
+       "nr": "1",
+       "text": "User makes an unconscious mistake resulting in (digital) sensitive information being accessed by unauthorized individuals."
+      },
+      {
+       "nr": "2",
+       "text": "Hacker deceives an user, leading to unauthorized access to sensitive information."
+      },
+      {
+       "nr": "3",
+       "text": "Hacker tricks an user into making a wrong action or payment, resulting in financial damage."
+      },
+      {
+       "nr": "4",
+       "text": "Disgruntled (former) employee publishes/leaks information."
+      },
+      {
+       "nr": "5",
+       "text": "Employee accidentally leaves physical information lying around, allowing unauthorized access to sensitive information."
+      },
+      {
+       "nr": "6",
+       "text": "Employee lacks sufficient expertise for their job, causing a disruption in information provision."
+      },
+      {
+       "nr": "7",
+       "text": "Uncertainty in roles and/or functions and their associated information rights leads to overly broad authorization and thereby unauthorized access to information."
+      },
+      {
+       "nr": "8",
+       "text": "Changes in roles/functions are not properly managed, resulting in a buildup of rights and consequently unauthorized access to information."
+      },
+      {
+       "nr": "9",
+       "text": "Employee sells sensitive and valuable (personal) data for financial gain, resulting in unauthorized access."
+      }
+     ]
+    },
+    {
+     "title": "2. Human (IT)",
+     "risks": [
+      {
+       "nr": "10",
+       "text": "Employee (with privileged rights) makes a (configuration) mistake, allowing unauthorized access to systems."
+      },
+      {
+       "nr": "11",
+       "text": "Employee (with privileged rights) makes a (configuration) mistake, causing systems to become unavailable."
+      },
+      {
+       "nr": "12",
+       "text": "Disgruntled employee (with privileged rights) deletes data, rendering processes inoperable"
+      }
+     ]
+    },
+    {
+     "title": "3. Technical (IT)",
+     "risks": [
+      {
+       "nr": "13",
+       "text": "Employees use personal applications (Shadow IT), creating unknown vulnerabilities that can be exploited, resulting in process disruption."
+      },
+      {
+       "nr": "14",
+       "text": "Known vulnerabilities in network, infrastructure, OT equipment, workplace, or applications lead to unauthorized access to sensitive information and potentially incorrect information."
+      },
+      {
+       "nr": "15",
+       "text": "Lack of insight into vulnerabilities in network, infrastructure, OT equipment, workplace, or applications leads to unauthorized access and disclosure of information."
+      },
+      {
+       "nr": "16",
+       "text": "Lack of insight into vulnerabilities in network, infrastructure, OT equipment, workplace, or applications leads to information and systems becoming unavailable (e.g., ransomware)."
+      },
+      {
+       "nr": "17",
+       "text": "An infected device spreads malware, resulting in equipment becoming unavailable and processes being disrupted."
+      },
+      {
+       "nr": "18",
+       "text": "Equipment is misused, causing irreparable damage and rendering information unavailable."
+      },
+      {
+       "nr": "19",
+       "text": "Legacy systems in the network are vulnerable and used by a hacker as ‘stepping stones’ to gain unauthorized access to data or render information unavailable."
+      },
+      {
+       "nr": "20",
+       "text": "Users are not compelled to use strong authentication or suffer from MFA fatigue, allowing hackers to log in as employees, resulting in unauthorized access to sensitive data."
+      },
+      {
+       "nr": "21",
+       "text": "System changes result in unintended side effects in processes, causing information to become unavailable."
+      },
+      {
+       "nr": "22",
+       "text": "A development, testing, or acceptance system is less secure and gets hacked, resulting in a data breach."
+      },
+      {
+       "nr": "23",
+       "text": "IT maintenance activities disrupt the continuity of care processes, resulting in data being unavailable."
+      }
+     ]
+    },
+    {
+     "title": "4. Data (IT)",
+     "risks": [
+      {
+       "nr": "24",
+       "text": "Data is not securely erased, allowing unauthorized access to the information."
+      },
+      {
+       "nr": "25",
+       "text": "In an incident, backups/systems are found to be malfunctioning, resulting in data remaining unavailable and/or non-compliance with legislation."
+      },
+      {
+       "nr": "26",
+       "text": "Due to configuration errors or faulty equipment, data becomes corrupt and information is no longer available."
+      },
+      {
+       "nr": "27",
+       "text": "Data is intercepted during exchange, allowing a malicious actor to view and/or alter the data."
+      }
+     ]
+    },
+    {
+     "title": "5. Organization (Management & security office)",
+     "risks": [
+      {
+       "nr": "28",
+       "text": "Due to unclear responsibilities, risks are not properly managed, increasing the likelihood of a severe incident."
+      },
+      {
+       "nr": "29",
+       "text": "Incidents are not reported in a timely manner, not properly reported, or not properly managed, unnecessarily exacerbating them."
+      },
+      {
+       "nr": "30",
+       "text": "There is insufficient budget and/or priority for information security and privacy from management/board, resulting in information security and privacy measures not being implemented or being postponed."
+      },
+      {
+       "nr": "31",
+       "text": "Due to a lack of current knowledge of threats and vulnerabilities, important measures are overlooked, resulting in a large-scale incident."
+      },
+      {
+       "nr": "32",
+       "text": "Due to a lack of knowledge regarding laws and regulations, legal requirements are not met, resulting in fines or reputational damage."
+      },
+      {
+       "nr": "33",
+       "text": "Management prioritizes elsewhere, leading to financial shortages/cutbacks that result in insufficient investments in IT and vulnerable systems."
+      }
+     ]
+    },
+    {
+     "title": "6. Environment (Facilities)",
+     "risks": [
+      {
+       "nr": "34",
+       "text": "Due to a disaster (fire, weather conditions, earthquake, or otherwise), the information provision is damaged and/or unavailable."
+      },
+      {
+       "nr": "35",
+       "text": "Due to failing infrastructure (levee breach, pipeline break) or collapse/subsidence, the information provision is damaged and/or unavailable."
+      },
+      {
+       "nr": "36",
+       "text": "Due to failing utilities (electricity, internet), the information provision is unavailable."
+      },
+      {
+       "nr": "37",
+       "text": "Due to vulnerabilities in physical security, a burglar can break into the office and steal datacarriers with sensitive data, resulting in a data breach."
+      },
+      {
+       "nr": "38",
+       "text": "Vandals destroy parts of the infrastructure or other components of the information provision, rendering it unavailable."
+      }
+     ]
+    },
+    {
+     "title": "7. Suppliers (Procurement/IT)",
+     "risks": [
+      {
+       "nr": "39",
+       "text": "Due to insufficient control of assets, there is a risk of them falling outside the organization’s sphere of influence."
+      },
+      {
+       "nr": "40",
+       "text": "A lack of clear requirements in the procurement of a system or (Cloud) service leads to vulnerable technology, processes, human aspects, causing a disruption to operations and violation of laws and regulations."
+      },
+      {
+       "nr": "41",
+       "text": "A lack of clear requirements in the purchase of a service leads to vulnerable technology, processes, human aspects, resulting in a data breach."
+      },
+      {
+       "nr": "42",
+       "text": "A supplier or subcontractor of an essential system is hacked, resulting in the information provision being unavailable or unauthorized access to the data."
+      },
+      {
+       "nr": "43",
+       "text": "A supplier fails to report an incident, resulting in the organization not fulfilling its reporting obligations, the incident not being resolved, and the consequences of the incident not being mitigated."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

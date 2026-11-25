@@ -1,0 +1,55 @@
+{
+  "seo": {
+    "title": "Blog risicomanagement",
+    "description": "Risicomanagement voor informatiebeveiliging: in drie hoofdstukken bespreken we de hindernissen en valkuilen en geven we tips om veelgemaakte fouten te vermijden."
+  },
+  "crumbs": [
+    {
+      "label": "Wat bieden we?",
+      "href": "/wat-bieden-we/"
+    },
+    {
+      "label": "Risicomanagement"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Blog",
+    "title": "Risicomanagement voor informatie\u00adbeveiliging",
+    "chaptersLabel": "{count} hoofdstukken",
+    "readingTimeLabel": "± {minutes} min leestijd"
+  },
+  "intro": {
+    "lead": "NIS2 en ISO27001 vereisen het, het is een breed gedragen best practice, maar vrijwel niemand past het echt toe: een risicogebaseerde aanpak voor informatiebeveiliging. Op zich klinkt het logisch, je:",
+    "steps": [
+      "Bepaalt welke risico’s er voor jou zijn.",
+      "Bepaalt welke risico’s op dit moment het hoogst zijn.",
+      "Bepaalt extra maatregelen om die risico’s te verlagen.",
+      "Gaat als eerst aan de slag met de maatregelen om de hoogste risico’s te verminderenen gaat door totdat de risico’s zijn verlaagd tot een acceptabel niveau.",
+      "Schat het niveau van de risico’s opnieuw in als maatregelen zijn geïmplementeerd.",
+      "En rapporteert over de voortgang van de maatregelen en het risicoprofiel."
+    ],
+    "paragraphs": [
+      "Waarom gebeurt dit dan bijna nooit? Er zijn verschillende redenen, maar voornamelijk omdat de praktijk toch net wat complexer is dan de theorie. Er zijn veel hindernissen en valkuilen die je onderweg kunt tegenkomen.",
+      "In drie hoofdstukken zullen wij de hindernissen en valkuilen bespreken en tips geven over hoe je risicomanagement het beste kan aanpakken (althans volgens ons) en geven we tips om veelgemaakte fouten te vermijden."
+    ]
+  },
+  "video": {
+    "label": "Animatie over risicomanagement bij Pasquil"
+  },
+  "chapters": {
+    "title": "Hoofdstukken",
+    "chapterLabel": "Hoofdstuk {nr}:",
+    "nextLabel": "Volgende: {title}"
+  },
+  "outro": {
+    "textHtml": "Het is nogal wat informatie in één keer. Het duurt dus ook wel even voordat je dit in de vingers hebt en het hoeft ook allemaal niet in één keer perfect te gaan. Hopelijk heb je als lezer wat opgestoken. Mocht je nog meer willen weten, vragen hebben of hulp zoeken voor risicomanagement, neem dan <a class=\"link\" href=\"mailto:hallo@pasquil.nl?subject=Risicomanagement\">contact</a> met ons op!",
+    "primary": {
+      "label": "Bekijk Risqui",
+      "href": "/risqui/"
+    },
+    "secondary": {
+      "label": "Standaard risicosets",
+      "href": "/wat-is-onze-aanpak/template-standaard-risicoset/"
+    }
+  }
+}

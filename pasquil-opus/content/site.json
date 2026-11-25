@@ -1,0 +1,14 @@
+{
+  "name": "Pasquil",
+  "url": "https://pasquil.nl",
+  "email": "hallo@pasquil.nl",
+  "street": "Moreelsepark 1",
+  "city": "Utrecht",
+  "maps": "https://goo.gl/maps/YNZHknAnEPEoDNga9",
+  "linkedin": "https://www.linkedin.com/company/pasquil-consulting",
+  "risqui": "https://risqui.nl/",
+  "seo": {
+    "homeTitle": "Pasquil – Informatiebeveiliging en privacy is niet gewoon",
+    "description": "Pasquil is een adviesbureau voor informatiebeveiliging en privacy in Utrecht. Pragmatisch advies, ISO27001 & NEN7510, risicomanagement, audits en FG-as-a-service."
+  }
+}

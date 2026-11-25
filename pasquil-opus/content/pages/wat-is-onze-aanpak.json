@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "Wat is onze aanpak?",
+    "description": "De aanpak van Pasquil: pragmatisch, kwaliteit, humor en snel. Samen met partners zorgen we voor sterke beveiliging op het vlak van mensen, processen en techniek."
+  },
+  "hero": {
+    "breadcrumb": "Wat is onze aanpak?",
+    "eyebrow": "Wat is onze aanpak?",
+    "title": "Wat is de aanpak van Pasquil?",
+    "lead": "We worden steeds afhankelijker van data en IT-systemen. Door deze afhankelijkheid groeit het belang om dit goed te beveiligen. Echter kan er heel veel fout gaan en is goede informatiebeveiliging een complex spel geworden. De verdediging moet op alle fronten sterk staan. De combinatie tussen sterke techniek, processen en mensen zorgt voor een geoptimaliseerde beveiliging. Pasquil heeft deze kennis in huis en heeft met haar partners de juiste samenwerking om in alle expertisegebieden de juiste ondersteuning te geven voor uw optimale beveiliging."
+  },
+  "values": {
+    "eyebrow": "Zo werken wij",
+    "title": "Onze kernwaarden",
+    "items": [
+      {
+        "label": "Pragmatisch",
+        "icon": "screwdriver-wrench",
+        "paragraphsHtml": [
+          "Wij doen en zorgen ervoor dat het wordt gedaan. Niet: “Het mag niet of dit kan niet.” Maar: <strong>“Zo kan het wél!”</strong>",
+          "Wij zijn wars van onnodige complexiteit, modewoorden en jargon."
+        ]
+      },
+      {
+        "label": "Kwaliteit",
+        "icon": "gem",
+        "paragraphsHtml": [
+          "Wij leveren hoge kwaliteit. We zijn intrinsiek gedreven om het goed te doen. Dat doen we voor een fatsoenlijke prijs. We houden onze overhead laag, waardoor er geen te hoge tarieven nodig zijn."
+        ]
+      },
+      {
+        "label": "Humor",
+        "icon": "face-laugh-beam",
+        "paragraphsHtml": [
+          "We zorgen voor energie met humor. We maken zelfs saaie compliance werkzaamheden leuk en zorgen voor een positieve associatie voor privacy en informatiebeveiliging."
+        ]
+      },
+      {
+        "label": "Snel",
+        "icon": "bolt",
+        "paragraphsHtml": [
+          "Geen onnodige tussenstops of herhalingen. We focussen op de kern van informatiebeveiliging en privacy. We gebruiken eenvoudige en solide templates, minimaliseren administratie en voorkomen dubbel werk."
+        ]
+      }
+    ]
+  },
+  "partners": {
+    "label": "Partners",
+    "eyebrow": "Samen met partners",
+    "textHtml": "Pasquil werkt met verschillende partners samen om een breed pakket aan diensten te kunnen bieden. Alles onder één dak en met dezelfde kwaliteit en aanpak. We bieden ondersteuning op organisationeel vlak en helpen bij het kiezen en implementeren van de meest effectieve maatregelen op de vlakken van <strong>Mensen, Processen &amp; Techniek</strong>."
+  },
+  "topicsNav": {
+    "label": "Onderwerpen"
+  },
+  "people": {
+    "title": "Mensen",
+    "imageAlt": "Mensen in gesprek tijdens een sessie over informatiebeveiliging",
+    "paragraphs": [
+      "Organisaties bestaan (nu nog) grotendeels uit mensen. Er wordt vaak gezegd dat de mens de zwakste schakel is, maar het is ook zeker de sterkste. In al onze projecten nemen we de menselijke kant van informatiebeveiliging en privacy mee. Onze aanpak zorgt voor verbinding met de organisatie, doordat we met oplossingen komen.",
+      "We bieden ook losse awareness-elementen aan, zoals training, templates voor nieuwsberichten en verdiepingstrainingen. Ook bieden wij zelf ontworpen cyber crisis simulatie sessies aan."
+    ]
+  },
+  "process": {
+    "title": "Proces",
+    "imageAlt": "De Plan-Do-Check-Act cyclus",
+    "paragraphs": [
+      "Heldere processen zijn krachtig, maar ook zeldzaam. Wij zijn ervaren met het uitwerken en implementeren van processen op een bondige en heldere manier. Processen zijn uniek voor elk bedrijf, maar bevatten vaak dezelfde componenten en opbouw. Wij geloven erin dat processen alleen succesvol kunnen zijn als deze helder en eenvoudig zijn beschreven en er geëvalueerd wordt hoe het proces beter kan. Wij kunnen helpen bij het opstellen, het implementeren en het verbeteren van processen. Ook voeren we regelmatig internal audits uit."
+    ]
+  },
+  "technology": {
+    "title": "Technologie",
+    "imageAlts": {
+      "floppy": "Floppy disk",
+      "hdd": "Harde schijf",
+      "monitor": "Monitor",
+      "keyboard": "Toetsenbord",
+      "pi": "Raspberry Pi",
+      "camera": "Beveiligingscamera",
+      "cd": "CD",
+      "aquarium": "Aquarium"
+    },
+    "paragraphs": [
+      "Samen met onze partners leveren wij allerlei technische oplossingen. Zoals het testen van IT-systemen op zwaktes, het beoordelen van huidige beveiligingsmaatregelen, of het ondersteunen bij het configureren van huidige IT-tooling. In veel gevallen wordt de bestaande tooling (zoals de security producten van Microsft365) maar zeer beperkt benut. Uiteraard geven we ook advies over welke technische maatregelen echt werken en nodig zijn. Zo zorgen we er samen voor dat techniek optimaal wordt benut."
+    ]
+  },
+  "knowledge": {
+    "title": "Kennis",
+    "paragraphs": [
+      "We hebben door de jaren heen veel kennis opgebouwd en delen deze graag. We geloven in het laagdrempelig delen van kennis en realiseren onze meerwaarde door de kennis om te zetten in realisatie.",
+      "Mocht je op zoek zijn naar informatie, bijvoorbeeld op de volgende gebieden, neem dan contact met ons op!"
+    ],
+    "items": [
+      {
+        "label": "Standaard risicoset informatiebeveiliging",
+        "href": "/wat-is-onze-aanpak/template-standaard-risicoset/"
+      },
+      {
+        "label": "Templates voor beleidstukken",
+        "href": ""
+      },
+      {
+        "label": "ISMS-documentatie en procesbeschrijvingen",
+        "href": ""
+      },
+      {
+        "label": "DPIA format",
+        "href": ""
+      },
+      {
+        "label": "Inwerkprogramma’s en trainingen",
+        "href": ""
+      },
+      {
+        "label": "Vormgeving voor bewustwording",
+        "href": ""
+      },
+      {
+        "label": "Risicomanagement",
+        "href": "/blog-risicomanagement/"
+      }
+    ],
+    "cta": {
+      "label": "Neem contact op",
+      "href": "mailto:hallo@pasquil.nl"
+    }
+  }
+}

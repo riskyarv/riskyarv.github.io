@@ -1,0 +1,406 @@
+---
+import Base from '../../../layouts/Base.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Icon from '../../../components/Icon.astro';
+import { site } from '../../../data/site';
+import type { IconName } from '../../../data/icons';
+import c from '@content/pages/vacatures.json';
+
+const crumbs = c.breadcrumbs;
+const jobTitle = c.hero.title.replace(/\u00ad/g, '');
+const mail = `mailto:${site.email}?subject=${encodeURIComponent(c.apply.mailSubject)}`;
+
+const jobLd = {
+  '@context': 'https://schema.org',
+  '@type': 'JobPosting',
+  title: jobTitle,
+  description: c.jobPosting.description,
+  employmentType: 'FULL_TIME',
+  hiringOrganization: { '@type': 'Organization', name: site.name, sameAs: site.url },
+  jobLocation: {
+    '@type': 'Place',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: site.street,
+      addressLocality: site.city,
+      addressCountry: 'NL',
+    },
+  },
+  baseSalary: {
+    '@type': 'MonetaryAmount',
+    currency: 'EUR',
+    value: { '@type': 'QuantitativeValue', minValue: c.jobPosting.minSalaryPerMonth, unitText: 'MONTH' },
+  },
+};
+---
+
+<Base title={c.seo.title} description={c.seo.description} crumbs={crumbs} cta={false}>
+  <script type="application/ld+json" set:html={JSON.stringify(jobLd)} />
+
+  <PageHero eyebrow={c.hero.eyebrow} title={c.hero.title} crumbs={crumbs}>
+    <p class="pill pill--navy">{c.hero.pill}</p>
+  </PageHero>
+
+  <section class="section">
+    <div class="container job">
+      <aside class="job__aside" aria-label={c.summary.label}>
+        <div class="card card--navy facts">
+          <dl>
+            {
+              c.summary.facts.map((f) => (
+                <div class="fact">
+                  <span class="fact__icon">
+                    <Icon name={f.icon as IconName} />
+                  </span>
+                  <dt>{f.label}</dt>
+                  <dd>{f.value}</dd>
+                </div>
+              ))
+            }
+          </dl>
+          <a class="btn" href={mail}><Icon name="envelope" /> {c.summary.cta}</a>
+          <button
+            class="btn btn--ghost share"
+            type="button"
+            hidden
+            data-copied-label={c.summary.share.copiedLabel}
+            data-copied={c.summary.share.copiedMessage}
+            data-failed={c.summary.share.copyFailedMessage}
+          >
+            <Icon name="share-nodes" /> <span data-label>{c.summary.share.label}</span>
+          </button>
+          <span class="share-status sr-only" role="status" aria-live="polite"></span>
+        </div>
+      </aside>
+
+      <article class="job__body prose">
+        <h2 class="intro-title">{c.intro.title}</h2>
+        <blockquote class="coffee">
+          <Icon name="mug-hot" />
+          <p set:html={c.intro.quoteHtml} />
+        </blockquote>
+
+        <h2>{c.profile.title}</h2>
+        <ul class="check-list" role="list">
+          {
+            c.profile.itemsHtml.map((t) => (
+              <li>
+                <Icon name="check" />
+                <span set:html={t} />
+              </li>
+            ))
+          }
+        </ul>
+
+        <h2>{c.tasks.title}</h2>
+        <ul class="tasks">
+          {c.tasks.items.map((t) => <li>{t}</li>)}
+        </ul>
+
+        <h2>{c.company.title}</h2>
+        {c.company.paragraphs.map((t) => <p>{t}</p>)}
+        <p>
+          <a class="arrow-link" href={c.company.teamLink.href}>{c.company.teamLink.label} <Icon name="arrow-right" /></a>
+        </p>
+
+        <h2>{c.offer.title}</h2>
+        {c.offer.paragraphs.map((t) => <p>{t}</p>)}
+      </article>
+
+      <ul class="perks" role="list">
+        {
+          c.offer.perks.map((p) => (
+            <li class="perk">
+              <span class="perk__icon">
+                <Icon name={p.icon as IconName} />
+              </span>
+              <span>{p.text}</span>
+            </li>
+          ))
+        }
+      </ul>
+
+      <div class="job__body job__outro prose">
+        <p>{c.offer.outro}</p>
+
+        <div class="card card--yellow apply">
+          <p class="apply__title">
+            {c.apply.title} <a class="link" href={mail}>{site.email}</a>
+          </p>
+          <p>{c.apply.text}</p>
+          <div class="btn-row">
+            <a class="btn btn--navy" href={mail}><Icon name="paper-plane" /> {c.apply.cta}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  :global(.page-hero) .pill {
+    margin-top: 0.5rem;
+  }
+
+  .job {
+    display: grid;
+    gap: clamp(2rem, 1rem + 3vw, 3rem);
+    grid-template-areas: 'aside' 'body' 'perks' 'outro';
+  }
+
+  .job__aside {
+    grid-area: aside;
+  }
+
+  .job__body {
+    grid-area: body;
+    min-width: 0;
+  }
+
+  .perks {
+    grid-area: perks;
+  }
+
+  .job__outro {
+    grid-area: outro;
+  }
+
+  @media (min-width: 1000px) {
+    .job {
+      grid-template-columns: minmax(0, 1fr) 21rem;
+      grid-template-areas: 'body aside' 'perks aside' 'outro aside';
+      column-gap: clamp(3rem, 1rem + 4vw, 5rem);
+      row-gap: 2rem;
+      align-items: start;
+    }
+
+    .job__aside {
+      position: sticky;
+      top: calc(var(--header-h) + 1.5rem);
+    }
+  }
+
+  .facts {
+    gap: 0.75rem;
+  }
+
+  .facts dl {
+    display: grid;
+    gap: 1rem;
+    margin: 0 0 0.75rem;
+  }
+
+  @media (min-width: 560px) and (max-width: 999px) {
+    .facts dl {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .facts {
+      flex-flow: row wrap;
+    }
+
+    .facts dl {
+      flex-basis: 100%;
+    }
+  }
+
+  .fact {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    column-gap: 0.85rem;
+    align-items: center;
+  }
+
+  .fact__icon {
+    grid-row: span 2;
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--radius-xs);
+    background: rgb(255 255 255 / 0.08);
+    color: var(--yellow);
+  }
+
+  .fact dt {
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgb(255 255 255 / 0.6);
+  }
+
+  .fact dd {
+    margin: 0;
+    color: var(--white);
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .facts .btn {
+    justify-content: center;
+  }
+
+  .share[hidden] {
+    display: none;
+  }
+
+  .intro-title {
+    margin-top: 0;
+  }
+
+  .job__body h2 {
+    font-size: var(--fs-h3);
+  }
+
+  .coffee {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .coffee > :global(.icon) {
+    flex: none;
+    margin-top: 0.2rem;
+    font-size: 1.5rem;
+    color: var(--navy);
+  }
+
+  .coffee p {
+    margin: 0;
+  }
+
+  .tasks {
+    counter-reset: task;
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .tasks li {
+    counter-increment: task;
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-s);
+    background: var(--surface);
+  }
+
+  .tasks li::before {
+    content: counter(task, decimal-leading-zero);
+    font-weight: 800;
+    color: var(--navy);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .perks {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  @media (min-width: 600px) {
+    .perks {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .perk {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.85rem;
+      padding: 1.15rem 1.25rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .perks {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .perk {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0.9rem 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-s);
+    font-size: var(--fs-sm);
+    line-height: 1.5;
+    color: var(--ink);
+    transition:
+      border-color 0.25s,
+      transform 0.35s var(--ease-out);
+  }
+
+  .perk:hover {
+    border-color: var(--navy);
+    transform: translateY(-2px);
+  }
+
+  .perk__icon {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--radius-xs);
+    background: var(--yellow);
+    color: var(--navy);
+  }
+
+  .apply {
+    margin-top: 2rem;
+  }
+
+  .apply__title {
+    font-size: var(--fs-lead);
+    font-weight: 700;
+    color: var(--navy);
+    overflow-wrap: anywhere;
+  }
+
+  .apply .link {
+    color: var(--navy);
+    text-decoration-color: var(--navy);
+  }
+
+  .apply .btn-row {
+    margin-top: 0.5rem;
+  }
+</style>
+
+<script>
+  const btn = document.querySelector<HTMLButtonElement>('.share');
+  const status = document.querySelector<HTMLElement>('.share-status');
+  const label = btn?.querySelector<HTMLElement>('[data-label]');
+  const original = label?.textContent ?? '';
+  if (btn && (navigator.share || navigator.clipboard)) {
+    btn.hidden = false;
+    btn.addEventListener('click', async () => {
+      const data = { title: document.title, url: location.href };
+      if (navigator.share) {
+        try {
+          await navigator.share(data);
+        } catch {
+          /* gebruiker annuleerde */
+        }
+        return;
+      }
+      try {
+        await navigator.clipboard.writeText(location.href);
+        if (label) label.textContent = btn.dataset.copiedLabel ?? '';
+        if (status) status.textContent = btn.dataset.copied ?? '';
+        setTimeout(() => label && (label.textContent = original), 2500);
+      } catch {
+        if (status) status.textContent = btn.dataset.failed ?? '';
+      }
+    });
+  }
+</script>

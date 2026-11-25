@@ -1,0 +1,271 @@
+---
+import Icon from './Icon.astro';
+import { fill } from '../data/site';
+import setUi from '@content/set-ui.json';
+
+export interface StdVersion {
+  label: string;
+  categories: { title: string; risks: { nr: string; text: string }[] }[];
+}
+
+interface Props {
+  data: StdVersion;
+  lang?: 'nl' | 'en';
+  openFirst?: boolean;
+}
+
+const { data, lang = 'nl', openFirst = false } = Astro.props;
+const t = setUi.standardSet[lang];
+const total = data.categories.reduce((n, c) => n + c.risks.length, 0);
+---
+
+<div
+  class="stdset"
+  data-stdset
+  data-total={total}
+  data-l-risks={fill(t.count, { n: 0 })}
+  data-l-of={fill(t.countFiltered, { shown: 0, total: 0 })}
+  data-l-expand={t.expand}
+  data-l-collapse={t.collapse}
+>
+  <div class="stdset__bar" role="search">
+    <label class="field">
+      <span class="sr-only">{t.search}</span>
+      <Icon name="magnifying-glass" />
+      <input class="input" type="search" placeholder={t.placeholder} autocomplete="off" data-q />
+    </label>
+    <button type="button" class="btn btn--sm btn--ghost" data-toggle aria-pressed="false">
+      {t.expand}
+    </button>
+    <p class="stdset__count" aria-live="polite" data-count>{fill(t.count, { n: total })}</p>
+  </div>
+
+  <div class="stdset__list">
+    {
+      data.categories.map((c, i) => (
+        <details class="acc" open={openFirst && i === 0} data-group>
+          <summary>
+            <span class="stdset__title">{c.title}</span>
+            <span class="stdset__meta">
+              <span class="stdset__n" data-n>
+                {c.risks.length}
+              </span>
+              <span class="acc__chev" aria-hidden="true">
+                <Icon name="chevron-down" />
+              </span>
+            </span>
+          </summary>
+          <div class="acc__body">
+            <ol class="risk-list" role="list">
+              {c.risks.map((r) => (
+                <li data-risk>
+                  <span class="risk-list__nr" aria-hidden="true">
+                    {r.nr}
+                  </span>
+                  <p>
+                    <span class="sr-only">{r.nr}. </span>
+                    {r.text}
+                  </p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </details>
+      ))
+    }
+    <p class="stdset__empty" hidden data-empty>{t.empty}</p>
+  </div>
+</div>
+
+<script>
+  const norm = (s: string) =>
+    s
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
+
+  document.querySelectorAll<HTMLElement>('[data-stdset]').forEach((root) => {
+    const q = root.querySelector<HTMLInputElement>('[data-q]')!;
+    const toggle = root.querySelector<HTMLButtonElement>('[data-toggle]')!;
+    const count = root.querySelector<HTMLElement>('[data-count]')!;
+    const empty = root.querySelector<HTMLElement>('[data-empty]')!;
+    const total = Number(root.dataset.total);
+    const label = (tpl: string, ...n: number[]) => {
+      let i = 0;
+      return tpl.replace(/\d+/g, () => String(n[i++]));
+    };
+    const groups = [...root.querySelectorAll<HTMLDetailsElement>('[data-group]')].map((el) => ({
+      el,
+      n: el.querySelector<HTMLElement>('[data-n]')!,
+      items: [...el.querySelectorAll<HTMLElement>('[data-risk]')].map((li) => ({
+        li,
+        text: norm(li.textContent ?? ''),
+      })),
+    }));
+    let saved: boolean[] | null = null;
+
+    const syncToggle = () => {
+      const visible = groups.filter((g) => !g.el.hidden);
+      const allOpen = visible.length > 0 && visible.every((g) => g.el.open);
+      toggle.textContent = allOpen ? root.dataset.lCollapse! : root.dataset.lExpand!;
+      toggle.setAttribute('aria-pressed', String(allOpen));
+    };
+
+    q.addEventListener('input', () => {
+      const terms = norm(q.value).split(/\s+/).filter(Boolean);
+      if (terms.length && !saved) saved = groups.map((g) => g.el.open);
+      let shown = 0;
+      for (const g of groups) {
+        let n = 0;
+        for (const it of g.items) {
+          const ok = terms.every((t) => it.text.includes(t));
+          it.li.hidden = !ok;
+          if (ok) n++;
+        }
+        shown += n;
+        g.el.hidden = n === 0;
+        g.n.textContent = terms.length ? `${n}/${g.items.length}` : String(g.items.length);
+        if (terms.length) g.el.open = n > 0;
+      }
+      if (!terms.length && saved) {
+        groups.forEach((g, i) => (g.el.open = saved![i]));
+        saved = null;
+      }
+      count.textContent =
+        shown === total ? label(root.dataset.lRisks!, total) : label(root.dataset.lOf!, shown, total);
+      empty.hidden = shown > 0;
+      syncToggle();
+    });
+
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-pressed') !== 'true';
+      groups.forEach((g) => {
+        if (!g.el.hidden) g.el.open = open;
+      });
+      syncToggle();
+    });
+
+    groups.forEach((g) => g.el.addEventListener('toggle', syncToggle));
+    syncToggle();
+  });
+</script>
+
+<style>
+  .stdset__bar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .stdset__bar .field {
+    grid-column: 1 / -1;
+  }
+
+  .stdset__count {
+    grid-row: 2;
+    grid-column: 1;
+    margin: 0;
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  @media (min-width: 720px) {
+    .stdset__bar {
+      grid-template-columns: minmax(0, 28rem) auto 1fr;
+    }
+
+    .stdset__bar .field {
+      grid-column: auto;
+    }
+
+    .stdset__count {
+      grid-row: auto;
+      grid-column: auto;
+      justify-self: end;
+    }
+  }
+
+  .stdset__meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .stdset__n {
+    min-width: 2rem;
+    padding: 0.2em 0.65em;
+    border-radius: 999px;
+    background: var(--surface);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .acc[open] .stdset__n {
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  .risk-list {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .risk-list li {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    gap: 0.9rem;
+    align-items: start;
+    padding-block: 0.85rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .risk-list li:first-child {
+    border-top: 0;
+  }
+
+  .risk-list li[hidden] {
+    display: none;
+  }
+
+  .risk-list__nr {
+    display: grid;
+    place-items: center;
+    height: 2rem;
+    border-radius: 999px;
+    background: var(--yellow);
+    color: var(--navy);
+    font-size: var(--fs-xs);
+    font-weight: 800;
+  }
+
+  .risk-list p {
+    margin: 0;
+    padding-top: 0.2rem;
+    font-size: var(--fs-sm);
+    color: var(--ink);
+  }
+
+  .stdset__empty {
+    padding: 2.5rem 1rem;
+    border: 1.5px dashed var(--line);
+    border-radius: var(--radius-s);
+    text-align: center;
+    color: var(--muted);
+  }
+
+  .stdset__empty[hidden] {
+    display: none;
+  }
+
+  .acc[hidden] {
+    display: none;
+  }
+</style>

@@ -1,0 +1,168 @@
+---
+import Icon from './Icon.astro';
+import { fill, sets } from '../data/site';
+import setUi from '@content/set-ui.json';
+import type { IconName } from '../data/icons';
+import std from '@content/sets/standaard.json';
+import oz from '@content/sets/ouderenzorg.json';
+import zh from '@content/sets/ziekenhuis.json';
+import ho from '@content/sets/hogeronderwijs.json';
+
+interface Props {
+  current?: keyof typeof sets;
+  title?: string;
+  headingLevel?: 'h2' | 'h3';
+}
+
+const ui = setUi.setNav;
+const { current, title = ui.title, headingLevel: H = 'h2' } = Astro.props;
+const stdCount = std.nl[0].categories.reduce((n, c) => n + c.risks.length, 0);
+const counts: Record<keyof typeof sets, number> = {
+  base: stdCount,
+  ouderenzorg: oz[0].rows.length,
+  ziekenhuis: zh[0].rows.length,
+  hogeronderwijs: ho[0].rows.length,
+  english: stdCount,
+};
+const items = (Object.keys(ui.items) as (keyof typeof sets)[]).map((key) => ({
+  key,
+  label: ui.items[key].label,
+  meta: fill(ui.items[key].meta, { n: counts[key] }),
+  icon: ui.items[key].icon as IconName,
+  lang: key === 'english' ? 'en' : undefined,
+}));
+---
+
+<nav class="setnav" aria-label={title}>
+  <H class="setnav__title">{title}</H>
+  <ul role="list">
+    {
+      items.map((it) => (
+        <li>
+          <a
+            href={sets[it.key]}
+            class:list={['setnav__card', { 'is-current': it.key === current }]}
+            aria-current={it.key === current ? 'page' : undefined}
+            lang={it.lang}
+          >
+            <span class="icon-tile">
+              <Icon name={it.icon} />
+            </span>
+            <span class="setnav__text">
+              <strong>{it.label}</strong>
+              <span>{it.meta}</span>
+            </span>
+            <Icon name="arrow-right" class="setnav__arrow" />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  .setnav__title {
+    font-size: var(--fs-h4);
+    margin-bottom: 1rem;
+  }
+
+  .setnav ul {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  @media (min-width: 640px) {
+    .setnav ul {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .setnav ul {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  .setnav__card {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    height: 100%;
+    padding: 1rem 1.1rem;
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius-s);
+    background: var(--white);
+    color: var(--navy);
+    text-decoration: none;
+    transition:
+      border-color 0.2s,
+      transform 0.25s var(--ease-out),
+      box-shadow 0.25s;
+  }
+
+  .setnav__card:hover {
+    border-color: var(--navy);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-s);
+  }
+
+  .setnav__card.is-current {
+    border-color: var(--navy);
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  .setnav__card .icon-tile {
+    flex: none;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .setnav__card.is-current .icon-tile {
+    background: var(--yellow);
+    color: var(--navy);
+  }
+
+  .setnav__text {
+    display: grid;
+    flex: 1;
+    min-width: 0;
+    line-height: 1.3;
+  }
+
+  .setnav__text strong {
+    font-size: var(--fs-sm);
+  }
+
+  .setnav__text span {
+    font-size: var(--fs-xs);
+    color: var(--muted);
+  }
+
+  .is-current .setnav__text strong {
+    color: var(--white);
+  }
+
+  .is-current .setnav__text span {
+    color: rgb(255 255 255 / 0.7);
+  }
+
+  .setnav__card :global(.setnav__arrow) {
+    flex: none;
+    font-size: 0.8rem;
+    opacity: 0.5;
+    transition:
+      transform 0.25s var(--ease-out),
+      opacity 0.2s;
+  }
+
+  .setnav__card:hover :global(.setnav__arrow) {
+    opacity: 1;
+    transform: translateX(3px);
+  }
+</style>
